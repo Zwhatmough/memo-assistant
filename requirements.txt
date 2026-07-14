@@ -1,0 +1,7 @@
+pdfplumber
+pymupdf
+pydantic>=2
+anthropic
+python-dotenv
+pyyaml
+pytest

@@ -1,0 +1,18 @@
+# Secrets
+.env
+
+# Source documents and run outputs (large / regenerable)
+documents/*.pdf
+output/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
