@@ -54,7 +54,7 @@ EST_OUTPUT_TOKENS_PER_BATCH = 2000
 
 EXTRACTION_PROMPT = """You are extracting material facts from a company's annual report for an investment analyst.
 
-Below is text from {doc_id}, pages {page_range}.
+The text below comes from {doc_id}. It is divided by PAGE markers (--- PAGE N ---).
 
 Extract ONLY facts that an investment analyst would cite in a first-draft memo:
 - Key financial figures (revenue, profit, margins, cash flow, debt, dividends)
@@ -70,13 +70,16 @@ Do NOT extract:
 - Audit report language
 - Minor or repetitive facts already covered by a headline number
 
-For each fact, include:
-- source: doc_id="{doc_id}", the specific page number it appears on, and a short direct-quote excerpt
-- Confidence: "high" = explicitly stated, "medium" = clearly implied, "low" = inferred
-- Financial figures: report ONLY the number as stated. Do NOT calculate ratios or growth rates.
-- For values in parentheses like (235.7), the value is negative: -235.7
+SOURCE RULES — these are strict:
+1. source.page must be the exact PAGE N number from the marker immediately before the text where you found the excerpt. Never use the batch range or another page number.
+2. source.excerpt must be a single contiguous verbatim span copied exactly as it appears in the text — no ellipses, no joining of fragments from different sentences, no paraphrasing. It must be short enough to appear on one page as a consecutive string.
+3. source.doc_id is always "{doc_id}".
 
-Target: 2-5 material facts per page. Quality over quantity.
+OTHER RULES:
+- Confidence: "high" = explicitly stated, "medium" = clearly implied, "low" = inferred.
+- Financial figures: extract ONLY numbers as stated. Do NOT calculate ratios or growth rates.
+- For values in parentheses like (235.7), the value is negative: -235.7.
+- Target 2-5 material facts per page. Quality over quantity.
 
 Document text:
 ---

@@ -8,9 +8,9 @@ Read `DESIGN.md` in full. It is the agreed project design and is the source of t
 
 **Milestone 1** — Complete. pdfplumber spike confirmed `extract_text()` works cleanly on all financial statements; `extract_tables()` fails (no borders). Decision recorded in DESIGN.md decision log.
 
-**Milestone 2** — Gold set + fact extraction. Two parts:
-- **Part 1 (in progress):** Zak manually builds and freezes `eval/gold_set.json` (20 facts, 10 risks, 10 observations, 10 questions) from the PDFs. Template created; awaiting Zak's entries.
-- **Part 2 (blocked on Part 1):** Design pydantic fact schemas, thin `llm.py` wrapper, and run Claude fact extraction with citations on the annual report.
+**Milestone 2** — Complete. Gold set frozen (50 items). Schemas, LLM wrapper, and extraction pipeline built. Citation validator (`validate.py`) implemented with two-tier matching and auto-correction. Final verified facts: 220/254 (86%), matching manual 89% check. 34 unverifiable due to PDF layout structure (infographic pages, two-column body text, model-assembled table excerpts) — all believed correct, excluded from downstream as a documented limitation. Failure analysis recorded in DESIGN.md.
+
+**Milestone 3** — Deterministic finance module. `finance.py` pure functions; unit tests; cross-checks; `financials.json`. Input: `output/validated_facts.json`.
 
 ## Working method (non-negotiable)
 
