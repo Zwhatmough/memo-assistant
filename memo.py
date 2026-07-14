@@ -672,7 +672,10 @@ def run_memo_pipeline(
         f"**Status:** AI-assisted first draft — requires human review before use  \n"
         f"**Model:** {MEMO_GENERATION_MODEL}  \n\n---\n\n"
     )
-    memo_text = header + sections_1_5 + "\n\n" + sections_6_8 + "\n\n" + section_9 + "\n\n" + section_10
+    # Strip any title the model echoed at the start of sections_1_5 — the
+    # header already has one, so a duplicate would appear at line 11.
+    s15_clean = re.sub(r'^#\s+Investment Memo:[^\n]*\n+', '', sections_1_5, count=1)
+    memo_text = header + s15_clean + "\n\n" + sections_6_8 + "\n\n" + section_9 + "\n\n" + section_10
 
     # 10. Post-generation validation
     print("\nRunning post-generation validation...")

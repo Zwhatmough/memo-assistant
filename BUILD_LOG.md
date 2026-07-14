@@ -93,6 +93,20 @@ All 12 cross-checks passed (0 failures, 0 warns). Key findings:
 **Fix:** (1) Added a pass that runs `_FINANCIAL_NUMBER_RE` over the `label` and related text fields of every registered fact and adds parsed numbers to permitted values. (2) Added `abs(v)` to permitted values whenever a financial fact is negative. Re-running validation against the existing memo.md (without new API calls) produced 0 reference errors and 0 number errors.
 **Lesson:** A validator that misses legitimate numbers becomes noise, not a guard. The permitted-values set must cover every representation of a source figure that can legitimately appear in prose — both positive magnitudes of negative cash flows and numbers embedded in text-only (non-financial) facts.
 
+## 15 Jul 2026 — Milestone 6 (evaluation): automated metrics from run_eval.py
+
+First run of the evaluation harness against the frozen gold set. Automated scores:
+
+- **Fact recall**: 18/20 (90%). 2 near-misses flagged for manual adjudication (F-12: £600m FY2027 return target; F-16: ARPR primary value £141 not extracted as standalone fact — £2,995 matches as secondary).
+- **Citation accuracy**: 16/18 (88%). F-07 (EPS 34.17p) and F-15 (forecourts 13,942) cited on wrong pages.
+- **Risk coverage (automated estimate)**: 9/10 by keyword-stem matching (≥2 of 8-char stems in Section 6). R-05 (IT/cyber) flagged. Automated score requires manual verification — common words produce false positives.
+
+**Near-miss detail (F-12, F-16):** The pipeline extracted forward-guidance facts (£600m shareholder return target) and ARPR (£2,995) but not as the exact primary value the gold claim leads with. These facts are in the pipeline output; the value extraction ordering in the eval script picks a different lead number.
+
+**Citation miss detail (F-07, F-15):** EPS appears across multiple pages; the pipeline cited the wrong one. Forecourts KPI: pipeline page vs gold page differ by >1.
+
+**Risk coverage caveats added:** Keyword matching uses 8-char stem prefixes (handles morphological variants like 'disintermediate' → 'disintermediation') but is vulnerable to context-blind false positives (e.g., "consumer" matches in an AI-behavior context when the gold risk is about consumer demand). The scoring sheet (eval/scoring_sheet.md Part C) asks Zak to verify each automated COVERED result.
+
 ---
 
 *Update this file whenever a real failure is found and fixed. Each entry: Found / Cause / Fix / Lesson.*
