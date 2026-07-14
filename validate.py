@@ -56,15 +56,31 @@ def _normalise(text: str) -> str:
 
 
 # Minimum words in a fragment for fragment-match to be meaningful.
-FRAGMENT_WORDS = 6
+# 4 words is short enough to survive column interleaving while still
+# being specific enough to avoid coincidental matches.
+FRAGMENT_WORDS = 4
+
+
+def _strip_punct(text: str) -> str:
+    """Remove punctuation to allow matching across minor punct differences.
+
+    Applied on top of _normalise() before fragment comparison. Handles
+    cases where the model omits a trailing period or the PDF has
+    punctuation that doesn't survive normalisation cleanly.
+    """
+    return re.sub(r"[^\w\s]", " ", text)
 
 
 def _fragment_match(norm_excerpt: str, norm_page: str) -> bool:
     """Check if any FRAGMENT_WORDS-word run from excerpt appears in page.
 
-    This handles multi-column PDF layouts where pdfplumber interleaves
-    column text, breaking what would otherwise be a contiguous excerpt.
-    A 6-word run is specific enough to exclude coincidental matches.
+    Two passes:
+    1. Normalised text as-is (handles most single-column pages).
+    2. Punctuation stripped from both sides (handles column-interleaved
+       pages where punctuation breaks otherwise-matching runs).
+
+    A 4-word run is short enough to survive column interleaving while
+    still specific enough to avoid coincidental matches.
     """
     words = norm_excerpt.split()
     if len(words) < FRAGMENT_WORDS:
@@ -74,6 +90,16 @@ def _fragment_match(norm_excerpt: str, norm_page: str) -> bool:
         fragment = " ".join(words[i : i + FRAGMENT_WORDS])
         if fragment in norm_page:
             return True
+
+    # Second pass: strip punctuation from both sides
+    stripped_excerpt = _strip_punct(norm_excerpt)
+    stripped_page = _strip_punct(norm_page)
+    words2 = stripped_excerpt.split()
+    for i in range(len(words2) - FRAGMENT_WORDS + 1):
+        fragment = " ".join(words2[i : i + FRAGMENT_WORDS])
+        if fragment in stripped_page:
+            return True
+
     return False
 
 

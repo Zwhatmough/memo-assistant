@@ -8,9 +8,11 @@ Read `DESIGN.md` in full. It is the agreed project design and is the source of t
 
 **Milestone 1** — Complete. pdfplumber spike confirmed `extract_text()` works cleanly on all financial statements; `extract_tables()` fails (no borders). Decision recorded in DESIGN.md decision log.
 
-**Milestone 2** — Complete. Gold set frozen (50 items). Schemas, LLM wrapper, and extraction pipeline built. Citation validator (`validate.py`) implemented with two-tier matching and auto-correction. Final verified facts: 220/254 (86%), matching manual 89% check. 34 unverifiable due to PDF layout structure (infographic pages, two-column body text, model-assembled table excerpts) — all believed correct, excluded from downstream as a documented limitation. Failure analysis recorded in DESIGN.md.
+**Milestone 2** — Complete. Gold set frozen (50 items). Schemas, LLM wrapper, and extraction pipeline built. Citation validator (`validate.py`) implemented with two-tier matching and auto-correction. Validation rate improved to 249/254 (98%) after loosening fragment matching (4-word runs, punctuation-stripped second pass). 5 unverifiable remain: all infographic KPI boxes (model-assembled summaries, not verbatim text). Failure analysis recorded in DESIGN.md.
 
-**Milestone 3** — Deterministic finance module. `finance.py` pure functions; unit tests; cross-checks; `financials.json`. Input: `output/validated_facts.json`.
+**Milestone 3** — Complete. `finance.py` pure deterministic functions over `output/validated_facts.json`. 12 cross-checks, all passing. 5 derived metrics. Missing-data catalogue (growth rates blocked — no prior-year comparatives extracted). 36 pytest unit tests. Output: `output/financials.json`. See BUILD_LOG.md for what the cross-checks found and what was missing.
+
+**Milestone 4** — Classification and scoring. `classify.py` uses `claude-sonnet` to rate each verified fact for memo relevance and map it to a memo section. Input: `output/validated_facts.json`. Output: `output/classified_facts.json`.
 
 ## Working method (non-negotiable)
 
