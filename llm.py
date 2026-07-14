@@ -8,9 +8,12 @@ Why tool use instead of "please return JSON"?
 - Tool use forces Claude to return data matching the schema.
 - "Please return JSON" is a suggestion the model can ignore.
 - Tool use failures are parse errors we can catch, not silent garbage.
+
+Model split (decided Milestone 2):
+- claude-haiku-4-5-20251001: extraction tasks (structured reading)
+- claude-sonnet-5: classification and memo generation (analytical judgement)
 """
 
-import json
 import time
 from typing import TypeVar
 
@@ -19,10 +22,31 @@ from pydantic import BaseModel, ValidationError
 
 T = TypeVar("T", bound=BaseModel)
 
-# Pricing per million tokens (Claude 3.5 Sonnet, as of Jul 2026)
-# Update these if the model or pricing changes.
-INPUT_COST_PER_M = 3.00
-OUTPUT_COST_PER_M = 15.00
+# Pricing per million tokens (as of Jul 2026)
+MODEL_PRICING = {
+    "claude-haiku-4-5-20251001": {"input": 0.80, "output": 4.00},
+    "claude-sonnet-5": {"input": 3.00, "output": 15.00},
+}
+# Fallback for unknown models
+DEFAULT_PRICING = {"input": 3.00, "output": 15.00}
+
+# Default models for each task type
+EXTRACTION_MODEL = "claude-haiku-4-5-20251001"
+ANALYSIS_MODEL = "claude-sonnet-5"
+
+
+def get_pricing(model: str) -> dict:
+    """Get per-million-token pricing for a model."""
+    return MODEL_PRICING.get(model, DEFAULT_PRICING)
+
+
+def estimate_cost(n_calls: int, avg_input_tokens: int, avg_output_tokens: int,
+                  model: str) -> float:
+    """Estimate total USD cost for a batch of API calls."""
+    pricing = get_pricing(model)
+    input_cost = (n_calls * avg_input_tokens / 1_000_000) * pricing["input"]
+    output_cost = (n_calls * avg_output_tokens / 1_000_000) * pricing["output"]
+    return input_cost + output_cost
 
 
 def _schema_to_tool(name: str, schema_class: type[BaseModel]) -> dict:
@@ -38,7 +62,7 @@ def call_llm(
     prompt: str,
     schema_class: type[T],
     tool_name: str = "extract",
-    model: str = "claude-sonnet-5",
+    model: str = EXTRACTION_MODEL,
     max_tokens: int = 4096,
     log: list[dict] | None = None,
 ) -> T:
@@ -62,6 +86,7 @@ def call_llm(
     """
     client = anthropic.Anthropic()  # reads ANTHROPIC_API_KEY from env
     tool = _schema_to_tool(tool_name, schema_class)
+    pricing = get_pricing(model)
 
     messages = [{"role": "user", "content": prompt}]
 
@@ -90,8 +115,8 @@ def call_llm(
 
         # Log the call
         usage = response.usage
-        input_cost = (usage.input_tokens / 1_000_000) * INPUT_COST_PER_M
-        output_cost = (usage.output_tokens / 1_000_000) * OUTPUT_COST_PER_M
+        input_cost = (usage.input_tokens / 1_000_000) * pricing["input"]
+        output_cost = (usage.output_tokens / 1_000_000) * pricing["output"]
 
         record = {
             "model": model,
