@@ -14,7 +14,7 @@ Read `DESIGN.md` in full. It is the agreed project design and is the source of t
 
 **Milestone 4** — Complete. `classify.py` uses `claude-sonnet-5` over `validated_facts.json` + `financials.json` (never raw documents). Two-stage pipeline: (1) per-fact classification in batches of 80 (relevance 1–5 + memo section), (2) analytical synthesis over high-relevance facts. Every analytic item cites fact_ids or is flagged inference=True. Actual cost: $0.699. Output: `output/classified_facts.json`. Schema: `schemas/classify.py`.
 
-**Milestone 5** — Memo generation. Use classified_facts.json + financials.json to draft the investment memo in structured sections.
+**Milestone 5** — Complete. `memo.py` generates the ten-section investment memo using only `classified_facts.json` + `financials.json` (never raw documents). Evidence register pre-built (E-001–E-161) from all relevance ≥ 3 facts. Two-call generation strategy (sections 1–5, then 6–8) using `claude-sonnet-5` plain text; sections 9 (evidence table) and 10 (limitations) auto-generated deterministically. Post-generation validator checks every [E-NNN] reference resolves and every financial number matches a permitted source value within 2% tolerance. Actual cost: $0.137. Output: `output/memo.md`, `output/evidence_register.json`. Validation: 0 reference errors, 0 number errors.
 
 ## Working method (non-negotiable)
 

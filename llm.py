@@ -162,3 +162,60 @@ def call_llm(
                 ]
             else:
                 raise  # second attempt failed — let the caller handle it
+
+
+def call_llm_text(
+    prompt: str,
+    model: str = ANALYSIS_MODEL,
+    max_tokens: int = 8192,
+    log: list[dict] | None = None,
+) -> str:
+    """Send a prompt to Claude and get back plain text (no tool use).
+
+    Used for memo generation where the output is free-form markdown prose
+    rather than a schema-constrained JSON object. Quality enforcement is
+    done by the post-generation validator, not by pydantic.
+
+    Args:
+        prompt: The full prompt text.
+        model: Claude model to use.
+        max_tokens: Max tokens in the response.
+        log: If provided, append a call record for the run log.
+
+    Returns:
+        The model's text response as a string.
+    """
+    client = anthropic.Anthropic()
+    pricing = get_pricing(model)
+
+    start = time.time()
+    response = client.messages.create(
+        model=model,
+        max_tokens=max_tokens,
+        messages=[{"role": "user", "content": prompt}],
+    )
+    duration = time.time() - start
+
+    text = ""
+    for block in response.content:
+        if hasattr(block, "text"):
+            text += block.text
+
+    if log is not None:
+        usage = response.usage
+        input_cost = (usage.input_tokens / 1_000_000) * pricing["input"]
+        output_cost = (usage.output_tokens / 1_000_000) * pricing["output"]
+        log.append({
+            "model": model,
+            "tool_name": "text_generation",
+            "attempt": 1,
+            "input_tokens": usage.input_tokens,
+            "output_tokens": usage.output_tokens,
+            "cost_usd": round(input_cost + output_cost, 6),
+            "duration_s": round(duration, 2),
+            "success": True,
+            "error": None,
+            "stop_reason": response.stop_reason,
+        })
+
+    return text

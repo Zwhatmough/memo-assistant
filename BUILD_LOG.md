@@ -86,6 +86,13 @@ All 12 cross-checks passed (0 failures, 0 warns). Key findings:
 - **Analytics produced**: 6 strengths, 11 risks (10 disclosed + 1 inferred — AI disintermediation), 6 value drivers, 4 bull/5 bear points, 7 diligence questions. 3 items flagged inference=True.
 - **Actual cost**: $0.699 (vs $0.357 dry-run estimate — synthesis used more tokens than estimated for the analytical depth).
 
+## 15 Jul 2026 — Milestone 5: two validation failures on first memo generation run
+
+**Found:** Post-generation validator flagged 5 number errors: `75%`, `8,056`, and `£27.3m` could not be matched against permitted source values within 2% tolerance. All references resolved correctly (0 reference errors).
+**Cause:** Two separate bugs in `build_permitted_values`. (1) Non-financial facts (`business_facts`, `risk_disclosures`, etc.) have no numeric `value` field — their label text contains legitimate numbers like "over 75% of minutes" or "8,056 vehicles", but the function only scraped `float(fact["value"])` from `financial_figures`, so those quantities were absent from the permitted set. (2) Cash outflows are stored as negative values (e.g. PPE purchases = −27.3) but the memo writes their magnitude as a positive number (£27.3m), so the tolerance check `abs(val − pv) ≤ max(|pv| × 2%, 0.5)` always failed because `abs(27.3 − (−27.3)) = 54.6 ≫ 0.55`.
+**Fix:** (1) Added a pass that runs `_FINANCIAL_NUMBER_RE` over the `label` and related text fields of every registered fact and adds parsed numbers to permitted values. (2) Added `abs(v)` to permitted values whenever a financial fact is negative. Re-running validation against the existing memo.md (without new API calls) produced 0 reference errors and 0 number errors.
+**Lesson:** A validator that misses legitimate numbers becomes noise, not a guard. The permitted-values set must cover every representation of a source figure that can legitimately appear in prose — both positive magnitudes of negative cash flows and numbers embedded in text-only (non-financial) facts.
+
 ---
 
 *Update this file whenever a real failure is found and fixed. Each entry: Found / Cause / Fix / Lesson.*
