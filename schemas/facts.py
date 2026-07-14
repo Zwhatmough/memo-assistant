@@ -98,9 +98,9 @@ class ExtractedFacts(BaseModel):
     """All facts extracted from a single chunk of text.
 
     This is the schema Claude must return when processing a chunk.
+    chunk_id is set by extract.py after the fact, not by the model.
     """
 
-    chunk_id: str
     financial_figures: list[FinancialFigure] = []
     business_facts: list[BusinessFact] = []
     risk_disclosures: list[RiskDisclosure] = []

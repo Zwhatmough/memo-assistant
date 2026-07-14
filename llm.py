@@ -144,13 +144,20 @@ def call_llm(
                 log.append(record)
 
             if attempt == 0:
-                # Retry: send the error back so Claude can fix it
+                # Retry: after a tool_use block, the API requires the next
+                # user message to contain a tool_result block, not plain text.
                 messages = [
                     {"role": "user", "content": prompt},
                     {"role": "assistant", "content": response.content},
                     {
                         "role": "user",
-                        "content": f"Validation error: {e}. Please fix and try again.",
+                        "content": [
+                            {
+                                "type": "tool_result",
+                                "tool_use_id": tool_block.id,
+                                "content": f"Validation error: {e}. Please call the tool again with corrected output.",
+                            }
+                        ],
                     },
                 ]
             else:

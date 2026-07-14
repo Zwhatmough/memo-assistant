@@ -91,28 +91,37 @@ def _get_page_num(chunk_id: str) -> int | None:
 
 
 def _load_existing_facts(path: str) -> tuple[list[dict], set[int]]:
-    """Load existing facts.json, return (facts_list, set_of_done_pages)."""
+    """Load existing facts.json, return (facts_list, set_of_done_pages).
+
+    A page is only considered "done" if at least one fact cites it.
+    Empty batch results (0 facts) are dropped — they indicate a failed
+    or mis-batched extraction and should be retried.
+    """
     if not os.path.exists(path):
         return [], set()
 
     with open(path) as f:
-        facts = json.load(f)
+        raw = json.load(f)
 
+    facts = []
     done_pages = set()
-    for chunk in facts:
-        # Each chunk result may cover multiple pages (batched).
-        # Look at all source refs to find which pages are covered.
+
+    for chunk in raw:
+        # Collect pages cited by actual facts
+        cited = set()
         for key in ["financial_figures", "business_facts", "risk_disclosures",
                      "strategic_items", "management_commentary"]:
             for item in chunk.get(key, []):
-                src = item.get("source", {})
-                if src.get("page"):
-                    done_pages.add(src["page"])
+                p = item.get("source", {}).get("page")
+                if p:
+                    cited.add(p)
 
-        # Also parse the chunk_id for single-page results
-        pn = _get_page_num(chunk.get("chunk_id", ""))
-        if pn:
-            done_pages.add(pn)
+        # Drop chunks with zero extracted facts — treat as not done
+        if not cited:
+            continue
+
+        facts.append(chunk)
+        done_pages.update(cited)
 
     return facts, done_pages
 
@@ -126,10 +135,31 @@ def _pages_in_memo_sections() -> list[int]:
 
 
 def _make_batches(chunks: list, batch_size: int) -> list[list]:
-    """Group chunks into batches of up to batch_size."""
+    """Group chunks into batches of up to batch_size consecutive pages.
+
+    Only pages that are truly adjacent (page numbers differ by 1) are
+    grouped together. A gap in page numbers starts a new batch, regardless
+    of batch_size. This prevents cross-section batches that confuse the
+    model with non-contiguous text.
+    """
+    if not chunks:
+        return []
+
     batches = []
-    for i in range(0, len(chunks), batch_size):
-        batches.append(chunks[i : i + batch_size])
+    current = [chunks[0]]
+
+    for chunk in chunks[1:]:
+        prev_page = current[-1].page
+        this_page = chunk.page
+        # Start a new batch if pages aren't adjacent or batch is full
+        if this_page != prev_page + 1 or len(current) >= batch_size:
+            batches.append(current)
+            current = [chunk]
+        else:
+            current.append(chunk)
+
+    batches.append(current)
+    return batches
     return batches
 
 
@@ -212,9 +242,10 @@ def run_extraction(pdf_path: str, doc_id: str) -> None:
                 schema_class=ExtractedFacts,
                 tool_name="extract_facts",
                 model=EXTRACTION_MODEL,
+                max_tokens=8192,
                 log=call_log,
             )
-            # Override chunk_id to reflect the batch
+            # chunk_id is not part of the model schema — set it here
             facts_dict = facts.model_dump()
             facts_dict["chunk_id"] = batch_id
 
