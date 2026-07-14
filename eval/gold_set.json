@@ -1,0 +1,365 @@
+{
+  "_instructions": "This is the evaluation gold set. Zak fills every entry manually from the PDFs. Once complete, freeze this file (no further edits). Never tune prompts against it. Each entry must have: claim (the fact/risk/observation/question in plain English), source_doc (which PDF), page (page number in the PDF), excerpt (short quote from the document that supports the claim). For financial figures, include the exact number as reported.",
+
+  "factual_data_points": [
+    {
+      "id": "F-01",
+      "claim": "Group revenue for FY2026 was £624.3m, up 4% from £601.1m in FY2025",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 6,
+      "excerpt": "Group revenue also increased 4% to £624.3m (2025: £601.1m)"
+    },
+    {
+      "id": "F-02",
+      "claim": "Core Autotrader business revenue was £585.3m in FY2026, an increase of 4% on FY2025",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 6,
+      "excerpt": "In the core Autotrader business, we achieved revenues of £585.3m, an increase of 4% on 2025."
+    },
+    {
+      "id": "F-03",
+      "claim": "Autorama contributed revenue of £39.0m in FY2026 (FY2025: £36.3m)",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 6,
+      "excerpt": "with Autorama revenue contributing £39.0m (2025: £36.3m)"
+    },
+    {
+      "id": "F-04",
+      "claim": "Core Autotrader operating profit was £408.0m in FY2026 (FY2025: £394.0m), up 4%, at a 70% operating margin (flat year-on-year)",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 6,
+      "excerpt": "Operating profit in the core Autotrader business was £408.0m (2025: £394.0m), up 4% on last year, with an operating profit margin of 70% (2025: 70%)."
+    },
+    {
+      "id": "F-05",
+      "claim": "Autorama's operating losses reduced to £2.0m in FY2026 from £4.3m in FY2025",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 6,
+      "excerpt": "Autorama saw reduced operating losses of £2.0m (2025: £4.3m)."
+    },
+    {
+      "id": "F-06",
+      "claim": "Group operating profit increased 4% to £392.7m in FY2026 (FY2025: £376.8m), with the operating margin flat at 63%",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 6,
+      "excerpt": "Group operating profit increased by 4% to £392.7m (2025: £376.8m) ... Group operating profit margin remained consistent at 63% (2025: 63%)."
+    },
+    {
+      "id": "F-07",
+      "claim": "Basic earnings per share increased 8% to 34.17p in FY2026 (FY2025: 31.66p)",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 6,
+      "excerpt": "Basic earnings per share increased 8% to 34.17p (2025: 31.66p)."
+    },
+    {
+      "id": "F-08",
+      "claim": "The proposed final dividend is 7.8p per share, giving total dividends of 11.6p per share for FY2026 (FY2025: 10.6p)",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 6,
+      "excerpt": "We are proposing a final dividend of 7.8 pence per share (2025: 7.1 pence per share) giving total dividends of 11.6 pence per share for the year (2025: 10.6 pence per share)."
+    },
+    {
+      "id": "F-09",
+      "claim": "The company bought back 58.5 million shares in FY2026, 6.6% of issued share capital",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 6,
+      "excerpt": "we have accelerated our share buyback programme, purchasing 58.5 million shares in the year, 6.6% of issued share capital"
+    },
+    {
+      "id": "F-10",
+      "claim": "At year end £165m of the debt facility was drawn, taking leverage to 0.3x (FY2025: 0.0x net bank debt to EBITDA)",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 6,
+      "excerpt": "At year end we had drawn £165m of our debt facility, increasing leverage up to 0.3x."
+    },
+    {
+      "id": "F-11",
+      "claim": "Total returns to shareholders (buybacks plus dividends) were £463.2m in FY2026 (FY2025: £275.7m)",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 6,
+      "excerpt": "Combined with dividends we have returned £463.2m (2025: £275.7m) to shareholders."
+    },
+    {
+      "id": "F-12",
+      "claim": "For 2027 the company expects to return £600m to shareholders, including c.£500m of buybacks, increasing leverage to c.1.0x",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 6,
+      "excerpt": "in 2027 we currently expect to return £600m to shareholders. This will be through purchasing c.£500m of shares ... this would increase leverage to c.1.0x"
+    },
+    {
+      "id": "F-13",
+      "claim": "Cash generated from operations increased to £418.0m in FY2026 (FY2025: £399.7m)",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 23,
+      "excerpt": "Cash generated from operations increased to £418.0m (2025: £399.7m) predominantly due to the increase in operating profit."
+    },
+    {
+      "id": "F-14",
+      "claim": "Net cash generated from operating activities was £322.8m in FY2026 (FY2025: £304.6m)",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 25,
+      "excerpt": "Net cash generated from operating activities was £322.8m (2025: £304.6m)."
+    },
+    {
+      "id": "F-15",
+      "claim": "The average number of retailer forecourts advertising on the platform declined 0.5% to 13,942 in FY2026 (FY2025: 14,013)",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 23,
+      "excerpt": "The average number of retailer forecourts advertising on our platform declined 0.5% to 13,942 (2025: 14,013)."
+    },
+    {
+      "id": "F-16",
+      "claim": "Average revenue per retailer (ARPR) per month increased 5%, or £141, to £2,995 in FY2026 (FY2025: £2,854), driven by the product and price levers",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 23,
+      "excerpt": "Average revenue per retailer ('ARPR') per month increased by 5% to £2,995 (2025: £2,854). ARPR growth was driven by the product and price levers"
+    },
+    {
+      "id": "F-17",
+      "claim": "Average monthly cross-platform visits were 81.7 million in FY2026, marginally up from 81.6 million in FY2025",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 20,
+      "excerpt": "81.7m 81.6m 77.5m 69.6m 2026 2025 2024 2023 (cross-platform visits KPI chart)"
+    },
+    {
+      "id": "F-18",
+      "claim": "Profit for the year attributable to equity holders was £293.9m in FY2026 (FY2025: £282.6m)",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 103,
+      "excerpt": "Profit for the year attributable to equity holders of the parent 293.9 282.6"
+    },
+    {
+      "id": "F-19",
+      "claim": "At 31 March 2026 the Group had net bank debt of £146.8m (31 March 2025: net cash of £15.3m), having drawn £165.0m of its syndicated RCF",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 25,
+      "excerpt": "As at 31 March 2026, the Group had net bank debt of £146.8m (31 March 2025: net cash of £15.3m). At the year end, the Group had drawn £165.0m of its Syndicated RCF (31 March 2025: £nil)"
+    },
+    {
+      "id": "F-20",
+      "claim": "Calls on the Group's technology and data services increased to an average of 155 million per month in FY2026 (FY2025: 91 million)",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 7,
+      "excerpt": "The number of calls on these technology and data services increased to an average of 155 million per month (2025: 91 million)"
+    }
+  ],
+
+  "key_risks": [
+    {
+      "id": "R-01",
+      "claim": "Macro risks: wars, geopolitical tensions, inflation, supply disruption and higher financing costs could weaken retailer profitability and consumer demand",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 47,
+      "excerpt": "can lead to supply chain disruption, trade tensions, inflation and heightened finance costs for both retailers and consumers. These risks have an impact on retailer profitability, and consumer demand"
+    },
+    {
+      "id": "R-02",
+      "claim": "Automotive economy and market environment: changes in vehicle supply/demand, higher retailer costs and elevated interest rates could reduce retailer profitability, advertising spend and consumer demand",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 48,
+      "excerpt": "Higher operating costs and interest rates could also affect retailer profitability and reduce their advertising spend with Autotrader. High cost of living and interest rates could affect car buyers' ability to afford a change of vehicle, affecting demand."
+    },
+    {
+      "id": "R-03",
+      "claim": "Legal and regulatory compliance: expansion into finance, leasing, online transactions and data-led products increases exposure to FCA, consumer-protection, privacy and competition regulation",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 49,
+      "excerpt": "Failure to comply with legal and regulatory requirements could lead to reputational damage, financial or criminal penalties and impact on our ability to execute our strategic objectives."
+    },
+    {
+      "id": "R-04",
+      "claim": "Competition: large technology companies, social platforms and AI agents could disrupt the customer journey or disintermediate the marketplace, reducing the value of paid prominence",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 49,
+      "excerpt": "Risks include: AI being used to disintermediate marketplaces like Autotrader; and AI being used to direct consumers directly to relevant adverts, negating the need for retailers to purchase prominence."
+    },
+    {
+      "id": "R-05",
+      "claim": "IT systems and cyber security: a cyberattack, data breach or prolonged platform interruption could prevent customers accessing the marketplace and damage trust",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 50,
+      "excerpt": "As a digital business, we rely on our IT infrastructure to provide our services. A disruptive cyber security and/or business continuity incident could lead to downtime of our systems"
+    },
+    {
+      "id": "R-06",
+      "claim": "Employees: the business depends on attracting, retaining and motivating people with specialist product, technology, data and commercial skills, during a year of substantial organisational change",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 47,
+      "excerpt": "Our employees are crucial to the success of Autotrader. The last year has involved lots of change and it has been a challenging time for our employees."
+    },
+    {
+      "id": "R-07",
+      "claim": "Brand and reputation: negative publicity, fraud, misleading advertisements or poor customer experiences could weaken trust and reduce audience and revenue",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 51,
+      "excerpt": "Our brand is one of our biggest assets. Our research shows that we are the largest and most trusted automotive classified brand in the UK. Failure to maintain and protect our brand"
+    },
+    {
+      "id": "R-08",
+      "claim": "Failure to innovate continuously and responsibly: the company could lose relevance if it fails to adapt to AI, new consumer behaviour, digital transactions and changing retailer requirements",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 51,
+      "excerpt": "Should we fail to innovate our business and product offerings, we could lose relevance with our key stakeholders, including consumers and customers."
+    },
+    {
+      "id": "R-09",
+      "claim": "Climate change: the ICE-to-EV transition, changing policy, extreme weather and environmental obligations could alter buyer behaviour and increase costs",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 52,
+      "excerpt": "Failure to deliver on our environmental commitments could affect our reputation as a responsible business. The shift from internal combustion engines ('ICE') to electric vehicles ('EVs') could prompt changes to car buyer behaviour"
+    },
+    {
+      "id": "R-10",
+      "claim": "Reliance on third parties and partners: failure by a critical cloud, technology, data or finance partner could affect platform availability, product quality, compliance or customer service",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 52,
+      "excerpt": "We monitor the performance of partners and suppliers to ensure continued quality and uptime."
+    }
+  ],
+
+  "business_observations": [
+    {
+      "id": "O-01",
+      "claim": "ARPR growth is masking pressure in the retailer base: ARPR rose 5% to £2,995 while retailer forecourts declined, so revenue growth is driven by monetisation of remaining retailers rather than customer expansion — sustainable only while customers accept price and product increases",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 23,
+      "excerpt": "The average number of retailer forecourts advertising on our platform declined 0.5% to 13,942 (2025: 14,013). Average revenue per retailer ('ARPR') per month increased by 5% to £2,995 (2025: £2,854)."
+    },
+    {
+      "id": "O-02",
+      "claim": "The Deal Builder rollout exposed execution risk in digital retailing: management met retailer resistance to the speed and nature of the rollout, showing that B2B product adoption depends on change management as much as product quality",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 7,
+      "excerpt": "the more difficult cost-related trading conditions and concerns with the speed and nature of our Deal Builder product roll-out. Average retailer forecourts advertising with us for the year decreased by 0.5% to 13,942 (2025: 14,013)"
+    },
+    {
+      "id": "O-03",
+      "claim": "Auto Trader is evolving from a listings marketplace into embedded infrastructure: technology and data-service calls rose from 91m to 155m per month, increasing switching costs and making reliability and partner management more strategically important",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 7,
+      "excerpt": "The number of calls on these technology and data services increased to an average of 155 million per month (2025: 91 million), demonstrating the embedded nature of this data into many customer systems"
+    },
+    {
+      "id": "O-04",
+      "claim": "The accelerated buyback creates a more leveraged equity story: the company moved from net cash to net debt and intends to lever to c.1.0x to fund returns, which is rational while cash generation is strong but reduces balance-sheet flexibility during a period of AI disruption and slower growth",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 6,
+      "excerpt": "At year end we had drawn £165m of our debt facility, increasing leverage up to 0.3x. ... this would increase leverage to c.1.0x"
+    },
+    {
+      "id": "O-05",
+      "claim": "EPS growth increasingly reflects capital structure as well as operating growth: revenue and operating profit each rose c.4% while basic EPS rose 8%, the difference largely reflecting the buyback-driven reduction in share count",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 6,
+      "excerpt": "Group operating profit increased by 4% to £392.7m (2025: £376.8m) ... Basic earnings per share increased 8% to 34.17p (2025: 31.66p)."
+    },
+    {
+      "id": "O-06",
+      "claim": "AI is both a product opportunity and a distribution threat: proprietary data gives Auto Trader an advantage in AI products, but generative AI assistants could become a new customer-acquisition layer that reduces direct traffic or the value of paid prominence",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 49,
+      "excerpt": "AI being used to disintermediate marketplaces like Autotrader; and AI being used to direct consumers directly to relevant adverts, negating the need for retailers to purchase prominence"
+    },
+    {
+      "id": "O-07",
+      "claim": "Direct traffic is a major competitive advantage: over 80% of visits arrive direct via app, URL or branded search, reducing customer-acquisition dependence and supporting margins — the key uncertainty is whether this persists as commercial searches shift to AI assistants",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 7,
+      "excerpt": "over 80% of our visits were either direct to our mobile apps, direct to our URL or through searches for 'Autotrader'"
+    },
+    {
+      "id": "O-08",
+      "claim": "Engagement quality deserves more attention than visit growth: visits edged up to 81.7m per month but total monthly minutes declined from 557m to 548m — possibly benign efficiency, possibly weaker engagement depth",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 20,
+      "excerpt": "548m 557m 553m 514m 2026 2025 2024 2023 (cross-platform minutes KPI chart)"
+    },
+    {
+      "id": "O-09",
+      "claim": "Employee engagement is a potentially material execution warning: employees proud to work at Auto Trader fell from 91% to 72% during restructuring and leadership change — given reliance on technology and data talent, prolonged cultural weakness could impair innovation and retention",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 39,
+      "excerpt": "In our most recent annual confidential survey 72% of colleagues agreed or strongly agreed with the statement 'I am proud to work for Autotrader' (2025: 91%)."
+    },
+    {
+      "id": "O-10",
+      "claim": "The marketplace position gives optionality beyond advertising — audience, proprietary vehicle data, retailer integrations, finance connections and transaction data create opportunities in digital retailing, finance, software and data services, but pursuing all simultaneously increases product, regulatory and execution complexity",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 9,
+      "excerpt": "We believe doing so will drive long-term value for buyers, our retailer customers and Autotrader, whilst being difficult for others to replicate."
+    }
+  ],
+
+  "diligence_questions": [
+    {
+      "id": "Q-01",
+      "claim": "What proportion of the decline in retailer forecourts was caused by business closures or market conditions, and what proportion was directly attributable to pricing, product changes or dissatisfaction with Deal Builder?",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 7,
+      "excerpt": "the more difficult cost-related trading conditions and concerns with the speed and nature of our Deal Builder product roll-out. Average retailer forecourts advertising with us for the year decreased by 0.5% to 13,942 (2025: 14,013) and were 236/1.7% lower in the second half."
+    },
+    {
+      "id": "Q-02",
+      "claim": "How much additional ARPR growth can be delivered through price increases before customer churn or reduced package uptake outweighs the revenue benefit?",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 23,
+      "excerpt": "Average revenue per retailer ('ARPR') per month increased by 5% to £2,995 (2025: £2,854). ARPR growth was driven by the product and price levers"
+    },
+    {
+      "id": "Q-03",
+      "claim": "What incremental revenue, retention or conversion benefit does Deal Builder generate per retailer, and how does this compare with the cost of implementation, support and integration?",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 9,
+      "excerpt": "which has always been at the core of our Deal Builder proposition. We believe doing so will drive long-term value for buyers, our retailer customers and Autotrader ... During the year we recognised the need to change both our approach and aspects of the"
+    },
+    {
+      "id": "Q-04",
+      "claim": "Why did cross-platform minutes decline despite stable visits, and what happened to enquiries, conversion rates and revenue per visit over the same period?",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 20,
+      "excerpt": "81.7m 81.6m 77.5m 69.6m 2026 2025 2024 2023 548m 557m 553m 514m 2026 2025 2024 2023 (cross-platform visits and minutes KPI charts)"
+    },
+    {
+      "id": "Q-05",
+      "claim": "What operating or market scenarios would cause management to reduce or pause the planned c.£500m FY2027 share-buyback programme?",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 6,
+      "excerpt": "in 2027 we currently expect to return £600m to shareholders. This will be through purchasing c.£500m of shares ... this would increase leverage to c.1.0x"
+    },
+    {
+      "id": "Q-06",
+      "claim": "If consumers increasingly begin vehicle searches through AI agents, how will Auto Trader preserve direct customer relationships and monetise traffic that does not begin on its own platform?",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 49,
+      "excerpt": "AI being used to disintermediate marketplaces like Autotrader; and AI being used to direct consumers directly to relevant adverts, negating the need for retailers to purchase prominence"
+    },
+    {
+      "id": "Q-07",
+      "claim": "Which datasets are truly exclusive to Auto Trader, and how difficult would it be for competitors, manufacturers, lenders or large technology companies to recreate them?",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 9,
+      "excerpt": "We believe doing so will drive long-term value for buyers, our retailer customers and Autotrader, whilst being difficult for others to replicate."
+    },
+    {
+      "id": "Q-08",
+      "claim": "Management states that high-intent leads convert at roughly twice the average rate — is this based on controlled testing, and does the uplift persist after adjusting for buyer type and vehicle quality?",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 9,
+      "excerpt": "We are committed to delivering more, higher quality enquiries, that convert at double the rate into sales for our customers"
+    },
+    {
+      "id": "Q-09",
+      "claim": "What were the primary causes of the decline in employee engagement from 91% to 72%, and what indicators will management use to establish whether morale and retention are recovering?",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 39,
+      "excerpt": "In our most recent annual confidential survey 72% of colleagues agreed or strongly agreed with the statement 'I am proud to work for Autotrader' (2025: 91%)."
+    },
+    {
+      "id": "Q-10",
+      "claim": "What financial, operational or product changes could arise from the CMA investigation into online reviews, and are any revenue streams materially dependent on review or consumer-interface practices that regulators may challenge?",
+      "source_doc": "at-ar-fy26.pdf",
+      "page": 49,
+      "excerpt": "In March 2026 the CMA announced an investigation into online reviews across a number of companies, including Autotrader and our third party moderator, Feefo."
+    }
+  ]
+}

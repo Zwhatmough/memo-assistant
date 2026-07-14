@@ -6,9 +6,11 @@ Read `DESIGN.md` in full. It is the agreed project design and is the source of t
 
 ## Current status
 
-**Milestone 1** — Ingestion + extraction spike. Goal: test pdfplumber text and table extraction on the Auto Trader FY2026 annual report (in `documents/`), focusing on the financial statements pages, and retire or re-plan the table-extraction risk before building any pipeline code.
+**Milestone 1** — Complete. pdfplumber spike confirmed `extract_text()` works cleanly on all financial statements; `extract_tables()` fails (no borders). Decision recorded in DESIGN.md decision log.
 
-Update this section as milestones complete.
+**Milestone 2** — Gold set + fact extraction. Two parts:
+- **Part 1 (in progress):** Zak manually builds and freezes `eval/gold_set.json` (20 facts, 10 risks, 10 observations, 10 questions) from the PDFs. Template created; awaiting Zak's entries.
+- **Part 2 (blocked on Part 1):** Design pydantic fact schemas, thin `llm.py` wrapper, and run Claude fact extraction with citations on the annual report.
 
 ## Working method (non-negotiable)
 
