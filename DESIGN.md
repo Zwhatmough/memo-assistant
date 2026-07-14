@@ -210,3 +210,4 @@ Each of these will come up in interviews; we cover them as they arise in the rel
 | Retrieval/vector DB | None in V1 | Proposed — confirm at review |
 | Document set | FY2026 AR + FY2026 results presentation (+ optional H1 FY26) | Proposed — confirm at review |
 | Eval gold-set timing | Built and frozen in Milestone 2, before prompt tuning | Proposed — confirm at review |
+| PDF table extraction | Use `extract_text()` only, not `extract_tables()`. pdfplumber table detection fails on Auto Trader statements (1-column output, no labels, missing comparative year) because pages lack explicit ruled borders. Text extraction is clean on all four primary statements including the 8-column Changes in Equity. Claude parses tabular structure from text in Stage 3. Risk §10.1 retired. | Confirmed 14 Jul 2026 |
