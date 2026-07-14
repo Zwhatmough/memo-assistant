@@ -61,6 +61,31 @@ All 12 cross-checks passed (0 failures, 0 warns). Key findings:
 - Autorama segment revenue growth — prior-year figure (£36.3m) is in the excerpt text but wasn't extracted as a separate fact
 - Full free cash flow — capitalised software/intangible additions not in extracted facts (only PPE purchases: −£27.3m)
 
+## 15 Jul 2026 — Milestone 3 extension: prior-year values from excerpt text
+
+**Found:** Growth rate calculations for the 5 key metrics (group revenue, core revenue, operating profit, ARPR, Autorama) were blocked because FY2025 comparatives weren't extracted as separate facts. But they were hiding in plain sight inside verified excerpts as "(2025: £601.1m)" patterns.
+**Cause:** The extraction model correctly captured the FY2026 headline value but left the prior-year parenthetical in the excerpt string rather than extracting it as a second fact.
+**Fix:** `prior_year.py` — a deterministic regex parser that scans all verified excerpt strings for `(YYYY: VALUE)` patterns, inherits the parent fact's unit and citation, and applies sign inheritance for loss facts (e.g. "Autorama operating loss" parent is -2.0, so prior-year "£4.3m" → -4.3). 38 prior-year facts extracted from 249 verified facts.
+**Lesson:** Verified excerpts are a rich secondary source for prior-year data. The verification step ("this excerpt appears verbatim on page X") doubles as provenance for any structured data embedded within the excerpt.
+
+## 15 Jul 2026 — Milestone 4: first classification call returned empty tool block
+
+**Found:** `call_llm` with 249 facts in one JSON blob returned a pydantic `ValidationError: classifications field required, input_value={}` — the model invoked the tool with an empty object.
+**Cause:** The prompt was too long (249 facts × ~50 tokens = ~12,500 tokens of dense JSON). The model ran out of usable context for generating the schema-constrained response and returned an empty call rather than a partial one.
+**Fix:** Batched classification to 80 facts per call (4 classification batches + 1 synthesis call). The compressed JSON format (no indentation) helps token efficiency within each batch; the schema is still enforced by tool use.
+**Lesson:** Schema-constrained tool calls have an implicit output token budget. With 249 facts × ~20 tokens per classification = ~5,000 output tokens, the model needs headroom in a single call. Batching is the right fix: not just for cost, but for reliability.
+
+## 15 Jul 2026 — Milestone 4: what the classification found
+
+- **31 facts rated relevance 5** (headline): revenue, margins, ARPR, EPS, cash conversion, Autorama operating loss, key KPIs, D&B scale, Amazon threat, leverage.
+- **69 facts rated relevance 4** (supporting): segment breakdown, operating profit bridge, shareholder returns, risk disclosures, strategic commentary.
+- **61 facts rated relevance 3** (contextual): operating cost lines, employee metrics, stock volume data.
+- **75 facts rated relevance 2** (peripheral): minor P&L lines, accounting details.
+- **13 facts rated relevance 1** (excluded): governance notes, boilerplate.
+- **161 facts passed to synthesis** (relevance ≥ 3).
+- **Analytics produced**: 6 strengths, 11 risks (10 disclosed + 1 inferred — AI disintermediation), 6 value drivers, 4 bull/5 bear points, 7 diligence questions. 3 items flagged inference=True.
+- **Actual cost**: $0.699 (vs $0.357 dry-run estimate — synthesis used more tokens than estimated for the analytical depth).
+
 ---
 
 *Update this file whenever a real failure is found and fixed. Each entry: Found / Cause / Fix / Lesson.*

@@ -17,6 +17,8 @@ import os
 from dataclasses import dataclass, asdict, field
 from typing import Optional
 
+from prior_year import extract_prior_year_facts
+
 # ── Tolerances ─────────────────────────────────────────────────────────────────
 
 # Rounding in published accounts typically introduces ±0.1–0.2 residuals.
@@ -62,11 +64,14 @@ class MissingData:
 
 # ── Fact loading ───────────────────────────────────────────────────────────────
 
-def load_verified_facts(path: str) -> list[dict]:
-    """Load validated_facts.json and return only verified/corrected financial figures.
+def load_verified_facts(path: str) -> tuple[list[dict], list[dict]]:
+    """Load validated_facts.json. Returns (verified_figures, raw_chunks).
 
-    Unverifiable facts are excluded — their citations couldn't be confirmed
-    so they should not be used in calculations.
+    verified_figures: flattened list of financial_figure dicts with
+        citation_status 'verified' or 'corrected'. Used for cross-checks
+        and derived metrics.
+    raw_chunks: the original chunk list, passed to extract_prior_year_facts()
+        so the prior-year parser can scan all excerpt text.
     """
     with open(path) as f:
         chunks = json.load(f)
@@ -76,7 +81,7 @@ def load_verified_facts(path: str) -> list[dict]:
         for fig in chunk.get("financial_figures", []):
             if fig.get("citation_status") in ("verified", "corrected"):
                 facts.append(fig)
-    return facts
+    return facts, chunks
 
 
 def find_fact(
@@ -585,45 +590,63 @@ def calc_arpr_implied_retailer_revenue(facts: list[dict]) -> DerivedMetric:
     )
 
 
+# ── Growth rate derived metrics (require prior-year facts) ─────────────────────
+
+def _growth_pct(current: Optional[float], prior: Optional[float]) -> Optional[float]:
+    """YoY growth rate as a percentage. Returns None if either input is missing or prior is 0."""
+    if current is None or prior is None or prior == 0:
+        return None
+    return round((current - prior) / abs(prior) * 100, 1)
+
+
+def calc_growth_metric(
+    name: str,
+    label_contains: str,
+    facts: list[dict],
+    prior_facts: list[dict],
+    unit: str,
+    note: str = "",
+) -> DerivedMetric:
+    """Generic YoY growth rate from current and prior-year fact lookups.
+
+    current_period_contains is always "2026"; prior is always "2025".
+    Unit is inherited for display; growth rate is in percentage points.
+    """
+    # Apply unit filter to disambiguate e.g. "operating profit" from "operating profit margin"
+    unit_filter = unit if unit not in ("%", "count", "GBP") else None
+    current = find_fact(facts, label_contains, "2026", unit_contains=unit_filter)
+    prior = find_fact(prior_facts, label_contains, "2025", unit_contains=unit_filter)
+
+    growth = _growth_pct(current, prior)
+    result = growth if growth is not None else 0.0
+
+    if current is None:
+        note_extra = "Current-year value not found in verified facts."
+    elif prior is None:
+        note_extra = "Prior-year value not found — not parsed from excerpts."
+    else:
+        note_extra = f"FY2025: {prior} {unit} → FY2026: {current} {unit}."
+    full_note = (note_extra + " " + note).strip()
+
+    return DerivedMetric(
+        name=name,
+        formula="(FY2026 − FY2025) / |FY2025| × 100",
+        inputs={"fy2026": current, "fy2025": prior},
+        result=result,
+        unit="%",
+        note=full_note,
+    )
+
+
 # ── Missing data catalogue ─────────────────────────────────────────────────────
 
-def identify_missing_data(facts: list[dict]) -> list[MissingData]:
-    """List calculations that are blocked by missing facts.
+def identify_missing_data(prior_facts: list[dict]) -> list[MissingData]:
+    """List calculations still blocked after prior-year extraction.
 
-    This is honest accounting of what the pipeline cannot produce, so the
-    memo writer knows which numbers are unavailable rather than silently absent.
+    After prior_year.py runs, most growth metrics become available. What
+    remains missing is documented here so the memo writer knows the gaps.
     """
     missing = []
-
-    # Growth rates require prior-year comparatives
-    rev_2025 = find_fact(facts, "group revenue", "2025")
-    if rev_2025 is None:
-        missing.append(MissingData(
-            name="Revenue Growth Rate (YoY)",
-            reason=(
-                "No FY2025 group revenue figure was extracted. The annual report contains "
-                "prior-year comparatives in the financial statements, but the extraction "
-                "scope (MEMO_SECTIONS in extract.py) did not capture them as separate facts."
-            ),
-            facts_needed=["Group Revenue FY2025"],
-        ))
-
-    op_2025 = find_fact(facts, "group operating profit", "2025")
-    if op_2025 is None:
-        missing.append(MissingData(
-            name="Operating Profit Growth Rate (YoY)",
-            reason="No FY2025 operating profit extracted. Same cause as revenue growth.",
-            facts_needed=["Group Operating Profit FY2025"],
-        ))
-
-    missing.append(MissingData(
-        name="ARPR Growth Rate (YoY)",
-        reason=(
-            "ARPR FY2025 not extracted. Comparable figure (£2,633/month in FY2025) "
-            "can be derived from the annual report's KPI table but was not captured."
-        ),
-        facts_needed=["Average Revenue Per Retailer FY2025"],
-    ))
 
     missing.append(MissingData(
         name="Full Free Cash Flow",
@@ -635,16 +658,18 @@ def identify_missing_data(facts: list[dict]) -> list[MissingData]:
         facts_needed=["Capitalised software / intangible additions FY2026"],
     ))
 
-    missing.append(MissingData(
-        name="Autorama Segment Revenue Growth",
-        reason=(
-            "Autorama FY2025 revenue not extracted as a financial figure fact. "
-            "The excerpt 'with Autorama revenue contributing £39.0m (2025: £36.3m)' "
-            "contains the prior year in parentheses but the model extracted only the "
-            "headline value."
-        ),
-        facts_needed=["Autorama Revenue FY2025 (= £36.3m, visible in source excerpt)"],
-    ))
+    # Check whether EPS growth is now computable
+    prior_eps = find_fact(prior_facts, "basic earnings per share", "2025")
+    if prior_eps is None:
+        missing.append(MissingData(
+            name="Basic EPS Growth Rate (YoY)",
+            reason=(
+                "FY2025 EPS not present in any verified excerpt — the EPS row in the "
+                "annual report does not include a prior-year comparative in the form "
+                "'(2025: Xp)'. Prior-year EPS must be obtained from the FY2025 annual report."
+            ),
+            facts_needed=["Basic EPS FY2025"],
+        ))
 
     return missing
 
@@ -674,12 +699,59 @@ DERIVED_METRIC_FUNCTIONS = [
     calc_arpr_implied_retailer_revenue,
 ]
 
+# Growth metrics computed using prior-year facts from prior_year.py.
+# Each tuple: (display_name, label_fragment, unit, explanatory_note)
+GROWTH_METRIC_SPECS = [
+    ("Group Revenue Growth (YoY)", "group revenue", "£m",
+     "Group includes Autotrader + Autorama."),
+    ("Autotrader Core Revenue Growth (YoY)", "autotrader revenue", "£m",
+     "Core digital marketplace only."),
+    ("Group Operating Profit Growth (YoY)", "group operating profit", "£m",
+     "Stated +4% in the annual report."),
+    ("Autotrader Operating Profit Growth (YoY)", "autotrader operating profit", "£m",
+     "Core operating profit excl. central costs and Autorama."),
+    ("ARPR Growth (YoY)", "average revenue per retailer", "GBP",
+     "ARPR is the key pricing KPI — revenue per retailer per month."),
+    ("Autorama Revenue Growth (YoY)", "autorama revenue", "£m",
+     "Autorama is growing revenue but still at operating loss."),
+    ("Group PBT Growth (YoY)", "group profit before tax", "£m", ""),
+    ("Cash from Operations Growth (YoY)", "cash generated from operations", "£m", ""),
+]
 
-def run_all(facts: list[dict]) -> dict:
-    """Run all cross-checks and derived metrics. Return a structured summary."""
+
+def run_all(facts: list[dict], validated_chunks: list[dict]) -> dict:
+    """Run all cross-checks, derived metrics, and growth rates.
+
+    Args:
+        facts: flattened list of verified financial_figure dicts
+        validated_chunks: raw chunks from validated_facts.json
+                          (needed to extract prior-year facts)
+    """
+    prior_facts = extract_prior_year_facts(validated_chunks)
+
     checks = [fn(facts) for fn in CROSS_CHECK_FUNCTIONS]
     metrics = [fn(facts) for fn in DERIVED_METRIC_FUNCTIONS]
-    missing = identify_missing_data(facts)
+
+    growth_metrics = [
+        calc_growth_metric(name, label, facts, prior_facts, unit, note)
+        for name, label, unit, note in GROWTH_METRIC_SPECS
+    ]
+
+    # ARPR absolute increase: stated as "£141" in the report
+    arpr_26 = find_fact(facts, "average revenue per retailer", "2026")
+    arpr_25 = find_fact(prior_facts, "average revenue per retailer", "2025")
+    if arpr_26 and arpr_25:
+        arpr_abs = DerivedMetric(
+            name="ARPR Absolute Increase (£/month)",
+            formula="ARPR FY2026 − ARPR FY2025",
+            inputs={"arpr_fy2026": arpr_26, "arpr_fy2025": arpr_25},
+            result=round(arpr_26 - arpr_25, 0),
+            unit="£/month",
+            note="Stated as '£141 increase' in the annual report.",
+        )
+        growth_metrics.append(arpr_abs)
+
+    missing = identify_missing_data(prior_facts)
 
     passes = sum(1 for c in checks if c.status == "pass")
     fails = sum(1 for c in checks if c.status == "fail")
@@ -691,13 +763,14 @@ def run_all(facts: list[dict]) -> dict:
             "passed": passes,
             "failed": fails,
             "warned": warns,
+            "prior_year_facts_extracted": len(prior_facts),
             "note": (
                 "Warn = stated value not in extracted facts; arithmetic still performed. "
                 "Fail = stated value found but arithmetic doesn't reconcile within tolerance."
             ),
         },
         "cross_checks": [asdict(c) for c in checks],
-        "derived_metrics": [asdict(m) for m in metrics],
+        "derived_metrics": [asdict(m) for m in metrics + growth_metrics],
         "missing_data": [asdict(m) for m in missing],
     }
 
@@ -717,6 +790,7 @@ def print_report(result: dict) -> None:
     print(f"  PASS:      {meta['passed']}")
     print(f"  FAIL:      {meta['failed']}")
     print(f"  WARN:      {meta['warned']}  (stated value missing from facts)")
+    print(f"Prior-year facts extracted: {meta.get('prior_year_facts_extracted', '—')}")
 
     if meta["failed"]:
         print(f"\n{'─'*width}")
@@ -729,10 +803,9 @@ def print_report(result: dict) -> None:
                 print(f"    Note:       {c['note']}")
 
     print(f"\n{'─'*width}")
-    print("DERIVED METRICS:")
+    print("DERIVED METRICS (incl. growth rates):")
     for m in metrics:
         print(f"  {m['name']}: {m['result']} {m['unit']}")
-        print(f"    {m['formula']}")
         if m["note"]:
             print(f"    Note: {m['note']}")
 
@@ -750,10 +823,10 @@ def main():
     args = parser.parse_args()
 
     print(f"Loading facts from {args.facts}...")
-    facts = load_verified_facts(args.facts)
+    facts, chunks = load_verified_facts(args.facts)
     print(f"  {len(facts)} verified/corrected financial figures loaded")
 
-    result = run_all(facts)
+    result = run_all(facts, chunks)
     print_report(result)
 
     os.makedirs("output", exist_ok=True)

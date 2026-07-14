@@ -10,9 +10,11 @@ Read `DESIGN.md` in full. It is the agreed project design and is the source of t
 
 **Milestone 2** — Complete. Gold set frozen (50 items). Schemas, LLM wrapper, and extraction pipeline built. Citation validator (`validate.py`) implemented with two-tier matching and auto-correction. Validation rate improved to 249/254 (98%) after loosening fragment matching (4-word runs, punctuation-stripped second pass). 5 unverifiable remain: all infographic KPI boxes (model-assembled summaries, not verbatim text). Failure analysis recorded in DESIGN.md.
 
-**Milestone 3** — Complete. `finance.py` pure deterministic functions over `output/validated_facts.json`. 12 cross-checks, all passing. 5 derived metrics. Missing-data catalogue (growth rates blocked — no prior-year comparatives extracted). 36 pytest unit tests. Output: `output/financials.json`. See BUILD_LOG.md for what the cross-checks found and what was missing.
+**Milestone 3** — Complete. `finance.py` pure deterministic functions over `output/validated_facts.json`. 12 cross-checks, all passing. 5 derived metrics + 9 growth rate metrics (all formerly blocked). `prior_year.py` deterministic parser extracts 38 prior-year facts from verified excerpts — no API calls. 63 pytest unit tests total (36 finance + 27 prior_year). Missing-data catalogue: only FCF and EPS growth still blocked. Output: `output/financials.json`, `output/prior_year_facts.json`. See BUILD_LOG.md for findings.
 
-**Milestone 4** — Classification and scoring. `classify.py` uses `claude-sonnet` to rate each verified fact for memo relevance and map it to a memo section. Input: `output/validated_facts.json`. Output: `output/classified_facts.json`.
+**Milestone 4** — Complete. `classify.py` uses `claude-sonnet-5` over `validated_facts.json` + `financials.json` (never raw documents). Two-stage pipeline: (1) per-fact classification in batches of 80 (relevance 1–5 + memo section), (2) analytical synthesis over high-relevance facts. Every analytic item cites fact_ids or is flagged inference=True. Actual cost: $0.699. Output: `output/classified_facts.json`. Schema: `schemas/classify.py`.
+
+**Milestone 5** — Memo generation. Use classified_facts.json + financials.json to draft the investment memo in structured sections.
 
 ## Working method (non-negotiable)
 
