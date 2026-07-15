@@ -107,6 +107,15 @@ First run of the evaluation harness against the frozen gold set. Automated score
 
 **Risk coverage caveats added:** Keyword matching uses 8-char stem prefixes (handles morphological variants like 'disintermediate' → 'disintermediation') but is vulnerable to context-blind false positives (e.g., "consumer" matches in an AI-behavior context when the gold risk is about consumer demand). The scoring sheet (eval/scoring_sheet.md Part C) asks Zak to verify each automated COVERED result.
 
+## 15 Jul 2026 — Milestone 6 (Polish): Streamlit app and README
+
+No failures during this milestone. Key decisions:
+
+- **`app.py`** — single-file Streamlit review app; `@st.cache_data` keeps all JSON loaded once per session; excerpt lookup built from `validated_facts.json` using the `{chunk_id}__{category}__{index}` key scheme that matches `classified_facts.json`'s `id` field. No database, no back-end. Explainable to a non-engineer.
+- **README.md** — drafted following DESIGN.md portfolio spec: problem, intended user, system design with AI-vs-deterministic split, cost engineering story, evaluation methodology, limitations, go-live checklist.
+- **Mermaid architecture diagram** — seven-stage pipeline with JSON artifacts shown as intermediate nodes.
+- **Go-live checklist** — three sections: security (verify .env history, grep for API key), data (.gitignore coverage, gold set freeze date), example outputs worth committing (`memo.md` and `evidence_register.json` via `.gitignore` exceptions).
+
 ---
 
 *Update this file whenever a real failure is found and fixed. Each entry: Found / Cause / Fix / Lesson.*
