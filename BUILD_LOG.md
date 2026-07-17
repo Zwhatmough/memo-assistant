@@ -321,6 +321,18 @@ Full V3 pipeline run on `documents/greggs-ar25.pdf` (`greggs_config.yaml`, `outp
 | Memo generation | 0 reference errors, 0 number errors, all 8 risk categories present, $0.15 |
 | Total cost | $1.33 (under $2.00 limit) |
 
+## 17 Jul 2026 — V1-complete: risk skeleton dedup defect (Greggs qualitative review)
+
+**Found:** Zak's qualitative review of the Greggs memo (eval/greggs_qualitative_review.md, 8.8–9.0/10 overall) identified a defect in Section 6: "Financial" and "Financial and market risk" appeared as separate sub-sections. The content overlapped materially — the former was a fallback label (from facts whose `risk_type` was "Financial") and the latter was the taxonomy-matched label from the same domain.
+
+**Cause:** `build_risk_skeleton()` populated `category_facts` keyed by label string. The taxonomy path assigns label "Financial and market risk" when facts match taxonomy terms like "liquidity risk" or "debt covenant". The fallback path assigns whatever the extraction model used as `risk_type`; for Greggs, some facts used `risk_type="Financial"`, which `_normalize_risk_type_to_label()` produced as label "Financial" (after stripping the "risk" suffix from "Financial Risk"). The two keys were distinct strings, so both entered the skeleton.
+
+**Fix:** `_dedupe_subset_labels()` added to `classify.py`. After the main loop, it checks every pair of labels for a word-subset relationship: if label A's significant words (stop words excluded) are a strict subset of label B's, label A is merged into B (fact_ids combined, B's keyword preserved). This is generic — no reference to "Financial" or "Greggs". "Financial" ⊂ {"financial", "market", "risk"} → absorbed into "Financial and market risk".
+
+Nine unit tests added to `tests/test_classify_skeleton.py`. Full test suite: 72 tests, 0 failures.
+
+**Lesson:** The fallback path in `build_risk_skeleton()` is a necessary safety valve (it captures disclosed risks that don't map to the standard taxonomy), but the extraction model's risk_type labels are unconstrained free text. Any time a fallback label shares significant words with a taxonomy label, dedup was needed. The generic word-subset check handles all future cases without hardcoding any label pair.
+
 ---
 
 *Update this file whenever a real failure is found and fixed. Each entry: Found / Cause / Fix / Lesson.*

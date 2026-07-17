@@ -193,6 +193,66 @@ def _normalize_risk_type_to_label(risk_type: str) -> str:
     return label.strip().title() or "Other risks"
 
 
+_DEDUP_STOP_WORDS = {"and", "or", "the", "of", "a", "an", "for", "with", "&"}
+
+
+def _sig_words(label: str) -> frozenset[str]:
+    """Return the significant (non-stop) words of a label, lowercased."""
+    return frozenset(
+        w.lower() for w in label.split()
+        if w.lower() not in _DEDUP_STOP_WORDS
+    )
+
+
+def _dedupe_subset_labels(category_facts: dict) -> dict:
+    """Merge category labels where one label's significant words are a strict
+    subset of another's.
+
+    Example: "Financial" ⊂ "Financial and market risk" — the narrower label's
+    fact_ids are folded into the broader one, and the narrower entry is removed.
+    When multiple broader labels could absorb a narrower one, the one with the
+    most fact_ids wins (most-evidenced = most likely the intended category).
+
+    This is generic — it does not reference any company name or specific label.
+    """
+    labels = list(category_facts.keys())
+    sig = {lbl: _sig_words(lbl) for lbl in labels}
+
+    # Map each narrower label to the broadest label that subsumes it
+    absorbed: dict[str, str] = {}
+    for narrow in labels:
+        candidates = [
+            broad for broad in labels
+            if broad != narrow
+            and sig[narrow] < sig[broad]  # strict subset
+        ]
+        if candidates:
+            # Prefer the label with the most existing fact_ids; break ties by label length
+            best = max(candidates,
+                       key=lambda b: (len(category_facts[b]["fact_ids"]), len(b)))
+            absorbed[narrow] = best
+
+    # Build merged result
+    result: dict = {}
+    for label, meta in category_facts.items():
+        target = absorbed.get(label, label)
+        if target not in result:
+            result[target] = {
+                "keyword": meta["keyword"],
+                "fact_ids": list(meta["fact_ids"]),
+                "is_taxonomy": meta["is_taxonomy"],
+            }
+        else:
+            # Keep the target's keyword and is_taxonomy; just extend fact_ids
+            seen = set(result[target]["fact_ids"])
+            for fid in meta["fact_ids"]:
+                if fid not in seen:
+                    result[target]["fact_ids"].append(fid)
+                    seen.add(fid)
+
+    return result
+
+
 def build_risk_skeleton(classified_facts: list[dict]) -> list[dict]:
     """Derive the company's disclosed principal risk categories from risk_disclosures facts.
 
@@ -249,6 +309,12 @@ def build_risk_skeleton(classified_facts: list[dict]) -> list[dict]:
             }
         if fact["id"] not in category_facts[label]["fact_ids"]:
             category_facts[label]["fact_ids"].append(fact["id"])
+
+    # Dedup overlapping labels: if one label's significant words are a strict
+    # subset of another's, merge the narrower into the broader. Prevents pairs
+    # like "Financial" (fallback) + "Financial and market risk" (taxonomy) from
+    # appearing as separate sub-sections in Section 6.
+    category_facts = _dedupe_subset_labels(category_facts)
 
     # Include taxonomy-matched categories always; fallback categories only if ≥2 facts.
     # Single-fact fallback entries (from ad-hoc extraction risk_type labels) are too

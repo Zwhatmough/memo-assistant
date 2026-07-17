@@ -101,14 +101,16 @@ Token economics were the primary design constraint, not an afterthought.
 | Re-running extraction after failures lost prior work | Resumable runs: skip already-extracted pages | No re-payment for completed work |
 | Surprise costs | Pre-run cost estimator; abort if estimate > $3 | Predictable budget |
 
-**Actual full-pipeline cost (FY2026 Annual Report):**
+**Actual full-pipeline cost:**
 
-| Stage | Cost |
-|---|---|
-| Fact extraction (Haiku, 40 pages, batched) | ~$0.05 |
-| Classification (Sonnet, 249 facts in batches of 80) | $0.70 |
-| Memo generation (Sonnet, two-call strategy) | $0.14 |
-| **Total** | **~$0.90** |
+| Stage | Auto Trader FY2026 | Greggs FY2025 |
+|---|---|---|
+| Fact extraction (Haiku, batched) | ~$0.05 | $0.28 |
+| Classification (Sonnet) | $0.70 | $0.71 |
+| Memo generation (Sonnet) | $0.14 | $0.15 |
+| **Total** | **~$0.90** | **$1.33** |
+
+The Greggs run costs more at extraction because it has more memo-relevant pages (53 vs ~40). Classification and memo cost are similar across companies because they operate on validated facts, not raw PDFs.
 
 ---
 
@@ -138,6 +140,30 @@ Three improvement rounds against the FY2026 Annual Report. Each round targeted d
 
 **Evaluation closed at V3.** Remaining gaps (FCA/regulatory breadth, brand/fraud, climate EV-transition depth, third-party failure consequences) are analytical-breadth issues appropriate to human review — the tool's stated design intent. Further automated rounds risk overfitting to gold-set wording.
 
+### Greggs Generalisation Test
+
+After evaluation closed at V3, the full pipeline was run against a second company — Greggs plc FY2025 Annual Report — to validate that no component was hardcoded to Auto Trader. There was no gold set for Greggs; the success criteria were code-verified citation rate and zero validation errors, plus a qualitative analyst read of the finished memo.
+
+**Pipeline results:**
+
+| Metric | Result |
+|---|---|
+| Facts extracted | 252 |
+| Citation verification rate | 249/252 (98%) |
+| Memo reference errors | 0 |
+| Memo number errors | 0 |
+| Disclosed risk categories covered | 8/8 |
+| Total cost | $1.33 |
+
+**Five generalisation failures found and fixed** (all documented in `BUILD_LOG.md`):
+1. **PDF sidebar** — Greggs' navigation sidebar appeared before body text in pdfplumber's reading order, defeating heading detection. Fixed: empty `heading_variants` + explicit `fallback_pages` in `greggs_config.yaml`.
+2. **`extract.py` output path** — no `--out` flag for per-company output directories. Fixed.
+3. **`finance.py` cross-checks** — universal checks all return WARN for a new company (expected; per-company checks need calibration from a first run).
+4. **`memo.py` company identity** — `MEMO_SYSTEM`, header, and section writing instructions were hardcoded to Auto Trader. The generation model flagged a "data-integrity issue" and refused to write the memo. Fixed: config-driven templates; `--config` flag; `max_tokens` for sections 1–5 raised 4096 → 8192.
+5. **Risk skeleton dedup** — "Financial" (fallback) and "Financial and market risk" (taxonomy) appeared as separate sub-sections. Fixed: generic word-subset dedup in `_dedupe_subset_labels()`.
+
+**Qualitative review** (Zak Whatmough, 17 Jul 2026): `eval/greggs_qualitative_review.md` — overall 8.8–9.0/10. Verdict: "beyond an AI summary — it reads like a junior analyst's first draft that a senior analyst would edit before an investment committee." The memo captured Greggs-specific drivers (white space, Derby/Kettering investment cycle, GLP-1 as an emerging risk) rather than applying a generic template.
+
 ### Near-Misses
 
 - **F-12** (£600m FY2027 return target): pipeline extracted the forward-guidance fact but the eval script matched a secondary value (£500m retailer segment revenue). Fact is present in pipeline output.
@@ -151,14 +177,32 @@ Both near-misses and citation misses are reported without cherry-picking. The er
 
 ---
 
+## V2 Roadmap
+
+Items deferred from V1 evaluation, plus directions identified in the Greggs qualitative review:
+
+| Item | Origin | Description |
+|---|---|---|
+| Synthesis → interpretation | Greggs review | Convert "evidence A, evidence B" framing into explicit investment interpretation ("here is why this changes my investment view") |
+| Investment Verdict section | Greggs review | Optional closing conviction paragraph (high/medium/low, synthesis of bull/bear). Requires relaxing the no-recommendation constraint — a deliberate product decision. |
+| Cost inflation analysis | Greggs review | Commodity costs (wheat, dairy, energy) and employment cost drivers (NICs, minimum wage) often implied but not made explicit |
+| Per-company finance calibration | Generalisation | Write company-specific cross-checks against actual fact labels from first run (Greggs shop count; AT segment splits) |
+| Multi-document support | Deferred | Ingest RNS announcements, investor presentations, half-year results alongside the annual report |
+| Contradiction detection | Deferred | Flag where management commentary contradicts the quantitative evidence (e.g. "confident outlook" alongside falling margins) |
+| Valuation module | Deferred | Deterministic EV/EBITDA and P/E multiples using extracted financials and market prices (out of scope for evidence-extraction V1) |
+| Hosted demo | Deferred | Streamlit Cloud or Vercel deployment of `app.py` with pre-loaded Auto Trader and Greggs outputs |
+
+---
+
 ## Limitations
 
-1. **Infographic pages:** pdfplumber cannot extract contiguous text from designed graphic layouts. Five facts from KPI summary boxes are flagged `unverifiable` in the evidence register — they are correct but cannot be string-matched.
-2. **Two-column body text:** pdfplumber interleaves columns in left-right reading order, which breaks contiguous excerpt spans. Mitigated by a 4-word fragment matching fallback.
-3. **Single document, single company:** V1 covers one annual report. The pipeline does not compare across periods or companies.
+1. **Infographic pages:** pdfplumber cannot extract contiguous text from designed graphic layouts. Facts from KPI summary boxes are flagged `unverifiable` in the evidence register — they are correct but cannot be string-matched.
+2. **Two-column body text:** pdfplumber interleaves columns in left-right reading order, breaking contiguous excerpt spans. Mitigated by a 4-word fragment matching fallback.
+3. **Single document per run:** the pipeline does not compare across periods or against peer companies. Multi-document support is on the V2 roadmap.
 4. **No OCR:** scanned PDFs are out of scope. The pipeline requires digitally-created PDFs.
 5. **No real-time data:** the pipeline reads static documents; it does not fetch market prices, consensus estimates, or comparable company data.
-6. **Not investment advice:** the output is a structured first draft for analyst review. It must never be used as the basis for an investment decision without independent verification.
+6. **Analytical breadth vs. structural coverage:** V3's risk skeleton guarantees every disclosed risk category appears in Section 6, but guarantees *presence*, not *analytical depth*. The reviewer's contribution remains essential for framing risks as investment theses.
+7. **Not investment advice:** the output is a structured first draft for analyst review. It must never be used as the basis for an investment decision without independent verification.
 
 ---
 
@@ -166,25 +210,35 @@ Both near-misses and citation misses are reported without cherry-picking. The er
 
 ```
 memo-assistant/
-├── extract.py          # Stages 1–3: ingest, chunk, Haiku fact extraction
-├── validate.py         # Stage 4: citation verification, auto-correction, excerpt matching
-├── finance.py          # Stage 5a: deterministic cross-checks and ratio calculation
-├── prior_year.py       # Stage 5b: prior-year value extraction from verified excerpts
-├── classify.py         # Stage 6: Sonnet classification and analytical synthesis
-├── memo.py             # Stage 7: Sonnet memo generation with post-generation validator
-├── llm.py              # Thin Anthropic API wrapper (model strings pinned here)
-├── app.py              # Streamlit review app (memo + evidence browser)
-├── schemas/            # Pydantic schemas for every pipeline artifact
-├── prompts/            # Extraction and generation prompt templates
+├── extract.py              # Stages 1–3: ingest, chunk, Haiku fact extraction
+├── validate.py             # Stage 4: citation verification, auto-correction, excerpt matching
+├── finance.py              # Stage 5a: deterministic cross-checks and ratio calculation
+├── prior_year.py           # Stage 5b: prior-year value extraction from verified excerpts
+├── classify.py             # Stage 6: Sonnet classification and analytical synthesis
+├── memo.py                 # Stage 7: Sonnet memo generation with post-generation validator
+├── section_filter.py       # Heading-based section detection (config-driven)
+├── chunk.py                # PDF text extraction and page chunking
+├── llm.py                  # Thin Anthropic API wrapper (model strings pinned here)
+├── app.py                  # Streamlit review app (memo + evidence browser)
+├── schemas/                # Pydantic schemas for every pipeline artifact
+├── config.yaml             # Auto Trader company configuration
+├── greggs_config.yaml      # Greggs plc company configuration
+├── tests/                  # Pytest suite (72 tests, all deterministic)
 ├── eval/
-│   ├── gold_set.json   # 50-item manually built gold standard (frozen)
-│   ├── run_eval.py     # Evaluation harness
-│   ├── results.md      # Automated metric scores and per-item detail
-│   └── scoring_sheet.md # Human-judgement scoring template
-├── documents/          # Source PDFs (gitignored — large; publicly available)
-├── output/             # Pipeline artifacts (gitignored — regenerable)
-├── DESIGN.md           # Architecture decisions and decision log
-└── BUILD_LOG.md        # Honest record of every failure found and fixed
+│   ├── gold_set.json       # 50-item manually built gold standard (frozen 14 Jul 2026)
+│   ├── run_eval.py         # Evaluation harness
+│   ├── results.md          # V1/V2/V3 scores and per-item detail
+│   ├── greggs_qualitative_review.md  # Qualitative analyst read of Greggs memo
+│   └── scoring_sheet.md   # Human-judgement scoring template
+├── output/
+│   ├── memo.md             # Auto Trader V3 investment memo (V1-locked output)
+│   ├── evidence_register.json  # Auto Trader evidence register
+│   └── greggs/
+│       ├── memo.md         # Greggs plc investment memo
+│       └── evidence_register.json  # Greggs evidence register
+├── documents/              # Source PDFs (gitignored — large; publicly available)
+├── DESIGN.md               # Architecture decisions and decision log
+└── BUILD_LOG.md            # Honest record of every failure found and fixed
 ```
 
 ---
@@ -200,18 +254,29 @@ cp .env.example .env
 # Edit .env: ANTHROPIC_API_KEY=sk-ant-...
 
 # Place source PDFs in documents/
-# Run each stage in order:
-python extract.py
+# Run each stage in order (Auto Trader example):
+python extract.py documents/at-ar-fy26.pdf at-ar-fy26
 python validate.py
 python finance.py
 python prior_year.py
 python classify.py
 python memo.py
 
+# For a second company (Greggs example):
+python extract.py documents/greggs-ar25.pdf greggs-ar25 --config greggs_config.yaml --out output/greggs/facts.json
+python validate.py --facts output/greggs/facts.json --pdf documents/greggs-ar25.pdf --out output/greggs/validated_facts.json
+python finance.py --facts output/greggs/validated_facts.json --out output/greggs/financials.json --company greggs
+python prior_year.py --facts output/greggs/validated_facts.json --out output/greggs/prior_year_facts.json
+python classify.py --facts output/greggs/validated_facts.json --financials output/greggs/financials.json --out output/greggs/classified_facts.json
+python memo.py --classified output/greggs/classified_facts.json --financials output/greggs/financials.json --memo-out output/greggs/memo.md --register-out output/greggs/evidence_register.json --config greggs_config.yaml
+
 # Review the output
 streamlit run app.py
 
-# Score against gold set
+# Run tests
+python -m pytest tests/
+
+# Score against gold set (Auto Trader only — gold set is AT-specific)
 python eval/run_eval.py
 ```
 
@@ -221,37 +286,36 @@ python eval/run_eval.py
 
 ### Security
 
-- [ ] Verify `.env` has never entered git history: `git log --all --full-history -- .env` should return nothing
-- [ ] Confirm `.env` is in `.gitignore` and no API key appears in any committed file: `git grep -i "sk-ant"` should return nothing
-- [ ] Check `.env.example` documents required variables without real values
+- [x] `.env` has never entered git history (verified: `git log --all --full-history -- .env` returns nothing; the 3 occurrences of "sk-ant" in `git log -p` are all in `.env.example` and README — placeholders, not real keys)
+- [x] `.env` is in `.gitignore`; no API key appears in any committed file
+- [x] `.env.example` documents required variables without real values
 
 ### Data
 
-- [ ] Confirm `documents/*.pdf` is gitignored (large files, publicly available)
-- [ ] Confirm `output/` is gitignored (regenerable artifacts)
-- [ ] Verify `eval/gold_set.json` is committed and unmodified since freeze date (14 Jul 2026)
+- [x] `documents/*.pdf` is gitignored (large files, publicly available)
+- [x] `output/` is gitignored with explicit exceptions for showcase outputs (both memos + evidence registers)
+- [x] `eval/gold_set.json` committed and unmodified since freeze date (14 Jul 2026)
 
-### Example Outputs Worth Committing
-
-The `output/` directory is gitignored by default (artifacts are regenerable). For portfolio purposes, consider adding exceptions for a small set of read-only showcase files:
+### Example Outputs Committed
 
 ```gitignore
-# In .gitignore — add to track specific output files:
+# In .gitignore — exceptions to track specific showcase outputs:
 !output/memo.md
 !output/evidence_register.json
+!output/greggs/
+!output/greggs/memo.md
+!output/greggs/evidence_register.json
 ```
 
-Files worth tracking:
-- `output/memo.md` — the generated memo (primary deliverable)
-- `output/evidence_register.json` — the evidence register (demonstrates citation architecture)
-
-The following are large or contain intermediate-stage detail better left gitignored:
-- `output/validated_facts.json` (~250 facts, verbose)
-- `output/classified_facts.json` (~250 facts + analytical synthesis)
-- `output/financials.json` (useful for debugging; not a portfolio asset)
+Files committed:
+- `output/memo.md` — Auto Trader V3 investment memo (primary deliverable, locked)
+- `output/evidence_register.json` — Auto Trader evidence register
+- `output/greggs/memo.md` — Greggs plc investment memo (generalisation showcase)
+- `output/greggs/evidence_register.json` — Greggs evidence register
 
 ### Evaluation
 
-- [ ] `eval/results.md` manual metrics section filled in
-- [ ] `eval/scoring_sheet.md` Part C (risk coverage verification) completed
-- [ ] `BUILD_LOG.md` up to date with any failures found during final review
+- [x] `eval/results.md` V1/V2/V3 manual metrics complete
+- [x] `eval/scoring_sheet.md` Part C (risk coverage) completed
+- [x] `eval/greggs_qualitative_review.md` recorded
+- [x] `BUILD_LOG.md` up to date through V3 + Greggs generalisation

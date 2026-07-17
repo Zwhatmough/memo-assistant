@@ -37,6 +37,8 @@ Read `DESIGN.md` in full. It is the agreed project design and is the source of t
 
 Greggs pipeline results: 249/252 facts verified (98%), 0 memo reference errors, 0 number errors, all 8 disclosed risk categories present. Total cost: $1.33. Greggs memo at `output/greggs/memo.md`. See BUILD_LOG.md for full finding detail.
 
+**V1-complete (17 Jul 2026).** Greggs qualitative review (eval/greggs_qualitative_review.md) scored 8.8–9.0/10. One defect fixed: risk skeleton dedup (`_dedupe_subset_labels()` in `classify.py`) — "Financial" and "Financial and market risk" overlapping sub-sections merged generically via word-subset detection. 9 unit tests added; full suite: 72 tests, 0 failures. README finalised: V1/V2/V3 results table, Greggs generalisation results and qualitative review link, V2 roadmap section, updated limitations, go-live checklist completed. Both memos and evidence registers committed to git as portfolio showcase outputs. Project is V1-locked.
+
 ## Working method (non-negotiable)
 
 - Work in small, understandable stages. For each stage: explain what and why, propose the simplest credible implementation, flag important decisions, implement a small component, test it, explain failures.

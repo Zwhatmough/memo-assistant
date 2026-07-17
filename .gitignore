@@ -1,9 +1,17 @@
 # Secrets
 .env
 
-# Source documents and run outputs (large / regenerable)
+# Source documents (large; publicly available)
 documents/*.pdf
-output/
+
+# Pipeline outputs — regenerable; ignored by default
+output/*
+!output/memo.md
+!output/evidence_register.json
+!output/greggs/
+output/greggs/*
+!output/greggs/memo.md
+!output/greggs/evidence_register.json
 
 # Python
 __pycache__/
