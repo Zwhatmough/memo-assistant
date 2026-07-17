@@ -1,0 +1,1873 @@
+[
+  {
+    "financial_figures": [
+      {
+        "label": "Core revenue",
+        "value": 565.0,
+        "unit": "\u00a3m",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 2,
+          "excerpt": "Core revenue 565.0"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Licensing revenue",
+        "value": 52.5,
+        "unit": "\u00a3m",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 2,
+          "excerpt": "Licensing revenue 52.5"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Total Revenue",
+        "value": 617.5,
+        "unit": "\u00a3m",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 2,
+          "excerpt": "Revenue 617.5"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Core operating profit",
+        "value": 211.8,
+        "unit": "\u00a3m",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 2,
+          "excerpt": "Core operating profit 211.8"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Licensing operating profit",
+        "value": 49.5,
+        "unit": "\u00a3m",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 2,
+          "excerpt": "Licensing operating profit 49.5"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Operating profit",
+        "value": 261.3,
+        "unit": "\u00a3m",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 2,
+          "excerpt": "Operating profit 261.3"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Profit before taxation",
+        "value": 262.8,
+        "unit": "\u00a3m",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 2,
+          "excerpt": "Profit before taxation 262.8"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Net increase in cash - pre-dividends paid",
+        "value": 197.5,
+        "unit": "\u00a3m",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 2,
+          "excerpt": "Net increase in cash - pre-dividends paid 197.5"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Earnings per share",
+        "value": 594.9,
+        "unit": "p",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 2,
+          "excerpt": "Earnings per share 594.9p"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Dividends per share declared and paid in the period",
+        "value": 520.0,
+        "unit": "p",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 2,
+          "excerpt": "Dividends per share declared and paid in the period 520p"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Investment in Warhammer Studio",
+        "value": 20.1,
+        "unit": "\u00a3m",
+        "period": "2024/25",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 5,
+          "excerpt": "In 2024/25 we invested \u00a320.1 million in the Warhammer Studio with a further \u00a37.0 million spent on tooling"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Investment in tooling",
+        "value": 7.0,
+        "unit": "\u00a3m",
+        "period": "2024/25",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 5,
+          "excerpt": "with a further \u00a37.0 million spent on tooling, the majority of which was for new plastic miniatures"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Core revenue - prior year",
+        "value": 494.7,
+        "unit": "\u00a3m",
+        "period": "53 weeks ended 2 June 2024",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 2,
+          "excerpt": "Core revenue 565.0 494.7"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Licensing revenue - prior year",
+        "value": 31.0,
+        "unit": "\u00a3m",
+        "period": "53 weeks ended 2 June 2024",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 2,
+          "excerpt": "Licensing revenue 52.5 31.0"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Total Revenue - prior year",
+        "value": 525.7,
+        "unit": "\u00a3m",
+        "period": "53 weeks ended 2 June 2024",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 2,
+          "excerpt": "Revenue 617.5 525.7"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Core operating profit - prior year",
+        "value": 174.8,
+        "unit": "\u00a3m",
+        "period": "53 weeks ended 2 June 2024",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 2,
+          "excerpt": "Core operating profit 211.8 174.8"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Licensing operating profit - prior year",
+        "value": 27.0,
+        "unit": "\u00a3m",
+        "period": "53 weeks ended 2 June 2024",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 2,
+          "excerpt": "Licensing operating profit 49.5 27.0"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Operating profit - prior year",
+        "value": 201.8,
+        "unit": "\u00a3m",
+        "period": "53 weeks ended 2 June 2024",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 2,
+          "excerpt": "Operating profit 261.3 201.8"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Profit before taxation - prior year",
+        "value": 203.0,
+        "unit": "\u00a3m",
+        "period": "53 weeks ended 2 June 2024",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 2,
+          "excerpt": "Profit before taxation 262.8 203.0"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Net increase in cash - pre-dividends paid - prior year",
+        "value": 155.9,
+        "unit": "\u00a3m",
+        "period": "53 weeks ended 2 June 2024",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 2,
+          "excerpt": "Net increase in cash - pre-dividends paid 197.5 155.9"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Earnings per share - prior year",
+        "value": 458.8,
+        "unit": "p",
+        "period": "53 weeks ended 2 June 2024",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 2,
+          "excerpt": "Earnings per share 594.9p 458.8p"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Dividends per share declared and paid in the period - prior year",
+        "value": 420.0,
+        "unit": "p",
+        "period": "53 weeks ended 2 June 2024",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 2,
+          "excerpt": "Dividends per share declared and paid in the period 520p 420p"
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "business_facts": [
+      {
+        "category": "Business Model & Operations",
+        "statement": "Games Workshop is a vertically integrated business that designs, manufactures, distributes and sells fantasy miniatures and related products from sci-fi and fantasy universes.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 3,
+          "excerpt": "We are a vertically integrated business. We design, manufacture, distribute and sell our fantasy miniatures and related products.",
+          "page_original": 4
+        },
+        "citation_status": "corrected"
+      },
+      {
+        "category": "Geography & Scale",
+        "statement": "Games Workshop operates 570 retail stores across 24 countries, with 79% of core sales coming from outside the UK.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 5,
+          "excerpt": "At the period end, we had 570 of our own retail stores in 24 countries. We are an international business centrally run from our HQ in Nottingham, with 79% of our core sales coming from outside the UK."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Brand Portfolio",
+        "statement": "Games Workshop owns multiple primary Warhammer universes: Warhammer 40,000, Warhammer: The Horus Heresy, Warhammer: The Old World, and Warhammer: Age of Sigmar, with smaller brands including Necromunda, Blood Bowl, and The Lord of the Rings.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 4,
+          "excerpt": "We have two primary universes: a fantasy universe and a space-fantasy universe. Each is a uniquely owned and created setting, populated with hundreds of characters, events and conflicts and multiple dedicated game systems"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Operations & Manufacturing",
+        "statement": "Games Workshop manufactures all products in Nottingham, employing approximately 330 people in the Warhammer Studio which produces hundreds of new sculpts, illustrations, rules and stories annually.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 5,
+          "excerpt": "Employing c.330 people, the Warhammer Studio creates all the IP and all the associated miniatures, artwork, games and publications that we sell. Annually, these specialist staff produce hundreds of new sculpts, illustrations, rules, stories etc."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Digital & Sales Channels",
+        "statement": "Games Workshop operates three complementary sales channels: Retail stores, Trade (independent retailers), and Online, with digital content reaching hundreds of thousands of people daily through warhammer-community.com and owned social media.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 4,
+          "excerpt": "To reach them, we have two key tools: our retail chain and our digital content. In retail, we showcase the Warhammer hobby and offer a fantastic customer experience. Our digital offering has never been richer. Through warhammer-community.com and owned social media we reach hundreds of thousands of people every day"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Products & Content",
+        "statement": "Black Library imprint sold over 4.5 million novels in the last financial period; Citadel Miniatures (plastic miniatures) and Forge World (resin miniatures) are the primary product lines.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 5,
+          "excerpt": "in the last financial period we sold over 4.5 million novels"
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "risk_disclosures": [],
+    "strategic_items": [
+      {
+        "description": "Expansion of Warhammer IP across new media channels including animation, live action, and video games through partnerships with new creative partners, while maintaining protection of the core miniatures business.",
+        "item_type": "Growth Initiative",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 5,
+          "excerpt": "Together, we'll continue to explore animation, live action, video games and more. We'll present the very best aspects of our rich IP, delighting audiences while always ensuring we do no harm to our core miniatures business."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Continued geographic expansion with ongoing store openings to reach customers worldwide, with strategic focus on maintaining 570-store retail network across 24 countries.",
+        "item_type": "Strategic Priority",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 3,
+          "excerpt": "We opened new stores and now operate in 24 countries, enlisting hobbyists from all over the world."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Balanced growth across three complementary sales channels (Retail, Trade, Online) with long-term goal of growing all channels in harmony while maintaining more independent stockists than company stores.",
+        "item_type": "Strategic Priority",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 4,
+          "excerpt": "Our long-term goal is to have all three channels (Retail, Trade and Online) growing in harmony. We will always have more independent accounts than our own stores."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Continued investment in IP development and product creation through the Warhammer Studio with over \u00a327 million invested annually in design, sculpting, tooling and new miniature development.",
+        "item_type": "Capital Allocation Priority",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 5,
+          "excerpt": "In 2024/25 we invested \u00a320.1 million in the Warhammer Studio with a further \u00a37.0 million spent on tooling, the majority of which was for new plastic miniatures."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "management_commentary": [
+      {
+        "statement": "We delivered the best financial results in our company's history with record sales in our core business and a bumper year of licensing income, achieving this against a backdrop of major geopolitical uncertainty.",
+        "topic": "Financial Performance & Resilience",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 3,
+          "excerpt": "We saw record sales in our core business and a bumper year of licensing income, delivering the best financial results in our company's history. And all this against a backdrop of major geopolitical uncertainty."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Our mission is to make the best fantasy miniatures in the world, to engage and inspire our customers, and to sell our products globally for a profit. We intend to do this forever. Our 'forever' ethos is fundamental - we take decisions for the long-term, not to make next week's numbers look good.",
+        "topic": "Corporate Mission & Long-Term Strategy",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 3,
+          "excerpt": "We are Games Workshop, and our mission is to make the best fantasy miniatures in the world, to engage and inspire our customers, and to sell our products globally for a profit. We intend to do this forever. Our 'forever' ethos is fundamental - we take decisions for the long term, not to make next week's numbers look good."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Our strategy is to grow our business through geographic spread, growing all three complementary channels (Retail, Trade and Online) in harmony, with always more independent accounts than our own stores.",
+        "topic": "Growth Strategy",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 4,
+          "excerpt": "Our long-term goal is to have all three channels (Retail, Trade and Online) growing in harmony. We will always have more independent accounts than our own stores. Our strategy is to grow our business through geographic spread, growing all of the three complementary channels."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "In the short term, we measure our success on our ability to grow sales whilst maintaining our core operating profit margin at current levels.",
+        "topic": "Financial Performance Targets",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 4,
+          "excerpt": "In the short term, we measure our success on our ability to grow sales whilst maintaining our core operating profit margin at current levels."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "We are committed to investing in the Warhammer Studio and tooling at an appropriate level every year to continue to deliver new products and keep customers engaged and excited.",
+        "topic": "Capital Investment & Product Development",
+        "confidence": "medium",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 5,
+          "excerpt": "We are committed to investing in these areas at an appropriate level every year."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "We are committed to making it easier than ever for people to discover, engage with and immerse themselves in our IP through new partners and by exploring animation, live action, video games and more, while ensuring we do no harm to our core miniatures business.",
+        "topic": "Intellectual Property Expansion & Licensing",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 5,
+          "excerpt": "We are committed to making it easier than ever for people to discover, engage with and immerse themselves in our IP. Aided by a small senior team, we have already begun to find new partners, and new ways to help us bring the worlds of Warhammer to life like never before. Together, we'll continue to explore animation, live action, video games and more. We'll present the very best aspects of our rich IP, delighting audiences while always ensuring we do no harm to our core miniatures business."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "chunk_id": "gw-ar25_p2-5"
+  },
+  {
+    "financial_figures": [],
+    "business_facts": [
+      {
+        "category": "Sales channels and distribution",
+        "statement": "Games Workshop sells through own retail stores, independent retailers (trade channel), online web stores, and licensing partnerships. In 2024/25 the company had 8,100 independent retailers in 71 countries, up from 7,200 in 2023/24.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 6,
+          "excerpt": "In 2024/25 we had 8,100 independent retailers (2023/24: 7,200) in 71 countries."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Operations and manufacturing",
+        "statement": "Games Workshop manages its business centrally from headquarters in Nottingham. The company operates three factories in Nottingham and main warehouse facilities in Nottingham, Memphis and Sydney, plus third-party warehouses in Tokyo and Shanghai.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 6,
+          "excerpt": "We control the business centrally from our HQ in Nottingham; it is where the majority of people with experience and knowledge of running our business work."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Licensing strategy",
+        "statement": "The majority of licensing income is generated by video games sales in North America, the UK and Continental Europe. Games Workshop carefully selects licensees and includes minimum guaranteed payments, performance-based royalties, and ongoing approval processes in licence contracts.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 6,
+          "excerpt": "Currently, the majority of this income is generated by video games sales in North America, the UK and Continental Europe."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Geographic presence",
+        "statement": "Games Workshop has telesales teams based in Memphis, Nottingham and Barcelona for trade sales, with additional small telesales teams in Sydney, Tokyo, Shanghai, Singapore, Hong Kong and Kuala Lumpur, operating in 20 languages.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 6,
+          "excerpt": "The bulk of our sales to independent retailers are made via our telesales teams based in Memphis, Nottingham and Barcelona. We also have small telesales teams in Sydney, Tokyo, Shanghai, Singapore, Hong Kong and Kuala Lumpur."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Financial performance",
+        "statement": "Games Workshop delivered core business profit before tax of over \u00a3200 million from Warhammer product sales for the first time, achieving the best financial results in the company's history.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 8,
+          "excerpt": "core business profit before tax of over \u00a3200 million from sales of Warhammer products for the first time and the best financial results in Games Workshop's history, so far."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Licensing performance",
+        "statement": "Licensing delivered increases in sales and profit. Space Marine 2 performed well above expectations. Management notes licensing performance will be very difficult to match next year and is focusing on more Warhammer 40,000 games and seeking partners for Age of Sigmar IP on console, PC and mobile.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 8,
+          "excerpt": "Space Marine 2 (SM2) performed well above our expectations. We will of course be focusing on more Warhammer 40,000 games and at the same time continuing to look for partners to bring our Age of Sigmar IP setting and characters to console, PC and mobile."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Inventory and stock management",
+        "statement": "Games Workshop recorded a stock provision charge of \u00a37 million in 2024/25 compared to \u00a36 million in 2023/24. The company follows a principle of selling what it makes with minimal excess stock and minimal stock write-offs.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 8,
+          "excerpt": "our stock provision charge was \u00a37 million (2023/24: \u00a36 million)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Cash management and dividends",
+        "statement": "Games Workshop increased its cash buffer from \u00a380 million at May 2024 to \u00a385 million at May 2025. The company sets aside three months' worth of working capital, tax payments and planned capital purchases before determining surplus cash for dividends. Dividends have been paid at record levels.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 7,
+          "excerpt": "A cash buffer of three months' worth of working capital requirement (now \u00a385 million) alongside three months' worth of tax payments and any large planned capital purchases or Group Profit Share payments/bonuses over \u00a31 million, have been set aside before deciding how much cash is truly surplus for the purpose of declaring dividends."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Product launches and portfolio",
+        "statement": "In July 2024, Games Workshop launched the 4th edition of Warhammer: Age of Sigmar, including a new 'Spearhead' fast-play version. In September, a new edition of 'Kill Team' launched. The company expanded in-territory translation and marketing teams and added a new team to support expansion into South Korea.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 9,
+          "excerpt": "In July we launched the 4th edition of 'Warhammer: Age of Sigmar' (AoS). As part of the new edition we introduced a smaller, fast play version of the game called 'Spearhead', perfect for when you don't have the time to play a full AoS game and a great way to get started with a new faction."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Sales growth",
+        "statement": "Games Workshop delivered year-on-year sales growth in all core established countries with impressive organic growth via the export team globally. Trade channel sales in China were over 20% but behind internal growth targets due to resourcing issues, now fully staffed with investment in senior manager structure.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 8,
+          "excerpt": "We delivered year on year sales growth, once again, in all of our core established countries and the organic growth via our export team to places globally was impressive too."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "risk_disclosures": [],
+    "strategic_items": [],
+    "management_commentary": [],
+    "chunk_id": "gw-ar25_p6-9"
+  },
+  {
+    "financial_figures": [
+      {
+        "label": "Production costs",
+        "value": 26.8,
+        "unit": "\u00a3 million",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 10,
+          "excerpt": "Total production costs have increased by \u00a31.0 million to \u00a326.8 million"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Production costs as percentage of core sales",
+        "value": 4.7,
+        "unit": "%",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 10,
+          "excerpt": "as a percentage of core sales, production costs have reduced from 5.2% to 4.7%"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Warehouse and logistics costs",
+        "value": 32.3,
+        "unit": "\u00a3 million",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 10,
+          "excerpt": "Total warehousing costs have increased by \u00a33.3 million to \u00a332.3 million"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Warehousing costs as percentage of core revenue",
+        "value": 5.7,
+        "unit": "%",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 10,
+          "excerpt": "as a percentage of core revenue they have reduced from 5.9% to 5.7%"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Core revenue",
+        "value": 565.0,
+        "unit": "\u00a3 million",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 12,
+          "excerpt": "Reported core revenue grew by 14.2% to \u00a3565.0 million for the period."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Core revenue (constant currency)",
+        "value": 573.8,
+        "unit": "\u00a3 million",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 12,
+          "excerpt": "On a constant currency basis, core sales were up by 16.0% to \u00a3573.8 million"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Licensing revenue",
+        "value": 52.5,
+        "unit": "\u00a3 million",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 12,
+          "excerpt": "Licensing revenue from royalty income was up in the period at \u00a352.5 million (2023/24: \u00a331.0 million)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Percentage of licensing revenue from PC and console games",
+        "value": 81.0,
+        "unit": "%",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 12,
+          "excerpt": "of which 81% is from PC and console game licences"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Licensing receivables due within one year",
+        "value": 16.4,
+        "unit": "\u00a3 million",
+        "period": "As at 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 12,
+          "excerpt": "As at the period end we had receivable balances of \u00a316.4 million (2023/24: \u00a39.6 million) falling due in the year ahead"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Total licensing receivables",
+        "value": 24.3,
+        "unit": "\u00a3 million",
+        "period": "As at 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 12,
+          "excerpt": "The total licensing receivables balance at the period end was \u00a324.3 million (2023/24: \u00a328.3 million)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Fixed income from licensing contracts",
+        "value": 11.1,
+        "unit": "\u00a3 million",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 12,
+          "excerpt": "In the period fixed income amounts under licensing contracts were \u00a311.1 million (2023/24: \u00a317.6 million)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Cash received from licensees",
+        "value": 57.0,
+        "unit": "\u00a3 million",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 12,
+          "excerpt": "Cash received from licensees in the period was \u00a357.0 million (2023/24: \u00a325.0 million)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Trade revenue (constant currency)",
+        "value": 351.7,
+        "unit": "\u00a3 million",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 13,
+          "excerpt": "Trade 351.7 288.4"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Trade revenue growth",
+        "value": 19.9,
+        "unit": "%",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 13,
+          "excerpt": "Trade achieved significant growth of 19.9% with growth in all key countries."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Retail revenue (constant currency)",
+        "value": 131.3,
+        "unit": "\u00a3 million",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 13,
+          "excerpt": "Retail 131.3 115.6"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Retail revenue growth",
+        "value": 11.3,
+        "unit": "%",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 13,
+          "excerpt": "Retail finished the year with growth of 11.3%"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Online revenue (constant currency)",
+        "value": 90.8,
+        "unit": "\u00a3 million",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 13,
+          "excerpt": "Online 90.8 90.7"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "North America retail sales",
+        "value": 51.7,
+        "unit": "\u00a3 million",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 13,
+          "excerpt": "Retail sales in North America are up 14.6% to record levels at \u00a351.7 million."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "North America retail sales growth",
+        "value": 14.6,
+        "unit": "%",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 13,
+          "excerpt": "Retail sales in North America are up 14.6% to record levels at \u00a351.7 million."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "UK retail sales",
+        "value": 37.0,
+        "unit": "\u00a3 million",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 13,
+          "excerpt": "in the UK retail is up 7.9% to record levels at \u00a337.0 million."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "UK retail sales growth",
+        "value": 7.9,
+        "unit": "%",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 13,
+          "excerpt": "in the UK retail is up 7.9% to record levels at \u00a337.0 million."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Australia and New Zealand retail sales",
+        "value": 8.2,
+        "unit": "\u00a3 million",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 13,
+          "excerpt": "Retail sales in ANZ are down 2.4% to \u00a38.2 million"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Australia and New Zealand retail sales growth",
+        "value": -2.4,
+        "unit": "%",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 13,
+          "excerpt": "Retail sales in ANZ are down 2.4% to \u00a38.2 million"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Continental Europe retail sales",
+        "value": 27.7,
+        "unit": "\u00a3 million",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 13,
+          "excerpt": "Sales in Retail in Continental Europe are up 13.5% to record levels too at \u00a327.7 million"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Continental Europe retail sales growth",
+        "value": 13.5,
+        "unit": "%",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 13,
+          "excerpt": "Sales in Retail in Continental Europe are up 13.5% to record levels too at \u00a327.7 million"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Japan retail sales",
+        "value": 3.4,
+        "unit": "\u00a3 million",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 13,
+          "excerpt": "In Asia, Japan Retail sales are up 25.9% to \u00a33.4 million."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Japan retail sales growth",
+        "value": 25.9,
+        "unit": "%",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 13,
+          "excerpt": "In Asia, Japan Retail sales are up 25.9% to \u00a33.4 million."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Average store capex (new openings)",
+        "value": 45000.0,
+        "unit": "\u00a3",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 13,
+          "excerpt": "The average capex at c.\u00a345,000 has been in line with our low cost financial model."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Average rent increase on retail stores",
+        "value": 4.0,
+        "unit": "%",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 13,
+          "excerpt": "Managing rents and shop fits has again been challenging during the period with the average rent increase at c.4% at constant currency."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Marketing operating expenses",
+        "value": 11.9,
+        "unit": "\u00a3 million",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 11,
+          "excerpt": "Total marketing operating expenses at \u00a311.9 million have stayed at our 2% of core sales cash spend limit."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Warhammer+ and animation content costs",
+        "value": 7.5,
+        "unit": "\u00a3 million",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 11,
+          "excerpt": "This excludes the cost of running Warhammer+ and animation content which was \u00a37.5 million (2023/24: \u00a35.4 million)"
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "business_facts": [
+      {
+        "category": "Business operations - Manufacturing",
+        "statement": "Games Workshop operates two existing manufacturing sites (F1 and F2) and is constructing Factory 4 (F4) with completion targeted for summer 2026.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 10,
+          "excerpt": "Our two existing manufacturing sites (F1 and F2 as defined earlier) performed well throughout the year. We have been increasing our manufacturing capacity: having secured planning permission, construction of Factory 4 (F4) has now started and we aim to have this completed in the summer of 2026."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Business operations - Manufacturing",
+        "statement": "A new paint production facility (F3) was purchased for \u00a32.9 million and refurbished, and additional land was purchased for \u00a32.1 million for future capacity expansion.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 10,
+          "excerpt": "A building (51,000 sq. ft vs for comparison our main HQ site at 628,000 sq. ft) a short walk from our existing factories at Easter Park has been purchased during the period for \u00a32.9 million. It has now been refurbished to operate as our new paint production facility (F3), allowing us to deliver higher volumes when we need to. We have also purchased an additional piece of land (31,000 sq. ft) opposite (F2) on Willow Road, at a cost of \u00a32.1 million"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Operating KPIs - Warehousing",
+        "statement": "North America warehouse (Memphis) added 41 staff to reach 121 headcount, installed additional pallet racking, and added 10 robots to increase picking capacity.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 10,
+          "excerpt": "We installed additional pallet racking into our Memphis warehouse to provide more bulk storage and added an additional 10 robots to increase picking capacity. We added 41 heads, taking the total headcount to 121, this included introducing a third shift to increase capacity."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Business operations - Customer engagement",
+        "statement": "Games Workshop operates 570 retail stores globally: 424 low cost format stores, 143 multi-person operating extended hours stores, and three caf\u00e9 format stores.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 11,
+          "excerpt": "Of our 570 stores, 424 are low cost, 143 are multi person operating extended hours and we have three caf\u00e9 format stores: two in the US and one in Japan."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Business operations - Customer engagement",
+        "statement": "The Warhammer Alliance schools programme has approximately 6,200 active school and library clubs worldwide.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 11,
+          "excerpt": "The Warhammer Alliance schools programme has c.6,200 active school and library clubs signed up worldwide, supporting young people in improving their engineering, arts, and maths skills."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Customer metrics - Digital engagement",
+        "statement": "My Warhammer active users reached approximately 735,000 at period end (2023/24: 565,000).",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 11,
+          "excerpt": "As at the period end, we have c.735,000 active users (2023/24: c.565,000)."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Customer metrics - Digital engagement",
+        "statement": "Warhammer+ subscription service had approximately 232,000 subscribers at period end (2023/24: 176,000).",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 11,
+          "excerpt": "Subscriber numbers at the period end were c.232,000 (2023/24: c.176,000)."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Customer metrics - Digital engagement",
+        "statement": "Email subscriber numbers reached approximately 678,000 at period end (2023/24: 598,000).",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 11,
+          "excerpt": "Subscriber numbers, defined as people who opened one of our emails in the last six months, at the period end were c.678,000 (2023/24: c.598,000)."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Business operations - Licensing",
+        "statement": "On 10 December 2024, Games Workshop announced a long-term partnership with Amazon for adaptation of Warhammer 40,000 universe into films and television series with associated merchandising rights.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 11,
+          "excerpt": "On 10 December 2024 we announced the conclusions of our negotiations with Amazon for the adaptation of Games Workshop's Warhammer 40,000 universe into films and television series, together with associated merchandising rights."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Business operations - Licensing",
+        "statement": "Four new PC/console games were announced in the period: Dawn of War Definition Edition, Space Marine Master Crafted Edition, Boltgun 2, and Dark Heresy, plus one new mobile game Supremacy: Warhammer 40,000.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 12,
+          "excerpt": "Four new games were announced in the period for PC/console. Dawn of War Definition Edition, Space Marine Master Crafted Edition, Boltgun 2, Dark Heresy - all sequels or remasters of original great Warhammer video games. In addition, one new mobile game has been announced called Supremacy: Warhammer 40,000."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Retail operations",
+        "statement": "Trade outlets increased by approximately 900 accounts to approximately 8,100 total accounts.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 13,
+          "excerpt": "In the period, our net number of trade outlets increased by c.900 accounts to c.8,100"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Retail operations",
+        "statement": "During the period, 30 stores were opened (including relocations) and 8 stores were closed, bringing total store count to 570.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 13,
+          "excerpt": "In the period we opened, including relocations, 30 stores including our first few stores in Switzerland. They were well received by our fans. After closing eight stores, our total number of stores at the end of the period was 570."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Retail operations - Regional performance",
+        "statement": "North America retail store count increased from 185 to 201 stores, with the team celebrating opening their 200th Warhammer store.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 13,
+          "excerpt": "Number of stores at 2 June 2024 Opened Closed at 1 June 2025 North America 185 18 2 201 Congratulations to the team on opening their 200th Warhammer store"
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "risk_disclosures": [
+      {
+        "description": "Stock availability challenges across core IP ranges require ongoing work to meet and beat operational metrics on product availability.",
+        "risk_type": "Operational - Supply chain",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 10,
+          "excerpt": "There is still some ongoing work to do to meet and ultimately beat our operational metrics on stock availability across all of our core IP ranges."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "The video games licensing market backdrop remains challenging in the short term, requiring caution when forecasting royalty income despite Space Marine 2's success.",
+        "risk_type": "Market - Video games",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 12,
+          "excerpt": "The general backdrop still remains challenging for this market in the short term. We therefore remain cautious when forecasting royalty income."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "The viability and ongoing success of licensing deals is broadly out of the company's control and relies on successful development and delivery by licensing partners.",
+        "risk_type": "Operational - Licensing dependency",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 12,
+          "excerpt": "As a reminder, the viability and ongoing success of any of our licensing deals is broadly out of our control; they are reliant on the successful development and delivery of projects by our licensing partners."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "strategic_items": [
+      {
+        "description": "Construction of Factory 4 (F4) is underway with targeted completion summer 2026; construction costs of approximately \u00a38 million expected in next financial year.",
+        "item_type": "Capital project",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 10,
+          "excerpt": "construction of Factory 4 (F4) has now started and we aim to have this completed in the summer of 2026. Most of the construction costs for F4 (c.\u00a38m) will fall in the next financial year."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Games Workshop is evaluating options to establish a warehouse facility in Europe to build capacity and improve service levels, integrated with Systems Improvement Programme.",
+        "item_type": "Expansion initiative",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 10,
+          "excerpt": "Looking forward, we continue to evaluate options to set up a warehouse facility in Europe, both to build capacity and improve service levels. This is being planned alongside our Systems Improvement Programme (SIP)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Multi-year Systems Improvement Programme (SIP) continues with global warehouse system launched in Australian warehouse; all Australian teams expected to go live with new systems in H2 2025/26, with project completion targeted for 2028/29.",
+        "item_type": "IT infrastructure",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 10,
+          "excerpt": "A version of our global warehouse system was launched within our new Australian warehouse; this represented a significant step in our SIP plan. The next significant deployments of this multi year international project are expected during the second half of 2025/26 (only a few weeks later than originally planned) when all of the remaining Australian teams will go live with their new systems"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Games Workshop is actively exploring further console and mobile video game opportunities, including Space Marine 3, following the success of Space Marine 2 in reaching a wider audience.",
+        "item_type": "IP licensing",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 12,
+          "excerpt": "We are actively exploring further console and mobile opportunities, including Space Marine 3, without losing sight of the significant long-term revenue provided by PC games."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "New management positions created for Australia/New Zealand and Japan markets with ambitious growth plans starting April 2025, led by internal candidates with experience in staff development.",
+        "item_type": "Regional expansion",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 13,
+          "excerpt": "To improve our performance in Australia and New Zealand (collectively known as ANZ) and Japan further I created two exciting new jobs managing all our activities in these countries and more importantly documenting and delivering an ambitious growth plan. These two internal candidates started in April 2025."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "North America retail team plans to find a new location for a caf\u00e9 format store on the east coast, with additional exciting news to be shared in coming year.",
+        "item_type": "Retail expansion",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 13,
+          "excerpt": "our North America retail team are looking forward to finding a new location for a caf\u00e9 format store on the east coast to open when they're ready. They also have some exciting news to share with us next year"
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "management_commentary": [],
+    "chunk_id": "gw-ar25_p10-13"
+  },
+  {
+    "financial_figures": [],
+    "business_facts": [
+      {
+        "category": "Business Operations - Online",
+        "statement": "Online sales decreased by 0.1% on a reported basis, but excluding digital sales, Online sales decreased by 5.2% (\u00a33.6 million). The decline was driven by fewer customers ordering directly from home, though orders picked up in Warhammer stores increased by 15.0% to \u00a39.5 million.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 14,
+          "excerpt": "Reported Online sales have decreased by 0.1% compared to the same period last year. Excluding digital sales, Online sales decreased by 5.2% or \u00a33.6 million."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Business Operations - Trade Channel",
+        "statement": "Direct through Trade (trade account orders on online platform) increased by 10.7% (\u00a31.9 million) to \u00a320.0 million in the period.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 14,
+          "excerpt": "There has been a 10.7% (\u00a31.9 million) increase to \u00a320.0 million in the period in 'Direct through Trade'"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Business Operations - Store Expansion",
+        "statement": "Games Workshop opened 30 new stores in the period and invested in customer engagement activities including digital content.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 14,
+          "excerpt": "We opened 30 new stores and invested in customer engagement activities including increased cash spend on digital content."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Products - Pricing",
+        "statement": "Average RRP increase on miniatures was 5% in the period, with an average of 4% across all other product lines.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 16,
+          "excerpt": "Our average RRP increase on miniatures in the period reported was 5%, and an average of 4% across all other product lines."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Business Operations - Warhammer+ Production",
+        "statement": "Animation costs relate to production of content for Warhammer+, with amortisation reported in cost of sales.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 14,
+          "excerpt": "Animation relates to the costs of producing the content for Warhammer+, the amortisation of which is reported in cost of sales."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "risk_disclosures": [],
+    "strategic_items": [],
+    "management_commentary": [],
+    "chunk_id": "gw-ar25_p14-16"
+  },
+  {
+    "financial_figures": [],
+    "business_facts": [
+      {
+        "category": "Business model and operations",
+        "statement": "Games Workshop is a vertically integrated business dependent on key manufacturing and warehousing facilities in Nottingham and Memphis to manufacture and deliver products to customers.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 19,
+          "excerpt": "As a vertically integrated business, we are dependent on our key manufacturing and warehousing sites in Nottingham and Memphis in order to manufacture and deliver products to our customers and run our business."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Market position",
+        "statement": "Games Workshop is the only company of its size making fantasy miniatures and the only one with a global presence.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 20,
+          "excerpt": "We are the only company of our size making fantasy miniatures and the only one with a global presence."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "International expansion",
+        "statement": "Games Workshop plans to open approximately 35 new stores in total across North America, Continental Europe and Asia in 2025/26, including opening its first Warhammer store in South Korea.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 20,
+          "excerpt": "Our aim is to open c.35 new stores in total across North America, Continental Europe and Asia in 2025/26."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Staffing and resources",
+        "statement": "Games Workshop added 184 new roles in the period reported, with many of these recruits in factories and warehouse facilities to scale with activity levels.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 20,
+          "excerpt": "We have added 184 new roles in the period reported."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Customer engagement",
+        "statement": "Since May 2024, 209 staff have decided to cross train and transfer to a new job across the business.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 20,
+          "excerpt": "Since May 2024, 209 staff have decided to cross train and to transfer on to a new job across the business."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Distribution strategy",
+        "statement": "Games Workshop expects the majority of incremental growth in 2025/26 to come through sales to independent retailers (the Trade channel), and will continue to open more independent retailer accounts.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 20,
+          "excerpt": "In the year ahead we expect the majority of our incremental growth to be through sales to independents, the channel we call Trade."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "risk_disclosures": [
+      {
+        "description": "Failure to protect IP may erode competitive advantage and undermine reputation, negatively impacting financial performance. Risk trend is increasing.",
+        "risk_type": "Intellectual property",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 18,
+          "excerpt": "Failure to protect our IP may erode our competitive advantage and/or undermine our reputation, which will negatively impact our financial performance."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Cyber attacks could result in reputational damage, regulatory fines, inability to operate, IP leaks and negative financial impact. Risk trend is increasing.",
+        "risk_type": "Cyber security and data",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 19,
+          "excerpt": "A cyber attack could result in reputational damage, regulatory fines, an inability to operate, IP leaks and will negatively impact our financial performance."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Global supply chain disruption and instability may negatively impact manufacturing and distribution operations and ability to meet demand and fulfil orders. Risk trend is increasing.",
+        "risk_type": "Supply chain disruption",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 19,
+          "excerpt": "Global supply chain disruption and instability may negatively impact our manufacturing and distribution operations, and our ability to meet demand and fulfil orders."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Failure to ensure continuous supply from key manufacturing and warehousing facilities due to climate change effects, physical damage, capacity constraints, or IT systems failure could lead to inability to supply customers. Risk trend is stable.",
+        "risk_type": "Facility disruption",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 19,
+          "excerpt": "Failure to ensure continuous supply from our key manufacturing and warehousing facilities, due to effects of climate change, physical damage, lack of capacity, and IT systems failure could lead to the inability to supply customers."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Short to medium-term climate risks relate to physical impacts (extreme weather affecting supply chain and manufacturing) and transitional changes (carbon and fossil fuel taxation increasing costs). These risks are not currently assessed as material but are being closely monitored.",
+        "risk_type": "Climate change",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 19,
+          "excerpt": "Our key risks in the short to medium-term relate to physical impacts, such as extreme weather affecting our supply chain, manufacture, and distribution of our product (for example flooding interrupting operations), and on the transitional changes (for example, carbon and fossil fuel taxation increasing the cost to our business)."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "strategic_items": [
+      {
+        "description": "Staff training and development remains a key priority, with focus on fair wages, lifelong learning, succession planning for board and senior management, and ongoing commitment to diversity and inclusion.",
+        "item_type": "Operational priority",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 20,
+          "excerpt": "Staff training and development"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Games Workshop aims to deliver year-on-year sales growth in every major country and expand customer engagement through My Warhammer platform and physical retail expansion.",
+        "item_type": "Growth strategy",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 20,
+          "excerpt": "We again aim to deliver year on year sales growth in every major country we sell in to."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Games Workshop will continue deploying its sales matrix approach to reach new audiences with the Warhammer hobby, offering official retail stores, local currency pricing, translated core ranges, and localized marketing support in countries above sales thresholds.",
+        "item_type": "Customer engagement",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 21,
+          "excerpt": "We will continue to implement using our new sales matrix approach as a guide to delivering an appropriate level of investment in new and existing countries."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "In licensing, the priority is to fully support delivery of the new media deal with Amazon and to sign a few significant licensing deals to launch successful video games, live action or animation shows.",
+        "item_type": "Strategic initiative",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 21,
+          "excerpt": "In the short term the priority is to fully support the work needed to deliver our new media deal with Amazon and to sign a few significant licensing deals."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Games Workshop maintains commitment to ethical sourcing, staff wellbeing, diversity and inclusion, and continues to collect and report internally on staff ethnicity with no significant trend changes.",
+        "item_type": "Corporate objective",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 21,
+          "excerpt": "We are committed to ethical sourcing and staff wellbeing, diversity and inclusion."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "management_commentary": [
+      {
+        "statement": "After a record year, Games Workshop remains focused on delivering its operational plans and working to overcome obstacles. The company will continue to give itself freedom to make mistakes while constantly working on improvements in product quality and manufacturing innovation.",
+        "topic": "Performance and outlook",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 21,
+          "excerpt": "After a record year, we remain focused on delivering our operational plans and working tirelessly to overcome any significant obstacles that get in the way."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Games Workshop is not planning any significant changes to the implementation of its core strategy in 2025/26, remaining commercially curious and inquisitive while prioritizing the six key initiatives designed to deliver further sales growth whilst maintaining core operating profit margin.",
+        "topic": "Strategic continuity",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 20,
+          "excerpt": "It may seem a little repetitive, it is, we are not planning any significant changes to the implementation of our core strategy in the year ahead."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Games Workshop considers its people as its biggest risk and critical necessity, emphasizing that leaders must understand not only what the company does but why it does it that way. The company recruits from within for all senior roles as far as possible to ensure continuity and mitigate risks.",
+        "topic": "Organizational culture and risk",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 20,
+          "excerpt": "Our biggest risk is the people we employ. The potential damage to the Group is enormous."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "chunk_id": "gw-ar25_p18-21"
+  },
+  {
+    "financial_figures": [
+      {
+        "label": "Total Revenue",
+        "value": 617.5,
+        "unit": "\u00a3m",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 69,
+          "excerpt": "Revenue 4 617.5 525.7"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Core Revenue",
+        "value": 565.0,
+        "unit": "\u00a3m",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 69,
+          "excerpt": "Core revenue 565.0 494.7"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Licensing Revenue",
+        "value": 52.5,
+        "unit": "\u00a3m",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 69,
+          "excerpt": "Licensing revenue 52.5 31.0"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Gross Profit",
+        "value": 445.0,
+        "unit": "\u00a3m",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 69,
+          "excerpt": "Gross profit 445.0 374.5"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Operating Profit",
+        "value": 261.3,
+        "unit": "\u00a3m",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 69,
+          "excerpt": "Operating profit 261.3 201.8"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Profit Before Taxation",
+        "value": 262.8,
+        "unit": "\u00a3m",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 69,
+          "excerpt": "Profit before taxation 9 262.8 203.0"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Profit Attributable to Owners of the Parent",
+        "value": 196.1,
+        "unit": "\u00a3m",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 69,
+          "excerpt": "Profit attributable to owners of the parent 196.1 151.1"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Basic Earnings Per Share",
+        "value": 594.9,
+        "unit": "pence per share",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 69,
+          "excerpt": "Basic earnings per ordinary share 11 594.9p 458.8p"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Diluted Earnings Per Share",
+        "value": 593.5,
+        "unit": "pence per share",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 69,
+          "excerpt": "Diluted earnings per ordinary share 11 593.5p 458.2p"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Cash and Cash Equivalents",
+        "value": 132.6,
+        "unit": "\u00a3m",
+        "period": "1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 70,
+          "excerpt": "Cash and cash equivalents 22 132.6 107.6"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Total Equity",
+        "value": 280.8,
+        "unit": "\u00a3m",
+        "period": "1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 70,
+          "excerpt": "Total equity 280.8 251.4"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Total Assets",
+        "value": 383.0,
+        "unit": "\u00a3m",
+        "period": "1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 70,
+          "excerpt": "Total assets 383.0 351.3"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Inventories",
+        "value": 39.7,
+        "unit": "\u00a3m",
+        "period": "1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 70,
+          "excerpt": "Inventories 19 39.7 42.2"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Dividends Paid to Company Shareholders",
+        "value": 171.4,
+        "unit": "\u00a3m",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 71,
+          "excerpt": "Dividends paid to Company shareholders - - (171.4) (138.3)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Cash Generated from Operations",
+        "value": 311.5,
+        "unit": "\u00a3m",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 72,
+          "excerpt": "Cash generated from operations 30 311.5 237.9"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Net Cash Generated from Operating Activities",
+        "value": 247.4,
+        "unit": "\u00a3m",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 72,
+          "excerpt": "Net cash generated from operating activities 247.4 196.2"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Capital Expenditure on Property, Plant and Equipment",
+        "value": 24.0,
+        "unit": "\u00a3m",
+        "period": "52 weeks ended 1 June 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 72,
+          "excerpt": "Purchases of property, plant and equipment (24.0) (15.6)"
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "business_facts": [
+      {
+        "category": "Revenue composition",
+        "statement": "The company generates revenue from core operations and licensing, with core revenue of \u00a3565.0m and licensing revenue of \u00a352.5m in the 52 weeks ended 1 June 2025.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 69,
+          "excerpt": "Core revenue 565.0 494.7\nLicensing revenue 52.5 31.0\nRevenue"
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "risk_disclosures": [],
+    "strategic_items": [],
+    "management_commentary": [
+      {
+        "statement": "Operating profit increased from \u00a3201.8m in the 53 weeks ended 2 June 2024 to \u00a3261.3m in the 52 weeks ended 1 June 2025, representing significant growth in the period.",
+        "topic": "Profit growth and operational performance",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 69,
+          "excerpt": "Operating profit 261.3 201.8"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Licensing revenue grew substantially from \u00a331.0m in the 53 weeks ended 2 June 2024 to \u00a352.5m in the 52 weeks ended 1 June 2025, demonstrating expansion in the licensing segment.",
+        "topic": "Licensing revenue growth",
+        "confidence": "high",
+        "source": {
+          "doc_id": "gw-ar25",
+          "page": 69,
+          "excerpt": "Licensing revenue 52.5 31.0"
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "chunk_id": "gw-ar25_p69-72"
+  }
+]

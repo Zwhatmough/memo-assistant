@@ -398,6 +398,21 @@ All three sections used `heading_variants: []` and explicit `fallback_pages` in 
 
 **Lesson:** Config-driven path conventions require operational consistency. A checklist item before any pipeline run: confirm source PDF is in `documents/`, not the project root or a downloads folder.
 
+## 17 Jul 2026 — V1.1: app.py rebuilt as a hostable public demo
+
+**What changed:** `app.py` extended from a single-company local review tool into a two-mode Streamlit application ready for Streamlit Community Cloud deployment.
+
+**Demo mode** (default, no API key): company selector — Auto Trader (V3, evaluated), Greggs, Games Workshop — each loading pre-committed output files (memo, evidence register, classified facts, validated facts). All six output files per company committed to the repo; `.gitignore` exceptions updated. No source PDFs required at runtime.
+
+**"Run your own" mode**: user uploads a UK annual report PDF and pastes their Anthropic API key. Key is set in `os.environ` for the duration of the run and deleted in a `finally` block — never written to disk, never logged. A deterministic pre-flight suitability check runs before any API spend: (1) text extractable via pdfplumber (not a scanned image), (2) page count 40–500, (3) at least two of: "strategic report", "principal risks", "directors' report", "annual report" found in page text, (4) fewer than three bank/insurer terms ("net interest income", "underwriting", "solvency ii", etc.). If all checks pass, the full pipeline runs stage-by-stage with `st.status()` progress display and expandable logs. Results stored in `st.session_state` so they survive Streamlit reruns without re-running the pipeline.
+
+**Design decisions:**
+- One file, no database — matches the V1 design principle.
+- Pipeline functions imported directly (not subprocess) so stdout can be captured per stage with `contextlib.redirect_stdout(io.StringIO())`.
+- Generic config written to a temp directory for "run your own" — uses UK annual-report heading variants with reasonable fallback page ranges. Source PDF and all intermediate files in a `tempfile.TemporaryDirectory()` deleted after the pipeline completes (results already loaded into memory).
+- `sys.exit()` calls inside pipeline functions caught with `try/except SystemExit` to prevent Streamlit worker termination on cost-guard aborts.
+- Memo download button provided (`st.download_button`) for "run your own" results.
+
 ---
 
 *Update this file whenever a real failure is found and fixed. Each entry: Found / Cause / Fix / Lesson.*

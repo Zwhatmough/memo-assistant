@@ -1,0 +1,3293 @@
+[
+  {
+    "financial_figures": [
+      {
+        "label": "Group revenue",
+        "value": 624.3,
+        "unit": "\u00a3m",
+        "period": "2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 6,
+          "excerpt": "Group revenue also increased 4% to \u00a3624.3m (2025: \u00a3601.1m)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Core Autotrader revenue",
+        "value": 585.3,
+        "unit": "\u00a3m",
+        "period": "2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 6,
+          "excerpt": "In the core Autotrader business, we achieved revenues of \u00a3585.3m, an increase of 4% on 2025."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Autorama revenue",
+        "value": 39.0,
+        "unit": "\u00a3m",
+        "period": "2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 6,
+          "excerpt": "with Autorama revenue contributing \u00a339.0m (2025: \u00a336.3m)."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Group operating profit",
+        "value": 392.7,
+        "unit": "\u00a3m",
+        "period": "2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 6,
+          "excerpt": "Group operating profit increased by 4% to \u00a3392.7m (2025: \u00a3376.8m),"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Core Autotrader operating profit",
+        "value": 408.0,
+        "unit": "\u00a3m",
+        "period": "2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 6,
+          "excerpt": "Operating profit in the core Autotrader business was \u00a3408.0m (2025: \u00a3394.0m), up 4% on last year,"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Core Autotrader operating profit margin",
+        "value": 70.0,
+        "unit": "%",
+        "period": "2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 6,
+          "excerpt": "with an operating profit margin of 70% (2025: 70%)."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Autorama operating loss",
+        "value": -2.0,
+        "unit": "\u00a3m",
+        "period": "2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 6,
+          "excerpt": "Autorama saw reduced operating losses of \u00a32.0m (2025: \u00a34.3m)."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Group operating profit margin",
+        "value": 63.0,
+        "unit": "%",
+        "period": "2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 6,
+          "excerpt": "Group operating profit margin remained consistent at 63% (2025: 63%)."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Basic earnings per share",
+        "value": 34.17,
+        "unit": "p",
+        "period": "2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 4,
+          "excerpt": "Basic earnings per share (+8% YoY) 34.17p"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Cash generated from operations",
+        "value": 418.0,
+        "unit": "\u00a3m",
+        "period": "2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 4,
+          "excerpt": "Cash generated from operations (+5% YoY) \u00a3418m"
+        },
+        "citation_status": "unverifiable"
+      },
+      {
+        "label": "Total dividends per share",
+        "value": 11.6,
+        "unit": "p",
+        "period": "2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 6,
+          "excerpt": "giving total dividends of 11.6 pence per share for the year (2025: 10.6 pence per share)."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Final dividend per share",
+        "value": 7.8,
+        "unit": "p",
+        "period": "2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 6,
+          "excerpt": "We are proposing a final dividend of 7.8 pence per share (2025: 7.1 pence per share)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Shares purchased under buyback programme",
+        "value": 58.5,
+        "unit": "m",
+        "period": "2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 6,
+          "excerpt": "purchasing 58.5 million shares in the year, 6.6% of issued share capital."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Debt facility drawn",
+        "value": 165.0,
+        "unit": "\u00a3m",
+        "period": "2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 6,
+          "excerpt": "At year end we had drawn \u00a3165m of our debt facility, increasing leverage up to 0.3x."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Total returned to shareholders",
+        "value": 463.2,
+        "unit": "\u00a3m",
+        "period": "2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 6,
+          "excerpt": "Combined with dividends we have returned \u00a3463.2m (2025: \u00a3275.7m) to shareholders."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Total returned to shareholders over three years",
+        "value": 989.2,
+        "unit": "\u00a3m",
+        "period": "2024-2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 4,
+          "excerpt": "RETURNED TO SHAREHOLDERS \u00a3989.2m returned to shareholders over the past three years"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Group central costs",
+        "value": 13.3,
+        "unit": "\u00a3m",
+        "period": "2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 6,
+          "excerpt": "broadly maintaining Group central costs at \u00a313.3m (2025: \u00a312.9m)."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Employees proud to work at Autotrader",
+        "value": 72.0,
+        "unit": "%",
+        "period": "2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 4,
+          "excerpt": "2026 72% of employees proud to work at Autotrader (2025: 91%)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Ethnically diverse staff",
+        "value": 20.0,
+        "unit": "%",
+        "period": "2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 4,
+          "excerpt": "20% of total staff are ethnically diverse (2025: 19%)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Monthly visits",
+        "value": 81.7,
+        "unit": "m",
+        "period": "2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 4,
+          "excerpt": "RECORD NUMBERS OF BUYERS USING OUR PLATFORM 81.7m monthly visits"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Monthly minutes",
+        "value": 548.0,
+        "unit": "m",
+        "period": "2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 4,
+          "excerpt": "548m monthly minutes"
+        },
+        "citation_status": "unverifiable"
+      }
+    ],
+    "business_facts": [
+      {
+        "category": "Business model and market position",
+        "statement": "Autotrader operates as a marketplace platform connecting buyers and sellers of cars, with a software and data platform that supports profitable retailing from sourcing through to sale.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 6,
+          "excerpt": "For retailers, we are increasingly a software and data platform that supports profitable retailing from sourcing through to sale."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Competitive position",
+        "statement": "Autotrader maintains a large and highly engaged audience, strong brand trust, and network effects between buyers and sellers. The company's competitive position has strengthened when measured against other automotive marketplaces.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 6,
+          "excerpt": "We have maintained our large and highly engaged audience, strong brand trust and the network effects between buyers and sellers on our platform. Our competitive position has strengthened when measured against other automotive marketplaces."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Products and strategy",
+        "statement": "Autotrader includes AI-powered Co-Driver product, continued roll-out of Deal Builder, and launched Buying Signals. The company is using over 50 AI models across operations, combining advanced Large Language Models with proprietary real-time dataset.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 6,
+          "excerpt": "we included our AI-powered Co-Driver product within our pricing and packaging event, continued the roll-out of Deal Builder, and launched Buying Signals."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Customer base",
+        "statement": "Record numbers of buyers using the platform at 81.7m monthly visits in 2026, up from 81.6m in 2025. Autotrader users spend 6x more time on the platform than all main competitors combined.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 4,
+          "excerpt": "RECORD NUMBERS OF BUYERS USING OUR PLATFORM 81.7m monthly visits (2025: 81.6m) 6x more time spent on Autotrader than all our main competitors combined (2025: 6x)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Retailer base",
+        "statement": "The average number of retailer forecourts in the period was down 0.5% to 13,942 in 2026 from 14,013 in 2025.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 4,
+          "excerpt": "The average number of retailer forecourts in the period was down 0.5% to 13,942 (2025: 14,013)"
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "risk_disclosures": [
+      {
+        "description": "More challenging market conditions with increased cost pressure for retailers and manufacturers. Challenging end to the year which impacts growth in both 2026 and 2027.",
+        "risk_type": "Market and economic",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 6,
+          "excerpt": "despite more challenging market conditions, with continued strong demand and constrained supply, added to by increased cost pressure for retailers and manufacturers."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Rapidly changing technology environment presents competitive risk. While AI will change how many users begin their research, a trusted, up-to-date information source will remain important to maintain market position.",
+        "risk_type": "Technology and competition",
+        "confidence": "medium",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 6,
+          "excerpt": "Despite a rapidly changing technology environment, our current competitive position has strengthened, we are adapting our car buying experience to evolve with consumer habits, and we remain comfortable our investment in technology is sufficient to take full advantage of AI."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Received increased levels of feedback in November on the roll-out of some new products, indicating potential customer dissatisfaction with product changes.",
+        "risk_type": "Product execution",
+        "confidence": "medium",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 6,
+          "excerpt": "Having received increased levels of feedback in November on the roll-out of some of these products, we remain committed to delivering value to customers and will continue to listen and evolve our product offering."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "strategic_items": [
+      {
+        "description": "Three interconnected strategic focus areas: (1) Marketplace - Be the best place to buy and sell a car; (2) Platform - Be the industry's data and technology platform; (3) Digital retailing - Be the enabler for more to be done online. Working responsibly is embedded into everything.",
+        "item_type": "Strategic priority",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 5,
+          "excerpt": "Our strategy has three focus areas that are closely interconnected, with working responsibly embedded into everything we do: MARKETPLACE Platform Digital retailing Be the best Be the industry's Be the enabler place to buy data and for more to be and sell a car technology done online platform"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "New partnership with the national charity Good Things Foundation and Greater Manchester Combined Authority (GMCA) to tackle digital exclusion. The output will create a five-year roadmap to help shape future policy.",
+        "item_type": "Digital inclusion initiative",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 4,
+          "excerpt": "DIGITAL INCLUSION Tackling digital exclusion through a new partnership with the national charity, Good Things Foundation and Greater Manchester Combined Authority ('GMCA'). The output will create a five-year roadmap to help shape future policy."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Autotrader has a long track record of strong cash generation which it expects to continue. Capital allocation policy focuses on investment in the business supporting growth, while returning approximately one third of net income to shareholders through dividends.",
+        "item_type": "Capital allocation strategy",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 6,
+          "excerpt": "Autotrader has a long track record of strong cash generation which we expect to continue. Autotrader's capital allocation policy continues to focus on investment in the business supporting growth, while returning approximately one third of net income to shareholders through dividends."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Autotrader has accelerated its share buyback programme, purchasing 58.5 million shares in the year (6.6% of issued share capital). Over 2026 and 2027, the company expects to return over \u00a31bn to shareholders through combined share buyback and dividend programmes.",
+        "item_type": "Accelerated share buyback programme",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 6,
+          "excerpt": "In the year, we have accelerated our share buyback programme, purchasing 58.5 million shares in the year, 6.6% of issued share capital. In aggregate this returns over \u00a31bn to shareholders over the course of 2026 and 2027."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "management_commentary": [
+      {
+        "statement": "We are already seeing the application of AI improve the buyer experience, automate retailer tasks and enhance colleague productivity. While AI will change how many users begin their research, buying a car remains a complex, time-consuming journey for a high-value item, where inventory changes daily. We believe a trusted, up-to-date information source will remain an important part of the journey and Autotrader is well placed to continue in this role.",
+        "topic": "AI and technology investment",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 6,
+          "excerpt": "We are already seeing the application of AI improve the buyer experience, automate retailer tasks and enhance colleague productivity. While AI will change how many users begin their research, buying a car remains a complex, time-consuming journey for a high-value item, where inventory changes daily. We believe a trusted, up-to-date information source will remain an important part of the journey and Autotrader is well placed to continue in this role."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Delivered growth in revenue and profit this year, despite more challenging market conditions, with continued strong demand and constrained supply, added to by increased cost pressure for retailers and manufacturers. The Board recognises there has been a challenging end to the year which impacts growth in both 2026 and 2027, although we have seen a gradual increase in some of our core metrics as we've entered the new financial year.",
+        "topic": "Market conditions and outlook",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 6,
+          "excerpt": "Autotrader delivered growth in revenue and profit this year, despite more challenging market conditions, with continued strong demand and constrained supply, added to by increased cost pressure for retailers and manufacturers."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "The Board believes the prevailing Autotrader share price does not reflect the Company's underlying fundamentals or long-term prospects. Despite a rapidly changing technology environment, our current competitive position has strengthened, we are adapting our car buying experience to evolve with consumer habits, and we remain comfortable our investment in technology is sufficient to take full advantage of AI.",
+        "topic": "Share valuation and shareholder returns",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 6,
+          "excerpt": "The Board believes the prevailing Autotrader share price does not reflect the Company's underlying fundamentals or long-term prospects. Despite a rapidly changing technology environment, our current competitive position has strengthened, we are adapting our car buying experience to evolve with consumer habits, and we remain comfortable our investment in technology is sufficient to take full advantage of AI."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Having received increased levels of feedback in November on the roll-out of some of these products, we remain committed to delivering value to customers and will continue to listen and evolve our product offering.",
+        "topic": "Product feedback and future direction",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 6,
+          "excerpt": "Having received increased levels of feedback in November on the roll-out of some of these products, we remain committed to delivering value to customers and will continue to listen and evolve our product offering."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "In 2027 we currently expect to return \u00a3600m to shareholders. This will be through purchasing c.\u00a3500m of shares (we will be seeking authority to purchase up to 15% of issued share capital at our AGM), as well as paying a third of net income in dividends. Based on current assumptions, this would increase leverage to c.1.0x.",
+        "topic": "Capital allocation and 2027 shareholder returns",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 6,
+          "excerpt": "in 2027 we currently expect to return \u00a3600m to shareholders. This will be through purchasing c.\u00a3500m of shares (we will be seeking authority to purchase up to 15% of issued share capital at our AGM), as well as paying a third of net income in dividends. Based on current assumptions, this would increase leverage to c.1.0x."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "chunk_id": "at-ar-fy26_p3-6"
+  },
+  {
+    "financial_figures": [
+      {
+        "label": "Average retailer forecourts",
+        "value": 13942.0,
+        "unit": "count",
+        "period": "FY 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 7,
+          "excerpt": "Average retailer forecourts advertising with us for the year decreased by 0.5% to 13,942 (2025: 14,013)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Average revenue per retailer (ARPR)",
+        "value": 2995.0,
+        "unit": "GBP",
+        "period": "FY 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 7,
+          "excerpt": "Average revenue per retailer ('ARPR') increased 5% (or \u00a3141) to \u00a32,995 (2025: \u00a32,854)."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Average live car listings",
+        "value": 451000.0,
+        "unit": "count",
+        "period": "FY 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 7,
+          "excerpt": "Despite higher average live car listings of 451,000 (2025: 449,000)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Technology and data service calls",
+        "value": 155.0,
+        "unit": "million per month",
+        "period": "FY 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 7,
+          "excerpt": "The number of calls on these technology and data services increased to an average of 155 million per month (2025: 91 million)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Cross-platform visits",
+        "value": 81.7,
+        "unit": "million per month",
+        "period": "FY 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 10,
+          "excerpt": "We retained record numbers of buyers, with an average number of cross-platform visits of 81.7 million per month (2025: 81.6 million)."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "GHG emissions across Scopes 1, 2 and 3",
+        "value": 144.1,
+        "unit": "k tonnes CO\u2082",
+        "period": "FY 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 9,
+          "excerpt": "estimate our GHG emissions during the year were 55% higher at c.144.1k tonnes of CO\u2082 across Scopes 1, 2 and 3 (2025: 93.2k tonnes)."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Women in organisation",
+        "value": 43.0,
+        "unit": "percent",
+        "period": "March 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 9,
+          "excerpt": "At the end of March 2026, women represented 43% of our organisation (March 2025: 44%)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Ethnically diverse employees",
+        "value": 20.0,
+        "unit": "percent",
+        "period": "March 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 9,
+          "excerpt": "Ethnically diverse employees represent 20% of our organisation (March 2025: 19%)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Employee engagement score",
+        "value": 72.0,
+        "unit": "percent",
+        "period": "FY 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 9,
+          "excerpt": "Employee engagement has fallen to 72% from 91% a year ago."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Deal Builder retailers",
+        "value": 6700.0,
+        "unit": "count",
+        "period": "March 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 9,
+          "excerpt": "In the year, we have continued to scale Deal Builder, with over 6.7k retailers on the product (March 2025: 2.0k)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Deal Builder live vehicles",
+        "value": 175000.0,
+        "unit": "count",
+        "period": "March 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 9,
+          "excerpt": "175k vehicles live at the end of March (March 2025: 84k)."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Deal Builder deals with full reservation placed",
+        "value": 137000.0,
+        "unit": "count",
+        "period": "FY 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 9,
+          "excerpt": "In the year, we saw 137k deals with a full reservation placed (2025: 49k)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "EV share of new car stock",
+        "value": 24.0,
+        "unit": "percent",
+        "period": "FY 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 10,
+          "excerpt": "Supported the EV transition, with EVs making up 24% of new car stock."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "business_facts": [
+      {
+        "category": "Market Position",
+        "statement": "Autotrader is 11x larger than its nearest competitor in terms of time on site against a collection of four brands, and 22x larger than the next largest individual brand.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 7,
+          "excerpt": "We were 11x larger (2025: 10x) than our nearest competitor in terms of time on site, which was against a collection of four brands. We were 22x larger (2025: 23x) than the next largest individual brand"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Market Position",
+        "statement": "Six times more time is spent on Autotrader than all main competitors combined, with 67% of Autotrader's audience unique to the platform.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 7,
+          "excerpt": "six times more time was spent on Autotrader than all our main competitors combined. 67% of our audience was unique to Autotrader, not visiting these other sites."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Data & Technology Platform",
+        "statement": "Autotrader's proprietary dataset is integrated with over 220 technology partners, and the company holds the broadest view of the UK car market with almost 300 people in customer-facing teams using tools to identify operational opportunities and performance metrics.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 7,
+          "excerpt": "integrated with over 220 technology partners, and increasingly central to finance and insurance companies. We have almost 300 people in our customer-facing teams, who are equipped with tools that identify operational opportunities, problem vehicles, areas of future risk and opportunity and performance variation across different retail sites."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Product & Features",
+        "statement": "Co-Driver, a generative AI-powered product, automates vehicle description generation and vehicle highlights for retailers, with 86% of retailers having used one of the Co-Driver tools since launch, generating 1.9 million descriptions and 700k smart image re-orders.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 8,
+          "excerpt": "86% of retailers have used one of our Co-Driver tools since launch. There have been 1.9 million descriptions generated and 700k smart image re-orders."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Product & Features",
+        "statement": "Autotrader launched Buying Signals in January 2026, a proprietary machine learning product that flags high-intent leads converting at twice the average rate, already featured on over 800k enquiries.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 9,
+          "excerpt": "In January 2026, we launched our Buying Signals product, which uses a proprietary machine learning model trained on verified but anonymised sales transactions and consumer interactions. Buying Signals has already featured on over 800k enquiries, and early results indicate that leads flagged as high-intent convert at twice the average rate."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Product & Features",
+        "statement": "Deal Builder has been scaled to 6.7k retailers (up from 2.0k in March 2025) with 175k vehicles live at end of March 2026, generating 137k deals with full reservation placed (2025: 49k).",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 9,
+          "excerpt": "In the year, we have continued to scale Deal Builder, with over 6.7k retailers on the product (March 2025: 2.0k) and 175k vehicles live at the end of March (March 2025: 84k). In the year, we saw 137k deals with a full reservation placed (2025: 49k)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Business Model",
+        "statement": "Over 80% of Autotrader visits are direct (via mobile apps, URL, or brand searches), 13% from organic search, and only 4% from paid web traffic; less than 1% of audience comes from generative AI chat assistants.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 7,
+          "excerpt": "over 80% of our visits were either direct to our mobile apps, direct to our URL or through searches for \"Autotrader\"; 13% were from organic search; and only 4% from paid for web traffic. Currently less than 1% of audience comes from generative AI chat assistants."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Business Model",
+        "statement": "Autotrader receives approximately 9 million unique visitors monthly with 548 million minutes of activity on site (2025: 557 million), with cross-platform visits averaging 81.7 million per month.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 7,
+          "excerpt": "This year, on average each month, we saw over nine million unique visitors, averaging 548 million (2025: 557 million) minutes of activity on site."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Technology & Infrastructure",
+        "statement": "Autotrader has fully transitioned to a modern cloud-based delivery and data platform based largely on open-source technologies, with an AI platform allowing quick build, training and roll-out of AI services using a range of foundational Large Language Models.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 7,
+          "excerpt": "We have already transitioned fully to a modern cloud-based delivery and data platform based largely on open-source technologies. The highly performant, reliable and consistent architecture allows us to build new features quickly on stable foundations. The recent addition of an AI platform built using the same principles allows us to quickly build, train and roll-out AI services and products utilising a wide range of foundational Language Models"
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "risk_disclosures": [
+      {
+        "description": "Consumer behaviour is shifting towards conversational chat interfaces powered by LLMs, which could reduce reliance on traditional search and marketplace functionality. However, car buying is described as a high-value, multi-step regulated process where each vehicle is unique and changes daily.",
+        "risk_type": "Technology and Business Model Risk",
+        "confidence": "medium",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 8,
+          "excerpt": "Consumer behaviour is changing, with increased use of conversational chat interfaces powered by LLMs. We expect this trend to continue, with AI taking on more of the buying experience for many goods sold online. Whilst this change presents some risk, car buying is a high-value, multi-step and often regulated process, where each vehicle is unique and changes daily."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Retailer sentiment softened during the year due to difficult cost-related trading conditions and concerns with the speed and nature of the Deal Builder product roll-out, leading to a slight decrease in retailer numbers.",
+        "risk_type": "Customer and Product Risk",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 7,
+          "excerpt": "Retailer numbers softened slightly during the year, reflecting both the more difficult cost-related trading conditions and concerns with the speed and nature of our Deal Builder product roll-out."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Employee engagement has fallen significantly from 91% to 72% due to restructures, external factors, and a tighter approach to working in the office during a challenging year.",
+        "risk_type": "People and Organizational Risk",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 9,
+          "excerpt": "Employee engagement has fallen to 72% from 91% a year ago. It has been a challenging year for colleagues with restructures, external factors and a tighter approach to working in the office."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "GHG emissions increased 55% to 144.1k tonnes CO\u2082, driven by one-off capital expenditure on the new office and an increase in the number of vehicles taken on balance sheet by Autorama.",
+        "risk_type": "Environmental Risk",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 9,
+          "excerpt": "estimate our GHG emissions during the year were 55% higher at c.144.1k tonnes of CO\u2082 across Scopes 1, 2 and 3 (2025: 93.2k tonnes). The majority of our emissions are Scope 3, with the increase driven by both one-off capital expenditure on our new office and an increase in the number of vehicles taken on balance sheet by Autorama."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "strategic_items": [
+      {
+        "description": "Develop and scale AI-enabled products and services using proprietary models and LLMs, including Co-Driver for automated vehicle descriptions and highlights, Buying Signals for high-intent lead identification, and ChatGPT integration via Model Context Protocol with plans for additional integrations.",
+        "item_type": "Product and Innovation Strategy",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 8,
+          "excerpt": "Our product and technology organisation includes a growing data science and analytics community and has had ongoing research partnerships with Manchester Metropolitan University and the University of Manchester to the cloud since 2019, focused on Natural Language Processing and Large Language Models, producing academic whitepapers and insights that inform internal development."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Continue investing in cloud-based infrastructure, open-source technologies, and a modern AI platform to maintain competitive advantage while building new features quickly on stable foundations.",
+        "item_type": "Technology Strategy",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 7,
+          "excerpt": "Our technology platform reflects decades of consistent, long-term investment. We have already transitioned fully to a modern cloud-based delivery and data platform based largely on open-source technologies. The highly performant, reliable and consistent architecture allows us to build new features quickly on stable foundations."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Scale Deal Builder to additional retailers with custom integrations for large customers, focusing on improving retailer conversion and reducing manual effort through AI-powered automation.",
+        "item_type": "Product Growth Strategy",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 9,
+          "excerpt": "Within the 6.7k retailers, we have started onboarding some of our largest customers with custom integrations. In the year, we saw 137k deals with a full reservation placed (2025: 49k), which continue to be the very best enquiries in terms of conversion to sale."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Expand technology and data services to finance, insurance, and manufacturer partners through APIs and integrations, with the goal of embedding Autotrader data into decision-making processes across the broader automotive industry.",
+        "item_type": "Market Expansion Strategy",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 7,
+          "excerpt": "The use of our data also extends beyond just retailers to become an important industry asset, integrated with over 220 technology partners, and increasingly central to finance and insurance companies. We see further opportunity in continuing to expand this capability to deliver business improvements to a range of automotive industry participants."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Integrate leasing offers into core Autotrader search experience and build a scalable and robust checkout journey to enable growth in the personal leasing channel (PCH) as volumes return.",
+        "item_type": "Product Strategy",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 10,
+          "excerpt": "We continued to focus on integrating leasing offers into the core Autotrader search experience. The goal is to enable a more scalable and robust checkout journey on all platforms and to ensure we are set up to grow profitably as volume returns to the personal leasing channel"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Achieve net zero emissions by 2040 and halve carbon emissions by 2030, with targets validated by the Science Based Targets initiative (SBTi).",
+        "item_type": "Sustainability Strategy",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 9,
+          "excerpt": "We are committed to being net zero by 2040 and halving our carbon emissions by 2030, targets which have been validated by the Science Based Targets initiative"
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "management_commentary": [
+      {
+        "statement": "Group operating profit is expected to be \u00a3395m \u2013 \u00a3415m for financial year 2027, with an accelerated level of share buybacks supporting at least high single digit Basic EPS growth.",
+        "topic": "FY 2027 Outlook",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 9,
+          "excerpt": "Group operating profit is expected to be \u00a3395m \u2013 \u00a3415m for financial year 2027. With an accelerated level of share buybacks, we anticipate at least high single digit Basic EPS growth."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Management expects to maintain Group operating profit margins (excluding Vehicle & Accessory sales) at current levels and expects Autotrader revenue to grow in the second half of 2026 following improvements in paid stock and package penetration.",
+        "topic": "FY 2026 Outlook",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 9,
+          "excerpt": "Group operating profit margins, excluding Vehicle & Accessory sales, will be at least maintained. Autotrader revenue was flat year-on-year in April 2026, due to a decline in paid stock and package penetration are now improving, and we expect to grow in the second half."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Average retailer forecourts are expected to be 1-2% lower for the full year, with stock expected to recover from current levels to minus \u00a330-40 over the next 12 months.",
+        "topic": "FY 2026 Retailer Outlook",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 9,
+          "excerpt": "Average retailer forecourts are now growing but will be 1-2% lower for the full year. Stock will recover resulting in an improvement from current levels to minus \u00a330-40 for the year"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Autotrader is committed to delivering more, higher quality enquiries that convert at double the rate into sales, which has always been at the core of the Deal Builder proposition and drives long-term value for buyers, retailers, and Autotrader.",
+        "topic": "Strategic Priority",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 9,
+          "excerpt": "We are committed to delivering more, higher quality enquiries, that convert at double the rate into sales for our customers, which has always been at the core of our Deal Builder proposition."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "AI capability over the next few years is expected to be as significant a technology transition as the internet, mobile, big data, cloud and machine-learning combined, with Autotrader well positioned to provide richer experiences for buyers and better tooling for retailers.",
+        "topic": "AI Opportunity",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 8,
+          "excerpt": "We believe the shift in AI capability over the next few years will be as big if not a bigger technology transition than the internet, mobile, big data, cloud and machine-learning."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Autotrader expects Autorama to make a small profit for the year, with Commission & Ancillary revenue growing 8-12% and Vehicle & Accessory sales of approximately \u00a340m.",
+        "topic": "Autorama Outlook",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 9,
+          "excerpt": "We expect Autorama to make a small profit for the year, with Commission & Ancillary revenue growing 8-12% and Vehicle & Accessory sales of c.\u00a340m."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Co-Driver reduces the average time taken to list a vehicle from 28 minutes to 5 minutes, which is significant when multiplied across more than 340,000 vehicles uploaded monthly by retailers.",
+        "topic": "Product Impact",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 9,
+          "excerpt": "Co-Driver which anecdotally reduces the average time taken to list a vehicle from 28 minutes to 5 minutes, which is significant when multiplied across more than 340,000 vehicles uploaded every month by retailers."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "chunk_id": "at-ar-fy26_p7-10"
+  },
+  {
+    "financial_figures": [
+      {
+        "label": "Deal Builder retailers",
+        "value": 6700.0,
+        "unit": "number of retailers",
+        "period": "March 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 11,
+          "excerpt": "with over 6.7k retailers on the product (March 2025: 2.0k)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Deal Builder live vehicles",
+        "value": 175000.0,
+        "unit": "vehicles",
+        "period": "March 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 11,
+          "excerpt": "175k vehicles live at the end of March (March 2025: 84k)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Employee pride in working for Autotrader",
+        "value": 72.0,
+        "unit": "percent",
+        "period": "2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 11,
+          "excerpt": "72% of employees say they're proud to work for Autotrader (2025: 91%)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Used car transactions",
+        "value": 7.7,
+        "unit": "million",
+        "period": "FY 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 12,
+          "excerpt": "2026 with 7.7 million transactions, representing steady 1% year-on-year growth"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Average used vehicle price",
+        "value": 17597.0,
+        "unit": "GBP",
+        "period": "FY 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 13,
+          "excerpt": "with average values averaging \u00a317,597 across financial year 2026"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "New car registrations",
+        "value": 2.1,
+        "unit": "million",
+        "period": "FY 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 12,
+          "excerpt": "New car registrations grew 5% over the past 12 months to 2.1 million (2025: 2.0 million)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Electric vehicle share of new car registrations",
+        "value": 23.4,
+        "unit": "percent",
+        "period": "FY 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 12,
+          "excerpt": "EVs achieving a record 23.4% share (nearly half a million registrations)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "UK car parc",
+        "value": 37.0,
+        "unit": "million vehicles",
+        "period": "2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 13,
+          "excerpt": "reaching 37 million today"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Platform visits",
+        "value": 1000000000.0,
+        "unit": "visits",
+        "period": "FY 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 12,
+          "excerpt": "Last year we recorded nearly one billion platform visits to Autotrader"
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "business_facts": [
+      {
+        "category": "Business Model & Market Position",
+        "statement": "Autotrader is the UK's largest automotive marketplace and leading digital platform for the automotive industry, with an industry-leading technology and data platform increasingly used across the automotive industry.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 14,
+          "excerpt": "Creating value as the UK's largest automotive marketplace and leading digital platform for the automotive industry"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Products & Services",
+        "statement": "Autotrader launched Deal Builder, with 6.7k retailers on the product and 175k vehicles live as of March 2026, and has launched Buying Signals which uses AI-driven signals to identify high-intent leads and buyer preferences.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 11,
+          "excerpt": "we have continued to roll out Deal Builder, with over 6.7k retailers on the product (March 2025: 2.0k) and 175k vehicles live at the end of March (March 2025: 84k)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Engagement & Reach",
+        "statement": "Autotrader recorded nearly one billion platform visits in the financial year, helping partners' stock turn over at a highly profitable pace.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 12,
+          "excerpt": "Last year we recorded nearly one billion platform visits to Autotrader, helping our partners' stock to continue turning over at a highly profitable pace."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Market Dynamics",
+        "statement": "The used car market concluded 2026 with 7.7 million transactions, representing steady 1% year-on-year growth, with average used vehicle prices at \u00a317,597 across financial year 2026.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 12,
+          "excerpt": "the used car market demonstrated exceptional resilience throughout the financial year, 2026 with 7.7 million transactions, representing steady 1% year-on-year growth"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Market Dynamics",
+        "statement": "New car registrations grew 5% over the past 12 months to 2.1 million (2025: 2.0 million), with electric vehicles achieving a record 23.4% share.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 12,
+          "excerpt": "New car registrations grew 5% over the past 12 months to 2.1 million (2025: 2.0 million)"
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "risk_disclosures": [
+      {
+        "description": "The market faces structural supply headwinds as 2.5 million 'lost' pandemic registrations age through the vehicle parc, resulting in a forecasted 17% drop in availability of 5-7-year-old vehicles over the next two years.",
+        "risk_type": "Market & Supply Chain Risk",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 12,
+          "excerpt": "the market faces structural supply headwinds as the estimated 2.5 million \"lost\" pandemic registrations age through the vehicle parc. This shortfall is now maturing into a \"cliff edge\" for middle-aged stock, resulting in a forecasted 17% drop in the availability of 5-7-year-old vehicles over the next two years"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Mixed messaging from Government regarding electric vehicles is risking interest in EVs, as a newly proposed pay per mile EV tax (Electric Vehicle Excise Duty) threatens to erode the cost savings of running an EV.",
+        "risk_type": "Regulatory & Policy Risk",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 12,
+          "excerpt": "mixed messaging from the Government is risking interest in EVs, as a newly proposed pay per mile EV tax (Electric Vehicle Excise Duty) threatens to erode the cost savings of running an EV"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "In November 2025, Autotrader received negative sentiment around Deal Builder products, requiring customer listening sessions, product variations, testing of front-end consumer journeys, and language changes around 'Deals'.",
+        "risk_type": "Operational Risk",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 11,
+          "excerpt": "In November 2025, we received some negative sentiment around the Deal Builder products. We subsequently held customer listening sessions, made product variations, tested various front-end consumer journeys and changed the language around \"Deals\" which was causing confusion for some customers"
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "strategic_items": [
+      {
+        "description": "Digital retailing strategy to be the enabler for more to be done online, with focus on delivering more, higher quality enquiries that convert at high rates for customers. Core proposition is Deal Builder, with Buying Signals launched to identify high-intent leads and buyer preferences.",
+        "item_type": "Product Strategy",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 11,
+          "excerpt": "Digital retailing \u2013 Be the enabler for more to be done online"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "ESG strategy underpinned by purpose of 'Driving Change Together. Responsibly', focused on being a responsible business. Established Responsible Change Forum to drive forward ESG priorities.",
+        "item_type": "ESG & Purpose",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 11,
+          "excerpt": "Our ESG strategy is underpinned by our purpose of Driving Change Together. Responsibly."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Continuing to bring more of the car buying journey online, leveraging unparalleled data and AI-powered tools to help retailers navigate supply gaps and fully capitalise on strong levels of buyer engagement.",
+        "item_type": "Platform & AI Expansion",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 12,
+          "excerpt": "by leveraging our unparalleled data and AI-powered tools, retailers are well equipped to navigate these supply gaps, adapt their forecourts, and fully capitalise on the very strong levels of buyer engagement"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Developing leaders through investment in tools and resources and 'Leader as Coach' programme. Launched first T-Level placement and expanded L4 software engineering apprenticeship.",
+        "item_type": "People & Culture",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 11,
+          "excerpt": "Developing our leaders through investment in tools and resources and our \"Leader as Coach\" programme."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "management_commentary": [
+      {
+        "statement": "The UK car market is moving closer to 10 million total transactions, effectively returning the industry to its pre-pandemic scale for the first time since 2019. The combined new and used car market demonstrates exceptional resilience with underlying drivers of a growing population, expanding parc and increasing transaction volumes remaining firmly in place.",
+        "topic": "Market Outlook & Fundamentals",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 12,
+          "excerpt": "the combined UK car market is moving closer to 10 million total transactions, effectively returning the industry to its pre-pandemic scale for the first time since 2019"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Retailer gross margins remain consistently stable between 9% and 11%. As vehicle values rise, higher vehicle prices reliably translate into higher absolute gross profits, underpinning robust, growing profit for the industry.",
+        "topic": "Pricing & Profitability",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 13,
+          "excerpt": "Crucially, as vehicle values rise, two decades, reaching 37 million today. historical data shows retailer gross margins remain consistently stable between 9% and 11%."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Management believes that delivering more, higher quality enquiries that convert at high rates will drive long-term value for buyers, retailer customers and Autotrader, while being difficult for others to replicate due to the data and technology moat.",
+        "topic": "Long-term Value Creation",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 11,
+          "excerpt": "This ensures we strive to make a positive difference to our people, our communities, the industries we operate in and the wider environment to create a more accessible, equitable and sustainable future."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "chunk_id": "at-ar-fy26_p11-14"
+  },
+  {
+    "financial_figures": [],
+    "business_facts": [
+      {
+        "category": "Business Purpose & Strategy",
+        "statement": "The company's purpose is Driving Change Together, focused on driving change in an industry that needs to evolve to adapt to changing consumer needs and the mainstream adoption of electric vehicles.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 15,
+          "excerpt": "Our purpose is Driving Change Together. Responsibly We are driving change in an industry that needs to evolve to adapt to changing consumer needs, and the changing product, as electric vehicles become the mainstream."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Business Model & Stakeholders",
+        "statement": "The business model brings together a diverse set of stakeholders including consumers, customers (retailers, manufacturers and other customers), suppliers and partners, underpinned by a collaborative, people-led culture.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 15,
+          "excerpt": "We are committed to acting responsibly through our focus on diversity and inclusion, the environment, our sustainability practices and maintaining high levels of ethical conduct, trust and transparency."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "risk_disclosures": [],
+    "strategic_items": [
+      {
+        "description": "Committed to acting responsibly with focus on diversity and inclusion, environmental sustainability practices, and maintaining high ethical conduct standards, trust and transparency.",
+        "item_type": "Strategic Priority",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 15,
+          "excerpt": "We are committed to acting responsibly through our focus on diversity and inclusion, the environment, our sustainability practices and maintaining high levels of ethical conduct, trust and transparency."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "management_commentary": [],
+    "chunk_id": "at-ar-fy26_p15"
+  },
+  {
+    "financial_figures": [
+      {
+        "label": "Group Revenue",
+        "value": 624.3,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 19,
+          "excerpt": "Revenue \u00a3m 2026 624.3"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Autotrader Revenue",
+        "value": 585.3,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 19,
+          "excerpt": "Autotrader revenue increasing to \u00a3585.3m"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Trade Revenue",
+        "value": 531.3,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 19,
+          "excerpt": "Trade revenue grew by 4% and \u00a3531.3m"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Autorama Revenue",
+        "value": 39.0,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 19,
+          "excerpt": "Autorama generated \u00a339.0m of revenue"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Average Revenue Per Retailer (ARPR)",
+        "value": 2995.0,
+        "unit": "\u00a3 per month",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 19,
+          "excerpt": "Average revenue per retailer1 ('ARPR') \u00a3 per month 2026 2,995"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Operating Profit",
+        "value": 392.7,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 19,
+          "excerpt": "Operating profit \u00a3m 2026 392.7"
+        },
+        "citation_status": "unverifiable"
+      },
+      {
+        "label": "Operating Profit Margin",
+        "value": 63.0,
+        "unit": "%",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 19,
+          "excerpt": "Operating profit \u00a3m 2026 Margin 63%"
+        },
+        "citation_status": "unverifiable"
+      },
+      {
+        "label": "Autotrader Operating Profit",
+        "value": 408.0,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 19,
+          "excerpt": "Operating profit in the Autotrader business was \u00a3408.0m"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Basic EPS",
+        "value": 34.16,
+        "unit": "Pence per share",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 19,
+          "excerpt": "Basic EPS Pence per share 2026 34.16"
+        },
+        "citation_status": "unverifiable"
+      },
+      {
+        "label": "Cash Generated from Operations",
+        "value": 418.0,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 19,
+          "excerpt": "Cash generated from operations \u00a3m 2026 418.0"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Cross-platform Visits",
+        "value": 81.7,
+        "unit": "m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 20,
+          "excerpt": "Cross-platform visits1 Monthly average visits spent across all platforms 2026 81.7m"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Cross-platform Minutes",
+        "value": 548.0,
+        "unit": "m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 20,
+          "excerpt": "Cross-platform minutes1,2 Monthly average minutes spent across all platforms 2026 548m"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Number of Retailer Forecourts",
+        "value": 13942.0,
+        "unit": "Average number per month",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 20,
+          "excerpt": "Number of retailer forecourts3 Average number per month 2026 13,942"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Live Car Stock",
+        "value": 451000.0,
+        "unit": "Average number per month",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 20,
+          "excerpt": "Live car stock5 Average number per month 2026 451,000"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Full-Time Equivalent Employees (FTEs)",
+        "value": 1244.0,
+        "unit": "Average number",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 20,
+          "excerpt": "Number of full-time equivalent employees ('FTEs')4 Average number 2026 1,244"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Total CO2 Emissions",
+        "value": 144124.0,
+        "unit": "Tonnes of carbon dioxide equivalent",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 21,
+          "excerpt": "Total CO emissions4 Tonnes of carbon dioxide equivalent 2026 144,124"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Share Buyback and Cancellation",
+        "value": 58.5,
+        "unit": "m shares",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 19,
+          "excerpt": "We purchased and cancelled 58.5 million shares during the year"
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "business_facts": [
+      {
+        "category": "Market Position & Segments",
+        "statement": "Autotrader operates across three main segments: Autotrader (core marketplace), Trade revenue (Retailer, Platform, Home Trader and other smaller revenue streams), and Autorama (Vehicle & Accessory sales and Commission & Ancillary revenue).",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 19,
+          "excerpt": "Trade revenue grew by 4% and \u00a3531.3m, reflecting contributions from Retailer, Platform Home Trader and other smaller revenue streams. Autorama generated \u00a339.0m of revenue, comprising \u00a329.6m from Vehicle & Accessory sales and \u00a39.4m from Commission & Ancillary revenue."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Market Position & Segments",
+        "statement": "Autotrader accounts for over 75% of all minutes spent on automotive classified sites and is 11x larger than its nearest competitor.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 20,
+          "excerpt": "were 11x larger than our nearest competitor."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Operating Model",
+        "statement": "The business model operates on a per-retailer subscription basis, with pricing delivered through annual product and pricing events.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 19,
+          "excerpt": "Our annual pricing and packaging event combined a like-for-like price increase with additional products, including core Co-Driver."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "risk_disclosures": [
+      {
+        "description": "Stock had a negative contribution in the year due to a small decline in retailers and some customers moderating spend in the fourth quarter, indicating sensitivity to macroeconomic conditions and customer spending patterns.",
+        "risk_type": "Automotive market and business environment",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 19,
+          "excerpt": "Stock had a negative contribution in the year due to a small decline in retailers and some customers moderating spend in the fourth quarter."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Deal Builder product roll-out experienced pushback from retailers related to the speed and nature of implementation, affecting retailer base growth.",
+        "risk_type": "Product Innovation and Implementation",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 20,
+          "excerpt": "the pushback related to the speed and nature of our Deal Builder product roll-out."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "GHG emissions increased 55% year-on-year to 144.1k tonnes CO2, primarily due to greater volume of vehicles sold by Autorama passing through the balance sheet and capex incurred for Manchester office relocation.",
+        "risk_type": "Climate Change",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 21,
+          "excerpt": "Most of our CO emiss 2 ions are Scope 3; the material increase is attributable to a greater volume of vehicles sold by Autorama that pass through the balance sheet and the capex incurred as part of our Manchester office relocation."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "strategic_items": [
+      {
+        "description": "Marketplace platform strategy focused on attracting car buyers with continued investment in user engagement despite economic uncertainty.",
+        "item_type": "Strategic Priority",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 20,
+          "excerpt": "Continued high levels of demand from car buyers, despite continued economic uncertainty, account for over 75% of all minutes spent on automotive classified sites"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Digital retailing capabilities being rolled out through Deal Builder product, though experiencing retailer adoption challenges.",
+        "item_type": "Strategic Initiative",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 20,
+          "excerpt": "the pushback related to the speed and nature of our Deal Builder product roll-out."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Pricing and product strategy leveraging annual packaging events with expansion of ancillary products such as Co-Driver to drive average revenue per retailer growth.",
+        "item_type": "Strategic Priority",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 19,
+          "excerpt": "Our annual pricing and packaging event combined a like-for-like price increase with additional products, including core Co-Driver."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Workforce optimization with FTE levels stabilizing at 1,244 (down 2% from prior year) to match current resource requirements.",
+        "item_type": "Strategic Priority",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 20,
+          "excerpt": "as we stabilise resourcing levels currently required to support the business."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "management_commentary": [
+      {
+        "statement": "Group revenue increased by 4% year-on-year, with ARPR grew 5%/\u00a3141 in the year to \u00a32,995, driven by product and pricing levers. Stock had a negative contribution in the year due to a small decline in retailers and some customers moderating spend in the fourth quarter.",
+        "topic": "Revenue Growth and Pricing",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 19,
+          "excerpt": "Group revenue increased by 4% year-on-year, with ARPR grew 5%/\u00a3141 in the year to \u00a32,995, driven by our product and pricing levers. Stock had a negative contribution in the year due to a small decline in retailers and some customers moderating spend in the fourth quarter."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Group operating profit increased by 4% to \u00a3392.7m, reflecting the increase in revenue and reduced losses of \u00a32.0m in Autorama.",
+        "topic": "Operating Profit and Autorama Performance",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 19,
+          "excerpt": "Group operating profit increased by 4% to \u00a3392.7m, reflecting the increase in revenue and reduced losses of \u00a32.0m in Autorama."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Average monthly cross-platform visits marginally increased to 81.7 million per month, with continued high levels of demand from car buyers despite economic uncertainty underpinning strong visit numbers.",
+        "topic": "Platform Engagement",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 20,
+          "excerpt": "Average monthly cross-platform visits marginally increased to 81.7 million per month (2025: 81.6 million). Continued high levels of demand from car buyers, despite continued economic uncertainty, account for over 75% of all minutes spent on automotive classified sites and were 11x larger than our nearest competitor."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "The average number of retailer forecourts decreased 1% to 13,942, reflecting difficult trading conditions and pushback related to the speed and nature of the Deal Builder product roll-out.",
+        "topic": "Retailer Base and Product Adoption",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 20,
+          "excerpt": "This reflects both the difficult trading conditions and the pushback related to the speed and nature of our Deal Builder product roll-out."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Employee engagement (proud to work at Autotrader) reduced significantly to 72% in FY2026 from 91% in FY2025. Management remains committed to improving this measure over the next 12 months.",
+        "topic": "Employee Engagement",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 21,
+          "excerpt": "This year we saw a reduction in our proud to work at Autotrader KPI to 72%. We remain committed to improving this measure over the next 12 months."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "chunk_id": "at-ar-fy26_p19-21"
+  },
+  {
+    "financial_figures": [
+      {
+        "label": "Total Group Revenue",
+        "value": 624.3,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 23,
+          "excerpt": "GROUP RESULTS 2026 2025 Revenue 624.3 601.1 4%"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Autotrader Revenue",
+        "value": 585.3,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 23,
+          "excerpt": "Revenue increased to \u00a3585.3m (2025: \u00a3564.8m)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Retailer Segment Revenue",
+        "value": 501.1,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 23,
+          "excerpt": "Retailer 501.1 480.0 4%"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Trade Revenue",
+        "value": 531.3,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 23,
+          "excerpt": "Trade 531.3 509.1 4%"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Home Trader Revenue",
+        "value": 16.7,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 23,
+          "excerpt": "Home Trader 16.7 16.1 4%"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Consumer Services Revenue",
+        "value": 38.8,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 23,
+          "excerpt": "Consumer Services 38.8 42.4 (8%)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Manufacturer & Agency Revenue",
+        "value": 15.2,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 23,
+          "excerpt": "Manufacturer & Agency 15.2 13.3 14%"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Autorama Revenue",
+        "value": 39.0,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 24,
+          "excerpt": "Autorama revenue 39.0 36.3 7%"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Group Operating Costs",
+        "value": -235.7,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 23,
+          "excerpt": "Operating costs (235.7) (227.9) (3%)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Group Operating Profit",
+        "value": 392.7,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 23,
+          "excerpt": "Group operating profit 392.7 376.8 4%"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Autotrader Operating Profit",
+        "value": 408.0,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 23,
+          "excerpt": "Autotrader 408.0 394.0 4%"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Autorama Operating Loss",
+        "value": -2.0,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 24,
+          "excerpt": "Autorama operating loss (2.0) (4.3) 53%"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Group Operating Profit Margin",
+        "value": 63.0,
+        "unit": "%",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 23,
+          "excerpt": "Group operating profit margin 63% 63% 0 pts"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Autotrader Operating Profit Margin",
+        "value": 70.0,
+        "unit": "%",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 24,
+          "excerpt": "Autotrader operating profit margin 70% 70% (0%) pts"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Average Revenue Per Retailer (ARPR) per month",
+        "value": 2995.0,
+        "unit": "\u00a3",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 23,
+          "excerpt": "increased by 5% to \u00a32,995 (2025: \u00a32,854)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Private Revenue (Consumer Services)",
+        "value": 23.6,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 23,
+          "excerpt": "decreased 11% to \u00a323.6m (2025: \u00a326.6m)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Motoring Services Revenue",
+        "value": 15.2,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 23,
+          "excerpt": "decreased 4% to \u00a315.2m (2025: \u00a315.8m)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "People Costs",
+        "value": 93.6,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 24,
+          "excerpt": "People costs increased by 1% to \u00a393.6m (2025: \u00a392.8m)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Marketing Expenditure",
+        "value": 21.9,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 24,
+          "excerpt": "Marketing expenditure decreased 11% to \u00a321.9m (2025: \u00a324.6m)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Depreciation & Amortisation (Group)",
+        "value": 9.4,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 24,
+          "excerpt": "Depreciation & amortisation increased by 49% to \u00a39.4m (2025: \u00a36.3m)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Digital Services Tax",
+        "value": 10.6,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 23,
+          "excerpt": "Digital Services Tax 10.6 10.2 4%",
+          "page_original": 24
+        },
+        "citation_status": "corrected"
+      },
+      {
+        "label": "Vehicle & Accessory Sales (Autorama)",
+        "value": 29.6,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 24,
+          "excerpt": "Vehicle & Accessory Sales 29.6 26.1 13%"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Commission & Ancillary Revenue (Autorama)",
+        "value": 9.4,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 24,
+          "excerpt": "Commission & Ancillary 9.4 10.2 (8%)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Group Profit Before Tax",
+        "value": 388.8,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 23,
+          "excerpt": "Group profit before tax increased by 3% to \u00a3388.8m (2025: \u00a3375.7m)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Group Tax Charge",
+        "value": 94.9,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 24,
+          "excerpt": "The Group tax charge of \u00a394.9m (2025: \u00a393.1m) represents an effective tax rate of 24% (2025: 25%)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Effective Tax Rate",
+        "value": 24.0,
+        "unit": "%",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 24,
+          "excerpt": "represents an effective tax rate of 24% (2025: 25%)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Basic Earnings Per Share",
+        "value": 34.17,
+        "unit": "pence",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 24,
+          "excerpt": "Basic earnings per share increased by 8% to 34.17 pence (2025: 31.66 pence)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Diluted Earnings Per Share",
+        "value": 34.07,
+        "unit": "pence",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 24,
+          "excerpt": "Diluted earnings per share, which accounts for the dilutive impact of outstanding share awards, also increased by 8% to 34.07 pence (2025: 31.56 pence)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Cash Generated from Operations",
+        "value": 418.0,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 23,
+          "excerpt": "Cash generated from operations was \u00a3418.0m (2025: \u00a3399.7m)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Net Cash Generated from Operating Activities",
+        "value": 322.8,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 25,
+          "excerpt": "Net cash generated from operating activities was \u00a3322.8m (2025: \u00a3304.6m)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Net Bank Debt",
+        "value": 146.8,
+        "unit": "\u00a3m",
+        "period": "31 March 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 25,
+          "excerpt": "As at 31 March 2026, the Group had net bank debt of \u00a3146.8m (31 March 2025: net cash of \u00a315.3m)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Syndicated RCF Drawn",
+        "value": 165.0,
+        "unit": "\u00a3m",
+        "period": "31 March 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 25,
+          "excerpt": "the Group had drawn \u00a3165.0m of its Syndicated RCF (31 March 2025: \u00a3nil)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Cash and Cash Equivalents",
+        "value": 18.2,
+        "unit": "\u00a3m",
+        "period": "31 March 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 25,
+          "excerpt": "held \u00a318.2m in cash. With a robust balance sheet, flexible liquidity position and a Syndicated RCF"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Leverage (Net Debt / EBITDA)",
+        "value": 0.3,
+        "unit": "times",
+        "period": "31 March 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 25,
+          "excerpt": "Leverage, defined as the ratio of Net bank debt to EBITDA was 0.3 times (2025: 0.0 times)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Interest Paid",
+        "value": 2.8,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 25,
+          "excerpt": "interest paid was \u00a32.8m (2025: \u00a31.2m)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Group Net Finance Costs",
+        "value": 3.9,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 24,
+          "excerpt": "Group net finance costs increased to \u00a33.9m (2025: \u00a31.1m)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Interest Costs on Syndicated RCF",
+        "value": 2.8,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 24,
+          "excerpt": "Interest costs on the Group's Syndicated Revolving Credit Facility ('Syndicated RCF') totalled \u00a32.8m (2025: \u00a31.1m)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Shares Purchased for Treasury",
+        "value": 58.5,
+        "unit": "million",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 25,
+          "excerpt": "During the year, a total of 58.5 million shares (2025: 23.9 million) were purchased"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Share Buyback Consideration",
+        "value": 369.1,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 25,
+          "excerpt": "for a consideration of \u00a3369.1m (2025: \u00a3187.3m)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Dividends Paid",
+        "value": 94.1,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 25,
+          "excerpt": "\u00a394.1m (2025: \u00a388.4m) was paid in dividends"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Total Cash Returned to Shareholders",
+        "value": 463.2,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 25,
+          "excerpt": "giving a total of \u00a3463.2m (2025: \u00a3275.7m) in cash returned to shareholders"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Total Dividend Per Share",
+        "value": 11.6,
+        "unit": "pence",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 25,
+          "excerpt": "The total dividend for the year is therefore 11.6 pence per share (2025: 10.6 pence per share)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Final Dividend Per Share",
+        "value": 7.8,
+        "unit": "pence",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 25,
+          "excerpt": "The Directors are recommending a final dividend of 7.8 pence per share"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Weighted Average Ordinary Shares Outstanding (Basic)",
+        "value": 860.2,
+        "unit": "million",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 24,
+          "excerpt": "based on a weighted average number of ordinary shares in issue of 860.2 million (2025: 892.4 million)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Weighted Average Ordinary Shares Outstanding (Diluted)",
+        "value": 862.7,
+        "unit": "million",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 24,
+          "excerpt": "based on 862.7 million shares (2025: 895.4 million)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Amortisation of Autorama Intangible Assets",
+        "value": 13.3,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 23,
+          "excerpt": "Group central costs comprise an amortisation charge of \u00a313.3m (2025: \u00a312.9m)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Corporation Tax Paid",
+        "value": 95.2,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 25,
+          "excerpt": "Corporation tax payments increased to \u00a395.2m (2025: \u00a395.1m)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Average Used Car Stock (Autotrader)",
+        "value": 428000.0,
+        "unit": "units",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 23,
+          "excerpt": "Average underlying live used car stock declined marginally in the year to 428,000 (2025: 429,000)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Average New Car Stock (Autotrader)",
+        "value": 23000.0,
+        "unit": "units",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 23,
+          "excerpt": "by new car stock, which increased on average to 23,000 (2025: 20,000)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Average Live Cars Advertised (Autotrader)",
+        "value": 451000.0,
+        "unit": "units",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 23,
+          "excerpt": "The average number of live cars advertised on Autotrader increased to 451,000 (2025: 449,000)"
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "business_facts": [
+      {
+        "category": "Business Model & Revenue",
+        "statement": "Autotrader operates a multi-revenue platform including Retailer, Home Trader, Consumer Services (Private and Motoring Services), and Manufacturer & Agency segments, with Trade revenue comprising Retailer, Home Trader and other streams.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 23,
+          "excerpt": "Trade, which comprises revenue from Retailer, Home Trader and other smaller revenue streams"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Market Position & Operations",
+        "statement": "Autotrader platform had 451,000 average live cars advertised in 2026 (up from 449,000 in 2025), with 13,942 retailer forecourts (down from 14,013 in 2025).",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 23,
+          "excerpt": "The average number of retailer forecourts advertising on our platform declined 0.5% to 13,942 (2025: 14,013). Average revenue per retailer ('ARPR') per month increased by 5% to \u00a32,995"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Subsidiary Business",
+        "statement": "Autorama delivered 8,056 vehicles in 2026 (5,302 cars, 2,520 vans, 234 pickups) with 3,804 deliveries from Autotrader (predominantly cars), more than tripling Autotrader-related deliveries from 976 units in 2025.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 24,
+          "excerpt": "Total deliveries amounted to 8,056 units (2025: 6,268), which comprised 5,302 cars (2025: 2,124), 2,520 vans (2025: 3,498) and 234 pickups (2025: 646). Deliveries from Autotrader, which were predominantly cars, increased over three times to 3,804 (2025: 976)."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Organization & Staffing",
+        "statement": "The Group employed an average of 1,138 full-time equivalent employees in 2026 (2025: 1,140), with Autorama employing 106 FTEs on average (2025: 127).",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 24,
+          "excerpt": "The average number of full-time equivalent employees ('FTEs') remained broadly flat at 1,138 (2025: 1,140), reflecting the stable resourcing levels currently required to support the business."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Market Position",
+        "statement": "From financial year 2027, Autorama will operate and be reported as a single operating segment with the rest of the Autotrader Group, following more than half of all leasing transactions being delivered through the Autotrader platform in the second half of 2026.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 25,
+          "excerpt": "From financial year 2027, Autorama will operate and be reported as a single operating segment with the rest of the Autotrader Group as more than half of all leasing transactions were delivered through the Autotrader platform in the second half of financial year 2026."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "risk_disclosures": [],
+    "strategic_items": [],
+    "management_commentary": [
+      {
+        "statement": "For financial year 2027, we expect revenue to continue the acceleration of share buybacks, purchasing c.\u00a3500m. We expect marketing to increase in financial year 2027. Share-based payments are expected to be \u00a314m in 2027.",
+        "topic": "FY2027 Outlook and Capital Allocation",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 23,
+          "excerpt": "For financial year 2027, we expect revenue to continue the acceleration of share buybacks, purchasing c.\u00a3500m. 2026"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "ARPR growth was driven by the product and price levers, with a negative contribution from the stock lever. Price contributed \u00a3117 to ARPR growth driven by the 1 April 2025 pricing and product event combining a like-for-like price increase with additional products.",
+        "topic": "Pricing and Product Dynamics",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 23,
+          "excerpt": "ARPR growth was driven by the product and price levers, with a negative contribution from the stock lever. growth was driven by the product and product event, which combined a like-for-like price increase with additional products."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "From November 2025, prompted by the speed and nature of our Deal Builder product and reflecting more difficult trading conditions, a number of retailers reduced the number of vehicles advertised on the platform, contributing to lower paid stock levels.",
+        "topic": "Market Conditions and Product Impact",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 23,
+          "excerpt": "From November 2025, prompted by the speed and nature of our Deal Builder product and reflecting more difficult trading conditions, a number of retailers reduced the number of vehicles advertised on the platform"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "The Directors consider the Group to have sufficient resources to continue as a going concern given its robust balance sheet, flexible liquidity position, and a Syndicated RCF which has recently increased to \u00a3300m and is committed until February 2030.",
+        "topic": "Going Concern and Liquidity",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 25,
+          "excerpt": "With a robust balance sheet, flexible liquidity position and a Syndicated RCF, which has recently increased to \u00a3300m and is committed until February 2030, the Directors consider the Group to have sufficient resources to continue as a going concern."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "chunk_id": "at-ar-fy26_p23-25"
+  },
+  {
+    "financial_figures": [],
+    "business_facts": [
+      {
+        "category": "Market Position",
+        "statement": "Autotrader has the largest and most engaged automotive audience in the UK, with external measures confirming this position.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 49,
+          "excerpt": "External measures show that we have the largest and most engaged automotive audience."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Market Position",
+        "statement": "Autotrader is the largest and most trusted automotive classified brand in the UK according to company research.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 51,
+          "excerpt": "Our research shows that we are the largest and most trusted automotive classified brand in the UK."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Products & Services",
+        "statement": "Autotrader has launched Deal Builder, Buying Signals, and an AI platform for quickly productionising AI products.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 51,
+          "excerpt": "We launched Buying Signals which enables retailers to prioritise leads from high-intent buyers. We continue to invest heavily in our technology platforms. In FY26 we launched an AI platform which enables us to quickly productionise AI products."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Customer Base & Segments",
+        "statement": "Autotrader's customers include retailers and manufacturers, with exposure to both new and used car markets.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 48,
+          "excerpt": "We also work with OEMs to develop solutions to enable them to advertise their new car pipeline stock on our website."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Operations",
+        "statement": "In January 2026, Autotrader moved to a new, state-of-the-art office in Manchester with increased capacity and improved facilities.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 50,
+          "excerpt": "In January 2026, we moved to a new, state-of-the-art office in Manchester. This increased capacity and provided improved facilities, enabling better collaboration and productivity."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "risk_disclosures": [
+      {
+        "description": "Exposure to global macro events could result in customers being unable to trade, leading to loss of revenue, stock, audience and market share. Geo-political instability remains high with potential knock-on impacts from supply chain disruption affecting used car stock pipeline and affordability.",
+        "risk_type": "Market Risk - Macro Environment",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 48,
+          "excerpt": "We consider there to be a threat to the short-to-mid-term performance of our business posed by unpreventable macro events. Such events could result in our customers being unable to spend and trade, leading to loss of revenue, stock, audience and market share."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Adverse changes in supply versus demand for new/used cars will affect retailer profitability. Higher operating costs and interest rates could affect retailer profitability and reduce their advertising spend with Autotrader. This year saw a tough trading environment for customers with higher operating costs and interest rates affecting profitability.",
+        "risk_type": "Market Risk - Automotive Economy",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 48,
+          "excerpt": "This year saw a tough trading environment for our customers. Higher operating costs and interest rates on stocking loans during the last year put financial pressures on our customers, affecting their profitability."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "The Digital Markets, Competition and Consumers Act came into force during the financial year placing new obligations around consumer protections. In March 2026 the CMA announced an investigation into online reviews across multiple companies including Autotrader and Feefo, still in early stages.",
+        "risk_type": "Regulatory Risk",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 49,
+          "excerpt": "The Digital Markets, Competition and Consumers Act came into force during the financial year. In March 2026 the CMA announced an investigation into online reviews across a number of companies, including Autotrader and our third party moderator, Feefo. The investigation is still in the very early stages and Autotrader is cooperating fully with the CMA."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Emergence of agentic AI presents both opportunity and disruption risk. Risks include AI being used to disintermediate marketplaces and AI being used to direct consumers directly to adverts, negating the need for retailers to purchase prominence.",
+        "risk_type": "Competitive Risk - Technology",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 49,
+          "excerpt": "The emergence of agentic AI presents opportunity but also has the potential to disrupt online marketplaces. Risks include: AI being used to disintermediate marketplaces like Autotrader; and AI being used to direct consumers directly to relevant adverts, negating the need for retailers to purchase prominence."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Amazon is expected to launch Amazon Autos in the UK, presenting a new competitive threat from a large technology organization operating in the automotive sector.",
+        "risk_type": "Competitive Risk - Market Entry",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 49,
+          "excerpt": "We expect Amazon to launch Amazon Autos in the UK which would be a new competitor."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "As a digital business relying on IT infrastructure, a disruptive cyber security or business continuity incident could lead to system downtime. Additionally, as AI models become more sophisticated, there is a risk they could be used by bad actors to discover and exploit zero-day vulnerabilities.",
+        "risk_type": "Cyber Security Risk",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 50,
+          "excerpt": "As a digital business, we rely on our IT infrastructure to provide our services. A disruptive cyber security and/or business continuity incident could lead to downtime of our systems and infrastructure. As AI models become increasingly sophisticated, there is a risk that they could be used by bad actors."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Employee engagement declined from 91% to 72%. Factors affecting employee morale include restructuring during FY26, recent fall in share price, and negative sentiment from retailers regarding Deal Builder scaling.",
+        "risk_type": "Operational Risk - Employees",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 50,
+          "excerpt": "These factors have been reflected in our current measure of employee engagement, which saw a decline from 91% to 72%."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "strategic_items": [
+      {
+        "description": "Marketplace Platform - core strategic priority focusing on strengthening the marketplace with investments in product development, brand, and customer engagement.",
+        "item_type": "Strategic Priority",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 48,
+          "excerpt": "OUR STRATEGIC PRIORITIES Marketplace Platform Digital retailing Working responsibly"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Digital Retailing - strategic priority to expand online buying experience and new car offerings on the platform.",
+        "item_type": "Strategic Priority",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 48,
+          "excerpt": "OUR STRATEGIC PRIORITIES Marketplace Platform Digital retailing Working responsibly"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Working Responsibly - strategic priority encompassing responsible business practices, brand protection, and responsible innovation.",
+        "item_type": "Strategic Priority",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 48,
+          "excerpt": "OUR STRATEGIC PRIORITIES Marketplace Platform Digital retailing Working responsibly"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Scaling of new car advertising - ambitions to grow in new car market and work with OEMs to enable them to advertise new car pipeline stock on the platform.",
+        "item_type": "Product Initiative",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 48,
+          "excerpt": "Our ambitions to grow in new car could increase our exposure to the direct impacts of macro risks. We also work with OEMs to develop solutions to enable them to advertise their new car pipeline stock on our website."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Scaling of Leasing and related products - expansion of product offerings referenced in compliance context as part of ambitions alongside new car.",
+        "item_type": "Product Initiative",
+        "confidence": "medium",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 49,
+          "excerpt": "Our obligations under GDPR and FCA regulations will continue as we scale and evolve Leasing, Deal Builder and Buying Signals, as well as our ambitions in new car."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Autotrader commenced 'listening' sessions within the business aimed at increasing employee engagement following decline from 91% to 72%.",
+        "item_type": "Employee Engagement Initiative",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 50,
+          "excerpt": "We commenced 'listening' sessions within the business aimed at increasing engagement."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "management_commentary": [
+      {
+        "statement": "New car supply increased in FY26 including strong supply from Chinese manufacturers. This coupled with consistently high consumer demand presents a positive outlook for the used car market in the coming years.",
+        "topic": "Market Outlook",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 48,
+          "excerpt": "New car supply increased in FY26, including strong supply from Chinese manufacturers. This, coupled with consistently high consumer demand, presents a positive outlook for the used car market in the coming years."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "The FCA's redress scheme for mis-sold car finance does not impact Autotrader directly. The FCA have stated that the impact on the automotive finance market will be limited, reducing uncertainty compared to prior years.",
+        "topic": "Regulatory Impact",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 48,
+          "excerpt": "The FCA's redress scheme for mis-sold car finance does not impact us directly and whilst there will be an impact on lenders, the FCA have stated that the impact on the automotive finance market will be \"limited\", reducing the level of uncertainty that we have seen in prior years."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Autotrader is evolving its retailer engagement strategy in response to resistance to Deal Builder rollout to ensure customers have a voice in how products are shaped, including through Customer Advisory Groups.",
+        "topic": "Product Strategy",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 51,
+          "excerpt": "Our roll-out of Deal Builder in the autumn was met with resistance from some retailers. We are evolving our retailer engagement strategy to ensure that our customers have a voice in how we shape our products, which includes Customer Advisory Groups with diverse representation from across our retailer customers."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Autotrader launched a new marketing campaign, 'It's Time for Autotrader', designed to target the 25-34 year-old demographic, estimated to reach 96% of this demographic in the UK.",
+        "topic": "Brand & Marketing",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 51,
+          "excerpt": "We launched our new marketing campaign, 'It's Time for Autotrader', which was designed to target the 25-34 year-old demographic. We estimate that this campaign will reach 96% of this demographic in the UK."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Autotrader maintains a high Trustpilot rating of 4.7 out of 5 with fraud levels remaining low.",
+        "topic": "Brand Trust",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 51,
+          "excerpt": "The level of fraud remains low and our Trustpilot rating remains high at 4.7 out of 5."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Despite competitive and AI disruption risks, the marketplace saw continued record levels of cross-platform visits in the last year.",
+        "topic": "Marketplace Activity",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 49,
+          "excerpt": "Despite these factors, our marketplace remains strong and last year saw continued record levels of cross-platform visits."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "chunk_id": "at-ar-fy26_p48-51"
+  },
+  {
+    "financial_figures": [],
+    "business_facts": [
+      {
+        "category": "Market Position",
+        "statement": "The Group is the UK's largest and most engaged automotive marketplace, with the largest volume of in-market car buyers and the most influential website a consumer visits when purchasing a vehicle.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 53,
+          "excerpt": "the Group is the UK's largest and most engaged automotive marketplace, with the largest volume of in-market car buyers and the most influential website a consumer visits when purchasing a vehicle"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Products & Services",
+        "statement": "The Group's Vehicle Check product has been successfully rolled out and the company is now entirely self-sufficient by sourcing all data directly from source, rather than via intermediary organisations.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 52,
+          "excerpt": "Our Vehicle Check product has been successfully rolled out and we are now entirely self-sufficient by sourcing all data directly from source, rather than via intermediary organisations."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Business Operations",
+        "statement": "Retailers can use Autotrader's systems to access services and data, whereas others use third-party technology systems that have been integrated with.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 52,
+          "excerpt": "Retailers can use Autotrader's systems to access our services and data, whereas others use third-party technology systems that we have integrated with."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Market Trends",
+        "statement": "In calendar year 2025, EVs made up approximately 23% of all new car registrations, below the 28% target set by the ZEV mandate, with the target for calendar year 2026 increasing to 33%.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 52,
+          "excerpt": "In the calendar year 2025, EVs made up c.23% of all new car registrations, below the 28% target set by the ZEV mandate. The target for calendar year 2026 increases to 33%"
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "risk_disclosures": [
+      {
+        "description": "The shift from internal combustion engines (ICE) to electric vehicles (EVs) could prompt changes to car buyer behaviour. Barriers to mass consumer adoption of EVs include high price compared to ICE equivalents, potential improvements in public transport, changing government policy and reduced incentives such as increasing taxes on EVs, range anxiety, and anxiety over residual value of EVs. Changing and more stringent regulatory requirements could increase cost base.",
+        "risk_type": "Climate and Regulatory",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 52,
+          "excerpt": "The shift from internal combustion engines ('ICE') to electric vehicles ('EVs') could prompt changes to car buyer behaviour. Factors which might inhibit mass consumer adoption of EVs include: the high price of EVs compared to ICE equivalents; potential for improvements in public transport; changing Government policy and reduced incentives such as increasing taxes on EVs; range anxiety; and anxiety over the residual value of EVs. Changing and more stringent regulatory requirements could increase our cost base."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "To achieve strategic objectives, the Group is reliant on partners to support product initiatives, including lenders integrated with the Deal Builder journey. Reliance also exists on third parties for technology infrastructure, vehicle data supply, financing, and fulfilment of some revenue-generating products.",
+        "risk_type": "Third-party Dependency",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 52,
+          "excerpt": "To achieve our strategic objectives, we are reliant on partners to support certain product initiatives, for example having lenders integrated with our Deal Builder journey is a key dependency. We also rely on third parties to support our technology infrastructure, to supply vehicle data and financing, and in the fulfilment of some of our revenue generating products."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "A cyber attack affecting the Group or key supplier could lead to data loss, disruption to systems and infrastructure, regulatory fines, and reputational damage. Maximum GDPR fine is 4% of Group revenue.",
+        "risk_type": "Cyber Security and Data",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 54,
+          "excerpt": "A cyber attack affecting either the Group or a key supplier could lead to data loss and disruption to the Group's systems and infrastructure, resulting in reduced revenue, additional costs of regulatory fines, remediation and reputational damage. This scenario assumes a cyber incident that triggers the maximum General Data Protection Regulation ('GDPR') fine (4% of Group revenue)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Increased competition risk includes potential takeover of a competitor by a well-capitalised third party or entry of a new player that could develop superior consumer experience or retailer products including AI-driven tools, potentially disintermedating the marketplace and disrupting market share.",
+        "risk_type": "Competition",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 54,
+          "excerpt": "This scenario assumes a shift in the competitive landscape following the takeover of a competitor by a well-capitalised third party or the entry of a new player. A competitor could develop a superior consumer experience or retailer products, including AI-driven tools that disintermediate the marketplace or route consumers directly to specific vehicles."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Carbon emissions have increased this year owing to the initial costs of the new office and the practice of purchasing vehicles within the Leasing business. Vehicle purchases is the primary source of carbon emissions and this activity will continue in the near future, leading to higher carbon emissions attributable to the Group versus prior years.",
+        "risk_type": "Environmental",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 52,
+          "excerpt": "Historically, our carbon emissions have been relatively low. However, they have increased this year owing to two primary factors: the initial costs of our new office; and the practice of purchasing vehicles within our Leasing business. Vehicle purchases is the primary source of our carbon emissions and this activity will continue in the near future, leading to higher carbon emissions attributable to the Group versus prior years."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "strategic_items": [
+      {
+        "description": "The Group aims to continue growing its marketplace through playing a larger role in new car sales and advertising, surfacing the power of artificial intelligence which will enhance existing data products, and moving more of the car buying process online.",
+        "item_type": "Strategic Priority",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 53,
+          "excerpt": "The Group's aim is to continue growing its marketplace, which includes playing a larger role in new car sales and advertising, to surface the power of artificial intelligence ('AI') which will enhance our existing data products, and to move more of the car buying process online."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Growth in the use of data, being the industry standard platform, and further embedding data into the automotive ecosystem to give buyers and retailers up-to-date insight.",
+        "item_type": "Strategic Priority",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 53,
+          "excerpt": "growth in the use of our data, being the industry standard platform and further embedding our data into the automotive ecosystem, giving buyers and retailers up-to-date insight"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Growth in areas outside of advertising, continuing to evolve products and consumer experience to bring more of the car buying process online.",
+        "item_type": "Strategic Priority",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 53,
+          "excerpt": "growth in areas outside of advertising, as we continue to evolve both our products and consumer experience, bringing more of the car buying process online"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "The company introduced the Responsible Change Forum to bring senior stakeholders together to shape and oversee ESG strategy.",
+        "item_type": "Strategic Initiative",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 52,
+          "excerpt": "We introduced the Responsible Change Forum. This brings senior stakeholders together to shape and oversee our ESG strategy."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "management_commentary": [
+      {
+        "statement": "Price disparity between ICE and EVs has remained a barrier to mass-adoption of EVs despite discounts aimed at stimulating demand. Additional barriers include price inequality between public and private charging, and anxiety around the availability and reliability of public EV charging.",
+        "topic": "EV Market Adoption",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 52,
+          "excerpt": "Despite discounts aimed at stimulating demand for EVs, price disparity between ICE and EVs has remained a barrier to mass-adoption of EVs. Additional barriers include price inequality between public and private charging, and anxiety around the availability and reliability of public EV charging."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "There is a pipeline of EVs flowing through to used vehicles, and the company's data indicates that consumer appetite for used EVs is strong.",
+        "topic": "Used EV Market",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 52,
+          "excerpt": "We are seeing a pipeline of EVs flowing through to used, and our data indicates that consumer appetite for used EVs is strong."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Despite the ongoing geo-political risks over the last year, the supplier-base has remained resilient with no major disruption or downtime arising from suppliers.",
+        "topic": "Supplier Resilience",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 52,
+          "excerpt": "Despite the ongoing geo-political risks over the last year, our supplier-base has remained resilient. We have not experienced any major disruption or downtime arising from suppliers."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Key assumptions in the financial forecasts include sustained growth in the marketplace as the Group continues to develop its platform and invest in search experience, growth in data usage, growth outside advertising through evolving products and bringing more of the car buying process online, and increase in costs largely through salaries as the Group grows.",
+        "topic": "Strategic Planning Assumptions",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 53,
+          "excerpt": "sustained growth in our marketplace, as we continue to develop our platform and invest in our search experience; growth in the use of our data, being the industry standard platform and further embedding our data into the automotive ecosystem, giving buyers and retailers up-to-date insight; growth in areas outside of advertising, as we continue to evolve both our products and consumer experience, bringing more of the car buying process online; and increase in costs largely through salaries as the Group continues to grow, supporting and developing new products."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "The Board has assessed the Group's viability and prospects over a five-year period to March 2031, considering detailed financial forecasts covering customer numbers, stock levels, ARPR, revenue, profit, cash flow and key financial ratios, with stress testing demonstrating the Group would be able to withstand severe scenarios due to significant free cash flow, access to the Syndicated RCF and ability to adjust discretionary share buyback programme.",
+        "topic": "Viability Assessment",
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 54,
+          "excerpt": "The results of the stress testing demonstrated that due to the Group's significant free cash flow, access to the Syndicated RCF and the Board's ability to adjust the discretionary share buyback programme, it would be able to withstand the impact of any of these scenarios, remain cash generative and meet the obligations of its debt facility."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "chunk_id": "at-ar-fy26_p52-54"
+  },
+  {
+    "financial_figures": [
+      {
+        "label": "Revenue",
+        "value": 624.3,
+        "unit": "\u00a3m",
+        "period": "Year ended 31 March 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 103,
+          "excerpt": "Revenue 5 624.3 601.1"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Operating costs",
+        "value": -235.7,
+        "unit": "\u00a3m",
+        "period": "Year ended 31 March 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 103,
+          "excerpt": "Operating costs 4 (235.7) (227.9)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Operating profit",
+        "value": 392.7,
+        "unit": "\u00a3m",
+        "period": "Year ended 31 March 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 103,
+          "excerpt": "Operating profit 6 392.7 376.8"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Profit for the year",
+        "value": 293.9,
+        "unit": "\u00a3m",
+        "period": "Year ended 31 March 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 103,
+          "excerpt": "Profit for the year attributable to equity holders of the parent 293.9 282.6"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Basic earnings per share",
+        "value": 34.17,
+        "unit": "pence",
+        "period": "Year ended 31 March 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 103,
+          "excerpt": "Basic earnings per share (pence) 11 34.17 31.66"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Borrowings",
+        "value": 163.4,
+        "unit": "\u00a3m",
+        "period": "At 31 March 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 105,
+          "excerpt": "Borrowings 21 163.4 \u2013"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Cash and cash equivalents",
+        "value": 18.2,
+        "unit": "\u00a3m",
+        "period": "At 31 March 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 105,
+          "excerpt": "Cash and cash equivalents 19 18.2 15.3"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Total equity",
+        "value": 407.1,
+        "unit": "\u00a3m",
+        "period": "At 31 March 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 105,
+          "excerpt": "Total equity 407.1 569.4"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Dividends paid",
+        "value": 94.1,
+        "unit": "\u00a3m",
+        "period": "Year ended 31 March 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 106,
+          "excerpt": "Dividends paid \u2013 \u2013 (94.1) \u2013 \u2013 \u2013 \u2013 (94.1)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Share of profit from joint ventures, net of tax",
+        "value": 4.1,
+        "unit": "\u00a3m",
+        "period": "Year ended 31 March 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 103,
+          "excerpt": "Share of profit from joint ventures, net of tax 15 4.1 3.6"
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "business_facts": [],
+    "risk_disclosures": [],
+    "strategic_items": [],
+    "management_commentary": [],
+    "chunk_id": "at-ar-fy26_p103-106"
+  },
+  {
+    "financial_figures": [
+      {
+        "label": "Cash generated from operations",
+        "value": 418.0,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 107,
+          "excerpt": "Cash generated from operations 28 418.0"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Net cash generated from operating activities",
+        "value": 322.8,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 107,
+          "excerpt": "Net cash generated from operating activities 322.8"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Purchases of property, plant and equipment",
+        "value": -27.3,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 107,
+          "excerpt": "Purchases of property, plant and equipment (27.3)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Dividends paid to Company shareholders",
+        "value": -94.1,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 107,
+          "excerpt": "Dividends paid to Company shareholders 27 (94.1)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Drawdown of Syndicated Revolving Credit Facility",
+        "value": 165.0,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 107,
+          "excerpt": "Drawdown of Syndicated Revolving Credit Facility 21 165.0"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Purchase of own shares for cancellation",
+        "value": -358.4,
+        "unit": "\u00a3m",
+        "period": "FY2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 107,
+          "excerpt": "Purchase of own shares for cancellation 25 (358.4)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Cash and cash equivalents at end of year",
+        "value": 18.2,
+        "unit": "\u00a3m",
+        "period": "31 March 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "at-ar-fy26",
+          "page": 107,
+          "excerpt": "Cash and cash equivalents at end of year 19 18.2"
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "business_facts": [],
+    "risk_disclosures": [],
+    "strategic_items": [],
+    "management_commentary": [],
+    "chunk_id": "at-ar-fy26_p107"
+  }
+]

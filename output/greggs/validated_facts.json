@@ -1,0 +1,3205 @@
+[
+  {
+    "financial_figures": [
+      {
+        "label": "Interim ordinary dividend per share",
+        "value": 19.0,
+        "unit": "pence",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 11,
+          "excerpt": "declared an interim ordinary dividend of 19.0 pence per share"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Final ordinary dividend per share (intended recommendation)",
+        "value": 50.0,
+        "unit": "pence",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 11,
+          "excerpt": "the Board intends to recommend at the AGM a final dividend of 50.0 pence per share"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Total ordinary dividend per share",
+        "value": 69.0,
+        "unit": "pence",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 11,
+          "excerpt": "giving a total ordinary dividend for the year of 69.0 pence per share"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Greggs Foundation distribution to schools and charitable organisations",
+        "value": 5.4,
+        "unit": "million pounds",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 13,
+          "excerpt": "The Greggs Foundation was able to distribute \u00a35.4 million to schools and charitable organisations in the UK."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Invoices paid to suppliers within agreed terms",
+        "value": 91.6,
+        "unit": "percent",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 13,
+          "excerpt": "Over 90% of invoices were paid to suppliers within the terms agreed."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Colleague engagement opinion survey score",
+        "value": 72.0,
+        "unit": "percent",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 13,
+          "excerpt": "with an overall engagement score of 72% in the most recent colleague engagement opinion survey."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Retail colleagues engagement score",
+        "value": 71.0,
+        "unit": "percent",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 13,
+          "excerpt": "The engagement score for our retail colleagues was 71% which is 2 percentage points higher than the retail benchmark."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "business_facts": [
+      {
+        "category": "Business Purpose & Positioning",
+        "statement": "Greggs' purpose is to make great tasting, freshly prepared food and drink accessible to everyone, with a vision to be the customers' favourite for food-on-the-go.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 12,
+          "excerpt": "To make great tasting, freshly prepared food and drink accessible to everyone"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Market Position",
+        "statement": "Greggs is rated No.1 for value on the YouGov BrandIndex 2025 within the quick-service restaurant, coffee shop and delivery services group.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 13,
+          "excerpt": "Greggs is rated No.1 for value on the YouGov BrandIndex 2025*, within the quick-service restaurant, coffee shop and delivery services group."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Estate & Operations",
+        "statement": "Greggs operates a 2,700-strong shop estate and has expanded grocery and delivery partnerships.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 13,
+          "excerpt": "we have been working to expand and improve our 2,700-strong shop estate, as well as our grocery and delivery partnerships."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Workforce",
+        "statement": "Greggs has over 33,000 colleagues across its business in shops, supply chain and central support teams.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 12,
+          "excerpt": "We have over 33,000 amazing colleagues across our business"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Supply Chain",
+        "statement": "Greggs operates a vertically-integrated model and has a competitive supply chain as a core strength.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 10,
+          "excerpt": "leverage the benefits of our vertically-integrated model"
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "risk_disclosures": [
+      {
+        "description": "Cyber security and systems change are risks requiring management focus, particularly given well-publicised issues faced by other retailers. Technological change continues to accelerate.",
+        "risk_type": "Cyber Security & Technology",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 10,
+          "excerpt": "Cyber security and our plans to manage the business during a period of significant systems change were both in focus, particularly given the well-publicised issues faced by other retailers. Technological change continues to accelerate"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Allergen management is a material risk area for a food business. The Board receives updates on progress and measures being taken to protect customers.",
+        "risk_type": "Food Safety & Allergen Management",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 10,
+          "excerpt": "As a food business, our processes for allergen management continued to be an area of Board focus, given the material risk associated with this."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Consumer sentiment is expected to remain a headwind in 2026, presenting a market challenge despite the company's competitive position.",
+        "risk_type": "Market Conditions & Consumer Demand",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 11,
+          "excerpt": "We expect consumer sentiment to continue to be a headwind in 2026"
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "strategic_items": [
+      {
+        "description": "Five core strategic pillars: (1) Broadening customer appeal and driving loyalty; (2) Growing and developing the Greggs estate; (3) Developing digital channels; (4) Expanding evening trade; (5) Investing in supply chain and technology.",
+        "item_type": "Strategic Priority",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 12,
+          "excerpt": "focus on our core strategic pillars\u2026 1. Broadening customer appeal and driving loyalty 2. Growing and developing the Greggs estate 3. Developing our digital channels 4. Expanding our evening trade 5. Investing in our supply chain and technology for a bigger business"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Development and enhancement of digital channels through Click + Collect and the Greggs App to offer more value and convenience to customers, with the App enabling direct customer communication and loyalty rewards.",
+        "item_type": "Digital Growth Initiative",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 13,
+          "excerpt": "we have also been developing and enhancing our digital channels to offer more value and convenience to our customers via Click + Collect and the Greggs App."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Expansion of the shop estate through growing and developing locations while also expanding partnerships in grocery and delivery to broaden customer reach.",
+        "item_type": "Estate & Partnership Growth",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 13,
+          "excerpt": "we have been working to expand and improve our 2,700-strong shop estate, as well as our grocery and delivery partnerships."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Investment plans in infrastructure and systems are progressing well and will provide the capability needed to realise significant growth opportunity ahead.",
+        "item_type": "Capital Investment Program",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 11,
+          "excerpt": "Our investment plans are progressing well and will provide the infrastructure with which to realise the significant growth opportunity that lies ahead."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "management_commentary": [
+      {
+        "statement": "Greggs outperformed a tough market in 2025 and delivered continued strategic progress, demonstrating its resilience. The company increased market share and maintained competitiveness despite headwinds in the food-to-go market.",
+        "topic": "Market Performance & Resilience",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 10,
+          "excerpt": "Greggs outperformed a tough market in 2025 and delivered the continued strategic progress that will support further growth in the business, demonstrating its resilience."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Management is executing investment plans in systems and supply chain capacity that will help realise the company's growth ambition in the years to come.",
+        "topic": "Investment & Growth Strategy",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 10,
+          "excerpt": "We also made good progress investing in the systems and supply chain capacity that will help us to realise our ambition in the years to come."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "The Board expects consumer sentiment to continue to be a headwind in 2026, but with a strong competitive position and clear growth opportunities, Greggs can weather these conditions and continue to outperform the market.",
+        "topic": "Outlook & Future Performance",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 11,
+          "excerpt": "We expect consumer sentiment to continue to be a headwind in 2026, but with a strong competitive position and a clear opportunity for further growth Greggs can weather these conditions and continue to outperform the market."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "The Board remains confident in the prospects for further profitable growth over the medium term, with a strong brand and financial position.",
+        "topic": "Medium-term Outlook",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 11,
+          "excerpt": "Our brand and financial position remain strong and the Board remains confident in the prospects for further profitable growth over the medium term."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "chunk_id": "greggs-ar25_p10-13"
+  },
+  {
+    "financial_figures": [
+      {
+        "label": "Total sales",
+        "value": 2151.0,
+        "unit": "\u00a3 million",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 17,
+          "excerpt": "Total sales grew to \u00a32,151 million in 2025 (2024: \u00a32,014 million)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Total sales",
+        "value": 2014.0,
+        "unit": "\u00a3 million",
+        "period": "2024",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 17,
+          "excerpt": "Total sales grew to \u00a32,151 million in 2025 (2024: \u00a32,014 million)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Company-managed shop like-for-like sales growth",
+        "value": 2.4,
+        "unit": "%",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 17,
+          "excerpt": "company-managed shop like-for-like sales were 2.4% higher than 2024"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Franchised units like-for-like system sales growth",
+        "value": 4.3,
+        "unit": "%",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 17,
+          "excerpt": "like-for-like 'system sales' in franchised units rose by 4.3%"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Underlying pre-tax profit",
+        "value": 171.9,
+        "unit": "\u00a3 million",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 17,
+          "excerpt": "Underlying pre-tax profit for the year decreased by 9.4% to \u00a3171.9 million (2024: \u00a3189.8 million)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Underlying pre-tax profit",
+        "value": 189.8,
+        "unit": "\u00a3 million",
+        "period": "2024",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 17,
+          "excerpt": "Underlying pre-tax profit for the year decreased by 9.4% to \u00a3171.9 million (2024: \u00a3189.8 million)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Statutory profit before tax",
+        "value": 167.4,
+        "unit": "\u00a3 million",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 17,
+          "excerpt": "statutory profit before tax for the year decreased to \u00a3167.4 million (2024: \u00a3203.9 million including an exceptional gain of \u00a314.1 million)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Statutory profit before tax",
+        "value": 203.9,
+        "unit": "\u00a3 million",
+        "period": "2024",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 17,
+          "excerpt": "statutory profit before tax for the year decreased to \u00a3167.4 million (2024: \u00a3203.9 million including an exceptional gain of \u00a314.1 million)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Underlying operating profit change",
+        "value": -4.0,
+        "unit": "%",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 17,
+          "excerpt": "Underlying operating profit was 4% lower than in the previous year"
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "business_facts": [
+      {
+        "category": "Market Position",
+        "statement": "Greggs increased its share of food-to-go market visits by 0.5 percentage points to 8.6%, with gains across all dayparts",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 16,
+          "excerpt": "We increased our share of food-to-go market visits by 0.5 percentage points to 8.6%, with gains across all dayparts"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Market Position",
+        "statement": "Greggs is the number one brand at breakfast, number two at lunch, number three for snacking, and number four for both the dinner market and delivery channel",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 17,
+          "excerpt": "Greggs remaining the number one brand at breakfast, number two at lunch, number three for snacking and now number four for both the dinner market and delivery channel"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Products & Range",
+        "statement": "Greggs is expanding its range with a focus on emerging dietary preferences including increased protein, more fibre, smaller portions, and new product launches such as Red Pepper Feta & Spinach Bake and iced drinks including matcha options",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 16,
+          "excerpt": "We are seeing some emerging shifts in dietary preferences, with certain consumers seeking greater choice in areas such as increased protein, more fibre and smaller portions"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Distribution",
+        "statement": "Greggs is increasing access through extension of its own shop estate alongside partnerships with grocery, franchise and delivery partners",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 16,
+          "excerpt": "we are successfully increasing access to Greggs through the extension of our own shop estate alongside partnerships with grocery, franchise and delivery partners"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Operational Strategy",
+        "statement": "Greggs is investing in manufacturing and logistics network upgrades to provide capacity, efficiency and resilience to support long-term growth",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 17,
+          "excerpt": "We're also investing in the future of our operations, with major upgrades to our manufacturing and logistics network that will give us the capacity, efficiency and resilience to support long term growth"
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "risk_disclosures": [
+      {
+        "description": "Retail crime including theft and anti-social behaviour impacts profitability and colleague safety",
+        "risk_type": "Operational & Safety",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 14,
+          "excerpt": "The rise in theft and anti-social behaviour impacts profitability and colleague safety"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Climate change and extreme weather threaten business operations and supply chain",
+        "risk_type": "Climate and Environmental",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 14,
+          "excerpt": "Businesses play a critical role in reducing carbon emissions and supporting the transition to a low-carbon future"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Global tensions and conflicts create unpredictable operating conditions affecting supply chain resilience",
+        "risk_type": "Supply Chain",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 14,
+          "excerpt": "Global tensions and conflicts create unpredictable operating conditions"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Cyber threats are intensifying, increasing the risk to operational systems and sensitive data",
+        "risk_type": "Cyber Security",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 14,
+          "excerpt": "Cyber threats are intensifying, increasing the risk to operational systems and sensitive data"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Growing use of GLP-1 drugs for weight loss is reshaping eating habits and reducing demand for calorie-dense foods",
+        "risk_type": "Consumer Demand",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 15,
+          "excerpt": "The growing use of GLP-1 drugs for weight loss is reshaping eating habits and reducing demand for calorie-dense foods"
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "strategic_items": [
+      {
+        "description": "Maintain value leadership and cost competitiveness through strong cost control and structural efficiency opportunities to remain resilient against consumer pressure",
+        "item_type": "Strategic Priority",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 16,
+          "excerpt": "we will continue to focus on this through strong cost control and structural efficiency opportunities"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Expand shop estate and build partnerships with grocery, franchise and delivery channels to increase customer access across multiple formats",
+        "item_type": "Growth Initiative",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 16,
+          "excerpt": "we are successfully increasing access to Greggs through the extension of our own shop estate alongside partnerships with grocery, franchise and delivery partners"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Continue menu evolution to address emerging dietary preferences including higher protein, fibre, and smaller portions, plus new bitesize shop formats",
+        "item_type": "Product Innovation",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 16,
+          "excerpt": "We expect this will be a developing trend and are confident in our ability to evolve our range to appeal to those looking for different nutritional profiles and portion sizes when eating out of home"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Major upgrades to manufacturing and logistics network to provide capacity, efficiency and resilience supporting long-term growth",
+        "item_type": "Operational Investment",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 17,
+          "excerpt": "We're also investing in the future of our operations, with major upgrades to our manufacturing and logistics network that will give us the capacity, efficiency and resilience to support long term growth"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Continue investment in marketing, digital capabilities including the Greggs App improvements, and brand activation campaigns to drive awareness and customer engagement",
+        "item_type": "Brand & Digital",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 17,
+          "excerpt": "Our investment in marketing to drive brand awareness and performance continues, promoting our menu through out-of-home poster campaigns, radio advertising, and paid social media"
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "management_commentary": [
+      {
+        "statement": "We remain confident that demand for convenient food-on-the-go as customers go about their busy lives will continue to underpin the market. In the year ahead we expect market conditions will remain challenging for the consumer.",
+        "topic": "Market Conditions & Outlook",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 16,
+          "excerpt": "We remain confident that demand for convenient food-on-the-go as customers go about their busy lives will continue to underpin the market. In the year ahead we expect market conditions will remain challenging for the consumer."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Greggs value proposition makes it relatively resilient in the face of cyclical pressure on consumers, and we will continue to focus on this through strong cost control and structural efficiency opportunities",
+        "topic": "Value Proposition",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 16,
+          "excerpt": "Greggs value proposition makes it relatively resilient in the face of cyclical pressure on consumers, and we will continue to focus on this through strong cost control and structural efficiency opportunities"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Pressure on disposable incomes remains the key factor impacting sales performance",
+        "topic": "Performance Drivers",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 16,
+          "excerpt": "Our analysis of the factors impacting sales performance suggests that pressure on disposable incomes remains the key factor"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Greggs topped the YouGov Brand Index, ranking first for both value and consideration, proving that consumers believe we are getting it right",
+        "topic": "Brand Position",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 17,
+          "excerpt": "we once again topped the YouGov Brand Index, ranking first for both value and consideration"
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "chunk_id": "greggs-ar25_p14-17"
+  },
+  {
+    "financial_figures": [
+      {
+        "label": "Net new shops opened",
+        "value": 121.0,
+        "unit": "shops",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 18,
+          "excerpt": "Over the course of 2025, we opened 121 net new shops"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Existing shops relocated",
+        "value": 50.0,
+        "unit": "shops",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 18,
+          "excerpt": "moved 50 existing shops to better locations in the same area"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Company-managed shops refitted",
+        "value": 116.0,
+        "unit": "shops",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 18,
+          "excerpt": "refitted 116 company-managed shops and 47 franchise shops"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Franchise shops refitted",
+        "value": 47.0,
+        "unit": "shops",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 18,
+          "excerpt": "refitted 116 company-managed shops and 47 franchise shops"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Shops closed",
+        "value": 50.0,
+        "unit": "shops",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 18,
+          "excerpt": "During 2025, we closed shops in 50 locations"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Structural cost savings delivered",
+        "value": 13.0,
+        "unit": "\u00a3 million",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 19,
+          "excerpt": "Our teams delivered structural cost savings of \u00a313.0 million in 2025, \u00a34 million ahead of our stretch target"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "App downloads",
+        "value": 1.7,
+        "unit": "million",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 19,
+          "excerpt": "Another 1.7 million customers downloaded the App in 2025"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Percentage of HVO renewable fuel usage",
+        "value": 28.0,
+        "unit": "%",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 20,
+          "excerpt": "We now use the renewable biofuel HVO at three sites, meaning that 28% of our fuel usage has been switched to a renewable fuel source."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Profit share payment to colleagues",
+        "value": 20.2,
+        "unit": "\u00a3 million",
+        "period": "March 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 20,
+          "excerpt": "at the end of March 2026, each will receive a share of \u00a320.2 million"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "The Greggs Foundation charitable donation",
+        "value": 3.4,
+        "unit": "\u00a3 million",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 21,
+          "excerpt": "In 2025, this support amounted to \u00a33.4 million."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Community fundraising via till donations and campaigns",
+        "value": 0.42,
+        "unit": "\u00a3 million",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 21,
+          "excerpt": "Our colleagues and customers give generously throughout the year, raising a further \u00a3420,000 through donations at the till"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "BBC Children in Need raised",
+        "value": 1.0,
+        "unit": "\u00a3 million",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 21,
+          "excerpt": "During November, we raised over \u00a31 million for the charity through shop collections, merchandise, Pudsey Biscuits, and till donations."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Like-for-like sales growth, company-managed shops",
+        "value": 1.6,
+        "unit": "%",
+        "period": "First 9 weeks of 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 21,
+          "excerpt": "Like-for-like sales in company-managed shops have increased by 1.6% year-on-year in the first nine weeks of 2026."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Total sales growth",
+        "value": 6.3,
+        "unit": "%",
+        "period": "First 9 weeks of 2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 21,
+          "excerpt": "Total sales increased by 6.3% year-on-year as we continued to grow our shop estate"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Planned net shop openings",
+        "value": 120.0,
+        "unit": "shops",
+        "period": "2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 19,
+          "excerpt": "we expect to deliver around 120 net openings in 2026"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Transfer of sales from existing shops (average)",
+        "value": 5.0,
+        "unit": "%",
+        "period": "2024-2025",
+        "note_ref": null,
+        "confidence": "medium",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 18,
+          "excerpt": "For openings in areas with existing access to Greggs within a mile of the new shop, the transfer of sales from existing shops across 2024 and 2025 averaged less than 5%."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "business_facts": [
+      {
+        "category": "Business Operations",
+        "statement": "Greggs opened its 2,700th shop in November 2025",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 18,
+          "excerpt": "In November 2025, we opened our 2,700th shop."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Shop Openings & Expansion",
+        "statement": "53% of new shop openings in 2025 (excluding relocations) were in areas with no other Greggs shop within a mile",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 18,
+          "excerpt": "In 2025 53% of our new shop openings (excluding relocations) were in areas with no other Greggs shop within a mile (2024: 60% of new shop openings)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Shop Format Innovation",
+        "statement": "Greggs opened three bitesize shops in 2025, a new compact format for high-footfall locations with limited space",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 18,
+          "excerpt": "In 2025, we opened three bitesize shops, each offering a focused range of customer favourites"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Market Position - Delivery",
+        "statement": "Home delivery makes up 6.8% of sales mix and Greggs is ranked number four in the market for delivery",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 19,
+          "excerpt": "Home delivery makes up 6.8% of our sales mix (6.7% in 2024) and Greggs is now ranked number four in the market for delivery (source: Circana, 12 months ended December 2025)."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Market Position - Evening Sales",
+        "statement": "Greggs is ranked number four in the market for dinner visits with evening sales representing 9.4% of company-managed shop sales",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 19,
+          "excerpt": "Evening sales represent 9.4% of company-managed shop sales (2024: 9.0%) and remained our fastest-growing daypart in 2025. We are now ranked number four in the market for dinner visits (source: Circana, 12 months ended December 2025)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Digital/Loyalty - App Usage",
+        "statement": "The Greggs App was used by over 1.5 million customers a week at peak in December 2025, up from over 500,000 in December 2022",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 19,
+          "excerpt": "At the peak in December 2025, the App was used by over 1.5 million customers a week \u2013 over three times more than the December peak in 2022."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Digital/Loyalty - App Engagement",
+        "statement": "App was scanned in more than a quarter of company-managed transactions at 26.7%, up from 20.1% in the prior year",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 19,
+          "excerpt": "scanned in more than a quarter of company-managed transactions (26.7%, up from 20.1% in the previous year)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Retail Partnerships - Grocery",
+        "statement": "Greggs products are now available at 800 larger Tesco stores and online, with further expansion to 1,900 Tesco Express stores from January 2026",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 19,
+          "excerpt": "Greggs products are now available at 800 larger Tesco stores and online. From January 2026 a subset of this range became available in a further 1,900 Tesco Express stores."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Workforce",
+        "statement": "Greggs employs more than 33,000 people across the UK, adding over 1,200 colleagues in 2025 through 121 net new shop openings",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 20,
+          "excerpt": "We are proud to employ more than 33,000 people across the UK in stable, fairly-paid jobs. In a wider environment of rising unemployment, we are proud to be creating new jobs; in opening 121 net new shops we added over 1,200 colleagues to our team."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Capital Investment - Supply Chain",
+        "statement": "New National Distribution Centres in Derby and Kettering are on track, with Derby ready for robotic picking from mid-2026 and full operation by end of 2026",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 19,
+          "excerpt": "Our plans to open new National Distribution Centres in Derby and Kettering remain on time and are both on track to come in under budget. At the Derby site, we will be ready to roll out upstream robotic picking of frozen goods from mid-2026. The 23-acre site will be fully operational by the end of 2026"
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "risk_disclosures": [
+      {
+        "description": "Risk that new shop openings could cannibalize sales from existing shops; mitigated by monitoring customer behaviour via Greggs App analysis",
+        "risk_type": "Sales Cannibalization",
+        "confidence": "medium",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 18,
+          "excerpt": "As we grow our estate, we continually monitor customer behaviour to ensure that new openings are not at risk of cannibalising existing shop sales. Analysis of our Greggs App customers continues to demonstrate that those who visit a new"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Consumer environment is expected to remain tough in 2026, though management is optimistic that inflationary pressure will ease",
+        "risk_type": "Macro/Consumer Demand",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 21,
+          "excerpt": "We expect that 2026 will be another tough year for the consumer but are optimistic that inflationary pressure will ease a little, providing some support to consumers and the food-to-go sector."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Profit progress in 2026 will be impacted by increased fixed costs from commissioning the new Derby distribution centre, primarily in the second half",
+        "risk_type": "Operational/Cost",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 21,
+          "excerpt": "We will see an increase in fixed costs as we commission the new Derby site, which will primarily impact the second half."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "strategic_items": [
+      {
+        "description": "Expansion into alternative sites such as petrol forecourts, supermarkets, retail parks, hospitals, university campuses, transport hubs, and roadsides to increase customer access beyond traditional high street locations",
+        "item_type": "Growth Strategy",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 18,
+          "excerpt": "with over half of our new openings located in alternative sites such as petrol forecourts, supermarkets, retail parks, hospitals and university campuses. We remain focused on expanding our presence in major transport hubs"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Relocation of existing shops to better locations to add space and serve more customers whilst retaining the existing shop team",
+        "item_type": "Estate Optimization",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 18,
+          "excerpt": "Relocating shops enables us to retain the existing shop team whilst adding the space needed to serve more customers and expand our offer in that community."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Investment in new National Distribution Centres in Derby and Kettering with automation and production capacity to improve logistics efficiency",
+        "item_type": "Supply Chain Investment",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 19,
+          "excerpt": "Our plans to open new National Distribution Centres in Derby and Kettering remain on time and are both on track to come in under budget. The 23-acre site will be fully operational by the end of 2026, including our first production line on the site, adding capacity to both our manufacturing and logistics operations."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Development of unattended retail solutions to serve additional customer missions and enhance returns",
+        "item_type": "Format Innovation",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 18,
+          "excerpt": "In addition to the bitesize trial, we are developing unattended retail solutions to serve additional missions and further enhance returns."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Expanding evening daypart offer with hot, filling meal options and delivery-optimized products to capitalize on fastest-growing daypart opportunity",
+        "item_type": "Product & Daypart Strategy",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 19,
+          "excerpt": "we're strengthening our offer for sit-in and delivery occasions by providing hot, filling meals. Products like Southern Fried Chicken Goujons, Southern Fried Potato Wedges and Mozzarella & Cheddar Bites are key drivers of like-for-like volume growth in the evenings"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Increasing adoption of renewable HVO biofuel across logistics operations, with expansion planned at Leeds and Kettering sites in 2026",
+        "item_type": "Sustainability",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 20,
+          "excerpt": "Building on this progress, we are exploring opportunities to expand HVO usage across our Leeds and Kettering logistics sites in 2026, aiming, where viable, to support increased adoption and further reduce emissions."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Leveraging digital capabilities including AI-driven CRM, real-time data analytics, and decision-support tools to improve operations and customer service",
+        "item_type": "Digital Transformation",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 20,
+          "excerpt": "At our Head Office our support teams are benefiting from the investment in CRM capability, with AI functionality being developed to drive service standards and efficiencies. These enhancements continue to strengthen our data and AI capabilities and improve our ability to run efficient, well-informed operations."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Continued evolution of Greggs App loyalty proposition with personalized product promotion, gamification (Quests feature), and expansion of engagement opportunities to increase customer frequency",
+        "item_type": "Digital/Loyalty Strategy",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 19,
+          "excerpt": "In May, we introduced a personalised inbox, Baked for You, to the Greggs App, giving us more space to promote new products and deals. In November, we launched Greggs Quests to 'gamify' the App user experience and provide more opportunities to drive engagement and frequency of purchase"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Three core strategic pillars for next five years: building stronger, healthier communities; making our planet safer; and striving to be a better business",
+        "item_type": "ESG Strategy",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 21,
+          "excerpt": "Our priorities for the next five years are based around the same three pillars: building stronger, healthier communities; making our planet safer; and striving to be a better business."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Climate commitments: Scope 2 net zero by 2030 and full net zero across Scopes 1-3 by 2040",
+        "item_type": "Sustainability",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 21,
+          "excerpt": "maintaining our climate ambition to reach Scope 2 net zero by 2030, and stay firmly on track for full net zero across Scopes 1\u20133 by 2040"
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "management_commentary": [
+      {
+        "statement": "Increasing the frequency of customer visits remains a clear opportunity when compared with best in class for food-to-go",
+        "topic": "Growth Strategy - Customer Frequency",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 18,
+          "excerpt": "Despite Greggs success over many years, increasing the frequency of customer visits remains a clear opportunity when compared with best in class for food-to-go."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Managing costs closely is, and always has been, strategically important to us as a value retailer",
+        "topic": "Cost Management Strategy",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 19,
+          "excerpt": "Managing costs closely is, and always has been, strategically important to us as a value retailer."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "We expect that 2026 will be another tough year for the consumer but are optimistic that inflationary pressure will ease a little",
+        "topic": "Outlook - Consumer Environment",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 21,
+          "excerpt": "We expect that 2026 will be another tough year for the consumer but are optimistic that inflationary pressure will ease a little, providing some support to consumers and the food-to-go sector."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Management's expectations for 2026 profit before tax expected to be broadly in line with 2025, with any year-on-year improvement contingent on a recovery in the consumer backdrop",
+        "topic": "Outlook - Financial Guidance",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 21,
+          "excerpt": "management's expectations for the year remain unchanged, with forward look profit before tax expected to be broadly in line with 2025 and any year-on-year improvement contingent on a recovery in the consumer backdrop."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "The key focus for management in the coming years will be restoring the Company's return on capital employed back to our target of around 20%",
+        "topic": "Strategic Focus - ROCE",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 21,
+          "excerpt": "The key focus for management in the coming years will be restoring the Company's return on capital employed ('ROCE') back to our target of around 20%."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "chunk_id": "greggs-ar25_p18-21"
+  },
+  {
+    "financial_figures": [
+      {
+        "label": "Brand consideration score",
+        "value": 37.4,
+        "unit": "points",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 25,
+          "excerpt": "Extending our lead to achieve 37.4 points"
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "business_facts": [
+      {
+        "category": "Market Position & Brand",
+        "statement": "Greggs is the UK's leading food-to-go brand based on YouGov BrandIndex scores, ending the year as the No.1 brand in 7 out of 16 YouGov categories.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 25,
+          "excerpt": "we continued to be the UK's leading food-to-go brand based on YouGov BrandIndex scores, ending the year as the No.1 brand in 7 out of 16 YouGov categories"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Customer Reach",
+        "statement": "1 in 3 adults in Great Britain enjoyed a Greggs in 2025.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 25,
+          "excerpt": "with 1 in 3 adults in Great Britain enjoying a Greggs in 2025"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Market Position & Brand",
+        "statement": "Greggs is the No.1 considered food-to-go brand in the UK for the second year running.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 25,
+          "excerpt": "Greggs being the most considered food-to-go brand in the UK in 2025 for the second year running"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Operating Metrics",
+        "statement": "Greggs served up half a billion transactions in 2025.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 25,
+          "excerpt": "We served up half a billion transactions"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Market Position & Brand",
+        "statement": "Greggs is the UK's No.1 food-to-go brand for value and has held this position since 2010.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 25,
+          "excerpt": "we remained the No.1 brand for value and have proudly held this position since 2010"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Market Position & Brand",
+        "statement": "Greggs is the No.1 food-to-go brand for breakfast for the second year running.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 25,
+          "excerpt": "We retained our position as the UK's No.1 food-to-go brand for breakfast"
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "risk_disclosures": [],
+    "strategic_items": [
+      {
+        "description": "Greggs has a strong pipeline of new shop openings and significant opportunity to enhance the estate through strategic relocations and modern refits, with investment in supply chain to support up to 3,500 shops across the UK.",
+        "item_type": "Growth Initiative",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 23,
+          "excerpt": "We have a strong pipeline of new shop openings and a significant opportunity to enhance our estate through strategic relocations and modern refits. We're investing in our supply chain to build the capacity required to support up to 3,500 shops across the UK"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Developing digital channels through delivery partnerships with Just Eat and Uber Eats to extend reach beyond passing footfall, and Click + Collect functionality for customer convenience.",
+        "item_type": "Growth Initiative",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 23,
+          "excerpt": "Delivery partnerships with Just Eat and Uber Eats extend our reach beyond passing footfall, driving higher-value orders by serving multiple customers at once. Meanwhile, Click + Collect lets customers browse the menu, customise their order, and skip the queue"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Expanding evening trade through extended trading hours, new menu additions, and leveraging walk-in and digital channels to grow food-to-go sales in the evening market.",
+        "item_type": "Growth Initiative",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 23,
+          "excerpt": "By offering extended trading hours in many of our shops, introducing exciting new menu additions and leveraging both walk-in and digital channels, we have a clear strategic opportunity to grow food-to-go sales in the evening market"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Core strategic pillars focused on great tasting, freshly prepared food and drink; best customer experience with fast, friendly service; ownership of supply chain for quality and value; and first-class support teams with investments in systems and technology.",
+        "item_type": "Strategic Priority",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 22,
+          "excerpt": "Great tasting, freshly prepared food and drink. Nothing beats freshly baked, freshly prepared food. With bold flavours, responsibly sourced ingredients and consistent quality at outstanding value, Greggs sets the standard for food-on-the-go."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "management_commentary": [
+      {
+        "statement": "Following a challenging year for food-to-go brands, Greggs continued to be the UK's leading food-to-go brand. With consumer spending continuing to come under pressure, Greggs remained the No.1 brand for value.",
+        "topic": "Market Performance & Consumer Sentiment",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 25,
+          "excerpt": "Following a challenging year for food-to-go brands, we continued to be the UK's leading food-to-go brand. With consumer spending continuing to come under pressure, we remained the No.1 brand for value"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "During 2025 Greggs developed data-driven and digital workstreams with focus on how data and AI can inform strategy, including improving customer segmentation for loyalty scheme participants and introducing new App features such as Greggs Quests.",
+        "topic": "Digital Strategy & Customer Engagement",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 25,
+          "excerpt": "During 2025 we continued to develop a range of data-driven and digital workstreams, with a focus on how data and AI can inform and shape our wider strategy. This includes improving how we segment customers who participate in our loyalty scheme"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Although the UK Government delayed new regulations on Less Healthy Food until January 2026, Greggs adhered to the spirit of the legislation from its planned introduction date of October 2025, adapting its paid media strategy and content across relevant channels.",
+        "topic": "Regulatory Compliance",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 25,
+          "excerpt": "Although the UK Government delayed the new advertising regulations on Less Healthy Food until January 2026, we adhered to the spirit of the legislation for its planned introduction date of October 2025, adapting our paid media strategy and content across relevant channels"
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "chunk_id": "greggs-ar25_p22-25"
+  },
+  {
+    "financial_figures": [
+      {
+        "label": "Net new shops opened",
+        "value": 121.0,
+        "unit": "shops",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 27,
+          "excerpt": "We opened 121 net new shops during 2025, ending the year with more than 2,700 Greggs shops across the UK."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Total shops at year-end",
+        "value": 2700.0,
+        "unit": "shops",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 27,
+          "excerpt": "ending the year with more than 2,700 Greggs shops across the UK"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Shops with delivery service",
+        "value": 1632.0,
+        "unit": "shops",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 29,
+          "excerpt": "We are now offering home delivery from more than 1,600 Greggs shops around the country"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Delivery as percentage of company-managed sales",
+        "value": 6.8,
+        "unit": "%",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 29,
+          "excerpt": "with delivery now representing 6.8% of company-managed sales (2024: 6.7%)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "App-accompanied transactions",
+        "value": 26.7,
+        "unit": "%",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 29,
+          "excerpt": "In 2025, 26.7% of all company-managed shop transactions were accompanied by an App scan (2024: 20.1%)."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "New Tesco stores with Bake at Home products",
+        "value": 800.0,
+        "unit": "stores",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 27,
+          "excerpt": "Our core range of Bake at Home Greggs products is now available at 800 Tesco Extra stores and online."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Northern Ireland shops",
+        "value": 28.0,
+        "unit": "shops",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 27,
+          "excerpt": "We continued our expansion in Northern Ireland, opening eight new shops in 2025 taking our total there to 28."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Refitted company-managed shops",
+        "value": 116.0,
+        "unit": "shops",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 27,
+          "excerpt": "We continued our programme of refits, refreshing and upgrading 116 company-managed shops."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Relocated shops",
+        "value": 50.0,
+        "unit": "shops",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 27,
+          "excerpt": "We moved 50 shops to new locations which allowed us to better serve our existing customer base."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "New drive-thrus opened",
+        "value": 9.0,
+        "unit": "shops",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 27,
+          "excerpt": "we opened nine new drive-thrus, six new supermarket shops and seven Outlet shops."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "New supermarket shops opened",
+        "value": 6.0,
+        "unit": "shops",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 27,
+          "excerpt": "we opened nine new drive-thrus, six new supermarket shops and seven Outlet shops."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "New Outlet shops opened",
+        "value": 7.0,
+        "unit": "shops",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 27,
+          "excerpt": "we opened nine new drive-thrus, six new supermarket shops and seven Outlet shops."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "business_facts": [
+      {
+        "category": "Business Model & Expansion",
+        "statement": "Greggs operates over 2,700 shops across the UK and is expanding toward an ambition of more than 3,500 shops in the longer term. Over half of shops are now in alternative locations beyond the high street.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 27,
+          "excerpt": "we opened 121 net new shops during 2025, ending the year with more than 2,700 Greggs shops across the UK. We continue to focus on broadening our presence beyond the high street and over half of our shops are now in alternative locations."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Market Presence",
+        "statement": "Greggs has expanded its presence in Northern Ireland to 28 shops by 2025 and operates in grocery partnerships including Bake at Home ranges in Iceland supermarkets and a new Tesco partnership introduced in September 2025 covering 800 Tesco Extra stores.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 27,
+          "excerpt": "We continued our expansion in Northern Ireland, opening eight new shops in 2025 taking our total there to 28. We launched a new partnership with Tesco in September 2025. Our core range of Bake at Home Greggs products is now available at 800 Tesco Extra stores and online."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Strategic Initiative",
+        "statement": "Greggs trialled a new bitesize shop format in three high-footfall locations to enter smaller, previously unreachable locations such as travel hubs. Three bitesize shops opened by December 2025.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 27,
+          "excerpt": "We trialled a new shop format \u2013 bitesize Greggs \u2013 in three high-footfall locations to test what we can achieve with a very small footprint. This agile shop format will enable us to enter more prime locations, particularly travel hubs, many of which were previously out of reach due to the size needed to run a traditional Greggs shop format. The first bitesize shop opened in Sevenoaks railway station in November. The unit is open seven days a week, creating nine new jobs for the local area"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Estate Upgrade",
+        "statement": "Greggs refitted 116 company-managed shops and relocated 50 shops to better serve existing customer base, with large refits including Birmingham Bull Ring, Sheffield Meadowhall and Glasgow Buchanan bus station.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 27,
+          "excerpt": "We opened nine new drive-thrus, six new supermarket shops and seven Outlet shops. We also expanded our presence in UK transport hubs, opening shops at Manchester Airport, and in railway stations in Leeds, St Pancras, Dartford and Sevenoaks. We moved 50 shops to new locations which allowed us to better serve our existing customer base. These included London Ludgate Hill, Cardiff St Davids, Wandsworth Southside Shopping Centre, Aberdeen Union Square and Bridgend McArthur Glen. We continued our programme of refits, refreshing and upgrading 116 company-managed shops. Larger refits include the Birmingham Bull Ring, Sheffield Meadowhall and Glasgow Buchanan bus station."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Digital & Delivery",
+        "statement": "Greggs offers home delivery from more than 1,600 shops through Just Eat and Uber Eats partnerships, with delivery representing 6.8% of company-managed sales in 2025. Delivery basket value is approximately three times that of walk-in customers.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 29,
+          "excerpt": "We are now offering home delivery from more than 1,600 Greggs shops around the country through our partnerships with Just Eat and Uber Eats. The basket value of a delivery customer is around three times that of a walk-in customer helping to drive sales growth, with delivery now representing 6.8% of company-managed sales (2024: 6.7%)."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "App & Loyalty",
+        "statement": "The Greggs App was used in 26.7% of all company-managed shop transactions in 2025, up from 20.1% in 2024. The app provides loyalty rewards with free products for every nine purchases and includes gamification features via Greggs Quests.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 29,
+          "excerpt": "In 2025, 26.7% of all company-managed shop transactions were accompanied by an App scan (2024: 20.1%). The App is our key opportunity for rewarding customer loyalty, giving people a free product for every nine they buy. We also launched Greggs Quests to gamify the user experience and provide more opportunity to win free Greggs and other exciting prizes."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "risk_disclosures": [],
+    "strategic_items": [
+      {
+        "description": "Greggs expects to open approximately 120 net new shops in 2026, with around one-third expected from franchise partners, including drive-thrus, petrol forecourts, roadsides, travel hubs, retail parks and supermarket locations.",
+        "item_type": "Growth Target",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 27,
+          "excerpt": "The pipeline of new shop opportunities remains strong, and we expect to open in the region of 120 net new shops in 2026, including drive-thrus, petrol forecourts, roadsides, travel hubs, retail parks and supermarket locations. We estimate that around a third of these will be with our franchise partners."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Greggs will focus on delivering excellent retail execution through improved technology and simplification of shop operations, including putting all digital orders through a single screen and standardising processes.",
+        "item_type": "Operational Priority",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 29,
+          "excerpt": "Our key focus will be on excellent retail execution through improved technology. By giving our people the right tools to make their jobs easier, we can free them up to concentrate on delivering excellent service. We plan to simplify shop operations by putting all digital orders through a single screen, standardising our processes and freeing up space in our digital prep areas."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Greggs plans to target approximately 35 relocations and 85 refits in 2026, with focus on providing bigger and better shops to serve all channels.",
+        "item_type": "Growth Initiative",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 27,
+          "excerpt": "We will also focus on providing bigger and better shops to serve all channels by targeting around 35 relocations and 85 refits."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Greggs plans to continue exploring further growth of its home delivery service through partnerships to increase order volume from existing sites and add new shops.",
+        "item_type": "Digital Expansion",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 29,
+          "excerpt": "We will continue to explore the potential for further growth of our home delivery service, working with our partners to increase order volume from existing sites, and adding new shops."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "management_commentary": [
+      {
+        "statement": "When launching the current strategy in 2021, Greggs set an ambition of more than 3,000 shops, which has now grown and the company is readying the business for more than 3,500 shops in the longer term.",
+        "topic": "Store Growth Strategy",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 27,
+          "excerpt": "When we launched our current strategy in 2021, we set an ambition to have more than 3,000 shops. Just a few years later, our ambition has grown, and we are now readying the business for more than 3,500 shops in the longer term."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Record numbers of customers are choosing delivery, downloading the Greggs App, and using Click + Collect to skip queues, with the app and digital channels becoming increasingly central to the business.",
+        "topic": "Digital Channel Performance",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 29,
+          "excerpt": "Our digital presence continues to go from strength to strength with record numbers of customers choosing a delivery, downloading the Greggs App, and skipping the queues in-shop by using Click + Collect."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "chunk_id": "greggs-ar25_p26-29"
+  },
+  {
+    "financial_figures": [],
+    "business_facts": [
+      {
+        "category": "Operating Metrics",
+        "statement": "Greggs increased its share of visits in the evening (post-5pm) time slot to 2.9% in 2025, up from 2.4% in 2024",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 31,
+          "excerpt": "In 2025, Greggs increased its share of visits across all dayparts, including the important evening (post-5pm) time slot, where share of visits increased to 2.9% (2024: 2.4%)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Operating Metrics",
+        "statement": "Evening sales represented 9.4% of company-managed food sales in 2025, up from 9.0% in 2024",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 31,
+          "excerpt": "Evening sales as a percentage of company-managed food sales 9.4% (2024: 9.0%)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Product & Market",
+        "statement": "Almost 2,000 Greggs shops stay open after 5pm, with evening being the fastest growing daypart",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 31,
+          "excerpt": "With almost 2,000 Greggs shops staying open after 5pm, the evening remains our fastest growing daypart"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Product & Market",
+        "statement": "Mac & Cheese was successfully trialed and launched in early 2025 and is now available in over 1,830 shops",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 31,
+          "excerpt": "Following a successful trial, we launched Mac & Cheese in early 2025, and it is now available in over 1,830 shops"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Product & Market",
+        "statement": "Pizza Box sales occur 19% in the evening, with more than 70% of total Pizza Box sales via Uber Eats or Just Eat",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 31,
+          "excerpt": "19% of sales occurring in the evening. We offer pizza slices in boxes of two, four or six slices and our customers can choose from nine different flavours. We have run successful promotional bundle deals on our delivery platforms and more than 70% of our total Pizza Box sales are now via Uber Eats or Just Eat"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Operating Metrics",
+        "statement": "More than 1,300 shops offer delivery service after 5pm in 2025, up from 1,200 shops in 2024",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 31,
+          "excerpt": "We now have more than 1,300 shops offering a delivery service after 5pm (2024: 1,200)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Production Capacity",
+        "statement": "Additional production capacity at Balliol Park now enables production of around four million more bakes per week",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 33,
+          "excerpt": "The new equipment gives us the ability to produce around four million more bakes per week"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Supply Chain & Sustainability",
+        "statement": "28% of fleet fuel usage has been switched to renewable biofuel HVO from fossil diesel in 2025, up from 13% in 2024",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 33,
+          "excerpt": "28% (2024: 13%) Of fleet now powered with a renewable biofuel, HVO"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Capex & Infrastructure",
+        "statement": "A new 23-acre manufacturing and logistics facility in Derby is nearing completion and scheduled to begin operating from mid-2026, with automated warehouse system for frozen goods",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 33,
+          "excerpt": "Building work at our new 23-acre manufacturing and logistics facility in Derby is nearing completion, ready to begin operating from mid-2026. As well as providing extra capacity for Yum Yum production, it will have an automated warehouse system for frozen goods allowing us to use robotic picking"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Capex & Infrastructure",
+        "statement": "New National Distribution Centre in Kettering is being fitted out ready for launch in first quarter of 2027, with labour planning and recruitment of key staff underway",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 33,
+          "excerpt": "We have now taken control of our new National Distribution Centre in Kettering and are fitting it out ready for its launch in first quarter of 2027. We have begun labour planning and the recruitment of key individuals who will run the new site"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Technology & Systems",
+        "statement": "Migration to SAP ERP software (S/4HANA) is underway, with finance and procurement teams now using the new system; intensive communications and training programme launched in final quarter of 2025",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 33,
+          "excerpt": "The migration to SAP has been central to this and we are now midway through moving our Enterprise Resource Planning (ERP) software to SAP S/4HANA. Our finance and procurement teams are now using the new system. In the final quarter of 2025, we began an intensive communications and training programme"
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "risk_disclosures": [],
+    "strategic_items": [],
+    "management_commentary": [],
+    "chunk_id": "greggs-ar25_p30-33"
+  },
+  {
+    "financial_figures": [
+      {
+        "label": "Total Sales Growth",
+        "value": 6.8,
+        "unit": "%",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 34,
+          "excerpt": "TOTAL SALES GROWTH 6.8% 2025 6.8%"
+        },
+        "citation_status": "unverifiable"
+      },
+      {
+        "label": "Like-for-Like Sales Growth",
+        "value": 2.4,
+        "unit": "%",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 34,
+          "excerpt": "LIKE-FOR-LIKE SALES GROWTH 2.4% 2025 2.4%"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Profit Before Tax (underlying, excluding exceptional items)",
+        "value": 171.9,
+        "unit": "\u00a3m",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 34,
+          "excerpt": "PROFIT BEFORE TAX (\u00a3M) 171.9m 2025 \u00a3171.9"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Profit Before Tax (including exceptional items)",
+        "value": 167.4,
+        "unit": "\u00a3m",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 34,
+          "excerpt": "\u00a3167.4 119.3p 2024 \u00a3189.8 2024 137.5p"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Diluted Earnings Per Share (underlying, excluding exceptional items)",
+        "value": 122.8,
+        "unit": "pence",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 34,
+          "excerpt": "DILUTED EARNINGS PER SHARE (PENCE) 122.8p 2025 122.8p"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Diluted Earnings Per Share (including exceptional items)",
+        "value": 119.3,
+        "unit": "pence",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 34,
+          "excerpt": "\u00a3167.4 119.3p"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Net Cash Inflow from Operating Activities After Lease Payments",
+        "value": 273.7,
+        "unit": "\u00a3m",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 35,
+          "excerpt": "NET CASH INFLOW FROM OPERATING ACTIVITIES AFTER LEASE PAYMENTS (\u00a3M) \u00a3273.7m 2025 \u00a3273.7"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Return on Capital Employed (ROCE)",
+        "value": 16.0,
+        "unit": "%",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 35,
+          "excerpt": "RETURN ON CAPITAL EMPLOYED (ROCE) 16.0% 2025 16.0%"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Capital Expenditure",
+        "value": 287.5,
+        "unit": "\u00a3m",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 35,
+          "excerpt": "CAPITAL EXPENDITURE (\u00a3M) \u00a3287.5m 2025 \u00a3287.5"
+        },
+        "citation_status": "unverifiable"
+      },
+      {
+        "label": "Liquidity",
+        "value": 145.8,
+        "unit": "\u00a3m",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 35,
+          "excerpt": "LIQUIDITY (\u00a3M) \u00a3145.8m 2025 \u00a3145.8"
+        },
+        "citation_status": "unverifiable"
+      }
+    ],
+    "business_facts": [
+      {
+        "category": "Business Overview",
+        "statement": "Greggs is a retail company with company-managed shops and operates as a publicly listed plc (Greggs plc).",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 34,
+          "excerpt": "Compares year-on-year cash sales in our company-managed shops, with more than one calendar year's trading history."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "risk_disclosures": [],
+    "strategic_items": [
+      {
+        "description": "The company uses eight key financial performance indicators (KPIs) to monitor Group performance against its strategy, including total sales growth, like-for-like sales growth, profit before tax, diluted earnings per share, net cash inflow from operating activities, ROCE, capital expenditure, and liquidity.",
+        "item_type": "Performance Framework",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 34,
+          "excerpt": "We use eight key financial performance indicators (KPIs) to monitor the performance of the Group against our strategy."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "management_commentary": [
+      {
+        "statement": "Return on Capital Employed is a measure of the return generated on capital invested by the Group and provides a guide to how efficiently the business is generating profit with the assets used.",
+        "topic": "Capital Efficiency",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 35,
+          "excerpt": "This is a measure of the return generated on capital invested by the Group and provides a guide to how efficiently we are generating profit with the assets used in the business."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Net cash inflow from operating activities after lease payments represents cash flows that could be used for distribution of dividends or to fund strategic objectives and is reflective of the strong cash-generative nature of the business.",
+        "topic": "Cash Generation and Capital Allocation",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 35,
+          "excerpt": "This represents cash flows that could be used for distribution of dividends or to fund our strategic objectives and is reflective of the strong cash-generative nature of the business."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "chunk_id": "greggs-ar25_p34-35"
+  },
+  {
+    "financial_figures": [
+      {
+        "label": "Revenue",
+        "value": 2151.2,
+        "unit": "\u00a3m",
+        "period": "52 weeks ended 27 December 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 59,
+          "excerpt": "Revenue 2,151.2 2,014.4 +6.8%"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Underlying operating profit",
+        "value": 187.5,
+        "unit": "\u00a3m",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 60,
+          "excerpt": "Underlying operating profit (profit before net finance charges, exceptional items and tax) was \u00a3187.5 million in 2025"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Underlying operating profit margin",
+        "value": 8.7,
+        "unit": "%",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 60,
+          "excerpt": "Underlying operating profit margin was 8.7% in 2025 (2024: 9.7%)."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Profit before tax",
+        "value": 167.4,
+        "unit": "\u00a3m",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 60,
+          "excerpt": "After exceptional items profit before taxation was \u00a3167.4 million in 2025"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Profit after tax",
+        "value": 122.2,
+        "unit": "\u00a3m",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 59,
+          "excerpt": "Profit after tax 122.2 153.4 -20.3%"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Underlying diluted earnings per share",
+        "value": 122.8,
+        "unit": "pence",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 59,
+          "excerpt": "Underlying diluted earnings per share 122.8p 137.5p -10.7%"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Diluted earnings per share including exceptional items",
+        "value": 119.3,
+        "unit": "pence",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 61,
+          "excerpt": "Including exceptional items diluted earnings per share were 119.3 pence (2024: 149.6 pence per share including net exceptional income)."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Like-for-like sales growth (company-managed)",
+        "value": 2.4,
+        "unit": "%",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 59,
+          "excerpt": "Company-managed like-for-like sales grew by 2.4% in the year"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Like-for-like system sales growth (franchised units)",
+        "value": 4.3,
+        "unit": "%",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 59,
+          "excerpt": "like-for-like 'system sales' in franchised units rose by 4.3%."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Underlying return on capital employed (ROCE)",
+        "value": 16.0,
+        "unit": "%",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 59,
+          "excerpt": "Underlying return on capital employed 16.0% 20.3%"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Cost savings achieved",
+        "value": 13.0,
+        "unit": "\u00a3m",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 60,
+          "excerpt": "in 2025 this delivered \u00a313.0 million of savings (2024: \u00a310.6 million)."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Like-for-like cost inflation",
+        "value": 5.5,
+        "unit": "%",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 60,
+          "excerpt": "The business experienced overall like-for-like cost inflation of around 5.5% in 2025."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Finance income",
+        "value": 1.8,
+        "unit": "\u00a3m",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 59,
+          "excerpt": "Finance income 1.8 8.1 -77.8%"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Finance expense",
+        "value": 17.4,
+        "unit": "\u00a3m",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 59,
+          "excerpt": "Finance expense (17.4) (13.6) +27.9%"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Group net current liabilities",
+        "value": 151.8,
+        "unit": "\u00a3m",
+        "period": "end of 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 62,
+          "excerpt": "We ended the year with Group net current liabilities of \u00a3151.8 million (2024: \u00a367.3 million)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Capital expenditure",
+        "value": 287.5,
+        "unit": "\u00a3m",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 62,
+          "excerpt": "We invested a total of \u00a3287.5 million in capital expenditure during 2025 (2024: \u00a3249.0 million)."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Depreciation and amortisation on property, plant and equipment and intangibles",
+        "value": 95.4,
+        "unit": "\u00a3m",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 62,
+          "excerpt": "Depreciation and amortisation on property, plant and equipment and intangibles in the year was \u00a395.4 million (2024: \u00a380.8 million)."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Depreciation on right-of-use assets",
+        "value": 65.2,
+        "unit": "\u00a3m",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 62,
+          "excerpt": "A further \u00a365.2 million (2024: \u00a359.2 million) of depreciation was charged in respect of right-of-use assets on capitalised leases."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Interim dividend",
+        "value": 19.0,
+        "unit": "pence per share",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 61,
+          "excerpt": "the interim dividend of 19.0 pence per share (2024: 19.0 pence per share) paid in October 2025"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Final ordinary dividend",
+        "value": 50.0,
+        "unit": "pence per share",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 61,
+          "excerpt": "The Board recommends a final ordinary dividend of 50.0 pence per share (2024: 50.0 pence per share)."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Total ordinary dividend",
+        "value": 69.0,
+        "unit": "pence per share",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 61,
+          "excerpt": "this makes a total ordinary dividend for the year of 69.0 pence per share (2024: 69.0 pence per share)."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Diluted operating cash inflow per share",
+        "value": 267.1,
+        "unit": "pence",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 61,
+          "excerpt": "Diluted operating cash inflow per share grew by 4.6% in 2025 to 267.1 pence (2024: 255.4 pence)."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Underlying effective tax rate",
+        "value": 26.8,
+        "unit": "%",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 61,
+          "excerpt": "the underlying effective rate for the year was 26.8% (2024: 25.7%)."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Expected capital expenditure",
+        "value": 200.0,
+        "unit": "\u00a3m",
+        "period": "2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 62,
+          "excerpt": "we expect capital expenditure in 2026 to be around \u00a3200 million in line with previous guidance."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Planned company-managed shop openings",
+        "value": 135.0,
+        "unit": "number",
+        "period": "2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 62,
+          "excerpt": "we will invest in circa 135 new company-managed shops in 2026"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Planned shop refurbishments",
+        "value": 45.0,
+        "unit": "number",
+        "period": "2026",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 62,
+          "excerpt": "refurbish around 45 existing company-managed shops."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "business_facts": [
+      {
+        "category": "Business model and operations",
+        "statement": "Greggs operates through company-managed shops, franchise partners, and business-to-business channels to franchise and grocery retail partners. The company has vertical integration in manufacturing and logistics operations.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 59,
+          "excerpt": "Total Group revenue reflects sales from company-managed shops, which include delivery sales, and sales through the business-to-business channel to our franchise and grocery retail partners."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Market position and segments",
+        "statement": "Greggs operates both company-managed shops and franchised units, with franchised operations primarily focused on roadside locations that have proven more resilient to market conditions.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 59,
+          "excerpt": "The performance of shops managed by franchise partners proved more resilient to market conditions, being primarily focused on roadside locations."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Growth strategy and capacity",
+        "statement": "The company is investing in new distribution facilities in Derby and Kettering that will provide logistics capacity to support a network of 3,500 shops in the medium term, with flexibility to extend further if appropriate.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 60,
+          "excerpt": "When complete, we will have the logistics capacity to support a network of 3,500 shops in the medium term and the flexibility to extend this further if appropriate."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Competitive positioning",
+        "statement": "Greggs offers prices comparable to the grocery sector with freshly prepared food and drink offerings prepared in shops each day, and maintains a strong discount position relative to other food-to-go specialists.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 60,
+          "excerpt": "Our prices are comparable to the grocery sector, however, our food and drink offering is freshly prepared in shops each day."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Capital allocation strategy",
+        "statement": "The company targets a 25% cash return on investment for new shops and typically exceeds this level after two to three years as shops mature, with acquisition strategy targeting shops with higher than average sales and returns in new catchments.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 62,
+          "excerpt": "In our retail estate we continue to target a 25% cash return on investment on new shops and typically exceed this level after two to three years as shops mature."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "risk_disclosures": [
+      {
+        "description": "Challenging market conditions in 2025 impacted trading, with subdued consumer confidence and particularly prolonged high temperatures in June and July materially impacting footfall and consumer behaviour.",
+        "risk_type": "Market and consumer demand",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 59,
+          "excerpt": "Subdued consumer confidence impacted trading but the Company's growth strategy remains intact"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "The business experienced overall like-for-like cost inflation of around 5.5% in 2025, primarily driven by employment costs including the impact of increased employer's National Insurance contributions from April 2025, and rising costs of food and packaging.",
+        "risk_type": "Cost inflation",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 60,
+          "excerpt": "The business experienced overall like-for-like cost inflation of around 5.5% in 2025. This was primarily driven by employment costs, including the impact of the increase in employer's National Insurance contributions from April 2025, and rising costs of food and packaging."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "The development and commissioning of new distribution facilities in Derby and Kettering will bring additional operating and financing costs in the short term, impacting near-term margins. ROCE declined to 16.0% in 2025 from 20.3% in 2024 due to current operating conditions and increased capital employed.",
+        "risk_type": "Capital intensity and profitability",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 60,
+          "excerpt": "As we have previously guided, the development and commissioning of these sites will bring additional operating and financing costs in the short term, which will subsequently be leveraged as the new facilities allow us to open further profitable new shops."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "strategic_items": [
+      {
+        "description": "The company is developing further partnerships to improve brand access and continuing to progress in evening daypart and delivery channels as part of its growth strategy to develop additional income streams.",
+        "item_type": "Growth strategy",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 59,
+          "excerpt": "Greggs delivered further sales growth through new shop openings, the development of further partnerships that improve access to the brand and continued progress in the evening daypart and delivery channel."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "The company is investing in logistics infrastructure and new distribution facilities in Derby and Kettering to support medium-term growth to 3,500 shops. Capital expenditure will reduce to \u00a3200m in 2026 and \u00a3150-170m from 2027 onwards, enabling material cash returns whilst pursuing disciplined capital allocation.",
+        "item_type": "Capital investment and returns",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 62,
+          "excerpt": "2025 was the peak year of our capital investment programme and, as previously communicated, expenditure will reduce materially from this point."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Management targets a ROCE of around 20% and expects it to stabilise in 2027 before recovering from 2028 onwards through shop openings in attractive locations, relocation of traditional shops to stronger locations, disciplined capital allocation, structural cost efficiency improvements, and wider market performance.",
+        "item_type": "ROCE recovery plan",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 60,
+          "excerpt": "Greggs targets a ROCE of around 20% and this remains one of our key objectives.",
+          "page_original": 61
+        },
+        "citation_status": "corrected"
+      },
+      {
+        "description": "The company has a rolling programme of cost-saving initiatives leveraging vertical integration benefits and end-to-end process reviews to mitigate cost pressure, delivering \u00a313.0 million of savings in 2025.",
+        "item_type": "Cost management strategy",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 60,
+          "excerpt": "We have a rolling programme of cost-saving initiatives with the aim of mitigating as much cost pressure as possible and in 2025 this delivered \u00a313.0 million of savings"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "The Board recommends maintaining the ordinary dividend at 69.0 pence per share through the investment phase, with a progressive dividend policy aiming to increase dividends in line with growth in underlying earnings per share once returns normalise.",
+        "item_type": "Dividend policy",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 61,
+          "excerpt": "The Board recommends maintaining the ordinary dividend through this investment phase, before returning to an ordinary dividend that is covered two times by underlying diluted earnings per share."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "management_commentary": [
+      {
+        "statement": "Despite challenging market conditions in 2025, the Company's growth strategy remains intact, with work progressing to develop additional income streams and accelerate cost efficiencies. Along with leveraging new logistics capacity, this will support the medium-term plan to restore returns in line with historic targets.",
+        "topic": "Market conditions and outlook",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 59,
+          "excerpt": "Despite challenging market conditions in 2025, Greggs delivered further sales growth through new shop openings"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Management expects like-for-like costs to be less inflationary in 2026 with overall input cost inflation of around 3%, with employment cost inflation being the biggest driver but at lower levels than recent years reflecting changes to the National Living Wage.",
+        "topic": "Cost inflation outlook",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 60,
+          "excerpt": "Looking forward we expect like-for-like costs to be less inflationary in 2026, with overall input cost inflation of around 3%."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "The company currently has good levels of forward cover for commodity costs, with 100% of electricity requirements fixed for the year and forward purchase agreements in place representing approximately four months of food and packaging needs.",
+        "topic": "Commodity cost management",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 60,
+          "excerpt": "We currently have good levels of forward cover for commodity costs, with 100% of our electricity requirements fixed for the year"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Management believes Greggs is well positioned to weather short-term market pressures whilst benefiting as the consumer environment improves. ROCE is expected to reduce further in 2026 as new distribution facilities are brought into use, stabilise in 2027, and recover from 2028 onwards.",
+        "topic": "Future ROCE trajectory",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 61,
+          "excerpt": "we believe that Greggs is well placed to weather the short-term pressures"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Management expects the effective tax rate for 2026 to be around 26.0% and going forward the rate is expected to remain around one percentage point above the headline corporation tax rate, principally due to expenditure for which no tax relief is available.",
+        "topic": "Taxation outlook",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 61,
+          "excerpt": "We expect the effective tax rate for 2026 to be around 26.0%"
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "chunk_id": "greggs-ar25_p59-62"
+  },
+  {
+    "financial_figures": [
+      {
+        "label": "Net cash inflow from operating activities after lease payments",
+        "value": 273.7,
+        "unit": "\u00a3 million",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 63,
+          "excerpt": "The net cash inflow from operating activities after lease payments in the year was \u00a3273.7 million (2024: \u00a3261.9 million)."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Net cash and cash equivalents",
+        "value": 45.8,
+        "unit": "\u00a3 million",
+        "period": "Year-end 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 63,
+          "excerpt": "At the end of the year the Group had net cash and cash equivalents of \u00a345.8 million (2024: \u00a3125.3 million)"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Cash and cash equivalents (gross)",
+        "value": 70.8,
+        "unit": "\u00a3 million",
+        "period": "Year-end 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 63,
+          "excerpt": "representing \u00a370.8 million of cash and cash equivalents, offset by \u00a325 million drawn on the Company's RCF."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "RCF drawn",
+        "value": 25.0,
+        "unit": "\u00a3 million",
+        "period": "Year-end 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 63,
+          "excerpt": "representing \u00a370.8 million of cash and cash equivalents, offset by \u00a325 million drawn on the Company's RCF."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "RCF facility size",
+        "value": 100.0,
+        "unit": "\u00a3 million",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 63,
+          "excerpt": "The facility provides liquidity of \u00a3100 million in committed funds."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Total available liquidity",
+        "value": 145.8,
+        "unit": "\u00a3 million",
+        "period": "Year-end 2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 63,
+          "excerpt": "total available liquidity at the end of 2025 was \u00a3145.8 million (2024: \u00a3225.3 million)."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "label": "Pension scheme net liability",
+        "value": -0.3,
+        "unit": "\u00a3 million",
+        "period": "2025",
+        "note_ref": null,
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 63,
+          "excerpt": "the scheme is in a net liability position of \u00a30.3 million (2024: \u00a30.4 million net liability)"
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "business_facts": [
+      {
+        "category": "Business Operations",
+        "statement": "Greggs is investing in significant new sites in Derby and Kettering to expand its supply chain and support profitable growth.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 63,
+          "excerpt": "The significant investments we are making to support further profitable growth create short-term ROCE and margin headwinds as we bring important new sites into our supply chain in a period where underlying trading has seen pressure from market operating conditions."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Capital Allocation Strategy",
+        "statement": "Greggs targets maintenance capital expenditure at around 5% of revenue in normal circumstances, which will reduce following the significant investment in new sites in Derby and Kettering.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 63,
+          "excerpt": "In normal circumstances we expect maintenance capital expenditure to be around 5% of revenue. The level of maintenance capital expenditure will reduce following the significant investment in the new sites in Derby and Kettering."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Dividend Policy",
+        "statement": "Greggs targets a progressive ordinary dividend normally covered around two times by underlying profit after taxation.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 63,
+          "excerpt": "We continue to target a progressive ordinary dividend, normally around two times covered by underlying profit after taxation."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "risk_disclosures": [
+      {
+        "description": "Internal business interruption risks have decreased as mitigating actions have reduced the impact of any such issues, though cyber risk in the market has increased and the company continues to take significant steps to improve controls and strengthen resilience.",
+        "risk_type": "Operational Risk - Business Interruption",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 66,
+          "excerpt": "The risk relating to internal business interruption has decreased, as we consider the impact of any such issue has been reduced by our mitigating actions. We recognise that the overall level of cyber risk in the market has increased, although we continue to take significant steps to improve our controls and strengthen our resilience."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "A principal risk relating to access to liquidity has been included, in the context of a material reduction in solvency without prior warning, rather than a gradual decline over time.",
+        "risk_type": "Financial Risk - Liquidity",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 66,
+          "excerpt": "we have reflected on our principal risk disclosure, and agreed that we should include a financial risk relating to access to liquidity. This would be in the context of a material reduction in solvency without prior warning, rather than a gradual decline over a period of time."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Climate-related risks are integrated within the risk management process and strategic and functional registers. The company does not currently consider failure to effectively respond to climate-related impacts as a principal risk within the time horizon of current plans.",
+        "risk_type": "Strategic Risk - Climate",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 66,
+          "excerpt": "Our climate-related risks are integrated within our risk management process and are captured within our strategic and functional registers. We remain of the view that our strategic risk of 'a failure to effectively respond to climate-related impacts on our business' does not constitute a principal risk within the time horizon of our current plans."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "strategic_items": [
+      {
+        "description": "Return surplus cash to shareholders where net cash exceeds minimum requirement, taking into account reserves for growth investments, through special dividends or share buybacks.",
+        "item_type": "Capital Allocation Priority",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 63,
+          "excerpt": "Return surplus cash to shareholders. Where net cash on the balance sheet exceeds our minimum requirement, taking into account that reserved for growth investments, we expect to return cash to shareholders by way of either special dividends or share buybacks."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Selective investment in opportunities that deliver attractive returns, including expansion of the estate and support for generation of additional income streams.",
+        "item_type": "Growth Initiative",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 63,
+          "excerpt": "Selectively invest to grow. We will continue to invest in opportunities that deliver attractive returns, including the expansion of our estate and to support the generation of additional income streams where relevant."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Material controls and contingency plans for business-critical activities have been a key focus, with continued development of the risk management framework to ensure risks are identified and appropriately managed.",
+        "item_type": "Risk Management Enhancement",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 65,
+          "excerpt": "The focus of meetings outside standing agenda items has been on material controls and contingency plans for business-critical activities."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "management_commentary": [
+      {
+        "statement": "The significant investments to support profitable growth create short-term ROCE and margin headwinds as new sites are brought into the supply chain during a period of pressure from market operating conditions.",
+        "topic": "Growth Investment and Margin Outlook",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 63,
+          "excerpt": "The significant investments we are making to support further profitable growth create short-term ROCE and margin headwinds as we bring important new sites into our supply chain in a period where underlying trading has seen pressure from market operating conditions."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Investment in additional capacity will enable Greggs to realise the medium-term opportunity to grow its estate and expand into new channels, while progressing opportunities to develop additional income streams and accelerate structural cost savings.",
+        "topic": "Medium-term Opportunity",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 63,
+          "excerpt": "Our investment in additional capacity will enable Greggs to realise the medium-term opportunity to grow its estate and expand into new channels, whilst also progressing opportunities to develop additional income streams and accelerate structural cost savings."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "Greggs aims to maintain a year-end net cash position of circa 3% of revenue in normal circumstances to allow for seasonality in the working capital cycle and to protect creditor interests.",
+        "topic": "Balance Sheet Strength Target",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 63,
+          "excerpt": "we aim, in normal circumstances, to maintain a year-end net cash position of circa 3% of revenue in order to allow for seasonality in the working capital cycle and to protect the interests of all creditors."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "chunk_id": "greggs-ar25_p63-66"
+  },
+  {
+    "financial_figures": [],
+    "business_facts": [
+      {
+        "category": "Business Operations & Service Delivery",
+        "statement": "Greggs operates a diversified product range and franchise partnership model alongside grocery retail sales and delivery channels.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 67,
+          "excerpt": "This would primarily impact our own customers, including those of our franchise partners, but also potentially our grocery retail sales."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Supply Chain & Operations",
+        "statement": "Greggs avoids single source supply for key ingredients with risk mitigation plans in place where necessary.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 67,
+          "excerpt": "We avoid single source supply for key ingredients as far as possible, with risk mitigations plans in place where necessary."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Business Model",
+        "statement": "Greggs operates through company-owned stores, franchise partners, and grocery retail channels.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 68,
+          "excerpt": "Our strategy and goals may not be fully aligned with those of our partners in franchise, grocery retail or delivery."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "risk_disclosures": [
+      {
+        "description": "Potential loss of capacity at a key production facility could prevent supply of full product range to customers, franchise partners and grocery retail sales for an extended period.",
+        "risk_type": "Operational - Business Interruption",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 67,
+          "excerpt": "We could suffer a significant reduction in product availability as a result of the total loss of capacity at a key production facility."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Prolonged outage or significant issue at a key supplier or within their supply chain could impact ability to produce parts of product range, due to external business interruption, geopolitical instability, or food safety concerns.",
+        "risk_type": "Supply Chain - Supplier Disruption",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 67,
+          "excerpt": "Supply from a key third party could be interrupted. This could be a result of issues such as external business interruption, geopolitical instability, or a food safety concern."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Cyber incident or data breach could result in significant loss of data, litigation, fines, and data unavailability impacting ability to operate.",
+        "risk_type": "Cyber/Information Security",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 68,
+          "excerpt": "We could suffer a significant loss of data, resulting in litigation and fines. Data may be unavailable or lost, making it difficult for us to operate."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "IT system interruptions and cyber incidents could cause extended business disruption, as operations and business-critical activities rely on technology.",
+        "risk_type": "Operational - System Downtime",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 68,
+          "excerpt": "Our reliance on technology means that system interruptions and cyber incidents are potentially more disruptive, with a more significant impact on business operations."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Misalignment with franchise, grocery retail or delivery partners could limit service in desired locations, affect performance and damage brand reputation.",
+        "risk_type": "Strategic - Partner Relationship Deterioration",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 68,
+          "excerpt": "This would limit our ability to offer our service in locations where our customers want us to be."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Inability to attract, retain and motivate the right talent could prevent delivery of existing product range and service standards, increase staff turnover and training burden, and limit business growth.",
+        "risk_type": "Operational - Talent Management",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 69,
+          "excerpt": "We may be unable to attract and retain the right talent within Greggs to maintain our culture and operate as our customers expect."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Greater risk of brand reputation damage by internal or external sources as brand profile grows, which could cause customers to lose trust and reduce shareholder value.",
+        "risk_type": "Reputational - Brand Damage",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 69,
+          "excerpt": "There is greater risk of damage to our brand reputation by internal or external sources as our brand profile grows."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Potential to produce/sell unsafe products or inappropriate quality due to incorrect allergen labelling, product contamination or procedure non-compliance, risking customer/colleague harm, brand damage, sales impact and significant fines.",
+        "risk_type": "Food Safety - Product Quality",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 69,
+          "excerpt": "We may produce and/or sell products which are unsafe, or not of the appropriate quality. This could be a result of incorrect labelling of allergens, product contamination, or a failure to comply with procedures."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "New regulatory requirements driven by environmental, health or other concerns could require product range changes or advertising approach modifications, creating risk of market share loss or regulatory action if unable to respond quickly.",
+        "risk_type": "Regulatory - Compliance Changes",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 70,
+          "excerpt": "New regulatory requirements could be implemented, driven by environmental, health or other concerns."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Business may not be able to access required liquidity facilities to deliver on plans, potentially requiring delays to investment plans to prioritise financial commitments to employees, suppliers and property providers.",
+        "risk_type": "Financial - Liquidity",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 70,
+          "excerpt": "The business may not be able to access the liquidity facilities required to deliver on its plans."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "strategic_items": [
+      {
+        "description": "Five strategic pillars guide Greggs' strategy: Great tasting, freshly prepared food and drink; Best customer experience; Competitive supply chain; First-class support teams; and The Greggs Pledge.",
+        "item_type": "Strategic Priority",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 67,
+          "excerpt": "STRATEGIC PILLARS 1 Great tasting, freshly prepared food and drink 2 Best customer experience 3 Competitive supply chain 4 First-class support teams 5 The Greggs Pledge"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Greggs is rolling out a standardised Business Continuity Management approach across supply sites with contingency plans that are reviewed and tested periodically.",
+        "item_type": "Business Continuity Initiative",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 67,
+          "excerpt": "We are continuing to roll out a standardised Business Continuity Management approach across our supply sites."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Greggs is moving towards more cloud-based solutions across operations to increase resilience within the network and is developing business continuity and disaster recovery capability.",
+        "item_type": "Technology & Resilience Initiative",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 68,
+          "excerpt": "We continue to move towards more cloud-based solutions across our operations, which increases resilience within our network."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "A committed RCF (Revolving Credit Facility) is in place with significant undrawn capacity, and Greggs has discretion over uncommitted investment plans to manage liquidity.",
+        "item_type": "Financial Management",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 70,
+          "excerpt": "A committed RCF is in place, with significant undrawn capacity."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "management_commentary": [],
+    "chunk_id": "greggs-ar25_p67-70"
+  },
+  {
+    "financial_figures": [],
+    "business_facts": [
+      {
+        "category": "Business model and operations",
+        "statement": "Greggs has vertical integration in its supply chain, meaning the cost of the internal supply chain cannot be reduced quickly in a significant loss of sales scenario.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 71,
+          "excerpt": "A significant loss of sales is particularly damaging given the Group's vertical integration in that the cost of the internal supply chain cannot be reduced quickly."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Segment operations",
+        "statement": "The Group has grocery retail relationships with Iceland Foods and Tesco for delivery sales and 'Bake at Home' products.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 71,
+          "excerpt": "Delivery sales and 'Bake at Home' sales through the Group's grocery retail relationships with Iceland Foods and Tesco are assumed to be most resilient."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Supply chain",
+        "statement": "The Group has a savoury products manufacturing facility at Balliol Park.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 71,
+          "excerpt": "Operational disruption impacting product availability, resulting from either the loss of supply of savoury products from Balliol Park or loss of key IT systems."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "risk_disclosures": [
+      {
+        "description": "Loss of supply of savoury products from Balliol Park or loss of key IT systems could result in operational disruption and product availability impacts.",
+        "risk_type": "Operational/Supply chain",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 71,
+          "excerpt": "Operational disruption impacting product availability, resulting from either the loss of supply of savoury products from Balliol Park or loss of key IT systems."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "A brand-damaging food scare could result in a significant circa 25% sales reduction for the initial six months followed by gradual recovery of confidence.",
+        "risk_type": "Reputational/Food safety",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 71,
+          "excerpt": "A brand-damaging food scare resulting in a significant one-year sales reduction (circa 25% sales reduction for initial six months) followed by gradual recovery of confidence."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "A pandemic threat could result in significantly subdued trade due to lockdown rules, with an assumed circa 30% reduction in overall Group sales through a three-month lockdown in the final quarter of 2026, with phased recovery through 2027.",
+        "risk_type": "Pandemic/Lockdown",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 71,
+          "excerpt": "Pandemic threat \u2013 the risk that trade is significantly subdued as a result of lockdown rules, with the Group continuing to trade as an essential retailer selling food, which was permitted during the Covid-19 pandemic. This subdues walk-in trade through the lockdown period and as the economy recovers (a circa 30% reduction in overall Group sales through a three-month lockdown in the final quarter of 2026, with a phased recovery through 2027)."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "description": "Stress testing under multiple principal risk scenarios showed a potential breach of loan covenants in 2027, although the Directors consider the likelihood of this to be remote.",
+        "risk_type": "Covenant/Financing",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 71,
+          "excerpt": "Although the Group has sufficient existing and committed financing facilities to manage in a situation where multiple principal risk scenarios occur concurrently, the simulation showed a breach of loan covenants in 2027, but the directors consider the likelihood of this to be remote."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "strategic_items": [],
+    "management_commentary": [
+      {
+        "statement": "The Directors have a reasonable expectation that the Group will be able to continue in operation and meet its liabilities as they fall due over the three-year period of their detailed assessment to 2028.",
+        "topic": "Viability and financial resilience",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 71,
+          "excerpt": "Based on the results of the analysis, the Directors have a reasonable expectation that the Group will be able to continue in operation and meet its liabilities as they fall due over the three-year period of their detailed assessment."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "statement": "The Group has sufficient existing and committed financing facilities to manage in a situation where multiple principal risk scenarios occur concurrently, and Directors believe the Group's borrowing capacity would be sufficient to allow access to temporary additional facilities if needed.",
+        "topic": "Financing capacity",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 71,
+          "excerpt": "The Group has sufficient existing and committed financing facilities to manage in a situation where multiple principal risk scenarios occur concurrently. If this were not the case, the Directors believe that the borrowing capacity of the Group would be sufficient to allow it access to temporary additional facilities."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "chunk_id": "greggs-ar25_p71"
+  },
+  {
+    "financial_figures": [],
+    "business_facts": [],
+    "risk_disclosures": [],
+    "strategic_items": [],
+    "management_commentary": [],
+    "chunk_id": "greggs-ar25_p130-133"
+  },
+  {
+    "financial_figures": [],
+    "business_facts": [
+      {
+        "category": "Corporate Structure",
+        "statement": "Greggs is a company incorporated and domiciled in the UK with company-managed shops and business-to-business operations",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 136,
+          "excerpt": "Greggs plc (the 'Company') is a company incorporated and domiciled in the UK. The Group accounts consolidate those of the Company and its subsidiaries (together referred to as the 'Group')"
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Market Conditions",
+        "statement": "Volumes have been under pressure from reduced consumer spending impacting the wider food-to-go market",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 137,
+          "excerpt": "volumes have been under pressure from reduced consumer spending impacting the wider food-to-go market"
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "risk_disclosures": [],
+    "strategic_items": [],
+    "management_commentary": [],
+    "chunk_id": "greggs-ar25_p134-137"
+  },
+  {
+    "financial_figures": [],
+    "business_facts": [
+      {
+        "category": "Business Operations",
+        "statement": "The Group operates property leases that typically run for a period of 10 or 15 years, with the majority in England and Wales protected by the Landlord and Tenant Act 1954.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 138,
+          "excerpt": "The leases typically run for a period of 10 or 15 years. In England and Wales, the majority of the Group's property leases are protected by the Landlord and Tenant Act 1954 (LTA) which affords protection to the lessee at the end of an existing lease term."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Business Model",
+        "statement": "Some property leases contain variable payment terms linked to sales generated from individual shops, with up to 100% of lease payments on a basis of variable payment terms for some locations.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 140,
+          "excerpt": "Some property leases contain variable payment terms that are linked to sales generated from a shop. For individual shops, up to 100% of lease payments are on the basis of variable payment terms."
+        },
+        "citation_status": "verified"
+      },
+      {
+        "category": "Business Segments",
+        "statement": "The Group has a growing business-to-business segment and is exploring other growth opportunities in addition to company-managed estate expansion.",
+        "confidence": "high",
+        "source": {
+          "doc_id": "greggs-ar25",
+          "page": 138,
+          "excerpt": "a growing business-to-business segment, overheads incurred in respect of growing the company-managed estate and overheads related to exploring other growth opportunities."
+        },
+        "citation_status": "verified"
+      }
+    ],
+    "risk_disclosures": [],
+    "strategic_items": [],
+    "management_commentary": [],
+    "chunk_id": "greggs-ar25_p138-141"
+  },
+  {
+    "financial_figures": [],
+    "business_facts": [],
+    "risk_disclosures": [],
+    "strategic_items": [],
+    "management_commentary": [],
+    "chunk_id": "greggs-ar25_p142-143"
+  }
+]

@@ -5,17 +5,24 @@
 documents/*.pdf
 
 # Pipeline outputs — regenerable; ignored by default
+# Exceptions: committed outputs power the Streamlit demo (no API key needed).
 output/*
 !output/memo.md
 !output/evidence_register.json
+!output/classified_facts.json
+!output/validated_facts.json
 !output/greggs/
 output/greggs/*
 !output/greggs/memo.md
 !output/greggs/evidence_register.json
+!output/greggs/classified_facts.json
+!output/greggs/validated_facts.json
 !output/gw/
 output/gw/*
 !output/gw/memo.md
 !output/gw/evidence_register.json
+!output/gw/classified_facts.json
+!output/gw/validated_facts.json
 
 # Python
 __pycache__/

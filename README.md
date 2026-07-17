@@ -12,6 +12,16 @@ A command-line pipeline that turns a company's annual report into a structured i
 
 ---
 
+## Live Demo
+
+> **[Launch on Streamlit Community Cloud]** ← URL added after deployment
+
+**Demo mode (no API key needed):** choose Auto Trader (V3 — evaluated), Greggs, or Games Workshop from the selector. The finished memo loads with the full evidence panel and facts browser — all powered by pre-committed output files.
+
+**Run your own:** upload any UK-listed company annual report PDF and paste your Anthropic API key. A deterministic pre-flight check runs first (text extractable, page count sensible, annual-report headings present, not a bank or insurer). If it passes, the full pipeline runs for roughly $1 of your API credits in 5–10 minutes. Your key is held in session memory only — never written to disk, never logged, removed when the run finishes.
+
+---
+
 ## Problem
 
 Investment analysts spend significant time reading hundreds of pages of company documents to answer a recurring set of questions: what does the business do, how is it performing, what could go wrong, and what needs further investigation?
@@ -348,34 +358,35 @@ python eval/run_eval.py
 ### Data
 
 - [x] `documents/*.pdf` is gitignored (large files, publicly available)
-- [x] `output/` is gitignored with explicit exceptions for showcase outputs (both memos + evidence registers)
+- [x] `output/` is gitignored with explicit exceptions for demo outputs (memos, evidence registers, classified facts, validated facts for all three companies)
 - [x] `eval/gold_set.json` committed and unmodified since freeze date (14 Jul 2026)
 
 ### Example Outputs Committed
 
 ```gitignore
-# In .gitignore — exceptions to track specific showcase outputs:
+# In .gitignore — exceptions for the Streamlit demo (no API key needed):
 !output/memo.md
 !output/evidence_register.json
-!output/greggs/
-!output/greggs/memo.md
-!output/greggs/evidence_register.json
-!output/gw/
-!output/gw/memo.md
-!output/gw/evidence_register.json
+!output/classified_facts.json
+!output/validated_facts.json
+!output/greggs/  (+ memo, register, classified, validated)
+!output/gw/      (+ memo, register, classified, validated)
 ```
 
-Files committed:
-- `output/memo.md` — Auto Trader V3 investment memo (primary deliverable, locked)
-- `output/evidence_register.json` — Auto Trader evidence register
-- `output/greggs/memo.md` — Greggs plc investment memo (generalisation showcase)
-- `output/greggs/evidence_register.json` — Greggs evidence register
-- `output/gw/memo.md` — Games Workshop investment memo (third-company showcase)
-- `output/gw/evidence_register.json` — Games Workshop evidence register
+Files committed (all are public-document derivatives — the source PDFs are publicly available):
+- `output/memo.md` + `evidence_register.json` + `classified_facts.json` + `validated_facts.json` — Auto Trader V3
+- `output/greggs/` — Greggs plc (all four files)
+- `output/gw/` — Games Workshop (all four files)
+
+### Streamlit Demo
+
+- [x] `app.py` V1.1 — demo mode (three companies, no API key) + "run your own" mode (PDF upload + API key + pre-flight check + pipeline runner)
+- [ ] Streamlit Community Cloud deployment URL added to README
 
 ### Evaluation
 
 - [x] `eval/results.md` V1/V2/V3 manual metrics complete
 - [x] `eval/scoring_sheet.md` Part C (risk coverage) completed
 - [x] `eval/greggs_qualitative_review.md` recorded
-- [x] `BUILD_LOG.md` up to date through V3 + Greggs generalisation + GW third-company run
+- [x] `eval/gw_qualitative_review.md` recorded
+- [x] `BUILD_LOG.md` up to date through V3 + Greggs + GW + V1.1 app
