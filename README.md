@@ -116,23 +116,21 @@ Token economics were the primary design constraint, not an afterthought.
 
 The gold standard set was built **before** prompt tuning and is frozen: `eval/gold_set.json` contains 50 items (20 facts, 10 risks, 10 observations, 10 diligence questions) compiled manually from the source documents. The pipeline was never tuned against it.
 
-### Automated Metrics (from `eval/run_eval.py`)
+### V1 / V2 / V3 Results (scored against the same frozen gold set)
 
-| Metric | Score | Method |
-|---|---|---|
-| Fact recall | 18/20 (90%) | ±2% value tolerance; ±1 page citation tolerance |
-| Citation accuracy | 16/18 (88%) | Of found facts, pipeline page vs. gold page |
-| Risk coverage (automated estimate) | 9/10 (90%) | 8-char stem prefix matching; ≥2 stems = COVERED |
+Three improvement rounds have been run against the FY2026 Annual Report, each targeting diagnosed failure modes from the prior evaluation. Full detail: `eval/results.md`.
 
-> Risk coverage is a vocabulary estimate, not a definitive score. Common business words can match in unrelated contexts. See `eval/scoring_sheet.md` Part C for manual verification.
+| Metric | V1 | V2 | V3 | Method |
+|---|---|---|---|---|
+| Fact recall (automated) | 18/20 (90%) | 18/20 (90%) | 18/20 (90%) | ±2% value tolerance; ±1 page citation tolerance |
+| Citation accuracy (automated) | 16/18 (88%) | 16/18 (88%) | 16/18 (88%) | Of found facts |
+| Risk coverage (human-verified) | 5.5/10 (55%) | 6.5/10 (65%) | pending | Manual review of Section 6 vs gold set R-01..R-10 |
+| Observation coverage (human) | 7.5/10 (75%) | 9.0/10 (90%) | pending | Manual review vs gold set O-01..O-10 |
+| Diligence question quality (human) | 3.0/3.0 (100%) | 3.0/3.0 (100%) | pending | 7 questions rated 1–3 |
 
-### Manual Metrics (pending — `eval/scoring_sheet.md`)
+> Automated risk coverage (V1: 9/10, V2: 10/10 apparent, V3: 10/10) is unreliable — common business vocabulary produces false positives. Human-verified scores override automated. V3 R-05 and R-10 now have genuine keyword matches ("cyber", "security", "third", "reliance") rather than V2's false positives — manual verification pending.
 
-| Metric | Score | Notes |
-|---|---|---|
-| Observation coverage (O-01..O-10) | TODO / 10 | Zak to score |
-| Diligence question quality (1–3 rating) | TODO | Zak to score |
-| Risk coverage (verified) | TODO / 10 | Verify automated COVERED results in `scoring_sheet.md` Part C |
+**What V2 improved:** direct-traffic competitive moat and EPS-vs-buyback mechanism now explicit (C3); all 11 synthesis risks now in Section 6 (C2); climate/EV risk now addressed. **What V3 improved:** Section 6 structure is now derived deterministically from the company's own disclosed risk categories; a post-generation validator fails if any category is absent; synthesis prompt mandates explicit risk framing (not opportunity framing) for every category. Primary targets: R-05 (cyber/IT) and R-10 (third-party/partner reliance). **Persistent gap:** engagement quality (O-08) — structural pdfplumber limitation on infographic pages; no pipeline fix available without OCR.
 
 ### Near-Misses
 

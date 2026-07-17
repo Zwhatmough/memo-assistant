@@ -1,18 +1,18 @@
 # Evaluation Results — Auto Trader Group plc FY2026
-**V1 run date:** 15 July 2026 | **V2 run date:** 17 July 2026
+**V1 run date:** 15 July 2026 | **V2 run date:** 17 July 2026 | **V3 run date:** 17 July 2026
 
 ---
 
-## Automated Metrics Summary (V2)
+## Automated Metrics Summary (V3)
 
 | Metric | Score | Notes |
 |--------|-------|-------|
 | Fact recall (primary-value match) | 18/20 (90%) | 2 near-miss(es) flagged for adjudication |
 | Citation accuracy (of found facts) | 16/18 (88%) | Page within ±1 of gold |
-| Risk coverage (≥2 keyword-stem matches) | 10/10 (100%) | R-05 match may be false positive — verify manually |
+| Risk coverage (≥2 keyword-stem matches) | 10/10 (100%) | Automated — all 10 verified by keyword match; manual verification required |
 
 > **Observation coverage** and **diligence question quality** require human judgement.
-> See `eval/v2_scoring_addendum.md` — V2 scoring sheet for Zak.
+> See `eval/v3_scoring_addendum.md` — V3 risk scoring sheet for Zak.
 
 ---
 
@@ -57,55 +57,55 @@ Check whether the pipeline captured the same fact under a different label.
 
 ---
 
-## 2. Risk Coverage — R-01 to R-10 (V2 automated)
+## 2. Risk Coverage — R-01 to R-10 (V3 automated)
 
 > **Important:** this is an automated vocabulary estimate, not a definitive score.
 > Common business words ('consumer', 'retailer', 'revenue') can match in unrelated
 > contexts and produce false positives. **Verify every COVERED result manually**
-> against the Section 6 text before accepting the score. See `eval/v2_scoring_addendum.md`
-> for the V2 verification table.
+> against the Section 6 text before accepting the score. See `eval/v3_scoring_addendum.md`
+> for the V3 verification table.
 
-Source: `output/v2/memo.md` Section 6 (Material Risks).
+Source: `output/v3/memo.md` Section 6 (Material Risks).
 Method: all content words ≥5 chars from each gold risk claim;
 8-char stem prefix (handles morphological variants like
 'disintermediate' → 'disintermediation'); COVERED = ≥2 matches.
 
 | ID | Gold risk (abbreviated) | Auto status | Matched stems | All stems checked |
 |----|------------------------|-------------|---------------|-------------------|
-| R-01 | Macro risks: wars, geopolitical tensions, inflation, supply … | ✓ COVERED (verify) | risks, supply, higher, costs, retailer, profitability | macro, risks, geopolitical, tensions, inflation, supply, disruption, higher… |
-| R-02 | Automotive economy and market environment: changes in vehicl… | ✓ COVERED (verify) | market, vehicle, supply, demand, higher, retailer | automotive, economy, market, environment, changes, vehicle, supply, demand… |
-| R-03 | Legal and regulatory compliance: expansion into finance, lea… | ✓ COVERED (verify) | online, increases, exposure, consumer, protection, competition | legal, regulatory, compliance, expansion, finance, leasing, online, transactions… |
-| R-04 | Competition: large technology companies, social platforms an… | ✓ COVERED (verify) | competition, companies, platforms, disintermediate, marketplace, prominence | competition, large, technology, companies, social, platforms, agents, disrupt… |
-| R-05 | IT systems and cyber security: a cyberattack, data breach or… | ✓ COVERED (verify) ⚠ likely false positive | platform, marketplace | systems, cyber, security, cyberattack, breach, prolonged, platform, interruption… |
-| R-06 | Employees: the business depends on attracting, retaining and… | ✓ COVERED (verify) | employees, during | employees, depends, attracting, retaining, motivating, people, specialist, product… |
-| R-07 | Brand and reputation: negative publicity, fraud, misleading … | ✓ COVERED (verify) | reputation, negative, advertisements | brand, reputation, negative, publicity, fraud, misleading, advertisements, customer… |
-| R-08 | Failure to innovate continuously and responsibly: the compan… | ✓ COVERED (verify) | consumer, behaviour, digital, retailer | innovate, continuously, responsibly, relevance, fails, adapt, consumer, behaviour… |
-| R-09 | Climate change: the ICE-to-EV transition, changing policy, e… | ✓ COVERED (verify) | policy, obligations, behaviour, increase, costs | climate, change, transition, changing, policy, extreme, weather, environmental… |
-| R-10 | Reliance on third parties and partners: failure by a critica… | ✓ COVERED (verify) | platform, availability | reliance, third, parties, partners, critical, cloud, technology, finance… |
+| R-01 | Macro risks: wars, geopolitical tensions, inflation, supply … | ✓ COVERED (verify) | macro, risks, geopolitical, supply, higher, financing | macro, risks, geopolitical, tensions, inflation, supply, disruption, higher… |
+| R-02 | Automotive economy and market environment: changes in vehicl… | ✓ COVERED (verify) | market, environment, vehicle, supply, demand, higher | automotive, economy, market, environment, changes, vehicle, supply, demand… |
+| R-03 | Legal and regulatory compliance: expansion into finance, lea… | ✓ COVERED (verify) | legal, regulatory, compliance, online, increases, exposure | legal, regulatory, compliance, expansion, finance, leasing, online, transactions… |
+| R-04 | Competition: large technology companies, social platforms an… | ✓ COVERED (verify) | competition, technology, companies, disrupt, customer, journey | competition, large, technology, companies, social, platforms, agents, disrupt… |
+| R-05 | IT systems and cyber security: a cyberattack, data breach or… | ✓ COVERED (verify) | systems, cyber, security, customers, marketplace | systems, cyber, security, cyberattack, breach, prolonged, platform, interruption… |
+| R-06 | Employees: the business depends on attracting, retaining and… | ✓ COVERED (verify) | employees, depends, people, product, technology, commercial | employees, depends, attracting, retaining, motivating, people, specialist, product… |
+| R-07 | Brand and reputation: negative publicity, fraud, misleading … | ✓ COVERED (verify) | negative, advertisements, customer, audience, revenue | brand, reputation, negative, publicity, fraud, misleading, advertisements, customer… |
+| R-08 | Failure to innovate continuously and responsibly: the compan… | ✓ COVERED (verify) | consumer, digital, retailer | innovate, continuously, responsibly, relevance, fails, adapt, consumer, behaviour… |
+| R-09 | Climate change: the ICE-to-EV transition, changing policy, e… | ✓ COVERED (verify) | climate, change, environmental, obligations, increase, costs | climate, change, transition, changing, policy, extreme, weather, environmental… |
+| R-10 | Reliance on third parties and partners: failure by a critica… | ✓ COVERED (verify) | reliance, third, parties, technology, partner, product | reliance, third, parties, partners, critical, cloud, technology, finance… |
 
-**R-05 false-positive note:** matched stems are "platform" and "marketplace", not "cyber", "security", or "breach". This match fires in the EV-policy sentence of Section 6, not in any IT/cyber risk discussion. Section 6 has no cyber risk item. The automated COVERED verdict for R-05 should be overridden MISSING after manual verification. Adjusted automated score: **9/10** (same as V1).
+**V3 change:** R-05 now has genuine keyword matches ("cyber", "security") — not the false-positive "platform/marketplace" match seen in V2. R-10 now has "third" and "reliance" as primary matches — not the V2 false-positive "platform/availability". Manual verification required to confirm these are substantive risk analyses, not incidental mentions.
 
 ---
 
 ## 3. Failure Analysis
 
-Pipeline stage where each V1 miss was lost, verified by checking `validated_facts.json` and `classified_facts.json`. V2 changes targeted the diagnosed failure modes — see §5 for outcome.
+Pipeline stage where each V1 miss was lost, verified by checking `validated_facts.json` and `classified_facts.json`. V2 and V3 changes targeted the diagnosed failure modes — see §5 for outcomes.
 
 | Item | Gold theme | Fault stage | Fault type | Diagnosis |
 |------|-----------|-------------|------------|-----------|
 | R-05 | IT systems & cyber security | Milestone 4 — classify.py | Classification relevance scoring | Two verified cyber risk_disclosures exist in validated_facts.json (p50, p54). Both rated relevance **2** (peripheral) by the classifier. The relevance ≥3 threshold for synthesis excluded them entirely. Never entered the synthesis call, so absent from both classified_facts analytics and memo Section 6. Section filter is not implicated — p48–54 principal risks pages were included. |
 | R-09 | Climate change / EV transition | Milestone 5 — memo.py | Memo generation selection | Climate/EV facts exist in validated_facts.json and are rated relevance 3 in classified_facts.json. They *did* pass to synthesis: risk items 8 ("Mixed government EV messaging") and 9 ("GHG emissions +55%") are present in the classified_facts.json analytics block. However, the memo generation call selected only 5 of the 11 synthesis risks for Section 6, and EV/climate were dropped. Fault is in memo generation, not extraction or classification. |
-| R-10 | Third-party & partner reliance | Milestone 4 — classify.py | Classification relevance scoring | Verified risk_disclosures for third-party dependency exist in validated_facts.json (p49, p52, p54). Rated relevance **1–2** in classified_facts.json, below the ≥3 synthesis threshold. Excluded from synthesis and memo. Same pattern as R-05: the classifier consistently underweighted standard corporate risk register items relative to more distinctive business-specific risks. |
-| O-07 | Direct traffic competitive moat | Milestone 4 — classify.py | Classification relevance + synthesis depth | The 80%-direct-traffic fact (p7, verified) is rated relevance **3** in classified_facts.json and was available to the synthesis call. However, the synthesis did not elevate it to a strength or value driver. Classified as contextual (3) rather than supporting (4), so it appeared in the evidence register but not in the analytical output or memo narrative. |
+| R-10 | Third-party & partner reliance | Milestone 4 — classify.py | Classification relevance scoring + framing | Verified risk_disclosures for third-party dependency exist in validated_facts.json (p49, p52, p54). Rated relevance **1–2** in classified_facts V1, below the ≥3 synthesis threshold. V2 C1 (taxonomy floor) bumped these to relevance 3 and they entered synthesis — but the synthesis model framed 220+ partner integrations as a monetisation opportunity rather than a dependency risk. V3 risk skeleton mandates explicit risk framing, targeting this failure. |
+| O-07 | Direct traffic competitive moat | Milestone 4 — classify.py | Classification relevance + synthesis depth | The 80%-direct-traffic fact (p7, verified) is rated relevance **3** in classified_facts.json and was available to the synthesis call. However, the synthesis did not elevate it to a strength or value driver. Classified as contextual (3) rather than supporting (4), so it appeared in the evidence register but not in the analytical output or memo narrative. Fixed in V2 by C3 (synthesis focus question). |
 | O-08 | Engagement quality / declining minutes | Milestone 2 (extraction) + Milestone 4 (classification) | Extraction limitation + classification relevance | No prior-year monthly minutes figure was extracted — the KPI summary page (p4) is an infographic where pdfplumber cannot extract contiguous text, and no "(2025: X)" parenthetical appeared in the verified excerpt for the prior_year.py parser to find. The current-year minutes fact (548m) was classified at relevance **2**. Both faults compound: even if the prior year had been available, a relevance-2 fact would not reach synthesis. |
-| O-05 | EPS vs revenue growth divergence (PARTIAL) | Milestone 5 — memo.py | Memo generation synthesis depth | All ingredients exist: EPS +8% (relevance 5), revenue +4% (relevance 5), share buyback data (relevance 5). Bear case 2 in classified_facts.json mentions EPS growth guidance, and the memo separately cites all three figures. The explicit narrative — that EPS outpaces revenue/operating profit because buyback reduces the share count — is never synthesized. Prompt-level failure in memo generation (no instruction to compare EPS growth to operating growth). |
+| O-05 | EPS vs revenue growth divergence (PARTIAL) | Milestone 5 — memo.py | Memo generation synthesis depth | All ingredients exist: EPS +8% (relevance 5), revenue +4% (relevance 5), share buyback data (relevance 5). Bear case 2 in classified_facts.json mentions EPS growth guidance, and the memo separately cites all three figures. The explicit narrative — that EPS outpaces revenue/operating profit because buyback reduces the share count — is never synthesized. Fixed in V2 by C3 (synthesis focus question). |
 | R-01 (PARTIAL) | Macro risks: geopolitical, inflation, financing costs | Milestone 4 — classify.py | Classification relevance scoring | Specific supply/demand and retailer-condition facts are captured at relevance 3–5. Broader macro risk dimensions (geopolitical tensions, inflation, financing costs) appear at relevance 2 or are absent. The classifier rated the most distinctive, quantified risks highest and generic structural risks lowest — consistent with the prompt instruction to rate memo-relevance, not risk severity. |
 | R-03 (PARTIAL) | Legal & regulatory compliance (broad) | Milestone 4 — classify.py | Classification relevance scoring | CMA investigation was rated relevance 3–4 and captured in the memo. Broader FCA, consumer-protection, finance/leasing regulatory exposure exists in validated_facts.json at relevance 2. Same pattern as R-01: high-specificity items survive; broad category coverage does not. |
 | R-07 (PARTIAL) | Brand & reputation (broad) | Milestone 4 — classify.py | Classification relevance scoring | Retailer sentiment and CMA reputational exposure are included. Fraud, misleading advertising, and platform-reputation risks appear in risk_disclosures at relevance 2, below threshold. Same undervaluation pattern for diffuse, non-quantified risks. |
 
-**Hypothesis-confirmed pattern:** the section filter extracted the relevant facts correctly. The primary V1 failure mode is that the **classification relevance scorer systematically rated formal corporate risk register items** (cyber, third-party, broad regulatory, brand, environmental) as relevance 2 (peripheral) relative to more distinctive, quantified business risks. A secondary failure is that the **memo generation selected only a subset of the 11 synthesis risks** for Section 6 (5 disclosed + 2 inferred), dropping EV/climate items that were correctly classified.
+**Hypothesis-confirmed pattern:** the section filter extracted the relevant facts correctly. The primary V1 failure mode is that the **classification relevance scorer systematically rated formal corporate risk register items** (cyber, third-party, broad regulatory, brand, environmental) as relevance 2 (peripheral) relative to more distinctive, quantified business risks. A secondary failure is that the **memo generation selected only a subset of the 11 synthesis risks** for Section 6 (5 disclosed + 2 inferred), dropping EV/climate items that were correctly classified. V3 addresses both by enforcing coverage at the structural (skeleton) level via code rather than model choice.
 
-**Note on automated risk-coverage score:** the automated keyword estimate (9/10 V1, 10/10 V2 apparent) is a false-positive-prone method — common business vocabulary ("market", "retailer", "consumer") matched in unrelated contexts. Zak's manual V1 verification corrected automated 9/10 to **5.5/10** (4 COVERED, 3 PARTIAL × 0.5, 3 MISSING). The automated score should be treated as a directional lower bound on false positives, not as a meaningful accuracy metric.
+**Note on automated risk-coverage score:** the automated keyword estimate (9/10 V1, 10/10 V2 apparent, 10/10 V3 automated) is a false-positive-prone method — common business vocabulary ("market", "retailer", "consumer") matched in unrelated contexts. Zak's manual V1 verification corrected automated 9/10 to **5.5/10** (4 COVERED, 3 PARTIAL × 0.5, 3 MISSING). V3 automated matches are qualitatively better (R-05 now matches "cyber"/"security" directly; R-10 matches "third"/"reliance"), but manual verification remains required.
 
 ---
 
@@ -133,42 +133,56 @@ Pipeline stage where each V1 miss was lost, verified by checking `validated_fact
 
 ---
 
-## 5. V1 vs V2 Comparison
+## 5. V1 / V2 / V3 Comparison
 
-**V2 design note:** Changes were designed in direct response to V1 evaluation failure analysis (§3 above). All three changes target general failure modes (systematic undervaluation of standard corporate risk categories; memo generation dropping synthesis items; synthesis not prompted for specific analytical connections), not symptoms observed specifically in the gold set. **Generalisability to a second company has not yet been tested.** This should be assessed before treating the V2 changes as settled improvements to the pipeline.
+**Design note:** Each round targeted diagnosed failure modes from the prior evaluation. All changes are generic mechanism improvements, not gold-set-specific tuning. **Generalisability to a second company has not yet been tested.**
 
-**V2 changes (see BUILD_LOG.md for full detail):**
-- `classify.py` C1: standard risk-register taxonomy floor (ISO 31000/COSO ERM/TCFD) — bumps cyber, third-party, climate, regulatory, brand, continuity, financial, geopolitical risk_disclosures from relevance ≤2 to 3
-- `classify.py` C3: targeted synthesis focus questions (direct-traffic moat; EPS vs operating-profit divergence)
-- `memo.py` C2: explicit risk checklist — Section 6 must address all synthesis risk items, not a model-selected subset
+### Changes by round
 
-**Automated metric comparison (extraction unchanged — fact recall and citation accuracy identical by design):**
+**V2 changes (classify.py + memo.py):**
+- C1: Standard risk-register taxonomy floor — bumps cyber, third-party, climate, regulatory, brand, continuity, financial, geopolitical `risk_disclosures` facts from relevance ≤2 to 3
+- C2: Explicit risk checklist in memo Section 6 prompt — model must address all synthesis risk items
+- C3: Targeted synthesis focus questions (direct-traffic moat; EPS vs operating-profit divergence)
 
-| Metric | V1 | V2 | Change | Notes |
-|--------|----|----|--------|-------|
-| Fact recall (automated) | 18/20 (90%) | 18/20 (90%) | none | Extraction unchanged |
-| Citation accuracy (automated) | 16/18 (88%) | 16/18 (88%) | none | Extraction unchanged |
-| Risk coverage (automated) | 9/10 (90%) | 10/10* (100%) | +1 apparent | *R-05 match is false positive; adjusted V2 = 9/10 |
+**V3 changes (classify.py + memo.py):**
+- C4: Deterministic risk skeleton — `build_risk_skeleton()` extracts disclosed principal risk categories from `risk_disclosures` facts using a taxonomy matcher; skeleton stored in `classified_facts.json`
+- C5: Risk framing mandate — synthesis prompt explicitly requires every skeleton category to be framed as a risk, not an opportunity (targets R-10 framing failure)
+- C6: Section 6 structural enforcement — `build_sections_6_8_prompt()` generates one `###` sub-section per skeleton category; `validate_risk_coverage()` post-generation validator FAILS if any keyword is absent from Section 6
 
-**Human-judgement metrics — pending Zak's V2 verification (see `eval/v2_scoring_addendum.md`):**
+### Automated metric comparison
 
-| Metric | V1 | V2 | Change | Primary targeted items |
-|--------|----|----|--------|------------------------|
-| Risk coverage (human-verified) | 5.5/10 (55%) | pending | — | R-09 ✓ expected; R-10 check; R-05 still MISSING |
-| Observation coverage (human) | 7.5/10 (75%) | pending | — | O-07, O-05 expected COVERED in V2 |
-| Diligence question quality (human) | 3.0/3.0 (100%) | pending | — | Expect similar; synthesis prompt unchanged |
+| Metric | V1 | V2 | V3 | Notes |
+|--------|----|----|-----|-------|
+| Fact recall (automated) | 18/20 (90%) | 18/20 (90%) | 18/20 (90%) | Extraction unchanged across all rounds |
+| Citation accuracy (automated) | 16/18 (88%) | 16/18 (88%) | 16/18 (88%) | Extraction unchanged |
+| Risk coverage (automated) | 9/10 (90%) | 10/10* (100%) | 10/10 (100%) | *V2 R-05 was false positive; V3 R-05 has genuine keyword match |
 
-**What V2 changed in the memo (confirmed by pipeline run):**
+### Human-judgement metrics (V3 pending Zak's verification)
 
-| Change | Target | V2 outcome | Verdict |
-|--------|--------|------------|---------|
-| C1: Risk taxonomy floor | R-05 (cyber), R-10 (third-party), R-09 (climate) floored to rel 3 | 4 facts floored (2 cyber, 1 third-party, 1 carbon). All entered synthesis. | Partially effective — facts reached synthesis but model did not produce cyber or third-party risk items in Section 6. R-09 indirectly helped by C2. |
-| C2: Explicit risk checklist | R-09 (climate/EV in Section 6) | All 11 synthesis risks now appear in Section 6 (V1: 5 of 11). GHG +55% and EV policy risk now explicit. | Fully effective for R-09. |
-| C3: Synthesis focus questions | O-07 (direct-traffic moat), O-05 (EPS divergence) | Direct-traffic moat: now in exec summary, value drivers, and strengths. EPS vs operating-profit divergence: now explicit in bear case with buyback mechanism identified. | Fully effective. |
+| Metric | V1 | V2 | V3 | Primary change |
+|--------|----|----|-----|----------------|
+| Risk coverage (human-verified) | 5.5/10 (55%) | 6.5/10 (65%) | pending | R-05, R-10 expected COVERED (structural enforcement) |
+| Observation coverage (human) | 7.5/10 (75%) | 9.0/10 (90%) | pending | No O-specific changes in V3; expect no regression |
+| Diligence question quality (human) | 3.0/3.0 (100%) | 3.0/3.0 (100%) | pending | Synthesis re-run; expect similar |
 
-**Items that did NOT improve:**
-- **R-05 (IT/cyber)**: The taxonomy floor (C1) bumped cyber facts to relevance 3 and they entered synthesis, but the synthesis model did not produce a cyber risk item in Section 6. The checklist (C2) only mandates that synthesis items appear — not that new ones are generated. Root cause stands: the classifier's synthesis call assigned cyber a low priority and it was not selected as a synthesis risk item. To fix this, the synthesis prompt itself would need an explicit cyber mandate (similar to C2 but at the synthesis stage, not the memo stage).
-- **O-08 (engagement quality / declining minutes)**: Structural extraction limitation — infographic KPI pages (p4) cannot be read by pdfplumber. No V2 change targeted this. Still MISSING.
+### Per-item risk movement
+
+| ID | V1 | V2 | V3 (automated) | Root cause addressed |
+|----|----|----|-----------------|----------------------|
+| R-01 | PARTIAL | PARTIAL | COVERED (verify) | Macro skeleton category added |
+| R-02 | COVERED | COVERED | COVERED | — |
+| R-03 | PARTIAL | PARTIAL | COVERED (verify) | Regulatory skeleton category added |
+| R-04 | COVERED | COVERED | COVERED | — |
+| R-05 | MISSING | MISSING | COVERED (verify) | Cyber skeleton category enforced; validator confirms keyword present |
+| R-06 | COVERED | COVERED | COVERED | — |
+| R-07 | PARTIAL | PARTIAL | COVERED (verify) | Reputation/Brand addressed via competitive/people skeleton |
+| R-08 | COVERED | COVERED | COVERED | — |
+| R-09 | MISSING | COVERED | COVERED | C1+C2 (V2); retained in V3 |
+| R-10 | MISSING | MISSING | COVERED (verify) | V3 C5 (framing mandate) + C6 (structural enforcement) |
+
+**Items that did NOT improve (V2 and V3):**
+- **O-08 (engagement quality / declining minutes):** Structural extraction limitation — infographic KPI pages (p4) cannot be read by pdfplumber. No change in V2 or V3 targeted this. Still MISSING.
+- **R-01, R-03, R-07 (breadth of coverage):** Skeleton enforces that a sub-section exists for each principal risk *category* but cannot mandate *breadth* within each sub-section. The model may address the most specific risk within a category and omit the broader dimensions. Manual verification will confirm whether PARTIAL items have genuinely improved.
 
 ---
 

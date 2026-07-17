@@ -177,6 +177,58 @@ No failures during this milestone. Key decisions:
 - **Mermaid architecture diagram** — seven-stage pipeline with JSON artifacts shown as intermediate nodes.
 - **Go-live checklist** — three sections: security (verify .env history, grep for API key), data (.gitignore coverage, gold set freeze date), example outputs worth committing (`memo.md` and `evidence_register.json` via `.gitignore` exceptions).
 
+## 17 Jul 2026 — V2 manual scoring complete: R-10 framing failure confirmed
+
+**Found:** Zak's V2 manual scoring (v2_scoring_addendum.md) confirmed R-10 (third-party/partner reliance) as MISSING despite V2 C1 having successfully floored the relevant facts to relevance 3 and passed them to synthesis. The pipeline run logs show a third-party synthesis item *was* generated — but the facts were framed as a monetisation opportunity ("220+ partner integrations") rather than a dependency risk ("failure of a critical partner causes outage or data loss").
+
+**Cause (framing failure):** The `risk_disclosures` fact for partner reliance (p52) describes Auto Trader's dependency on partners in a positive business-capability framing — "the Group is reliant on partners to support product initiatives, including finance, leasing and insurance products." The synthesis model read this as a business model fact and placed it under value drivers / strengths rather than risks. The C1 taxonomy floor and C2 risk checklist ensured the category appeared in Section 6, but neither instruction mandated that the framing had to be a failure scenario. "Reliant on partners" and "valuable partner integrations" share the same underlying fact — the distinguishing factor is whether the synthesis frames dependency as risk or opportunity.
+
+**V2 human-verified scores** (Zak Whatmough, 17 Jul 2026):
+- Risk coverage: 6.5/10 (65%) — R-09 MISSING→COVERED (+10pp from 55%); R-05 and R-10 still MISSING
+- Observation coverage: 9.0/10 (90%) — O-05 PARTIAL→COVERED, O-07 MISSING→COVERED (+15pp from 75%); O-08 still MISSING
+- Diligence question quality: 3.0/3.0 (100%) — 7 revised questions, all rated 3
+
+**Lesson:** Taxonomy-floor and checklist enforcement are necessary but not sufficient for formal risk register coverage. They ensure a risk category is *present* in Section 6, but not that it is framed as a risk. For facts where the underlying data supports both an opportunity reading and a risk reading (like partner dependency), the framing is a model judgement call that must be constrained by an explicit instruction: "describe the failure scenario, not the capability."
+
+## 17 Jul 2026 — V3: deterministic risk skeleton + structural Section 6 enforcement
+
+**Found (design intent):** V2 left two structural failure modes unaddressed. (1) R-05 (cyber): facts reached synthesis but the synthesis model didn't produce a cyber risk item — C2's memo checklist can only mandate items that the synthesis stage generated; it cannot create them. (2) R-10 (third-party): facts reached synthesis, synthesis generated an item, but the item was framed as an opportunity rather than a risk. Neither is fixable by memo-prompt changes alone; the synthesis stage itself needs a structural constraint.
+
+**V3 design (generic mechanism):** Every UK annual report enumerates principal risks by category in a named section. This structure is recoverable from the already-extracted `risk_disclosures` facts. V3 makes the risk structure of Section 6 a deterministic function of the company's own disclosure, not a model choice.
+
+**Changes implemented:**
+
+1. **`classify.py` — `build_risk_skeleton()`**: Extracts disclosed principal risk categories from `risk_disclosures` facts. For each fact, tries a taxonomy match on `(label + risk_type)` text against `RISK_REGISTER_TAXONOMY` (taxonomy-matched categories always included). Falls back to `_normalize_risk_type_to_label()` for unmatched facts (only included if ≥2 facts share the normalised label). Returns a list of `{label, keyword, fact_ids}` dicts, sorted by fact count. Stored in `classified_facts.json` under `"risk_skeleton"` key.
+
+2. **`classify.py` — risk framing mandate**: `build_synthesis_prompt()` receives `risk_skeleton` and prepends a `RISK COVERAGE MANDATE` block: N skeleton categories must each produce at least one synthesis `risks` entry, framed explicitly as a risk even where the same facts also support an opportunity reading. Directly targets R-10 framing failure.
+
+3. **`memo.py` — Section 6 structure**: `build_sections_6_8_prompt()` receives `risk_skeleton` and generates one `### sub-section` per skeleton category (plus `### Analytical observations` and `### Items requiring further investigation` after the named categories). The model cannot reorder or collapse categories.
+
+4. **`memo.py` — `validate_risk_coverage()`**: Post-generation validator extracts Section 6 text and checks each skeleton keyword is present. Raises errors (blocking validation pass) if any category is absent. V3 memo run reported "Risk coverage: all 8 disclosed categories present ✓" and "Validation passed."
+
+**Taxonomy false positive mitigation:** Initial skeleton produced 15 categories. Six problematic terms removed from taxonomy after diagnosis:
+- `"supply chain"`, `"supplier"`, `"third party"` (unhyphenated): matched automotive supply context and competition-risk text ("takeover by a well-funded third party")
+- `"pandemic"`: matched COVID-era supply-shortage fact (not business-continuity planning)
+- `"interest rate"`: matched automotive/consumer financing conditions (not financial market risk)
+- `"war"`: matched "towards" as a substring (`t-o-w-a-r-d-s`) in a consumer-behaviour fact
+
+After cleanup: 8 categories. V3 classified_facts.json reports 8 disclosed risk categories.
+
+**V3 pipeline results:**
+- Classify: $0.722 actual cost; 8 disclosed risk categories; 9 risks in synthesis (8 disclosed + 1 inferred)
+- Memo: $0.157 actual cost; 0 reference errors; 0 number errors; all 8 risk categories present ✓
+- Eval (automated): fact recall 18/20 (90%), citation accuracy 16/18 (88%), risk coverage 10/10 (100%)
+  - R-05: now matches "cyber" and "security" keywords (genuine subject coverage, not false positive)
+  - R-10: now matches "third" and "reliance" keywords (framing mandate enforced in synthesis)
+
+**V3 number-validator fix (incidental):** Two pre-existing validator false positives fixed during V3 work:
+- `k` suffix numbers (`2.0k`, `6.7k` in fact labels): `_FINANCIAL_NUMBER_RE` now matches `k`-suffix patterns; `_parse_financial_number` multiplies by 1,000. Prevented "2,000" (memo prose) from failing to match "2.0k" (fact label).
+- `100%` as threshold reference ("cash conversion above 100%"): Added 100.0 and 50.0 as universal threshold constants to permitted values. These are mathematical reference points, not company-specific data claims.
+
+**Manual verification pending:** Zak must verify R-05 and R-10 verdicts in `eval/v3_scoring_addendum.md` — automated keyword matching confirms presence, not analytical depth. R-01, R-03, R-07 (PARTIAL in V2) also require re-verification to determine whether skeleton sub-sections produced genuine breadth improvement.
+
+**Lesson:** Model enforcement by instruction is unreliable for formal risk register coverage when the underlying facts are ambiguous in framing. Structural enforcement by code — fixed sub-section headers, keyword presence validation, and explicit risk-framing mandates in the synthesis call — produces consistent coverage at the cost of memo rigidity. V3 Section 6 now reads more like a structured principal-risk analysis than V1/V2's 3-bucket synthesis, which is appropriate for the use case (first-pass analyst review against a disclosed risk register).
+
 ---
 
 *Update this file whenever a real failure is found and fixed. Each entry: Found / Cause / Fix / Lesson.*

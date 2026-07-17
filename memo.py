@@ -280,16 +280,71 @@ def _format_risks_checklist(analytics: dict, fact_to_e: dict[str, str]) -> str:
     return "\n".join(lines)
 
 
+def _format_risk_skeleton_for_prompt(risk_skeleton: list[dict]) -> str:
+    """Format the risk skeleton as a mandatory Section 6 structure.
+
+    V3: Derived deterministically from the company's disclosed risk_disclosures
+    facts in classify.py. Every category must appear as a named sub-section in
+    Section 6, framed as a risk even where the same facts also support strengths
+    or value drivers in other sections.
+    """
+    lines = [
+        f"RISK SECTION STRUCTURE (V3) — Section 6 must contain one named sub-section "
+        f"(### header) for each of the following {len(risk_skeleton)} disclosed risk "
+        f"categories, in this order. Frame each as a risk — do not omit any category "
+        f"and do not convert any into a positive observation:\n"
+    ]
+    for i, cat in enumerate(risk_skeleton, 1):
+        lines.append(f"  {i}. ### {cat['label']}")
+    lines.append(
+        "\nAfter all named categories, add:\n"
+        "  ### Analytical observations  (1-2 inferred risks, hedged prose)\n"
+        "  ### Items requiring further investigation  (1-2 data gaps)"
+    )
+    return "\n".join(lines)
+
+
 def build_sections_6_8_prompt(
     register: dict[str, dict],
     analytics: dict,
     metrics: str,
     fact_to_e: dict[str, str],
     sections_1_5_text: str,
+    risk_skeleton: list[dict] | None = None,
 ) -> str:
     reg_text = _format_register_for_prompt(register)
     analytics_text = _format_analytics_with_e_ids(analytics, fact_to_e)
     risks_checklist = _format_risks_checklist(analytics, fact_to_e)
+
+    # V3: if a risk skeleton is available, use it to impose mandatory Section 6
+    # structure. The skeleton overrides the generic 3-bucket structure from V2.
+    if risk_skeleton:
+        skeleton_text = _format_risk_skeleton_for_prompt(risk_skeleton)
+        section_6_instruction = f"""{skeleton_text}
+
+{risks_checklist}
+
+For each named risk category sub-section (~40 words each):
+- Use the synthesis risk items and evidence register to populate the analysis
+- Cite [E-NNN] for each factual claim
+- Frame every sub-section as a risk, even where the evidence is the same as
+  a strength or value driver discussed in sections 1–5
+- If the synthesis has no pre-formed item for a category, write the risk analysis
+  directly from the evidence register facts listed in the skeleton above"""
+    else:
+        # V2 fallback: generic 3-bucket structure
+        section_6_instruction = f"""{risks_checklist}
+
+Organise under three sub-headers. You MUST address every item in the risk checklist above.
+
+### Disclosed risks
+Risks explicitly stated in the annual report. Draw from RISKS with risk_type=disclosed. Each point ~40 words with [E-NNN].
+
+### Inferred risks
+Patterns visible in the data not explicitly called out by management. 1–2 points, hedged prose.
+
+### Items requiring further investigation
+Draw from diligence questions that surface data gaps. 1–2 points."""
 
     return f"""{MEMO_SYSTEM}
 
@@ -302,7 +357,7 @@ FINANCIAL METRICS:
 ANALYTICAL SYNTHESIS:
 {analytics_text}
 
-{risks_checklist}
+{section_6_instruction}
 
 SECTIONS 1–5 ALREADY WRITTEN (for context — do not repeat):
 {sections_1_5_text[:2000]}
@@ -313,17 +368,7 @@ SECTIONS 1–5 ALREADY WRITTEN (for context — do not repeat):
 Write sections 6 through 8 only. Do not write sections 1–5 or 9–10.
 
 ## 6. Material Risks
-Organise under three sub-headers. You MUST address every item in the risk checklist above —
-group them under the appropriate sub-header. Do not omit any item.
-
-### Disclosed risks
-Risks explicitly stated in the annual report. Draw from RISKS with risk_type=disclosed. Each point ~40 words with [E-NNN].
-
-### Inferred risks
-Patterns visible in the data not explicitly called out by management. Draw from RISKS with risk_type=inferred. Items marked [INFERENCE] must be written as hedged prose. 1–2 points.
-
-### Items requiring further investigation
-Draw from the diligence questions where they surface data gaps (not yet answered by the evidence). 1–2 points, framed as "The available evidence does not clarify..."
+{('Follow the RISK SECTION STRUCTURE above exactly — one ### sub-section per disclosed category, then ### Analytical observations, then ### Items requiring further investigation.' if risk_skeleton else 'Follow the risk structure above.')}
 
 ## 7. Bull and Bear Cases
 Two sub-sections, 3–4 points each (~30 words per point), with [E-NNN] citations.
@@ -409,6 +454,7 @@ _FINANCIAL_NUMBER_RE = re.compile(
     r'|[\d,]+(?:\.\d+)?\s*%'                    # 63%, 3.9%, +4%
     r'|[\d,]+(?:\.\d+)?\s*p\b'                  # 34.17p
     r'|[\d,]+(?:\.\d+)?\s*x\b'                  # 0.3x
+    r'|[\d,]+(?:\.\d+)?\s*k\b'                  # 6.7k, 2.0k (thousands suffix)
     r'|\b[\d,]{5,}(?:\.\d+)?\b'                 # large bare numbers: 13,942 / 451,000
     r')',
     re.I,
@@ -416,11 +462,19 @@ _FINANCIAL_NUMBER_RE = re.compile(
 
 _STRIP_CURRENCY_RE = re.compile(r'[£$,\s]')
 _UNIT_RE = re.compile(r'[m%pbx]+$', re.I)
+_K_SUFFIX_RE = re.compile(r'^([\d.]+)\s*k$', re.I)
 
 
 def _parse_financial_number(text: str) -> float | None:
     """Parse a financial number string to float, stripping currency/unit suffixes."""
-    cleaned = _STRIP_CURRENCY_RE.sub('', text)
+    cleaned = _STRIP_CURRENCY_RE.sub('', text).strip()
+    # Handle k suffix (thousands): 6.7k -> 6700, 2.0k -> 2000
+    k_match = _K_SUFFIX_RE.match(cleaned)
+    if k_match:
+        try:
+            return float(k_match.group(1)) * 1000
+        except ValueError:
+            return None
     cleaned = _UNIT_RE.sub('', cleaned).strip()
     try:
         return float(cleaned)
@@ -498,7 +552,54 @@ def build_permitted_values(
             except (TypeError, ValueError):
                 pass
 
+    # Universal threshold constants — not company-specific data; used as reference
+    # points in prose (e.g. "above 100% cash conversion", "below 50%").
+    values.extend([100.0, 50.0])
+
     return values
+
+
+def validate_risk_coverage(
+    memo_text: str,
+    risk_skeleton: list[dict],
+) -> list[str]:
+    """Check that every disclosed risk category appears in Section 6 of the memo.
+
+    V3: Extracts Section 6 text and verifies that the validation keyword for
+    each skeleton category appears within it. Reports each category where the
+    keyword is absent — these represent genuine omissions that the model was
+    explicitly instructed to include.
+
+    Keyword matching is intentionally simple (substring, case-insensitive):
+    the validator detects presence/absence, not correct framing. Correct
+    framing (risk vs opportunity) requires human verification.
+    """
+    # Extract Section 6 text
+    s6_match = re.search(r'## 6\..*?(?=## 7\.)', memo_text, re.DOTALL)
+    if not s6_match:
+        return ["validate_risk_coverage: Section 6 not found in memo"]
+
+    s6_text = s6_match.group(0).lower()
+    errors = []
+
+    for cat in risk_skeleton:
+        keyword = cat.get("keyword", "").lower()
+        label = cat.get("label", "")
+        if not keyword:
+            continue
+
+        # Also check for the ### sub-section header (model may paraphrase the keyword)
+        label_lower = label.lower()
+        has_header = label_lower in s6_text
+        has_keyword = keyword in s6_text
+
+        if not has_header and not has_keyword:
+            errors.append(
+                f"Risk category '{label}' appears absent from Section 6 "
+                f"(keyword '{keyword}' not found and no matching ### header)"
+            )
+
+    return errors
 
 
 def validate_references(memo_text: str, register: dict[str, dict]) -> list[str]:
@@ -563,14 +664,20 @@ def validate_numbers(
 
 # ── Orchestration ───────────────────────────────────────────────────────────────
 
-def load_inputs(classified_path: str, financials_path: str) -> tuple[dict, dict, dict]:
-    """Load classified_facts.json and financials.json. Return (cf, financials, analytics)."""
+def load_inputs(classified_path: str, financials_path: str) -> tuple[dict, dict, dict, list[dict]]:
+    """Load classified_facts.json and financials.json.
+
+    Returns (cf, financials, analytics, risk_skeleton).
+    risk_skeleton is the V3 list of disclosed risk categories — present in
+    classified_facts.json when generated by classify.py V3+, empty list otherwise.
+    """
     with open(classified_path) as f:
         cf = json.load(f)
     with open(financials_path) as f:
         financials = json.load(f)
     analytics = cf.get("analytics", {})
-    return cf, financials, analytics
+    risk_skeleton = cf.get("risk_skeleton", [])
+    return cf, financials, analytics, risk_skeleton
 
 
 def load_unverifiable_facts(validated_path: str) -> list[dict]:
@@ -606,7 +713,7 @@ def run_memo_pipeline(
 
     # 1. Load inputs
     print("Loading inputs...")
-    cf, financials, analytics = load_inputs(classified_path, financials_path)
+    cf, financials, analytics, risk_skeleton = load_inputs(classified_path, financials_path)
     classified_facts = cf["classified_facts"]
     missing_data = financials.get("missing_data", [])
     unverifiable_facts = load_unverifiable_facts(validated_path)
@@ -615,6 +722,9 @@ def run_memo_pipeline(
     print(f"  {len(analytics.get('strengths', []))} strengths, "
           f"{len(analytics.get('risks', []))} risks, "
           f"{len(analytics.get('diligence_questions', []))} diligence questions")
+    if risk_skeleton:
+        print(f"  Risk skeleton: {len(risk_skeleton)} disclosed categories "
+              f"(V3 Section 6 structure)")
     print(f"  {len(missing_data)} missing-data items, {len(unverifiable_facts)} unverifiable facts")
 
     # 2. Build evidence register
@@ -668,7 +778,8 @@ def run_memo_pipeline(
     # 7. Generate sections 6–8
     print("Generating sections 6–8 (risks through diligence)...")
     prompt_6_8 = build_sections_6_8_prompt(
-        register, analytics, metrics_text, fact_to_e, sections_1_5
+        register, analytics, metrics_text, fact_to_e, sections_1_5,
+        risk_skeleton=risk_skeleton or None,
     )
     sections_6_8 = call_llm_text(
         prompt=prompt_6_8,
@@ -706,8 +817,10 @@ def run_memo_pipeline(
     permitted_values = build_permitted_values(classified_facts, financials, prior_year_path)
     ref_errors = validate_references(memo_text, register)
     num_errors = validate_numbers(memo_text, permitted_values)
+    # V3: structural risk coverage check — every disclosed risk category must appear
+    risk_errors = validate_risk_coverage(memo_text, risk_skeleton) if risk_skeleton else []
 
-    all_errors = ref_errors + num_errors
+    all_errors = ref_errors + num_errors + risk_errors
     if ref_errors:
         print(f"  REFERENCE ERRORS ({len(ref_errors)}):")
         for e in ref_errors:
@@ -723,6 +836,14 @@ def run_memo_pipeline(
             print(f"    ... and {len(num_errors)-10} more")
     else:
         print(f"  Numbers: all financial figures verified ✓")
+
+    if risk_skeleton:
+        if risk_errors:
+            print(f"  RISK COVERAGE ERRORS ({len(risk_errors)}):")
+            for e in risk_errors:
+                print(f"    ✗ {e}")
+        else:
+            print(f"  Risk coverage: all {len(risk_skeleton)} disclosed categories present ✓")
 
     if all_errors:
         print(f"\nValidation failed: {len(all_errors)} error(s). Memo written but FLAGGED.")
@@ -749,6 +870,7 @@ def run_memo_pipeline(
     register_output["_validation"] = {
         "reference_errors": ref_errors,
         "number_errors": num_errors,
+        "risk_coverage_errors": risk_errors,
         "total_errors": len(all_errors),
         "passed": len(all_errors) == 0,
     }

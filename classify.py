@@ -52,11 +52,16 @@ RISK_REGISTER_TAXONOMY: dict[str, list[str]] = {
         "privacy", "hacking", "phishing", "incident response",
     ],
     # ISO 28001 / COSO supply chain
+    # "supply chain" excluded: matches automotive vehicle supply contexts, not partner dependency.
+    # "supplier" excluded: "key supplier" appears in cyber risk context (e.g., supply chain attack).
+    # "third party" (two words, no hyphen) excluded: too generic — appears in competition risk
+    # texts like "takeover by a well-funded third party".
+    # Matching on hyphenated "third-party" (the standard accounting/legal form), "reliant on",
+    # and other specific dependency phrases is more precise.
     "third_party_supply_chain": [
-        "third party", "third-party", "supplier", "supply chain",
-        "outsourcing", "vendor", "partner depend", "cloud provider",
-        "critical supplier", "service provider", "outsource", "reliant on",
-        "reliance on third",
+        "third-party", "outsourcing", "vendor dependency",
+        "partner depend", "cloud provider", "critical supplier",
+        "service provider", "outsource", "reliant on", "reliance on third",
     ],
     # TCFD / GRI environmental
     "climate_environmental": [
@@ -85,33 +90,178 @@ RISK_REGISTER_TAXONOMY: dict[str, list[str]] = {
         "employee engagement", "talent risk", "key person", "succession",
         "industrial action", "whistleblowing", "people risk",
         "workforce planning", "health and safety",
+        # broad fallback — catches "people" in risk_type labels
+        "people and org", "people risk", "employee morale",
     ],
     # Business continuity / operational resilience
+    # "pandemic" excluded: post-COVID annual reports reference pandemic in automotive supply
+    # context ("2.5m lost pandemic registrations"), not in BCP context.
     "business_continuity": [
         "business continuity", "disaster recovery", "operational resilience",
-        "pandemic", "operational disruption", "bcp",
-        "recovery time", "site loss",
+        "operational disruption", "bcp", "recovery time", "site loss",
     ],
     # Financial / market risk
+    # "market risk" excluded: matches automotive-market risk_type labels, not financial risk.
+    # "interest rate" excluded: appears in automotive/consumer-financing market-conditions
+    # context, not corporate treasury/balance-sheet risk context.
     "financial_market_risk": [
-        "interest rate", "foreign exchange", "fx risk", "liquidity risk",
-        "credit risk", "counterparty", "market risk", "financing cost",
-        "debt covenant", "refinancing", "leverage risk",
+        "foreign exchange", "fx risk", "liquidity risk",
+        "credit risk", "counterparty risk", "financing cost",
+        "debt covenant", "refinancing risk", "leverage risk",
     ],
-    # Macro / geopolitical
+    # Macro / geopolitical — "macro" added as standalone term to catch
+    # AR risk_type labels like "Market Risk - Macro Environment".
+    # "war" removed as a standalone term: it appears as a substring of common
+    # English words ("towards", "upwards", "stewardship") producing false positives.
+    # "trade war" (two-word phrase) is retained as it is sufficiently specific.
     "geopolitical_macro": [
         "geopolitical", "political risk", "sanctions", "trade war",
-        "tariff", "conflict", "war", "macroeconomic", "recession",
+        "tariff", "conflict", "macroeconomic", "recession",
         "economic downturn", "fiscal policy", "inflation risk",
+        "macro environment", "global macro", "macro",
     ],
 }
 
-# Flatten all taxonomy terms for efficient lookup
+# Human-readable labels for each taxonomy category used in the risk skeleton.
+# Each entry also carries a validation_keyword: a distinctive term that MUST
+# appear in Section 6 to confirm the category was addressed.
+RISK_CATEGORY_LABELS: dict[str, dict[str, str]] = {
+    "cyber_it_security": {
+        "label": "IT systems and cyber security",
+        "keyword": "cyber",
+    },
+    "third_party_supply_chain": {
+        "label": "Third-party and partner reliance",
+        "keyword": "third",
+    },
+    "climate_environmental": {
+        "label": "Climate change and environmental obligations",
+        "keyword": "climate",
+    },
+    "regulatory_compliance": {
+        "label": "Legal and regulatory compliance",
+        "keyword": "regulatory",
+    },
+    "brand_reputation": {
+        "label": "Brand and reputation",
+        "keyword": "reputation",
+    },
+    "people_talent": {
+        "label": "People and talent",
+        "keyword": "employee",
+    },
+    "business_continuity": {
+        "label": "Business continuity and operational resilience",
+        "keyword": "continuity",
+    },
+    "financial_market_risk": {
+        "label": "Financial and market risk",
+        "keyword": "financial",
+    },
+    "geopolitical_macro": {
+        "label": "Macroeconomic and geopolitical risk",
+        "keyword": "macro",
+    },
+}
+
+# Flatten all taxonomy terms for efficient lookup (used by apply_risk_floor)
 _RISK_TAXONOMY_TERMS: list[str] = [
     term
     for terms in RISK_REGISTER_TAXONOMY.values()
     for term in terms
 ]
+
+
+def _normalize_risk_type_to_label(risk_type: str) -> str:
+    """Convert extraction model's free-text risk_type to a clean category label.
+
+    Used as a fallback when a risk_disclosures fact doesn't match any entry
+    in RISK_REGISTER_TAXONOMY — the fact still contributes a category entry
+    in the risk skeleton based on the risk_type the extraction model assigned.
+
+    Normalization steps:
+    1. Take the main part before any " - " sub-qualifier (e.g., "Competitive Risk
+       - Technology" → "Competitive Risk").
+    2. Strip " & something" suffixes (e.g., "Market & Supply Chain" → "Market").
+    3. Strip trailing " Risk" suffix so similar labels merge (e.g., "Competitive
+       Risk" → "Competitive").
+    """
+    import re as _re
+    label = risk_type.split(" - ")[0].strip()           # drop qualifier after " - "
+    label = _re.sub(r'\s*[&]\s*.*$', '', label)         # drop " & ..." suffixes
+    label = _re.sub(r'\s+risk$', '', label, flags=_re.I)  # drop trailing " Risk"
+    return label.strip().title() or "Other risks"
+
+
+def build_risk_skeleton(classified_facts: list[dict]) -> list[dict]:
+    """Derive the company's disclosed principal risk categories from risk_disclosures facts.
+
+    Two-pass approach:
+    1. Try to map each risk_disclosures fact to RISK_REGISTER_TAXONOMY via
+       substring matching on the combined (label + risk_type) text.
+    2. Facts that don't match any taxonomy category contribute a category entry
+       from their risk_type field (normalised to a clean label).
+
+    This ensures ALL disclosed risks are represented in the skeleton, not just
+    those that map to the standard enterprise risk taxonomy. Works generically
+    for any company: the skeleton is driven entirely by what was extracted from
+    the annual report, not by the gold set or any company-specific configuration.
+
+    Returns a list of {label, keyword, fact_ids} dicts sorted by fact count
+    descending. This list becomes the mandatory risk coverage specification:
+    Section 6 must contain a risk discussion for every entry.
+    """
+    risk_facts = [f for f in classified_facts if f.get("category") == "risk_disclosures"]
+
+    category_facts: dict[str, dict] = {}  # label → {keyword, fact_ids}
+
+    for fact in risk_facts:
+        # Check label AND risk_type together for taxonomy match
+        text = (fact.get("label", "") + " " + fact.get("risk_type", "")).lower()
+
+        matched_cat_id = None
+        for cat_id, terms in RISK_REGISTER_TAXONOMY.items():
+            if any(term in text for term in terms):
+                matched_cat_id = cat_id
+                break  # first match wins (taxonomy order is priority order)
+
+        if matched_cat_id is not None:
+            cat_info = RISK_CATEGORY_LABELS[matched_cat_id]
+            label = cat_info["label"]
+            keyword = cat_info["keyword"]
+            is_taxonomy = True
+        else:
+            # Fallback: use the extraction model's own risk_type as the category
+            label = _normalize_risk_type_to_label(fact.get("risk_type", "Other risks"))
+            # Primary keyword = first significant word in the label
+            keyword = next(
+                (w for w in label.lower().split()
+                 if len(w) >= 4 and w not in {"and", "the", "with", "for", "risk", "other"}),
+                label.split()[0].lower() if label.split() else "risk",
+            )
+            is_taxonomy = False
+
+        if label not in category_facts:
+            category_facts[label] = {
+                "keyword": keyword,
+                "fact_ids": [],
+                "is_taxonomy": is_taxonomy,
+            }
+        if fact["id"] not in category_facts[label]["fact_ids"]:
+            category_facts[label]["fact_ids"].append(fact["id"])
+
+    # Include taxonomy-matched categories always; fallback categories only if ≥2 facts.
+    # Single-fact fallback entries (from ad-hoc extraction risk_type labels) are too
+    # noisy to mandate as separate Section 6 sub-sections.
+    MIN_FALLBACK_FACTS = 2
+    filtered = [
+        {"label": label, "keyword": meta["keyword"], "fact_ids": meta["fact_ids"]}
+        for label, meta in category_facts.items()
+        if meta["is_taxonomy"] or len(meta["fact_ids"]) >= MIN_FALLBACK_FACTS
+    ]
+
+    # Sort most-evidenced categories first
+    return sorted(filtered, key=lambda x: len(x["fact_ids"]), reverse=True)
 
 
 def apply_risk_floor(classified: list[dict], floor: int = 3) -> tuple[list[dict], int]:
@@ -280,6 +430,7 @@ CONFIDENCE LEVELS:
 def build_synthesis_prompt(
     classified_facts: list[dict],
     financials: dict,
+    risk_skeleton: list[dict] | None = None,
 ) -> str:
     # Format the derived metrics compactly
     metrics_text = "\n".join(
@@ -316,10 +467,32 @@ def build_synthesis_prompt(
         "   include it as a bear case point about the sustainability of earnings growth."
     )
 
+    # V3: risk coverage mandate derived from the company's own risk register.
+    # Every disclosed risk category must produce at least one risk item in the
+    # synthesis output, framed as a risk even where the same facts also support
+    # strengths or value drivers elsewhere in the analysis.
+    risk_mandate_text = ""
+    if risk_skeleton:
+        risk_mandate_lines = [
+            f"RISK COVERAGE MANDATE — the following {len(risk_skeleton)} categories were "
+            f"identified in the company's disclosed risk register. Every category MUST "
+            f"produce at least one entry in the risks output, framed explicitly as a risk "
+            f"even where the same underlying facts also appear as strengths or value drivers:\n"
+        ]
+        for i, cat in enumerate(risk_skeleton, 1):
+            preview_ids = cat["fact_ids"][:3]
+            ellipsis = "…" if len(cat["fact_ids"]) > 3 else ""
+            risk_mandate_lines.append(
+                f"  {i}. {cat['label']} "
+                f"(evidence: {', '.join(preview_ids)}{ellipsis})"
+            )
+        risk_mandate_text = "\n".join(risk_mandate_lines)
+
     return (
         f"{SYNTHESIS_SYSTEM}\n\n"
         f"{analytical_focus}\n\n"
-        f"FINANCIAL METRICS (deterministic calculations — cite these by quoting the name):\n"
+        + (f"{risk_mandate_text}\n\n" if risk_mandate_text else "")
+        + f"FINANCIAL METRICS (deterministic calculations — cite these by quoting the name):\n"
         f"{metrics_text}\n\n"
         f"VERIFIED FACTS FOR ANALYSIS ({len(classified_facts)} high-relevance items):\n"
         f"{facts_text}\n\n"
@@ -367,9 +540,10 @@ def run_synthesis(
     classified_facts: list[dict],
     financials: dict,
     call_log: list[dict],
+    risk_skeleton: list[dict] | None = None,
 ) -> dict:
     """Stage 2: analytical synthesis over high-relevance facts."""
-    prompt = build_synthesis_prompt(classified_facts, financials)
+    prompt = build_synthesis_prompt(classified_facts, financials, risk_skeleton)
 
     print(f"  Stage 2: synthesising analysis over {len(classified_facts)} facts...")
     result: Analytics = call_llm(
@@ -464,6 +638,14 @@ def classify_and_synthesise(
     print(f"  Classified: {len(classified)} facts")
     print(f"  Relevance distribution: {dict(sorted(relevance_dist.items()))}")
 
+    # V3: build risk skeleton from all risk_disclosures facts (regardless of relevance).
+    # This captures the company's full disclosed principal risk register and is used
+    # to mandate coverage in both the synthesis and memo generation stages.
+    risk_skeleton = build_risk_skeleton(classified)
+    print(f"  Risk skeleton: {len(risk_skeleton)} disclosed categories identified")
+    for cat in risk_skeleton:
+        print(f"    • {cat['label']} ({len(cat['fact_ids'])} fact(s))")
+
     # 4. Stage 2: synthesis (high-relevance only)
     synthesis_input = [
         f for f in classified
@@ -472,7 +654,7 @@ def classify_and_synthesise(
     print(f"  {len(synthesis_input)} facts with relevance ≥ {SYNTHESIS_RELEVANCE_THRESHOLD} "
           f"passed to synthesis")
 
-    analytics = run_synthesis(synthesis_input, financials, call_log)
+    analytics = run_synthesis(synthesis_input, financials, call_log, risk_skeleton)
 
     # 5. Compile output
     total_cost = sum(r.get("cost_usd", 0) for r in call_log)
@@ -491,10 +673,14 @@ def classify_and_synthesise(
             "relevance_distribution": {str(k): v for k, v in sorted(relevance_dist.items())},
         },
         "classified_facts": classified,
+        # V3: risk skeleton stored in the output so memo.py can read it without
+        # re-deriving it from scratch. This ensures memo and classify use the
+        # same category set.
+        "risk_skeleton": risk_skeleton,
         "analytics": analytics,
     }
 
-    os.makedirs("output", exist_ok=True)
+    os.makedirs(os.path.dirname(out_path) or "output", exist_ok=True)
     with open(out_path, "w") as f:
         json.dump(output, f, indent=2)
 
