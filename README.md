@@ -8,7 +8,7 @@ A command-line pipeline that turns a company's annual report into a structured i
 *Memo & Evidence view — cited memo with inline [E-NNN] references alongside the source-excerpt panel.*
 
 ![Facts Browser — filterable card view of all verified facts by memo section, relevance and citation status](docs/screenshots/app-facts-browser.png)
-*Facts Browser — filterable card view of all 145+ verified facts by memo section, relevance and citation status.*
+*Facts Browser — filterable card view of all 249+ verified facts by memo section, relevance and citation status.*
 
 ---
 
@@ -242,7 +242,7 @@ Items deferred from V1 evaluation, plus directions identified in both qualitativ
 | Multi-document support | Deferred | Ingest RNS announcements, investor presentations, half-year results alongside the annual report |
 | Contradiction detection | Deferred | Flag where management commentary contradicts the quantitative evidence (e.g. "confident outlook" alongside falling margins) |
 | Valuation module | Deferred | Deterministic EV/EBITDA and P/E multiples using extracted financials and market prices (out of scope for evidence-extraction V1) |
-| Hosted demo | Deferred | Streamlit Cloud or Vercel deployment of `app.py` with pre-loaded outputs |
+| Hosted demo | **Shipped in V1.1** | Streamlit demo app: three-company explorer plus bring-your-own-API-key "run your own company" mode with deterministic pre-flight suitability checks |
 
 ---
 
@@ -270,7 +270,7 @@ memo-assistant/
 ├── classify.py             # Stage 6: Sonnet classification and analytical synthesis
 ├── memo.py                 # Stage 7: Sonnet memo generation with post-generation validator
 ├── section_filter.py       # Heading-based section detection (config-driven)
-├── chunk.py                # PDF text extraction and page chunking
+├── chunk.py                # PDF text extraction and page chunking (called by extract.py — not a pipeline stage itself)
 ├── llm.py                  # Thin Anthropic API wrapper (model strings pinned here)
 ├── app.py                  # Streamlit review app (memo + evidence browser)
 ├── schemas/                # Pydantic schemas for every pipeline artifact
@@ -283,7 +283,10 @@ memo-assistant/
 │   ├── run_eval.py         # Evaluation harness
 │   ├── results.md          # V1/V2/V3 scores and per-item detail
 │   ├── greggs_qualitative_review.md  # Qualitative analyst read of Greggs memo
-│   └── scoring_sheet.md   # Human-judgement scoring template
+│   ├── gw_qualitative_review.md      # Qualitative analyst read of GW memo (incl. buyback-inference finding)
+│   ├── v2_scoring_addendum.md        # V2 manual verdicts
+│   ├── v3_scoring_addendum.md        # V3 manual verdicts (evaluation closed here)
+│   └── scoring_sheet.md   # V1 human-judgement scoring sheet
 ├── output/
 │   ├── memo.md             # Auto Trader V3 investment memo (V1-locked output)
 │   ├── evidence_register.json  # Auto Trader evidence register
