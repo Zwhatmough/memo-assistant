@@ -1,0 +1,62 @@
+# Pipeline configuration — Games Workshop Group PLC Annual Report 2025
+#
+# DOCUMENT STRUCTURE NOTE: The GW report is 104 pages (compact vs typical FTSE 250 reports).
+# No persistent sidebar; pdfplumber extracts clean text throughout.
+#
+# However, heading detection is unreliable for this PDF:
+#   - "Principal risks and uncertainties" begins MID-PAGE on p18 (after the Section 172
+#     statement), so it never appears in the first 400 characters — heading detection misses it.
+#   - "STRATEGIC REPORT" appears on many non-consecutive pages as "STRATEGIC REPORT continued"
+#     (p4, p5, p9, p11, p13, p15, p17, p19, p21), making it unsuitable as a unique start marker.
+# All sections therefore use empty heading_variants and explicit fallback_pages.
+#
+# Page footer format: "N Games Workshop Group PLC" — NOT a bare integer, so
+# detect_page_offset() returns 0. fallback_pages are PDF page numbers (1-based).
+#
+# Memo-relevant sections (PDF page numbers):
+#   Financial Highlights:        PDF p2        (dense summary of key figures)
+#   Chair's Statement:           PDF p3
+#   Strategic Report (strategy): PDF p4–9
+#   Review of the period:        PDF p8–16     (financial narrative + cash + inventories)
+#   Principal risks:             PDF p18–20    (starts mid-page 18, ends p20)
+#   Priorities for 2025/26:      PDF p21
+#   Financial statements:        PDF p69–72    (income statement, balance sheets, cash flow)
+#
+# Not included: Directors' Report p22–33 (governance, TCFD, people — not memo-relevant),
+#   Corporate Governance p34–38, Remuneration p42–57, Auditor's Report p60–68 (too legal),
+#   Notes to financial statements p73–95 (except segment info; covered via income statement).
+
+company_id: "gw"
+company_name: "Games Workshop Group PLC"
+ticker: "GAW"
+fiscal_year_end: "1 June 2025"
+fiscal_year: "FY2025"
+report_year: "2025"
+currency: "GBP"
+currency_symbol: "£"
+
+documents:
+  annual_report:
+    path: "documents/gw-ar25.pdf"
+    doc_id: "gw-ar25"
+
+# ── Section taxonomy ──────────────────────────────────────────────────────────
+
+section_taxonomy:
+  strategic_overview:
+    heading_variants: []
+    description: "Financial Highlights, Chair's Statement and Review of Period"
+    max_pages: 15
+    fallback_pages: [2, 16]
+
+  principal_risks:
+    heading_variants: []
+    description: "Principal risks, uncertainties and priorities for 2025/26"
+    max_pages: 4
+    fallback_pages: [18, 21]
+
+  financial_statements:
+    heading_variants: []
+    description: "Primary financial statements (income, balance sheet, cash flow)"
+    max_pages: 4
+    fallback_pages: [69, 72]

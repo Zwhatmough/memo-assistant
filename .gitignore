@@ -12,6 +12,10 @@ output/*
 output/greggs/*
 !output/greggs/memo.md
 !output/greggs/evidence_register.json
+!output/gw/
+output/gw/*
+!output/gw/memo.md
+!output/gw/evidence_register.json
 
 # Python
 __pycache__/

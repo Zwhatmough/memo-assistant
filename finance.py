@@ -719,6 +719,99 @@ def check_greggs_shop_count(facts: list[dict]) -> CrossCheck:
     )
 
 
+def _find_fact_multi_exclude(
+    facts: list[dict],
+    label_contains: str,
+    period_contains: str,
+    unit_contains: str,
+    label_not_contains: list[str],
+) -> Optional[float]:
+    """Like find_fact() but accepts multiple label_not_contains exclusions.
+
+    Used by GW checks where the total label ("Revenue", "Operating profit") is
+    a substring of segment labels ("Core revenue", "Licensing revenue"), so a
+    single exclusion is insufficient to isolate the total.
+    """
+    lc = label_contains.lower()
+    pc = period_contains.lower()
+    uc = unit_contains.lower()
+    excludes = [e.lower() for e in label_not_contains]
+
+    matches = []
+    for fact in facts:
+        label = fact.get("label", "").lower()
+        period = fact.get("period", "").lower()
+        unit = fact.get("unit", "").lower()
+        if lc not in label:
+            continue
+        if pc not in period:
+            continue
+        if uc not in unit:
+            continue
+        if any(exc in label for exc in excludes):
+            continue
+        if fact.get("citation_status") not in ("verified", "corrected"):
+            continue
+        try:
+            matches.append(float(fact["value"]))
+        except (TypeError, ValueError):
+            pass
+
+    if not matches:
+        return None
+    if max(matches) - min(matches) > MONETARY_TOL:
+        return None   # ambiguous — treat as missing rather than raise
+    return matches[0]
+
+
+def check_gw_revenue_bridge(facts: list[dict]) -> CrossCheck:
+    """Core revenue + Licensing revenue = Total revenue.
+
+    Games Workshop reports two revenue streams separately: Core (miniatures,
+    direct IP sales) and Licensing (royalties from video games, media, etc.).
+    The income statement shows both plus the total. This check verifies the
+    extraction captured all three consistently.
+    """
+    year = "2025"
+    core_rev = find_fact(facts, "core revenue", year, "£m")
+    lic_rev = find_fact(facts, "licensing revenue", year, "£m")
+    total_rev = _find_fact_multi_exclude(facts, "revenue", year, "£m",
+                                         ["core", "licensing"])
+    calculated = (core_rev or 0.0) + (lic_rev or 0.0)
+    return _check(
+        name="GW: Revenue bridge (Core + Licensing = Total revenue)",
+        formula="Core revenue + Licensing revenue = Revenue",
+        inputs={"core_revenue": core_rev, "licensing_revenue": lic_rev},
+        calculated=calculated,
+        stated=total_rev,
+        tolerance=MONETARY_TOL,
+        unit="£m",
+    )
+
+
+def check_gw_operating_profit_bridge(facts: list[dict]) -> CrossCheck:
+    """Core operating profit + Licensing operating profit = Total operating profit.
+
+    GW's two-segment structure carries through from revenue to operating profit.
+    Core OP (miniatures/direct) and Licensing OP are disclosed separately.
+    """
+    year = "2025"
+    core_op = find_fact(facts, "core operating profit", year, "£m")
+    lic_op = find_fact(facts, "licensing operating profit", year, "£m")
+    total_op = _find_fact_multi_exclude(facts, "operating profit", year, "£m",
+                                        ["core", "licensing", "finance"])
+    calculated = (core_op or 0.0) + (lic_op or 0.0)
+    return _check(
+        name="GW: Operating profit bridge (Core + Licensing = Total)",
+        formula="Core operating profit + Licensing operating profit = Operating profit",
+        inputs={"core_operating_profit": core_op, "licensing_operating_profit": lic_op},
+        calculated=calculated,
+        stated=total_op,
+        tolerance=MONETARY_TOL,
+        unit="£m",
+    )
+
+
 # ── Orchestration ──────────────────────────────────────────────────────────────
 #
 # Cross-checks are split into two groups:
@@ -760,6 +853,12 @@ COMPANY_CROSS_CHECKS: dict[str, list] = {
         # No segment revenue split (single-segment retailer)
         # No ARPR × forecourts (not applicable to Greggs' business model)
     ],
+    "gw": [
+        check_gw_revenue_bridge,            # Core + Licensing = Total revenue
+        check_gw_operating_profit_bridge,   # Core OP + Licensing OP = Total OP
+        # No store-count reconciliation in V1 (store openings not consistently
+        # disclosed as a numeric KPI in the financial highlights or review pages).
+    ],
 }
 
 UNIVERSAL_DERIVED_METRICS = [
@@ -777,6 +876,10 @@ COMPANY_DERIVED_METRICS: dict[str, list] = {
     "greggs": [
         # No Autorama-equivalent segment metrics.
         # Universal metrics (cash conversion, FCF) are sufficient for Greggs.
+    ],
+    "gw": [
+        # Universal metrics (cash conversion, FCF) are sufficient for GW.
+        # Core vs Licensing margin analysis is a V2 extension.
     ],
 }
 

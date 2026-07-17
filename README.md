@@ -103,14 +103,14 @@ Token economics were the primary design constraint, not an afterthought.
 
 **Actual full-pipeline cost:**
 
-| Stage | Auto Trader FY2026 | Greggs FY2025 |
-|---|---|---|
-| Fact extraction (Haiku, batched) | ~$0.05 | $0.28 |
-| Classification (Sonnet) | $0.70 | $0.71 |
-| Memo generation (Sonnet) | $0.14 | $0.15 |
-| **Total** | **~$0.90** | **$1.33** |
+| Stage | Auto Trader FY2026 | Greggs FY2025 | Games Workshop FY2025 |
+|---|---|---|---|
+| Fact extraction (Haiku, batched) | ~$0.05 | $0.28 | $0.17 |
+| Classification (Sonnet) | $0.70 | $0.71 | $0.51 |
+| Memo generation (Sonnet) | $0.14 | $0.15 | $0.13 |
+| **Total** | **~$0.90** | **$1.33** | **$0.82** |
 
-The Greggs run costs more at extraction because it has more memo-relevant pages (53 vs ~40). Classification and memo cost are similar across companies because they operate on validated facts, not raw PDFs.
+Extraction cost varies with memo-relevant page count (AT ~40, Greggs 53, GW 23). Classification and memo cost are similar across companies because they operate on validated facts, not raw PDFs.
 
 ---
 
@@ -140,9 +140,9 @@ Three improvement rounds against the FY2026 Annual Report. Each round targeted d
 
 **Evaluation closed at V3.** Remaining gaps (FCA/regulatory breadth, brand/fraud, climate EV-transition depth, third-party failure consequences) are analytical-breadth issues appropriate to human review — the tool's stated design intent. Further automated rounds risk overfitting to gold-set wording.
 
-### Greggs Generalisation Test
+### Greggs Generalisation Test (Second Company)
 
-After evaluation closed at V3, the full pipeline was run against a second company — Greggs plc FY2025 Annual Report — to validate that no component was hardcoded to Auto Trader. There was no gold set for Greggs; the success criteria were code-verified citation rate and zero validation errors, plus a qualitative analyst read of the finished memo.
+After evaluation closed at V3, the full pipeline was run against Greggs plc FY2025 Annual Report — to validate that no component was hardcoded to Auto Trader. There was no gold set for Greggs; the success criteria were code-verified citation rate and zero validation errors, plus a qualitative analyst read of the finished memo.
 
 **Pipeline results:**
 
@@ -163,6 +163,27 @@ After evaluation closed at V3, the full pipeline was run against a second compan
 5. **Risk skeleton dedup** — "Financial" (fallback) and "Financial and market risk" (taxonomy) appeared as separate sub-sections. Fixed: generic word-subset dedup in `_dedupe_subset_labels()`.
 
 **Qualitative review** (Zak Whatmough, 17 Jul 2026): `eval/greggs_qualitative_review.md` — overall 8.8–9.0/10. Verdict: "beyond an AI summary — it reads like a junior analyst's first draft that a senior analyst would edit before an investment committee." The memo captured Greggs-specific drivers (white space, Derby/Kettering investment cycle, GLP-1 as an emerging risk) rather than applying a generic template.
+
+### Games Workshop Generalisation Test (Third Company)
+
+After all Greggs findings were fixed, the pipeline was run against Games Workshop Group PLC (GAW) FY2025 Annual Report — a structurally different company (manufacturing and IP licensing; two-segment reporting: Core miniatures and Licensing royalties) — under a strict config-only rule: only `gw_config.yaml` and a `COMPANY_CROSS_CHECKS["gw"]` entry were permitted.
+
+**Pipeline results:**
+
+| Metric | Result |
+|---|---|
+| Facts extracted | 145 |
+| Citation verification rate | 145/145 (100%) |
+| Memo reference errors | 0 |
+| Memo number errors | 0 |
+| Disclosed risk categories covered | 4/4 |
+| Total cost | $0.82 |
+
+**Generalisation findings (documented in `BUILD_LOG.md`):**
+1. **All section detection used fallback pages** — GW's "Principal risks" heading begins mid-page p18 (after the Section 172 statement); "STRATEGIC REPORT" is repeated across many non-consecutive pages. All three sections configured with `heading_variants: []` + explicit `fallback_pages`. No code change.
+2. **`find_fact()` single-exclusion insufficient** — GW's two-segment structure (Core revenue, Licensing revenue, Total revenue) required excluding two labels to isolate the total. Added `_find_fact_multi_exclude()` helper accepting a list of exclusions. This is the one additive code change — new utility function, no logic changes to existing functions.
+
+**Honest verdict: 99% config-only.** The third-company run required writing only a config file and two cross-check functions. No changes to extraction, validation, classification, or memo generation logic. The pipeline is demonstrably general-purpose.
 
 ### Near-Misses
 
@@ -223,6 +244,7 @@ memo-assistant/
 ├── schemas/                # Pydantic schemas for every pipeline artifact
 ├── config.yaml             # Auto Trader company configuration
 ├── greggs_config.yaml      # Greggs plc company configuration
+├── gw_config.yaml          # Games Workshop Group PLC company configuration
 ├── tests/                  # Pytest suite (72 tests, all deterministic)
 ├── eval/
 │   ├── gold_set.json       # 50-item manually built gold standard (frozen 14 Jul 2026)
@@ -233,9 +255,12 @@ memo-assistant/
 ├── output/
 │   ├── memo.md             # Auto Trader V3 investment memo (V1-locked output)
 │   ├── evidence_register.json  # Auto Trader evidence register
-│   └── greggs/
-│       ├── memo.md         # Greggs plc investment memo
-│       └── evidence_register.json  # Greggs evidence register
+│   ├── greggs/
+│   │   ├── memo.md         # Greggs plc investment memo
+│   │   └── evidence_register.json  # Greggs evidence register
+│   └── gw/
+│       ├── memo.md         # Games Workshop investment memo
+│       └── evidence_register.json  # Games Workshop evidence register
 ├── documents/              # Source PDFs (gitignored — large; publicly available)
 ├── DESIGN.md               # Architecture decisions and decision log
 └── BUILD_LOG.md            # Honest record of every failure found and fixed
@@ -269,6 +294,14 @@ python finance.py --facts output/greggs/validated_facts.json --out output/greggs
 python prior_year.py --facts output/greggs/validated_facts.json --out output/greggs/prior_year_facts.json
 python classify.py --facts output/greggs/validated_facts.json --financials output/greggs/financials.json --out output/greggs/classified_facts.json
 python memo.py --classified output/greggs/classified_facts.json --financials output/greggs/financials.json --memo-out output/greggs/memo.md --register-out output/greggs/evidence_register.json --config greggs_config.yaml
+
+# For a third company (Games Workshop example):
+python extract.py documents/gw-ar25.pdf gw-ar25 --config gw_config.yaml --out output/gw/facts.json
+python validate.py --facts output/gw/facts.json --pdf documents/gw-ar25.pdf --out output/gw/validated_facts.json
+python finance.py --facts output/gw/validated_facts.json --out output/gw/financials.json --company gw
+python prior_year.py --facts output/gw/validated_facts.json --out output/gw/prior_year_facts.json
+python classify.py --facts output/gw/validated_facts.json --financials output/gw/financials.json --out output/gw/classified_facts.json
+python memo.py --classified output/gw/classified_facts.json --financials output/gw/financials.json --validated output/gw/validated_facts.json --prior-year output/gw/prior_year_facts.json --memo-out output/gw/memo.md --register-out output/gw/evidence_register.json --config gw_config.yaml
 
 # Review the output
 streamlit run app.py
@@ -305,6 +338,9 @@ python eval/run_eval.py
 !output/greggs/
 !output/greggs/memo.md
 !output/greggs/evidence_register.json
+!output/gw/
+!output/gw/memo.md
+!output/gw/evidence_register.json
 ```
 
 Files committed:
@@ -312,10 +348,12 @@ Files committed:
 - `output/evidence_register.json` — Auto Trader evidence register
 - `output/greggs/memo.md` — Greggs plc investment memo (generalisation showcase)
 - `output/greggs/evidence_register.json` — Greggs evidence register
+- `output/gw/memo.md` — Games Workshop investment memo (third-company showcase)
+- `output/gw/evidence_register.json` — Games Workshop evidence register
 
 ### Evaluation
 
 - [x] `eval/results.md` V1/V2/V3 manual metrics complete
 - [x] `eval/scoring_sheet.md` Part C (risk coverage) completed
 - [x] `eval/greggs_qualitative_review.md` recorded
-- [x] `BUILD_LOG.md` up to date through V3 + Greggs generalisation
+- [x] `BUILD_LOG.md` up to date through V3 + Greggs generalisation + GW third-company run
