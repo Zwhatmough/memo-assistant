@@ -229,6 +229,23 @@ After cleanup: 8 categories. V3 classified_facts.json reports 8 disclosed risk c
 
 **Lesson:** Model enforcement by instruction is unreliable for formal risk register coverage when the underlying facts are ambiguous in framing. Structural enforcement by code — fixed sub-section headers, keyword presence validation, and explicit risk-framing mandates in the synthesis call — produces consistent coverage at the cost of memo rigidity. V3 Section 6 now reads more like a structured principal-risk analysis than V1/V2's 3-bucket synthesis, which is appropriate for the use case (first-pass analyst review against a disclosed risk register).
 
+## 17 Jul 2026 — V3 manual scoring complete, evaluation closed
+
+**Found:** V3 human scoring (Zak Whatmough, 17 Jul 2026) produced 8.0/10 (80%) risk coverage — up from 6.5/10 (65%) in V2 and 5.5/10 (55%) in V1. Every gold risk category now receives substantive treatment (0 MISSING for first time across all three rounds). Specific movements:
+
+- R-01 (macro): PARTIAL → COVERED — `### Macroeconomic and geopolitical risk` sub-section linked global instability and geopolitical events to stock pipelines, affordability and market share; Market sub-section added retailer cost and rate pressure. Combined breadth sufficient.
+- R-05 (cyber/IT): MISSING → COVERED — `### IT systems and cyber security` sub-section contained genuine risk analysis (IT infrastructure dependence, AI-enabled attacks, zero-day vulnerabilities, GDPR fines up to 4% of Group revenue), not token mention.
+- R-10 (third-party): MISSING → PARTIAL — `### Third-party and partner reliance` sub-section explicitly framed dependency as a risk (lenders, tech infrastructure, vehicle-data suppliers, finance/fulfilment partners). Failure consequences (outage, data loss, regulatory breach) still not described.
+- R-03, R-07: Remained PARTIAL — FCA/finance/leasing/privacy exposure and fraud/misleading-advertisements/brand-reputation dimensions still absent. Analytical-breadth failure; the classifier's undervaluation of diffuse, non-quantified risks persists within sub-sections.
+
+**R-09 regression (key finding):** R-09 (climate/EV) regressed from COVERED (V2) to PARTIAL (V3). Root cause: V2's `### Climate / EV Risk` sub-section was generated from the *synthesis analytics* block — which had already synthesised ICE-to-EV transition, EV policy uncertainty (pay-per-mile tax, mixed government messaging), and consumer adoption trends into a cohesive narrative. V3's skeleton created a `### Climate change and environmental obligations` sub-section populated *directly from raw risk_disclosures facts* (GHG trajectory +55%, compliance obligations). Those facts are narrower than the V2 synthesis — the synthesis model's analytical work was bypassed by the skeleton routing. The validator confirmed "climate" was present; the depth was not.
+
+**Mechanism of the regression:** the V3 Section 6 prompt no longer includes a synthesis risk checklist (C2 from V2). C2 was replaced by the skeleton structure (C6). This means synthesis analytics items that overlap with skeleton categories (e.g. "Mixed EV government messaging" from the V2 synthesis risks list) are not explicitly passed to the memo generation call for Section 6 — the skeleton categories instruct the model to draw from facts, not from pre-synthesised analytics. This is a design trade-off: skeleton provides structure guarantee; synthesis analytics provide depth. In V3 they competed.
+
+**Evaluation decision:** closed at V3. Remaining gaps (FCA breadth, brand/fraud, climate EV-transition depth, third-party failure consequences) are analytical-breadth issues that human review is designed to catch — exactly the tool's stated purpose. Further automated rounds risk overfitting to gold-set wording. The full V1→V2→V3 improvement story (55% → 65% → 80% risk coverage, 0 MISSING at V3) demonstrates the diagnostic-fix-measure methodology credibly.
+
+**Generalisation note:** all three improvement rounds (C1–C6) were designed as generic mechanisms over any company's principal risk disclosure. Generalisation to a second company (Greggs) is the next validation step.
+
 ---
 
 *Update this file whenever a real failure is found and fixed. Each entry: Found / Cause / Fix / Lesson.*

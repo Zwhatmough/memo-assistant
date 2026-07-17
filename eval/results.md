@@ -157,32 +157,43 @@ Pipeline stage where each V1 miss was lost, verified by checking `validated_fact
 | Citation accuracy (automated) | 16/18 (88%) | 16/18 (88%) | 16/18 (88%) | Extraction unchanged |
 | Risk coverage (automated) | 9/10 (90%) | 10/10* (100%) | 10/10 (100%) | *V2 R-05 was false positive; V3 R-05 has genuine keyword match |
 
-### Human-judgement metrics (V3 pending Zak's verification)
+### Human-judgement metrics (V3 LOCKED — Zak Whatmough, 17 July 2026)
 
-| Metric | V1 | V2 | V3 | Primary change |
-|--------|----|----|-----|----------------|
-| Risk coverage (human-verified) | 5.5/10 (55%) | 6.5/10 (65%) | pending | R-05, R-10 expected COVERED (structural enforcement) |
-| Observation coverage (human) | 7.5/10 (75%) | 9.0/10 (90%) | pending | No O-specific changes in V3; expect no regression |
-| Diligence question quality (human) | 3.0/3.0 (100%) | 3.0/3.0 (100%) | pending | Synthesis re-run; expect similar |
+| Metric | V1 | V2 | V3 | Notes |
+|--------|----|----|-----|-------|
+| Risk coverage (human-verified) | 5.5/10 (55%) | 6.5/10 (65%) | **8.0/10 (80%)** | +15pp V2→V3; +25pp V1→V3 |
+| Observation coverage (human) | 7.5/10 (75%) | 9.0/10 (90%) | 9.0/10 (90%) | No O-specific changes; carried from V2 |
+| Diligence question quality (human) | 3.0/3.0 (100%) | 3.0/3.0 (100%) | 3.0/3.0 (100%) | Carried from V2 |
 
-### Per-item risk movement
+### Per-item risk movement (V3 LOCKED)
 
-| ID | V1 | V2 | V3 (automated) | Root cause addressed |
-|----|----|----|-----------------|----------------------|
-| R-01 | PARTIAL | PARTIAL | COVERED (verify) | Macro skeleton category added |
-| R-02 | COVERED | COVERED | COVERED | — |
-| R-03 | PARTIAL | PARTIAL | COVERED (verify) | Regulatory skeleton category added |
-| R-04 | COVERED | COVERED | COVERED | — |
-| R-05 | MISSING | MISSING | COVERED (verify) | Cyber skeleton category enforced; validator confirms keyword present |
-| R-06 | COVERED | COVERED | COVERED | — |
-| R-07 | PARTIAL | PARTIAL | COVERED (verify) | Reputation/Brand addressed via competitive/people skeleton |
-| R-08 | COVERED | COVERED | COVERED | — |
-| R-09 | MISSING | COVERED | COVERED | C1+C2 (V2); retained in V3 |
-| R-10 | MISSING | MISSING | COVERED (verify) | V3 C5 (framing mandate) + C6 (structural enforcement) |
+| ID | V1 | V2 | V3 | Verdict notes |
+|----|----|----|-----|---------------|
+| R-01 | PARTIAL | PARTIAL | **COVERED** | Macro/geopolitical sub-section links global instability, stock pipelines, affordability and market share; Market sub-section adds retailer costs and rates. Breadth sufficient. |
+| R-02 | COVERED | COVERED | COVERED | Market sub-section covers supply-demand, retailer costs, rates, declining forecourts, negative stock contribution. |
+| R-03 | PARTIAL | PARTIAL | PARTIAL | DMCC Act, CMA and consumer protection covered; FCA/finance/leasing, privacy/data protection, broader online-transaction regulation still absent. |
+| R-04 | COVERED | COVERED | COVERED | Agentic-AI disintermediation, Amazon Autos, direct-to-listing consumer flow. |
+| R-05 | MISSING | MISSING | **COVERED** | Substantive analysis: IT infrastructure dependence, downtime, AI-enabled attacks, zero-day vulnerabilities, GDPR fines up to 4% of Group revenue. Genuine improvement. |
+| R-06 | COVERED | COVERED | COVERED | 91%→72% engagement decline, retention risk, execution-capability damage. |
+| R-07 | PARTIAL | PARTIAL | PARTIAL | CMA/retailer dissatisfaction present; fraud, misleading ads, platform abuse, buyer-trust dependency still absent. |
+| R-08 | COVERED | COVERED | COVERED | Agentic AI, Amazon Autos, Deal Builder/Co-Driver execution risk. |
+| R-09 | MISSING | COVERED | **PARTIAL (regression)** | Climate sub-section covers GHG +55% and compliance obligations but lost V2's ICE-to-EV transition, EV policy uncertainty, pay-per-mile tax and consumer-adoption analysis. Structural enforcement guaranteed *presence*; narrowed analytical *breadth*. |
+| R-10 | MISSING | MISSING | **PARTIAL** | Now explicitly framed as risk (lenders, tech infrastructure, vehicle-data suppliers); dependency named but failure consequences (outage, data loss, regulatory breach) not described. Materially better than V2. |
 
-**Items that did NOT improve (V2 and V3):**
-- **O-08 (engagement quality / declining minutes):** Structural extraction limitation — infographic KPI pages (p4) cannot be read by pdfplumber. No change in V2 or V3 targeted this. Still MISSING.
-- **R-01, R-03, R-07 (breadth of coverage):** Skeleton enforces that a sub-section exists for each principal risk *category* but cannot mandate *breadth* within each sub-section. The model may address the most specific risk within a category and omit the broader dimensions. Manual verification will confirm whether PARTIAL items have genuinely improved.
+**V3 summary: 6 COVERED, 4 PARTIAL, 0 MISSING — 8.0/10 (80%). No risks fully absent.**
+
+**What V3 structural enforcement delivered:**
+- Every gold risk category now receives some substantive treatment (0 MISSING for first time)
+- R-05 (cyber/IT): MISSING → COVERED — the mandatory sub-section produced genuine risk analysis
+- R-10 (third-party): MISSING → PARTIAL — framing mandate produced explicit risk framing
+- R-01 (macro): PARTIAL → COVERED — macro/geopolitical sub-section provided sufficient breadth
+
+**What V3 structural enforcement did not deliver:**
+- **R-09 regression:** V2's Section 6 synthesised EV-transition, pay-per-mile tax and climate-change policy into a cohesive risk narrative because it was drawn from synthesis analytics. V3's skeleton created a `### Climate change` sub-section generated from raw facts (GHG trajectory, compliance obligations) without the richer synthesis context — a narrower but guaranteed presence. The validator confirmed "climate" in Section 6; the model filled it with what facts were to hand, which happened to be narrower than V2's synthesis-driven narrative.
+- **R-03, R-07 (PARTIAL remain):** Analytical breadth within a sub-section cannot be mandated by a keyword validator. The classifier's systematic undervaluation of diffuse, non-quantified risks (FCA exposure, fraud, brand reputation beyond retailer sentiment) persists.
+- **O-08 (engagement quality):** Structural pdfplumber limitation on infographic pages (p4). No pipeline fix available without OCR.
+
+**Evaluation closed at V3.** Remaining gaps are analytical-breadth issues appropriate to human review (the tool's design intent), not structural defects. Further automated rounds would risk overfitting to gold-set wording. V3 is the final Auto Trader result.
 
 ---
 

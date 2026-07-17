@@ -118,19 +118,25 @@ The gold standard set was built **before** prompt tuning and is frozen: `eval/go
 
 ### V1 / V2 / V3 Results (scored against the same frozen gold set)
 
-Three improvement rounds have been run against the FY2026 Annual Report, each targeting diagnosed failure modes from the prior evaluation. Full detail: `eval/results.md`.
+Three improvement rounds against the FY2026 Annual Report. Each round targeted diagnosed failure modes from the prior evaluation — no tuning against the gold set. Full detail: `eval/results.md`.
 
 | Metric | V1 | V2 | V3 | Method |
 |---|---|---|---|---|
 | Fact recall (automated) | 18/20 (90%) | 18/20 (90%) | 18/20 (90%) | ±2% value tolerance; ±1 page citation tolerance |
 | Citation accuracy (automated) | 16/18 (88%) | 16/18 (88%) | 16/18 (88%) | Of found facts |
-| Risk coverage (human-verified) | 5.5/10 (55%) | 6.5/10 (65%) | pending | Manual review of Section 6 vs gold set R-01..R-10 |
-| Observation coverage (human) | 7.5/10 (75%) | 9.0/10 (90%) | pending | Manual review vs gold set O-01..O-10 |
-| Diligence question quality (human) | 3.0/3.0 (100%) | 3.0/3.0 (100%) | pending | 7 questions rated 1–3 |
+| Risk coverage (human-verified) | 5.5/10 (55%) | 6.5/10 (65%) | **8.0/10 (80%)** | Manual review of Section 6 vs gold set R-01..R-10 |
+| Observation coverage (human) | 7.5/10 (75%) | 9.0/10 (90%) | 9.0/10 (90%) | Manual review vs gold set O-01..O-10 |
+| Diligence question quality (human) | 3.0/3.0 (100%) | 3.0/3.0 (100%) | 3.0/3.0 (100%) | 7 questions rated 1–3 |
 
-> Automated risk coverage (V1: 9/10, V2: 10/10 apparent, V3: 10/10) is unreliable — common business vocabulary produces false positives. Human-verified scores override automated. V3 R-05 and R-10 now have genuine keyword matches ("cyber", "security", "third", "reliance") rather than V2's false positives — manual verification pending.
+**What changed each round:**
+- **V2:** taxonomy floor bumping risk_disclosures facts to synthesis threshold (C1); explicit risk checklist in Section 6 prompt (C2); targeted synthesis focus questions for direct-traffic moat and EPS-vs-buyback mechanism (C3).
+- **V3:** deterministic risk skeleton derived from company's own disclosed principal risks (C4); framing mandate requiring every category to appear as a failure scenario not an opportunity (C5); post-generation validator that blocks the pipeline if any skeleton keyword is absent from Section 6 (C6).
 
-**What V2 improved:** direct-traffic competitive moat and EPS-vs-buyback mechanism now explicit (C3); all 11 synthesis risks now in Section 6 (C2); climate/EV risk now addressed. **What V3 improved:** Section 6 structure is now derived deterministically from the company's own disclosed risk categories; a post-generation validator fails if any category is absent; synthesis prompt mandates explicit risk framing (not opportunity framing) for every category. Primary targets: R-05 (cyber/IT) and R-10 (third-party/partner reliance). **Persistent gap:** engagement quality (O-08) — structural pdfplumber limitation on infographic pages; no pipeline fix available without OCR.
+**Key V3 movements:** R-05 (cyber/IT) MISSING→COVERED — structural enforcement produced genuine risk analysis including GDPR exposure. R-10 (third-party) MISSING→PARTIAL — framing mandate produced explicit dependency risk framing. R-01 (macro) PARTIAL→COVERED. Zero risks fully absent for the first time.
+
+**V3 regression:** R-09 (climate/EV) COVERED→PARTIAL. V2's richer synthesis narrative (ICE-to-EV transition, pay-per-mile tax, EV policy uncertainty) was replaced by a narrower skeleton-driven sub-section (GHG trajectory, compliance obligations). Structural enforcement guaranteed *presence*; it could not guarantee *breadth*.
+
+**Evaluation closed at V3.** Remaining gaps (FCA/regulatory breadth, brand/fraud, climate EV-transition depth, third-party failure consequences) are analytical-breadth issues appropriate to human review — the tool's stated design intent. Further automated rounds risk overfitting to gold-set wording.
 
 ### Near-Misses
 
