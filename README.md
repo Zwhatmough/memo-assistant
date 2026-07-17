@@ -4,6 +4,8 @@ A command-line pipeline that turns a company's annual report into a structured i
 
 > **AI reads and writes prose. Code counts and checks.**
 
+**[Try the live demo →](https://memo-assistant.streamlit.app)**
+
 ![Memo & Evidence view — cited memo with inline [E-NNN] references and a source-excerpt panel](docs/screenshots/app-memo-evidence.png)
 *Memo & Evidence view — cited memo with inline [E-NNN] references alongside the source-excerpt panel.*
 
@@ -14,11 +16,11 @@ A command-line pipeline that turns a company's annual report into a structured i
 
 ## Live Demo
 
-> **[Launch on Streamlit Community Cloud]** ← URL added after deployment
+**[https://memo-assistant.streamlit.app](https://memo-assistant.streamlit.app)**
 
 **Demo mode (no API key needed):** choose Auto Trader (V3 — evaluated), Greggs, or Games Workshop from the selector. The finished memo loads with the full evidence panel and facts browser — all powered by pre-committed output files.
 
-**Run your own:** upload any UK-listed company annual report PDF and paste your Anthropic API key. A deterministic pre-flight check runs first (text extractable, page count sensible, annual-report headings present, not a bank or insurer). If it passes, the full pipeline runs for roughly $1 of your API credits in 5–10 minutes. Your key is held in session memory only — never written to disk, never logged, removed when the run finishes.
+**Run your own:** upload any UK-listed company annual report PDF and paste your own Anthropic API key. A deterministic pre-flight check runs first (text extractable, page count sensible, annual-report headings present, not a bank or insurer). If it passes, the full pipeline runs in 5–10 minutes and costs roughly **$1 of your API credits**. Your key is held in session memory only — never written to disk, never logged, removed when the run finishes.
 
 ---
 
@@ -384,7 +386,7 @@ Files committed (all are public-document derivatives — the source PDFs are pub
 ### Streamlit Demo
 
 - [x] `app.py` V1.1 — demo mode (three companies, no API key) + "run your own" mode (PDF upload + API key + pre-flight check + pipeline runner)
-- [ ] Streamlit Community Cloud deployment URL added to README
+- [x] Streamlit Community Cloud deployed: https://memo-assistant.streamlit.app
 
 ### Evaluation
 

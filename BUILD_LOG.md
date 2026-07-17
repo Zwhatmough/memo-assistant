@@ -398,6 +398,10 @@ All three sections used `heading_variants: []` and explicit `fallback_pages` in 
 
 **Lesson:** Config-driven path conventions require operational consistency. A checklist item before any pipeline run: confirm source PDF is in `documents/`, not the project root or a downloads folder.
 
+## 17 Jul 2026 — V1.1: app.py deployed to Streamlit Community Cloud
+
+**Live URL:** https://memo-assistant.streamlit.app
+
 ## 17 Jul 2026 — V1.1: app.py rebuilt as a hostable public demo
 
 **What changed:** `app.py` extended from a single-company local review tool into a two-mode Streamlit application ready for Streamlit Community Cloud deployment.
