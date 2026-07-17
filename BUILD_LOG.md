@@ -373,6 +373,31 @@ All three sections used `heading_variants: []` and explicit `fallback_pages` in 
 
 **Honest verdict:** 99% config-only. One new helper function (`_find_fact_multi_exclude`) required in `finance.py` to handle GW's two-segment revenue structure — additive, generic, and not a pipeline logic change, but not strictly zero-code.
 
+## 17 Jul 2026 — GW qualitative review: erroneous inference passed all automated checks
+
+**Found:** The GW memo's analytical observations section stated that EPS growth "may have been meaningfully supported by share count reduction / buybacks". The reviewer flagged this as doubtful (GW historically returns capital via dividends, not buybacks) and verified it as factually wrong against the annual report: p.23 states "During the period no shares were purchased in the market for cancellation"; p.103 records the Board "has no current intention to exercise this authority." GW repurchased zero shares in FY2025 — EPS growth was driven entirely by profit growth.
+
+**Cause:** The synthesis model was given verified facts about earnings-per-share growth alongside verified facts about AT's buyback activity (from the prior AT run's training context). EPS growth with no disclosed share issuance is a pattern consistent with either profit growth *or* buyback-driven share count reduction. The model generated a hedged but plausible inference ("may have been meaningfully supported") and correctly labelled it `inference=True` — so it appeared in the memo under the inference flag, not as a citation-backed claim. No automated check caught it because:
+1. Citation validation verifies that excerpts exist verbatim on cited pages — it does not validate reasoning.
+2. Finance cross-checks verify arithmetic — they do not check that inferred mechanisms correspond to disclosed facts.
+3. The post-generation validator checks that E-IDs resolve and numbers are within tolerance — it does not evaluate analytical correctness.
+
+**Fix:** None to the GW memo — it is locked, and this review is the correction of record (`eval/gw_qualitative_review.md`). The inference label correctly flagged the claim; the human reviewer caught the error. That is the design working as intended.
+
+**Lesson:** The tool's architecture is correct on this point. Citation validation + arithmetic cross-checks + schema validation form a complete system for fact accuracy. They form no system at all for reasoning quality. An inference-labelled claim that is plausible (the same mechanism is true for a peer company), not obviously wrong, and consistent with reported numbers can pass every automated gate and still be incorrect. Human review is not a QA afterthought — it is the mechanism that catches this class of error. The GW buyback finding is the clearest demonstration in the project of why the design says "AI drafts; humans verify."
+
+---
+
+## 17 Jul 2026 — Recurring: source PDFs migrating from documents/ to project root during review sessions
+
+**Found:** Across multiple review sessions, source PDF files (`gw-ar25.pdf`, `greggs-ar25.pdf`) appeared in the project root rather than in `documents/` where the pipeline expects them. This caused pipeline failures until files were moved back.
+
+**Cause:** During PDF inspection and review, files were opened or downloaded directly to the project root. The pipeline hardcodes `documents/` as the source directory in config YAMLs, and the `documents/*.pdf` gitignore pattern does not cover root-level PDFs.
+
+**Fix:** No code fix required — operational discipline. Source PDFs belong in `documents/`. If a file is found at the root, move it before running the pipeline. The `.gitignore` entry `documents/*.pdf` prevents root-level PDFs from being accidentally committed anyway (they are not covered by that pattern), so there is no git risk, only a pipeline path error.
+
+**Lesson:** Config-driven path conventions require operational consistency. A checklist item before any pipeline run: confirm source PDF is in `documents/`, not the project root or a downloads folder.
+
 ---
 
 *Update this file whenever a real failure is found and fixed. Each entry: Found / Cause / Fix / Lesson.*

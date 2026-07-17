@@ -162,7 +162,7 @@ After evaluation closed at V3, the full pipeline was run against Greggs plc FY20
 4. **`memo.py` company identity** — `MEMO_SYSTEM`, header, and section writing instructions were hardcoded to Auto Trader. The generation model flagged a "data-integrity issue" and refused to write the memo. Fixed: config-driven templates; `--config` flag; `max_tokens` for sections 1–5 raised 4096 → 8192.
 5. **Risk skeleton dedup** — "Financial" (fallback) and "Financial and market risk" (taxonomy) appeared as separate sub-sections. Fixed: generic word-subset dedup in `_dedupe_subset_labels()`.
 
-**Qualitative review** (Zak Whatmough, 17 Jul 2026): `eval/greggs_qualitative_review.md` — overall 8.8–9.0/10. Verdict: "beyond an AI summary — it reads like a junior analyst's first draft that a senior analyst would edit before an investment committee." The memo captured Greggs-specific drivers (white space, Derby/Kettering investment cycle, GLP-1 as an emerging risk) rather than applying a generic template.
+**Qualitative review** (Zak Whatmough, 17 Jul 2026): [`eval/greggs_qualitative_review.md`](eval/greggs_qualitative_review.md) — overall 8.8–9.0/10. Verdict: "beyond an AI summary — it reads like a junior analyst's first draft that a senior analyst would edit before an investment committee." The memo captured Greggs-specific drivers (white space, Derby/Kettering investment cycle, GLP-1 as an emerging risk) rather than applying a generic template.
 
 ### Games Workshop Generalisation Test (Third Company)
 
@@ -173,17 +173,24 @@ After all Greggs findings were fixed, the pipeline was run against Games Worksho
 | Metric | Result |
 |---|---|
 | Facts extracted | 145 |
-| Citation verification rate | 145/145 (100%) |
+| Citation verification rate (pipeline) | 145/145 (100%) |
+| Citation verification rate (stricter independent check) | 121/145 (83%) |
 | Memo reference errors | 0 |
 | Memo number errors | 0 |
 | Disclosed risk categories covered | 4/4 |
 | Total cost | $0.82 |
+
+Note: the pipeline validator uses a 4-word fragment match with punctuation-stripped fallback. An independent exact-prefix check run during review found 121/145 passing the stricter criterion. Both figures are reported; the pipeline's 100% reflects verified-or-corrected under the production standard.
 
 **Generalisation findings (documented in `BUILD_LOG.md`):**
 1. **All section detection used fallback pages** — GW's "Principal risks" heading begins mid-page p18 (after the Section 172 statement); "STRATEGIC REPORT" is repeated across many non-consecutive pages. All three sections configured with `heading_variants: []` + explicit `fallback_pages`. No code change.
 2. **`find_fact()` single-exclusion insufficient** — GW's two-segment structure (Core revenue, Licensing revenue, Total revenue) required excluding two labels to isolate the total. Added `_find_fact_multi_exclude()` helper accepting a list of exclusions. This is the one additive code change — new utility function, no logic changes to existing functions.
 
 **Honest verdict: 99% config-only.** The third-company run required writing only a config file and two cross-check functions. No changes to extraction, validation, classification, or memo generation logic. The pipeline is demonstrably general-purpose.
+
+**Qualitative review** (Zak Whatmough, 17 Jul 2026): [`eval/gw_qualitative_review.md`](eval/gw_qualitative_review.md) — overall 9.4/10, the strongest memo of the three. Verdict: "This no longer reads like an AI summary. It reads like a junior equity research analyst's first draft that requires editorial refinement rather than factual reconstruction."
+
+**Critical finding — erroneous inference caught by human review:** The memo suggested EPS growth "may have been meaningfully supported by share count reduction / buybacks." The reviewer identified this as factually wrong: GW purchased zero shares in FY2025 (AR p.23). The claim was correctly labelled `inference=True` by the pipeline, sounded plausible (the same mechanism is genuinely true for Auto Trader), and passed every automated check — citation validation verifies quotes, not reasoning. It was caught by human domain knowledge: the exact mechanism the tool is designed around. Full analysis in `BUILD_LOG.md` and `eval/gw_qualitative_review.md`.
 
 ### Near-Misses
 
@@ -200,18 +207,26 @@ Both near-misses and citation misses are reported without cherry-picking. The er
 
 ## V2 Roadmap
 
-Items deferred from V1 evaluation, plus directions identified in the Greggs qualitative review:
+The headline theme from both qualitative reviews is the same: **synthesis, conviction and investment judgement**. The pipeline is accurate and well-structured; the next step is less about improving extraction and more about making the synthesis reach conclusions rather than report evidence.
+
+> *"The next stage is less about improving extraction accuracy and more about improving synthesis, conviction and investment judgement."* — GW qualitative review
+
+> *"It reads like a junior analyst's first draft that a senior analyst would edit before an investment committee."* — Greggs qualitative review
+
+Items deferred from V1 evaluation, plus directions identified in both qualitative reviews:
 
 | Item | Origin | Description |
 |---|---|---|
-| Synthesis → interpretation | Greggs review | Convert "evidence A, evidence B" framing into explicit investment interpretation ("here is why this changes my investment view") |
-| Investment Verdict section | Greggs review | Optional closing conviction paragraph (high/medium/low, synthesis of bull/bear). Requires relaxing the no-recommendation constraint — a deliberate product decision. |
+| Synthesis → interpretation | Both reviews | Convert "evidence A, evidence B" framing into explicit investment interpretation ("here is why this changes my investment view") |
+| Decisiveness: reduce hedging | GW review | "may suggest", "appears to", "could indicate" should mark genuine uncertainty, not every conclusion |
+| Investment Verdict section | Both reviews | Optional closing conviction paragraph (high/medium/low, synthesis of bull/bear). Requires relaxing the no-recommendation constraint — a deliberate product decision. |
+| Inference validation | GW review | Cross-check inferred mechanisms (e.g. buybacks, pricing power) against disclosed facts before including in synthesis — prevent the GW EPS/buyback class of error |
 | Cost inflation analysis | Greggs review | Commodity costs (wheat, dairy, energy) and employment cost drivers (NICs, minimum wage) often implied but not made explicit |
 | Per-company finance calibration | Generalisation | Write company-specific cross-checks against actual fact labels from first run (Greggs shop count; AT segment splits) |
 | Multi-document support | Deferred | Ingest RNS announcements, investor presentations, half-year results alongside the annual report |
 | Contradiction detection | Deferred | Flag where management commentary contradicts the quantitative evidence (e.g. "confident outlook" alongside falling margins) |
 | Valuation module | Deferred | Deterministic EV/EBITDA and P/E multiples using extracted financials and market prices (out of scope for evidence-extraction V1) |
-| Hosted demo | Deferred | Streamlit Cloud or Vercel deployment of `app.py` with pre-loaded Auto Trader and Greggs outputs |
+| Hosted demo | Deferred | Streamlit Cloud or Vercel deployment of `app.py` with pre-loaded outputs |
 
 ---
 
@@ -223,7 +238,8 @@ Items deferred from V1 evaluation, plus directions identified in the Greggs qual
 4. **No OCR:** scanned PDFs are out of scope. The pipeline requires digitally-created PDFs.
 5. **No real-time data:** the pipeline reads static documents; it does not fetch market prices, consensus estimates, or comparable company data.
 6. **Analytical breadth vs. structural coverage:** V3's risk skeleton guarantees every disclosed risk category appears in Section 6, but guarantees *presence*, not *analytical depth*. The reviewer's contribution remains essential for framing risks as investment theses.
-7. **Not investment advice:** the output is a structured first draft for analyst review. It must never be used as the basis for an investment decision without independent verification.
+7. **Inference quality is not automatically validated:** the synthesis stage can produce plausible-but-wrong inferences that pass every automated check. Citation validation verifies that excerpts exist verbatim on cited pages; arithmetic cross-checks verify stated numbers; neither validates reasoning. An inference labelled `inference=True` by the pipeline may still be factually incorrect if the model applies a mechanism that is true for a peer but not for this company. Demonstrated concretely: the GW memo's EPS/buyback inference (caught by the reviewer; zero shares were repurchased in FY2025). Human review is a required stage, not a QA afterthought.
+8. **Not investment advice:** the output is a structured first draft for analyst review. It must never be used as the basis for an investment decision without independent verification.
 
 ---
 
