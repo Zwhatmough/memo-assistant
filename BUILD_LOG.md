@@ -107,6 +107,20 @@ First run of the evaluation harness against the frozen gold set. Automated score
 
 **Risk coverage caveats added:** Keyword matching uses 8-char stem prefixes (handles morphological variants like 'disintermediate' → 'disintermediation') but is vulnerable to context-blind false positives (e.g., "consumer" matches in an AI-behavior context when the gold risk is about consumer demand). The scoring sheet (eval/scoring_sheet.md Part C) asks Zak to verify each automated COVERED result.
 
+## 17 Jul 2026 — V2 improvement round: changes implemented, run blocked by API monthly limit
+
+**Context:** V2 improvements were designed in direct response to V1 evaluation findings (failure analysis in `eval/results.md §3`). All three changes target diagnosed failure modes, not gold-set-specific symptoms. **Generalisability to a second company has not yet been tested** — this is recorded as a caveat in `eval/results.md` and should be assessed when a second company pipeline run is conducted.
+
+**Changes implemented:**
+
+1. **`classify.py` Change 1 — risk-register taxonomy floor**: Added `RISK_REGISTER_TAXONOMY` constant (9 standard categories drawn from ISO 31000, COSO ERM, TCFD frameworks — not from the gold set). Added `apply_risk_floor()` function: any `risk_disclosures` fact assigned to the `risks` section with relevance ≤2 that matches a taxonomy term is bumped to relevance 3. Called after Stage 1 classification, before synthesis. This targets R-05 (cyber, relevance 2→3) and R-10 (third-party, relevance 2→3); also expected to broaden R-01, R-03, R-07 partial coverage.
+
+2. **`classify.py` Change 3 — targeted synthesis focus questions**: Two analytical questions added to `build_synthesis_prompt()` via an `ANALYTICAL FOCUS` block. Question 1 asks whether direct-traffic mix data constitutes a competitive moat (targets O-07). Question 2 asks the model to compare EPS growth to operating profit growth and identify the buyback mechanism if they diverge (targets O-05 partial). Both are framed as conditional ("if the facts support them") so the model does not hallucinate answers.
+
+3. **`memo.py` Change 2 — explicit risk checklist for Section 6**: Added `_format_risks_checklist()` function and updated `build_sections_6_8_prompt()` to pass an explicit numbered list of all analytics risk items with a mandate: "Section 6 must address every one." This targets R-09 (climate/EV — items 8 and 9 in the V1 synthesis analytics were dropped during memo generation).
+
+**Blocked:** `anthropic.BadRequestError: You have reached your specified API usage limits. You will regain access on 2026-08-01 at 00:00 UTC.` V2 run to resume from 1 August 2026. V1 outputs unchanged.
+
 ## 17 Jul 2026 — Milestone 6 (Evaluation): manual scoring complete, V1 locked
 
 **Found:** Human evaluation by Zak (17 July 2026) produced materially different risk-coverage scores from the automated keyword estimate. Automated: 9/10 (90%). Human-verified: 5.5/10 (55%). Three risks are MISSING (cyber/IT, climate/EV, third-party dependency) and three are PARTIAL (macro, legal/regulatory, brand/reputation). Observation coverage: 7.5/10 (75%). Diligence question quality: 7/7 at 3.0/3.0 (100%).

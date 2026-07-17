@@ -260,6 +260,26 @@ Write sections 1 through 5 only. Do not write sections 6–10.
 3–5 bullet points, each ~40 words. Draw from STRENGTHS in the analytical synthesis. Each bullet must cite [E-NNN]."""
 
 
+def _format_risks_checklist(analytics: dict, fact_to_e: dict[str, str]) -> str:
+    """Format all analytics risk items as an explicit numbered checklist.
+
+    V2 Change 2: V1 memo generation selected only 5 of 11 synthesis risks for
+    Section 6, silently dropping EV/climate and other items. Passing the full
+    list as an explicit mandate ensures every synthesised risk is addressed.
+    """
+    risks = analytics.get("risks", [])
+    lines = [
+        f"ALL {len(risks)} RISK ITEMS FROM SYNTHESIS — Section 6 must address every one:",
+    ]
+    for i, r in enumerate(risks, 1):
+        e_ids = [fact_to_e.get(fid, fid) for fid in r.get("fact_ids", [])]
+        refs = " [" + ", ".join(e_ids) + "]" if e_ids else ""
+        infer = " [INFERENCE]" if r.get("inference") else ""
+        rtype = r.get("risk_type", "disclosed")
+        lines.append(f"  {i}. ({rtype}){infer} {r['statement']}{refs}")
+    return "\n".join(lines)
+
+
 def build_sections_6_8_prompt(
     register: dict[str, dict],
     analytics: dict,
@@ -269,6 +289,7 @@ def build_sections_6_8_prompt(
 ) -> str:
     reg_text = _format_register_for_prompt(register)
     analytics_text = _format_analytics_with_e_ids(analytics, fact_to_e)
+    risks_checklist = _format_risks_checklist(analytics, fact_to_e)
 
     return f"""{MEMO_SYSTEM}
 
@@ -281,6 +302,8 @@ FINANCIAL METRICS:
 ANALYTICAL SYNTHESIS:
 {analytics_text}
 
+{risks_checklist}
+
 SECTIONS 1–5 ALREADY WRITTEN (for context — do not repeat):
 {sections_1_5_text[:2000]}
 [... truncated for brevity ...]
@@ -290,10 +313,11 @@ SECTIONS 1–5 ALREADY WRITTEN (for context — do not repeat):
 Write sections 6 through 8 only. Do not write sections 1–5 or 9–10.
 
 ## 6. Material Risks
-Organise under three sub-headers:
+Organise under three sub-headers. You MUST address every item in the risk checklist above —
+group them under the appropriate sub-header. Do not omit any item.
 
 ### Disclosed risks
-Risks explicitly stated in the annual report. Draw from RISKS with risk_type=disclosed. Each point ~40 words with [E-NNN]. Aim for 4–5 points.
+Risks explicitly stated in the annual report. Draw from RISKS with risk_type=disclosed. Each point ~40 words with [E-NNN].
 
 ### Inferred risks
 Patterns visible in the data not explicitly called out by management. Draw from RISKS with risk_type=inferred. Items marked [INFERENCE] must be written as hedged prose. 1–2 points.

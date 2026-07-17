@@ -27,18 +27,18 @@ Rate each of the pipeline's diligence questions on a 1–3 scale:
 
 | ID | Gold observation (first 120 chars) | Your rating | Notes |
 |----|-----------------------------------|-------------|-------|
-| O-01 | ARPR growth is masking pressure in the retailer base: ARPR rose 5% to £2,995 while retailer forecourts declined, so reve… | COVERED / PARTIAL / MISSING | |
-| O-02 | The Deal Builder rollout exposed execution risk in digital retailing: management met retailer resistance to the speed an… | COVERED / PARTIAL / MISSING | |
-| O-03 | Auto Trader is evolving from a listings marketplace into embedded infrastructure: technology and data-service calls rose… | COVERED / PARTIAL / MISSING | |
-| O-04 | The accelerated buyback creates a more leveraged equity story: the company moved from net cash to net debt and intends t… | COVERED / PARTIAL / MISSING | |
-| O-05 | EPS growth increasingly reflects capital structure as well as operating growth: revenue and operating profit each rose c… | COVERED / PARTIAL / MISSING | |
-| O-06 | AI is both a product opportunity and a distribution threat: proprietary data gives Auto Trader an advantage in AI produc… | COVERED / PARTIAL / MISSING | |
-| O-07 | Direct traffic is a major competitive advantage: over 80% of visits arrive direct via app, URL or branded search, reduci… | COVERED / PARTIAL / MISSING | |
-| O-08 | Engagement quality deserves more attention than visit growth: visits edged up to 81.7m per month but total monthly minut… | COVERED / PARTIAL / MISSING | |
-| O-09 | Employee engagement is a potentially material execution warning: employees proud to work at Auto Trader fell from 91% to… | COVERED / PARTIAL / MISSING | |
-| O-10 | The marketplace position gives optionality beyond advertising — audience, proprietary vehicle data, retailer integration… | COVERED / PARTIAL / MISSING | |
+| O-01 | ARPR growth is masking pressure in the retailer base: ARPR rose 5% to £2,995 while retailer forecourts declined, so reve… | COVERED | Strength 5 and Bear Cases 1 and 3 make the same core point that ARPR growth is offsetting weaker retailer and stock volumes. |
+| O-02 | The Deal Builder rollout exposed execution risk in digital retailing: management met retailer resistance to the speed an… | COVERED | Material Risks, Bear Case 1 and Diligence Question 1 capture Deal Builder execution problems, retailer resistance and the resulting revenue consequences. |
+| O-03 | Auto Trader is evolving from a listings marketplace into embedded infrastructure: technology and data-service calls rose… | COVERED | Value Driver 5 identifies the shift toward embedded data and technology infrastructure through APIs, proprietary data and partner integrations. |
+| O-04 | The accelerated buyback creates a more leveraged equity story: the company moved from net cash to net debt and intends t… | COVERED | Inferred Risks and Bear Case 4 capture leverage increasing to fund buybacks and the resulting reduction in balance-sheet flexibility. |
+| O-05 | EPS growth increasingly reflects capital structure as well as operating growth: revenue and operating profit each rose c… | PARTIAL | Memo includes the buyback, EPS and share-count facts, but does not explicitly contrast ~4% revenue/operating-profit growth with 8% EPS growth driven partly by share-count reduction. |
+| O-06 | AI is both a product opportunity and a distribution threat: proprietary data gives Auto Trader an advantage in AI produc… | COVERED | Strengths, Material Risks, Bull Case 4 and Diligence Question 3 capture AI as both a product opportunity and a distribution/disintermediation threat. |
+| O-07 | Direct traffic is a major competitive advantage: over 80% of visits arrive direct via app, URL or branded search, reduci… | MISSING | The 80%+ direct-traffic fact appears in the evidence register, but the analytical memo does not explain the strategic value of direct traffic, lower paid-acquisition dependence or brand-led distribution. |
+| O-08 | Engagement quality deserves more attention than visit growth: visits edged up to 81.7m per month but total monthly minut… | MISSING | The memo does not analyse monthly visits remaining broadly stable while monthly minutes decline, or whether conversion and revenue per visit compensate for weaker engagement depth. |
+| O-09 | Employee engagement is a potentially material execution warning: employees proud to work at Auto Trader fell from 91% to… | COVERED | Material Risks and Diligence Question 6 capture the employee-engagement decline and possible consequences for product quality, retailer service, innovation and execution. |
+| O-10 | The marketplace position gives optionality beyond advertising — audience, proprietary vehicle data, retailer integration… | COVERED | Value Drivers 2, 3 and 5 capture optionality across digital retailing, API integrations, data services and deeper embedding in retailer workflows. |
 
-**Part A summary:** ___ / 10 COVERED, ___ PARTIAL, ___ MISSING
+**Part A summary:** 7 / 10 COVERED, 1 PARTIAL, 2 MISSING — weighted score (PARTIAL = 0.5): 7.5/10 (75%)
 
 ### Pipeline analytical items (reference for Part A)
 
@@ -94,15 +94,15 @@ Check these items when completing the table above.
 
 | # | Pipeline question (first 130 chars) | Rating (1/2/3) | Notes |
 |---|-------------------------------------|----------------|-------|
-| 1 | What specific product and process changes has management made in response to the November 2025 Deal Builder feedback, and what lea… | | |
-| 2 | How much of the projected FY2027 leverage increase to ~1.0x net debt/EBITDA is driven by buybacks versus organic capex, and what c… | | |
-| 3 | What is management's contingency plan if agentic AI or LLM-based search materially reduces direct traffic to the platform, given l… | | |
-| 4 | What is the expected timeline and potential outcome of the CMA's investigation into online reviews involving Autotrader, and what … | | |
-| 5 | How dependent is ARPR growth on the annual pricing/packaging event structure, and is there a risk that the size of future price in… | | |
-| 6 | What specific actions are being taken to rebuild employee engagement from 72%, and is there evidence linking the engagement declin… | | |
-| 7 | What is Autorama's path to profitability and long-term strategic rationale now that it will be folded into a single reporting segm… | | |
+| 1 | What specific product and process changes has management made in response to the November 2025 Deal Builder feedback, and what lea… | 3 | Highly company-specific; focused on Deal Builder remediation and measurable leading indicators of retailer sentiment. |
+| 2 | How much of the projected FY2027 leverage increase to ~1.0x net debt/EBITDA is driven by buybacks versus organic capex, and what c… | 3 | Financially sharp; directly tests the sustainability of the leverage-funded capital-return programme and downside headroom. |
+| 3 | What is management's contingency plan if agentic AI or LLM-based search materially reduces direct traffic to the platform, given l… | 3 | Addresses a genuine structural threat from AI-led discovery and uses the current traffic mix intelligently. |
+| 4 | What is the expected timeline and potential outcome of the CMA's investigation into online reviews involving Autotrader, and what … | 3 | Specific and decision-relevant: regulatory timing, financial exposure and reputational consequences. |
+| 5 | How dependent is ARPR growth on the annual pricing/packaging event structure, and is there a risk that the size of future price in… | 3 | Directly tests the sustainability of ARPR growth, pricing power and the risk of retailer attrition. |
+| 6 | What specific actions are being taken to rebuild employee engagement from 72%, and is there evidence linking the engagement declin… | 3 | Goes beyond morale; asks whether the engagement decline is already affecting operating execution. |
+| 7 | What is Autorama's path to profitability and long-term strategic rationale now that it will be folded into a single reporting segm… | 3 | Identifies both the strategic question around Autorama and the loss of segment transparency after FY2027. |
 
-**Part B summary:** ___ questions rated 3, ___ rated 2, ___ rated 1
+**Part B summary:** 7 questions rated 3, 0 rated 2, 0 rated 1 — average 3.0/3.0 (100%)
 
 ### Gold diligence questions (benchmark)
 
@@ -134,18 +134,28 @@ present. Override automated status where it is wrong.
 
 | ID | Gold risk theme (abbreviated) | Auto score | Your verdict | Notes |
 |----|------------------------------|------------|-------------|-------|
-| R-01 | Macro risks: wars, geopolitical tensions, inflation, supply disruption and highe… | (see results.md §2) | COVERED / PARTIAL / MISSING | |
-| R-02 | Automotive economy and market environment: changes in vehicle supply/demand, hig… | (see results.md §2) | COVERED / PARTIAL / MISSING | |
-| R-03 | Legal and regulatory compliance: expansion into finance, leasing, online transac… | (see results.md §2) | COVERED / PARTIAL / MISSING | |
-| R-04 | Competition: large technology companies, social platforms and AI agents could di… | (see results.md §2) | COVERED / PARTIAL / MISSING | |
-| R-05 | IT systems and cyber security: a cyberattack, data breach or prolonged platform … | (see results.md §2) | COVERED / PARTIAL / MISSING | |
-| R-06 | Employees: the business depends on attracting, retaining and motivating people w… | (see results.md §2) | COVERED / PARTIAL / MISSING | |
-| R-07 | Brand and reputation: negative publicity, fraud, misleading advertisements or po… | (see results.md §2) | COVERED / PARTIAL / MISSING | |
-| R-08 | Failure to innovate continuously and responsibly: the company could lose relevan… | (see results.md §2) | COVERED / PARTIAL / MISSING | |
-| R-09 | Climate change: the ICE-to-EV transition, changing policy, extreme weather and e… | (see results.md §2) | COVERED / PARTIAL / MISSING | |
-| R-10 | Reliance on third parties and partners: failure by a critical cloud, technology,… | (see results.md §2) | COVERED / PARTIAL / MISSING | |
+| R-01 | Macro risks: wars, geopolitical tensions, inflation, supply disruption and highe… | (see results.md §2) | PARTIAL | Covers difficult retailer conditions and structural supply pressure, but not the wider geopolitical, inflation, financing-cost and supply-chain dimensions of macro risk. |
+| R-02 | Automotive economy and market environment: changes in vehicle supply/demand, hig… | (see results.md §2) | COVERED | Retailer weakness, declining stock and structural used-car supply constraints are directly analysed. |
+| R-03 | Legal and regulatory compliance: expansion into finance, leasing, online transac… | (see results.md §2) | PARTIAL | The CMA investigation is covered, but wider FCA, consumer-protection, finance, leasing, privacy and regulatory exposure is not. |
+| R-04 | Competition: large technology companies, social platforms and AI agents could di… | (see results.md §2) | COVERED | Amazon Autos, agentic AI and marketplace disintermediation are explicitly discussed. |
+| R-05 | IT systems and cyber security: a cyberattack, data breach or prolonged platform … | (see results.md §2) | MISSING | Cyberattack, data breach, platform outage and IT-resilience risks are not meaningfully analysed. |
+| R-06 | Employees: the business depends on attracting, retaining and motivating people w… | (see results.md §2) | COVERED | Employee engagement and its possible impact on execution, innovation and service are directly covered. |
+| R-07 | Brand and reputation: negative publicity, fraud, misleading advertisements or po… | (see results.md §2) | PARTIAL | Retailer sentiment and CMA-related reputation exposure appear, but broader fraud, advertising, customer-trust and platform reputation risks are absent. |
+| R-08 | Failure to innovate continuously and responsibly: the company could lose relevan… | (see results.md §2) | COVERED | Addresses the need to innovate through AI and digital retailing and the threat of technological disruption. |
+| R-09 | Climate change: the ICE-to-EV transition, changing policy, extreme weather and e… | (see results.md §2) | MISSING | Climate transition, EV policy, emissions, environmental commitments and related risks are not analysed. |
+| R-10 | Reliance on third parties and partners: failure by a critical cloud, technology,… | (see results.md §2) | MISSING | Third-party and partner dependence is discussed only as an opportunity, not as an operational or resilience risk. |
 
-**Part C summary:** ___ / 10 COVERED (verified), ___ PARTIAL, ___ MISSING
+**Part C summary:** 4 / 10 COVERED (verified), 3 PARTIAL, 3 MISSING — weighted score (PARTIAL = 0.5): 5.5/10 (55%). Note: overrides the automated estimate of 9/10, which had keyword-match false positives.
+
+---
+
+## Assessor summary (Zak Whatmough, 17 July 2026)
+
+**Key strengths of the memo:** strong company-specific diligence questions; good analysis of Deal Builder execution risk; strong capital-allocation analysis; strong treatment of AI as both an opportunity and a threat; clear distinction between disclosed and inferred risks; evidence references throughout; transparent limitations.
+
+**Main analytical gaps:** direct-traffic economics; engagement quality and declining monthly minutes; cyber security and platform resilience; third-party dependency risk; climate and EV-transition risk; broader legal and regulatory exposure; explicit separation of operating growth from buyback-driven EPS growth.
+
+**Status: LOCKED V1 EVALUATION RESULT.** The memo must not be altered or regenerated retroactively. Any improvement round produces separately labelled V2 outputs and V2 scores, reported alongside these.
 
 ---
 

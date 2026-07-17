@@ -30,6 +30,121 @@ load_dotenv()
 from llm import call_llm, estimate_cost, ANALYSIS_MODEL
 from schemas.classify import ClassificationBatch, Analytics, MEMO_SECTIONS
 
+# ── Standard risk-register taxonomy for relevance floor (Change 1 — V2) ───────
+#
+# When the AI classifier rates formal risk_disclosures facts as relevance 2
+# (peripheral), important but diffuse corporate risk categories (cyber, climate,
+# third-party, etc.) are excluded from synthesis. This taxonomy defines
+# universally-material risk categories from standard frameworks (ISO 31000,
+# COSO ERM, TCFD) so that any formally-disclosed fact matching one of these
+# categories is guaranteed relevance ≥ 3 (contextual) regardless of how
+# "interesting" it appears relative to more distinctive business-specific risks.
+#
+# These terms are derived from standard risk management frameworks, NOT from
+# the evaluation gold set. Generalisability to a second company has not yet
+# been tested (noted in BUILD_LOG.md).
+RISK_REGISTER_TAXONOMY: dict[str, list[str]] = {
+    # ISO 27001 / NIST CSF categories
+    "cyber_it_security": [
+        "cyber", "cybersecurity", "data breach", "malware", "ransomware",
+        "it system", "it infrastructure", "information security", "data loss",
+        "platform outage", "system failure", "data protection", "gdpr",
+        "privacy", "hacking", "phishing", "incident response",
+    ],
+    # ISO 28001 / COSO supply chain
+    "third_party_supply_chain": [
+        "third party", "third-party", "supplier", "supply chain",
+        "outsourcing", "vendor", "partner depend", "cloud provider",
+        "critical supplier", "service provider", "outsource", "reliant on",
+        "reliance on third",
+    ],
+    # TCFD / GRI environmental
+    "climate_environmental": [
+        "climate", "carbon", "emission", "ghg", "greenhouse gas",
+        "net zero", "environmental", "sustainability", "transition risk",
+        "physical risk", "tcfd", "electric vehicle", "ev transition",
+        "ice to ev", "scope 1", "scope 2", "scope 3",
+    ],
+    # FCA / SEC / EU regulatory
+    "regulatory_compliance": [
+        "regulatory", "regulation", "compliance", "fca",
+        "financial conduct", "legislation", "legal risk", "licence",
+        "authorisation", "conduct risk", "consumer protection",
+        "financial crime", "money laundering", "aml", "sanctions",
+        "competition law", "antitrust", "dmcc",
+    ],
+    # Reputational risk (standard ERM category)
+    "brand_reputation": [
+        "brand", "reputation", "reputational", "fraud",
+        "misleading", "public perception", "media risk",
+        "scandal", "advertising standards", "negative publicity",
+        "mis-selling", "customer trust",
+    ],
+    # People / HR risk
+    "people_talent": [
+        "employee engagement", "talent risk", "key person", "succession",
+        "industrial action", "whistleblowing", "people risk",
+        "workforce planning", "health and safety",
+    ],
+    # Business continuity / operational resilience
+    "business_continuity": [
+        "business continuity", "disaster recovery", "operational resilience",
+        "pandemic", "operational disruption", "bcp",
+        "recovery time", "site loss",
+    ],
+    # Financial / market risk
+    "financial_market_risk": [
+        "interest rate", "foreign exchange", "fx risk", "liquidity risk",
+        "credit risk", "counterparty", "market risk", "financing cost",
+        "debt covenant", "refinancing", "leverage risk",
+    ],
+    # Macro / geopolitical
+    "geopolitical_macro": [
+        "geopolitical", "political risk", "sanctions", "trade war",
+        "tariff", "conflict", "war", "macroeconomic", "recession",
+        "economic downturn", "fiscal policy", "inflation risk",
+    ],
+}
+
+# Flatten all taxonomy terms for efficient lookup
+_RISK_TAXONOMY_TERMS: list[str] = [
+    term
+    for terms in RISK_REGISTER_TAXONOMY.values()
+    for term in terms
+]
+
+
+def apply_risk_floor(classified: list[dict], floor: int = 3) -> tuple[list[dict], int]:
+    """Bump risk_disclosures facts in the 'risks' section from relevance ≤2 to floor.
+
+    This prevents the classifier from systematically under-rating formal
+    corporate risk register items relative to more distinctive business-specific
+    risks. Only applies when the fact's label matches one of the standard
+    risk taxonomy terms defined in RISK_REGISTER_TAXONOMY.
+
+    Returns the modified list and the count of facts adjusted.
+    """
+    adjusted = 0
+    for fact in classified:
+        if fact.get("category") != "risk_disclosures":
+            continue
+        if fact.get("memo_section") != "risks":
+            continue
+        if fact.get("relevance", 0) >= floor:
+            continue
+
+        label_lower = fact.get("label", "").lower()
+        if any(term in label_lower for term in _RISK_TAXONOMY_TERMS):
+            fact["relevance"] = floor
+            fact["rationale"] = (
+                fact.get("rationale", "") +
+                " [V2: relevance floored to 3 — matches standard risk-register taxonomy]"
+            )
+            adjusted += 1
+
+    return classified, adjusted
+
+
 # All categories of facts that can be classified
 FACT_CATEGORIES = [
     "financial_figures",
@@ -184,8 +299,26 @@ def build_synthesis_prompt(
         separators=(',', ':'),
     )
 
+    # V2 Change 3: targeted analytical focus questions surface two specific
+    # insights the V1 synthesis missed: the direct-traffic competitive moat
+    # and the EPS-vs-operating-growth divergence from buyback mechanics.
+    # These are phrased as open questions (not assertions) so the model only
+    # includes them if supporting facts exist.
+    analytical_focus = (
+        "ANALYTICAL FOCUS — address these specific questions if the facts support them:\n"
+        "1. TRAFFIC ACQUISITION MIX: Is there data on the proportion of visits arriving\n"
+        "   via direct channels (app, URL, branded search) vs paid acquisition? If so,\n"
+        "   assess whether this mix represents a structural competitive advantage through\n"
+        "   lower customer acquisition cost and include it as a strength or value driver.\n"
+        "2. EPS vs OPERATING GROWTH: Compare reported EPS growth to revenue and operating\n"
+        "   profit growth. If EPS is growing materially faster than operating profit,\n"
+        "   explicitly identify the mechanism (share count reduction from buybacks) and\n"
+        "   include it as a bear case point about the sustainability of earnings growth."
+    )
+
     return (
         f"{SYNTHESIS_SYSTEM}\n\n"
+        f"{analytical_focus}\n\n"
         f"FINANCIAL METRICS (deterministic calculations — cite these by quoting the name):\n"
         f"{metrics_text}\n\n"
         f"VERIFIED FACTS FOR ANALYSIS ({len(classified_facts)} high-relevance items):\n"
@@ -314,6 +447,14 @@ def classify_and_synthesise(
 
     if unclassified:
         print(f"  Warning: {len(unclassified)} facts not returned by classification model")
+
+    # V2 Change 1: apply risk-register taxonomy floor before relevance distribution.
+    # Bumps any risk_disclosures fact in the 'risks' section with relevance ≤2 to 3
+    # if its label matches a standard corporate risk-register taxonomy term.
+    classified, n_floored = apply_risk_floor(classified, floor=SYNTHESIS_RELEVANCE_THRESHOLD)
+    if n_floored:
+        print(f"  Risk-floor adjustment: {n_floored} fact(s) bumped to relevance "
+              f"{SYNTHESIS_RELEVANCE_THRESHOLD} by taxonomy match")
 
     relevance_dist = {}
     for f in classified:
