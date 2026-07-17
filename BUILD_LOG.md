@@ -107,6 +107,20 @@ First run of the evaluation harness against the frozen gold set. Automated score
 
 **Risk coverage caveats added:** Keyword matching uses 8-char stem prefixes (handles morphological variants like 'disintermediate' → 'disintermediation') but is vulnerable to context-blind false positives (e.g., "consumer" matches in an AI-behavior context when the gold risk is about consumer demand). The scoring sheet (eval/scoring_sheet.md Part C) asks Zak to verify each automated COVERED result.
 
+## 17 Jul 2026 — Milestone 6 (Evaluation): manual scoring complete, V1 locked
+
+**Found:** Human evaluation by Zak (17 July 2026) produced materially different risk-coverage scores from the automated keyword estimate. Automated: 9/10 (90%). Human-verified: 5.5/10 (55%). Three risks are MISSING (cyber/IT, climate/EV, third-party dependency) and three are PARTIAL (macro, legal/regulatory, brand/reputation). Observation coverage: 7.5/10 (75%). Diligence question quality: 7/7 at 3.0/3.0 (100%).
+
+**Cause (diagnosed from pipeline artifacts):** Two compounding faults:
+
+1. **Classification relevance undervaluation of standard AR risk register items (primary)**: Cyber/IT risk facts (p50, p54) are present in `validated_facts.json` but rated relevance **2** by `classify.py`, below the ≥3 threshold for synthesis. Third-party reliance facts are rated **1–2**. The classification prompt correctly asked for memo-relevance, but this caused the classifier to systematically rate distinctive, quantified risks higher and diffuse, formally-disclosed risks lower. Consistent pattern across R-05, R-10, R-01 (partial), R-03 (partial), R-07 (partial).
+
+2. **Memo generation dropped synthesis risks (secondary)**: Climate/EV risk facts (EV government messaging, GHG +55%) *did* pass through classification to synthesis (risks 8 and 9 in classified_facts.json analytics). However, `memo.py` Section 6 included only 5 of 11 synthesis risks. The two-call generation strategy with no explicit instruction to include all synthesis risk items caused the model to drop EV/climate items.
+
+**Automated risk-coverage keyword method is confirmed unreliable**: 8-char stem prefix matching on all content words ≥5 chars produces false positives from common business vocabulary ("market", "retailer", "consumer", "change"). The 9/10 automated estimate was wrong; manual verification corrected to 5.5/10. This method is retained in `eval/run_eval.py` as a directional signal only — the scoring sheet explicitly asks for manual verification of every COVERED result.
+
+**V1 result locked.** No alterations to V1 outputs. V2 will produce separately labelled outputs scored against the same frozen gold set.
+
 ## 15 Jul 2026 — Milestone 6 (Polish): Streamlit app and README
 
 No failures during this milestone. Key decisions:
