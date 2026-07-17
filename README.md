@@ -4,6 +4,12 @@ A command-line pipeline that turns a company's annual report into a structured i
 
 > **AI reads and writes prose. Code counts and checks.**
 
+![Memo & Evidence view — cited memo with inline [E-NNN] references and a source-excerpt panel](docs/screenshots/app-memo-evidence.png)
+*Memo & Evidence view — cited memo with inline [E-NNN] references alongside the source-excerpt panel.*
+
+![Facts Browser — filterable card view of all verified facts by memo section, relevance and citation status](docs/screenshots/app-facts-browser.png)
+*Facts Browser — filterable card view of all 145+ verified facts by memo section, relevance and citation status.*
+
 ---
 
 ## Problem
