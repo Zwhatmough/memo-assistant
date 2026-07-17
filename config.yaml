@@ -1,0 +1,110 @@
+# Pipeline configuration — one file per company.
+# To add a new company: copy this file, update every field, add company_id to
+# company_checks.py registry, and run the pipeline with --config pointing here.
+# No other code changes are needed.
+
+company_id: "at"
+company_name: "Auto Trader Group plc"
+ticker: "AUTO"
+fiscal_year_end: "31 March 2026"
+fiscal_year: "FY2026"
+report_year: "2026"
+currency: "GBP"
+currency_symbol: "£"
+
+documents:
+  annual_report:
+    path: "documents/at-ar-fy26.pdf"
+    doc_id: "at-ar-fy26"
+
+# ── Section taxonomy ──────────────────────────────────────────────────────────
+#
+# Used by section_filter.py to auto-detect which PDF pages are memo-relevant.
+# Each section type has a list of heading fragments (case-insensitive substring
+# match against the first ~400 characters of each PDF page).
+#
+# heading_variants: common heading text fragments in UK annual reports.
+#   The list is ordered by specificity — more specific patterns first.
+#   A page matches a section if ANY variant appears in its leading text.
+# max_pages: cap on how many consecutive pages a single heading match can span.
+#   Prevents one section consuming the whole document if detection is ambiguous.
+# fallback_pages: explicit page range used if heading detection fails for this
+#   section. Remove or leave null once heading detection is validated.
+
+section_taxonomy:
+  strategic_overview:
+    heading_variants:
+      - "Chief Executive"
+      - "Chairman's Statement"
+      - "Chairman's Review"
+      - "Business Overview"
+      - "Our Business"
+      - "Business Model"
+      - "Our Market"
+      - "CEO Review"
+      - "Group at a Glance"
+    description: "CEO/Chairman review, business overview, business model"
+    max_pages: 12
+    fallback_pages: [3, 9]
+
+  strategy:
+    heading_variants:
+      - "Our Strategy"
+      - "Strategy and"
+      - "Strategic Priorities"
+      - "Strategic Framework"
+      - "Market Position"
+    description: "Strategy and market position"
+    max_pages: 10
+    fallback_pages: [10, 15]
+
+  kpis:
+    heading_variants:
+      - "Key Performance Indicators"
+      - "Key Performance"
+      - "Financial Highlights"
+      - "Performance Indicators"
+      - "Financial Summary"
+      - "KPIs"
+    description: "Key performance indicators and financial highlights"
+    max_pages: 5
+    fallback_pages: [19, 21]
+
+  financial_review:
+    heading_variants:
+      - "Financial Review"
+      - "Finance Review"
+      - "Chief Financial Officer"
+      - "CFO Review"
+      - "CFO's Review"
+      - "Financial Performance"
+      - "Operating and Financial Review"
+    description: "Financial review section"
+    max_pages: 10
+    fallback_pages: [23, 25]
+
+  principal_risks:
+    heading_variants:
+      - "Principal Risks"
+      - "Risk Management"
+      - "Risks and Uncertainties"
+      - "Risk Report"
+      - "Principal Uncertainties"
+      - "Key Risks"
+    description: "Principal risks and uncertainties"
+    max_pages: 15
+    fallback_pages: [48, 54]
+
+  financial_statements:
+    heading_variants:
+      - "Consolidated Statement of Comprehensive Income"
+      - "Consolidated Income Statement"
+      - "Statement of Comprehensive Income"
+      - "Statement of Financial Position"
+      - "Balance Sheet"
+      - "Consolidated Cash Flow Statement"
+      - "Statement of Cash Flows"
+      - "Consolidated Statement of Changes in Equity"
+    description: "Primary financial statements"
+    max_pages: 12
+    fallback_pages: [103, 107]

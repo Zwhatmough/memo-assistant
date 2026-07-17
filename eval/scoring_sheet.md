@@ -1,5 +1,5 @@
 # Evaluation Scoring Sheet — Manual Metrics
-**To be completed by:** Zak Whatmough  **Date generated:** 15 July 2026
+**To be completed by:** Zak Whatmough  **Date generated:** 17 July 2026
 
 This file covers two metrics that require human judgement.
 **Do not ask the model to fill this in** — the model must not grade its own analytical quality.
@@ -27,64 +27,66 @@ Rate each of the pipeline's diligence questions on a 1–3 scale:
 
 | ID | Gold observation (first 120 chars) | Your rating | Notes |
 |----|-----------------------------------|-------------|-------|
-| O-01 | ARPR growth is masking pressure in the retailer base: ARPR rose 5% to £2,995 while retailer forecourts declined, so reve… | COVERED | Strength 5 and Bear Cases 1 and 3 make the same core point that ARPR growth is offsetting weaker retailer and stock volumes. |
-| O-02 | The Deal Builder rollout exposed execution risk in digital retailing: management met retailer resistance to the speed an… | COVERED | Material Risks, Bear Case 1 and Diligence Question 1 capture Deal Builder execution problems, retailer resistance and the resulting revenue consequences. |
-| O-03 | Auto Trader is evolving from a listings marketplace into embedded infrastructure: technology and data-service calls rose… | COVERED | Value Driver 5 identifies the shift toward embedded data and technology infrastructure through APIs, proprietary data and partner integrations. |
-| O-04 | The accelerated buyback creates a more leveraged equity story: the company moved from net cash to net debt and intends t… | COVERED | Inferred Risks and Bear Case 4 capture leverage increasing to fund buybacks and the resulting reduction in balance-sheet flexibility. |
-| O-05 | EPS growth increasingly reflects capital structure as well as operating growth: revenue and operating profit each rose c… | PARTIAL | Memo includes the buyback, EPS and share-count facts, but does not explicitly contrast ~4% revenue/operating-profit growth with 8% EPS growth driven partly by share-count reduction. |
-| O-06 | AI is both a product opportunity and a distribution threat: proprietary data gives Auto Trader an advantage in AI produc… | COVERED | Strengths, Material Risks, Bull Case 4 and Diligence Question 3 capture AI as both a product opportunity and a distribution/disintermediation threat. |
-| O-07 | Direct traffic is a major competitive advantage: over 80% of visits arrive direct via app, URL or branded search, reduci… | MISSING | The 80%+ direct-traffic fact appears in the evidence register, but the analytical memo does not explain the strategic value of direct traffic, lower paid-acquisition dependence or brand-led distribution. |
-| O-08 | Engagement quality deserves more attention than visit growth: visits edged up to 81.7m per month but total monthly minut… | MISSING | The memo does not analyse monthly visits remaining broadly stable while monthly minutes decline, or whether conversion and revenue per visit compensate for weaker engagement depth. |
-| O-09 | Employee engagement is a potentially material execution warning: employees proud to work at Auto Trader fell from 91% to… | COVERED | Material Risks and Diligence Question 6 capture the employee-engagement decline and possible consequences for product quality, retailer service, innovation and execution. |
-| O-10 | The marketplace position gives optionality beyond advertising — audience, proprietary vehicle data, retailer integration… | COVERED | Value Drivers 2, 3 and 5 capture optionality across digital retailing, API integrations, data services and deeper embedding in retailer workflows. |
+| O-01 | ARPR growth is masking pressure in the retailer base: ARPR rose 5% to £2,995 while retailer forecourts declined, so reve… | COVERED / PARTIAL / MISSING | |
+| O-02 | The Deal Builder rollout exposed execution risk in digital retailing: management met retailer resistance to the speed an… | COVERED / PARTIAL / MISSING | |
+| O-03 | Auto Trader is evolving from a listings marketplace into embedded infrastructure: technology and data-service calls rose… | COVERED / PARTIAL / MISSING | |
+| O-04 | The accelerated buyback creates a more leveraged equity story: the company moved from net cash to net debt and intends t… | COVERED / PARTIAL / MISSING | |
+| O-05 | EPS growth increasingly reflects capital structure as well as operating growth: revenue and operating profit each rose c… | COVERED / PARTIAL / MISSING | |
+| O-06 | AI is both a product opportunity and a distribution threat: proprietary data gives Auto Trader an advantage in AI produc… | COVERED / PARTIAL / MISSING | |
+| O-07 | Direct traffic is a major competitive advantage: over 80% of visits arrive direct via app, URL or branded search, reduci… | COVERED / PARTIAL / MISSING | |
+| O-08 | Engagement quality deserves more attention than visit growth: visits edged up to 81.7m per month but total monthly minut… | COVERED / PARTIAL / MISSING | |
+| O-09 | Employee engagement is a potentially material execution warning: employees proud to work at Auto Trader fell from 91% to… | COVERED / PARTIAL / MISSING | |
+| O-10 | The marketplace position gives optionality beyond advertising — audience, proprietary vehicle data, retailer integration… | COVERED / PARTIAL / MISSING | |
 
-**Part A summary:** 7 / 10 COVERED, 1 PARTIAL, 2 MISSING — weighted score (PARTIAL = 0.5): 7.5/10 (75%)
+**Part A summary:** ___ / 10 COVERED, ___ PARTIAL, ___ MISSING
 
 ### Pipeline analytical items (reference for Part A)
 
 Check these items when completing the table above.
 
 **Strengths**
-1. Autotrader holds a dominant, defensible market position, accounting for over 75% of all minutes spent on automotive classified sites and being 11x larger than its nearest competitor by time on site, with 67% of its audience unique to the platform.
-2. The core Autotrader marketplace generates a very high operating margin of 70.0%, reflecting the asset-light, network-effect-driven nature of the digital marketplace business model.
-3. Cash generation is exceptionally strong, with cash conversion of 106.4% of operating profit, and cash from operations grew 4.6% year-on-year to £418.0m, supporting the group's stated long track record of strong cash generation.
-4. The balance sheet is conservatively levered at 0.3x net debt/EBITDA with a £300m committed RCF until February 2030, providing significant financial flexibility.
-5. Autotrader is investing meaningfully in AI-driven product innovation (Co-Driver, Buying Signals, Deal Builder) which is driving measurable engagement and efficiency gains, such as reducing average vehicle listing time from 28 minutes to 5 minutes and generating high-intent leads converting at twice the average rate.
-6. ARPR growth of 4.9% (£141 increase to £2,995) demonstrates continued pricing power even as forecourt numbers softened, indicating resilient monetisation of the existing retailer base.
+1. Autotrader is the dominant UK automotive marketplace, with 81.7m average monthly visits, accounting for over 75% of all minutes spent on automotive classified sites, and is 11x larger than its nearest competitor in time on site.
+2. Over 80% of Autotrader visits are direct (app, URL, brand search) with only 4% from paid web traffic, indicating a highly efficient, low-cost traffic acquisition model driven by brand strength rather than paid marketing spend.
+3. This direct-traffic-heavy acquisition mix likely represents a structural competitive advantage: low reliance on paid channels suggests lower customer acquisition costs than competitors dependent on SEM/paid search, supporting durably high margins. *(inference)*
+4. Core Autotrader segment operating margin stood at 70.0% in FY2026, reflecting a highly asset-light, scalable digital marketplace model.
+5. Cash conversion is very strong, quoting the 'Cash Conversion Rate' metric of 106.4%, above 100% as typically expected for asset-light digital platforms, indicating high-quality earnings translating efficiently into cash.
+6. The balance sheet is conservatively levered at 0.3x Net Debt/EBITDA with access to a £300m Syndicated RCF committed until February 2030, providing significant financial flexibility.
+7. AI-powered product suite (Co-Driver, Buying Signals, Deal Builder) is seeing meaningful adoption, with 86% of retailers having used Co-Driver tools and Buying Signals already featured on over 800k enquiries, potentially deepening retailer stickiness and product differentiation.
 
 **Value Drivers**
-1. ARPR growth (4.9% YoY, +£141) driven primarily by pricing and product levers (price contributed £117) is the single largest driver of core revenue growth, more than offsetting a negative contribution from declining retailer stock.
-2. Expansion of Deal Builder (scaled from 2.0k to 6.7k retailers, deals with full reservation growing from 49k to 137k) represents a key monetisable digital retailing product that could support future ARPR and engagement growth despite near-term adoption friction.
-3. AI-enabled products (Co-Driver, Buying Signals) are driving productivity and engagement metrics that could underpin future retailer willingness to pay and reduce churn, given 86% of retailers have used Co-Driver tools and Buying Signals convert leads at twice the average rate.
-4. Autorama's transition to a single reporting segment from FY2027, alongside expected margin improvement (moving to a small profit) and 8-12% growth in Commission & Ancillary revenue, could reduce the current margin drag on the group (currently ~0.32pp).
-5. Expansion of data/technology services to finance, insurance and manufacturer partners via APIs represents an underdeveloped monetisation avenue leveraging Autotrader's proprietary dataset and 220+ technology partner integrations.
-6. Continued resilience of the underlying UK car market—approaching 10 million total transactions and returning to pre-pandemic scale—provides a supportive macro backdrop for volume-linked revenue drivers.
+1. ARPR (average revenue per retailer) grew year-on-year to £2,995/month, citing the 'ARPR Growth (YoY)' metric of 4.9% and the 'ARPR Absolute Increase' of £141/month, driven primarily by pricing and product levers, representing the core monetisation engine for the core marketplace.
+2. Price contributed £117 of the ARPR increase, driven by the 1 April 2025 pricing and product event combining a like-for-like price increase with additional products, showing continued pricing power despite retailer base softness.
+3. Deal Builder has scaled rapidly to 6.7k retailers (from 2.0k a year earlier) and 175k live vehicles, generating 137k deals with full reservation (up from 49k), positioning digital retailing as a growing incremental revenue and engagement driver despite rollout friction.
+4. The highly direct, low-cost traffic acquisition mix (>80% direct, only 4% paid) is a durable structural value driver, underpinning high margins by minimizing customer acquisition cost relative to competitors reliant on paid search. *(inference)*
+5. Autorama, while currently dilutive to group margin (citing 'Autorama Margin Drag on Group (pp)' of 0.32pp) and only about 6% of group revenue (citing 'Autorama Revenue Contribution to Group'), is growing revenue year-on-year (citing 'Autorama Revenue Growth (YoY)' of 7.4%) and is expected to turn to a small profit in FY2027, representing an emerging (if currently minor) growth and diversification driver.
+6. Expansion of technology and data services to finance, insurance, and manufacturer partners via APIs represents a potential new monetisation avenue leveraging Autotrader's proprietary dataset and 220+ technology partner integrations. *(inference)*
 
 **Bull Case**
-1. Autotrader's scale advantage (11x larger than nearest competitor, 75%+ of category time-on-site) and network effects create a durable moat that is difficult for new entrants, including Amazon Autos, to replicate in the near term. *(inference)*
-2. Management's own view that the share price does not reflect underlying fundamentals, combined with an accelerated buyback (£1bn+ planned over FY26-FY27) and high single-digit EPS growth guidance, suggests potential value realization for shareholders even amid near-term growth deceleration.
-3. High cash conversion (106.4%) and low leverage (0.3x net debt/EBITDA) give Autotrader substantial flexibility to continue funding growth investment, buybacks, and dividends simultaneously without balance sheet strain.
-4. Early traction in AI-driven products (Co-Driver, Buying Signals, Deal Builder) positions the company to defend against AI disintermediation risk by embedding itself deeper into the retailer workflow rather than solely as a search destination.
+1. Auto Trader holds an entrenched, difficult-to-replicate market leadership position (11x larger than nearest competitor on time-on-site, 75%+ of automotive classified minutes), supported by a low-cost, direct-traffic-driven acquisition model that sustains best-in-class 70% core segment margins.
+2. Continued ARPR growth driven by pricing/product levers (citing 'ARPR Growth (YoY)' of 4.9%), alongside early-stage monetisation of AI-enabled products (Co-Driver, Buying Signals, Deal Builder), shows the company can extract more value per retailer even as forecourt count is flat-to-declining.
+3. Exceptional cash generation (citing 'Cash Conversion Rate' of 106.4%) and a very low leverage profile (0.3x net debt/EBITDA) provide substantial capacity to fund continued large-scale shareholder returns (£989.2m returned over three years) without balance sheet strain.
+4. Management explicitly believes the current share price undervalues the company's underlying fundamentals and long-term prospects, and is using buybacks as a capital allocation tool to close this perceived value gap.
+5. Structural car market recovery towards pre-pandemic transaction volumes (approaching 10 million total transactions) with a growing population and expanding vehicle parc provides a supportive long-term volume backdrop for Autotrader's marketplace.
 
 **Bear Case**
-1. Retailer forecourt numbers have declined for a second consecutive period, and management commentary directly links this to retailer pushback on Deal Builder execution and difficult trading conditions — a controllable execution risk that has real revenue consequences (negative stock contribution to ARPR growth).
-2. Structural headwinds in used car supply (17% forecast drop in 5-7-year-old vehicle availability) could constrain retailer inventory and, by extension, Autotrader's addressable stock base and ARPR growth potential over the medium term.
-3. Revenue growth is increasingly dependent on price/product levers rather than volume (stock/retailer count), which may face diminishing returns or retailer resistance if pushed too aggressively, as evidenced by the November 2025 feedback backlash. *(inference)*
-4. Aggressive capital return plans (increasing leverage to ~1.0x in FY27 to fund ~£600m of buybacks and dividends) reduce financial headroom at a time when the business faces multiple emerging competitive and technological disruption risks (Amazon Autos, agentic AI).
-5. Sharp decline in employee engagement (91% to 72%) alongside restructuring and share price weakness could signal organizational strain that risks execution quality on strategic initiatives like Deal Builder and AI roll-out.
+1. Basic EPS growth is guided at 'at least high single digit' for FY2027, materially outpacing low-to-mid single digit operating profit and revenue growth (citing 'Group Operating Profit Growth (YoY)' of 4.2% and 'Group Revenue Growth (YoY)' of 3.9%), a divergence explained primarily by an accelerated buyback programme shrinking the share count (58.5m shares/6.6% of issued capital repurchased in FY2026) rather than underlying business acceleration.
+2. This buyback-driven EPS growth mechanism raises sustainability concerns: continued reliance on share count reduction to hit high-single-digit EPS targets is finite (constrained by cash generation and rising leverage, expected to reach c.1.0x in FY2027) and cannot indefinitely substitute for organic operating profit growth. *(inference)*
+3. Retailer forecourt numbers declined slightly (down 0.5% to 13,942), and retailer sentiment softened due to cost pressures and dissatisfaction with the Deal Builder roll-out, suggesting the core customer base is showing early signs of strain even as ARPR pricing gains offset volume softness.
+4. Employee engagement collapse (91% to 72%) alongside repeated retailer pushback on flagship digital retailing products (Deal Builder) may indicate underlying execution and morale issues that could impair future product roll-out quality and innovation velocity. *(inference)*
+5. Emerging AI-driven disintermediation risk (agentic AI, LLM chat interfaces, Amazon Autos entry) could over time erode Autotrader's toll-gate position between buyers and retailers, even though management asserts current technology investment is sufficient.
 
 **Risks**
 1. Retailer sentiment softened during the year due to difficult cost-related trading conditions and concerns with the speed and nature of the Deal Builder product roll-out, contributing to a slight decrease in retailer numbers.
-2. Employee engagement has fallen significantly from 91% to 72%, driven by restructures, a tighter office-working approach, and negative sentiment tied to Deal Builder scaling and the recent share price decline.
-3. Consumer behaviour is shifting toward conversational AI/LLM interfaces, which could reduce reliance on traditional search and marketplace functionality over time.
-4. Emergence of agentic AI presents disintermediation risk, where AI could direct consumers directly to listings/adverts, negating the need for retailers to purchase prominence on the marketplace.
-5. Amazon is expected to launch Amazon Autos in the UK, introducing a well-capitalised big-tech competitor into the automotive marketplace space.
-6. The CMA announced an investigation in March 2026 into online reviews across multiple companies including Autotrader, an early-stage regulatory risk under the Digital Markets, Competition and Consumers Act.
-7. Structural supply headwinds exist as 2.5 million 'lost' pandemic-era registrations age through the vehicle parc, forecasting a 17% drop in availability of 5-7-year-old vehicles over the next two years, which could constrain used car stock and retailer activity.
-8. Mixed government messaging on EVs, including a newly proposed pay-per-mile EV tax, risks eroding consumer interest in EV adoption, a category increasingly important to the new car market.
-9. GHG emissions increased 55% to 144.1k tonnes CO2, driven by one-off capex on a new office and increased vehicles held on balance sheet by Autorama, raising ESG cost and disclosure scrutiny.
-10. Increased competition risk includes potential takeover of a competitor by a well-capitalised third party, or a new entrant with superior AI-driven consumer/retailer tools that could disintermediate the marketplace.
-11. Autotrader's rapid share buyback pace (58.5m shares, 6.6% of issued capital in FY26, with plans to increase leverage to ~1.0x in FY27) concentrates capital return in equity repurchases, increasing financial leverage and reducing balance sheet flexibility relative to the current near-zero net debt position. *(inference)*
+2. Employee engagement fell significantly from 91% to 72%, driven by restructures, a tighter office-working approach, and negative sentiment linked to Deal Builder scaling and share price decline.
+3. Consumer behaviour is shifting towards conversational LLM-based chat interfaces, which could reduce reliance on traditional search and marketplace functionality, and emergence of agentic AI could disintermediate the marketplace or negate the need for retailers to purchase prominence.
+4. Amazon is expected to launch Amazon Autos in the UK, representing a new, well-capitalised competitive threat.
+5. In March 2026 the CMA announced an investigation into online reviews across multiple companies including Autotrader, still in early stages, alongside new consumer protection obligations under the Digital Markets, Competition and Consumers Act.
+6. Structural supply headwinds exist as 2.5 million 'lost' pandemic registrations age through the vehicle parc, with a forecast 17% drop in availability of 5-7-year-old vehicles over the next two years, which could constrain used car stock and retailer advertising demand.
+7. Higher operating costs and interest rates affecting retailer profitability could reduce retailer advertising spend with Autotrader, and adverse new/used car supply-demand shifts could further affect retailer economics.
+8. GHG emissions increased 55% year-on-year to 144.1k tonnes CO2, driven by new office capex and increased vehicle volumes on Autorama's balance sheet, indicating rising ESG-related cost/reputational exposure as Autorama scales.
+9. EV policy uncertainty, including a proposed pay-per-mile EV tax, risks eroding EV cost advantages and could dampen a growing new car sub-segment relevant to Autotrader's platform.
+10. Aggressive share buybacks (£500m planned in FY2027, increasing leverage to c.1.0x) are being used to support 'at least high single digit' Basic EPS growth guidance even as underlying operating profit growth is guided more modestly, suggesting EPS growth is increasingly a function of financial engineering rather than core business acceleration. *(inference)*
+11. The repeated retailer pushback on Deal Builder (raised in prior periods and again in November 2025) suggests a pattern of execution risk in the company's core digital retailing strategic pillar, not just a one-off event. *(inference)*
 
 ---
 
@@ -94,15 +96,15 @@ Check these items when completing the table above.
 
 | # | Pipeline question (first 130 chars) | Rating (1/2/3) | Notes |
 |---|-------------------------------------|----------------|-------|
-| 1 | What specific product and process changes has management made in response to the November 2025 Deal Builder feedback, and what lea… | 3 | Highly company-specific; focused on Deal Builder remediation and measurable leading indicators of retailer sentiment. |
-| 2 | How much of the projected FY2027 leverage increase to ~1.0x net debt/EBITDA is driven by buybacks versus organic capex, and what c… | 3 | Financially sharp; directly tests the sustainability of the leverage-funded capital-return programme and downside headroom. |
-| 3 | What is management's contingency plan if agentic AI or LLM-based search materially reduces direct traffic to the platform, given l… | 3 | Addresses a genuine structural threat from AI-led discovery and uses the current traffic mix intelligently. |
-| 4 | What is the expected timeline and potential outcome of the CMA's investigation into online reviews involving Autotrader, and what … | 3 | Specific and decision-relevant: regulatory timing, financial exposure and reputational consequences. |
-| 5 | How dependent is ARPR growth on the annual pricing/packaging event structure, and is there a risk that the size of future price in… | 3 | Directly tests the sustainability of ARPR growth, pricing power and the risk of retailer attrition. |
-| 6 | What specific actions are being taken to rebuild employee engagement from 72%, and is there evidence linking the engagement declin… | 3 | Goes beyond morale; asks whether the engagement decline is already affecting operating execution. |
-| 7 | What is Autorama's path to profitability and long-term strategic rationale now that it will be folded into a single reporting segm… | 3 | Identifies both the strategic question around Autorama and the loss of segment transparency after FY2027. |
+| 1 | What is the retailer churn rate and reactivation rate specifically attributable to Deal Builder dissatisfaction, and how does mana… | | |
+| 2 | What proportion of FY2027's guided high-single-digit EPS growth is attributable to the buyback-driven share count reduction versus… | | |
+| 3 | How sustainable is the low-cost, direct-traffic acquisition advantage if generative AI chat assistants and agentic AI increasingly… | | |
+| 4 | What are the terms and expected competitive impact of Amazon Autos' anticipated UK launch, and does Autotrader have any specific m… | | |
+| 5 | What is the expected trajectory and cost impact of the CMA's investigation into online reviews involving Autotrader, and could reg… | | |
+| 6 | Given rising leverage toward c.1.0x net debt/EBITDA to fund FY2027 buybacks, what is management's ceiling for leverage before capi… | | |
+| 7 | What specific actions are being taken to reverse the employee engagement decline from 91% to 72%, and is there evidence this is af… | | |
 
-**Part B summary:** 7 questions rated 3, 0 rated 2, 0 rated 1 — average 3.0/3.0 (100%)
+**Part B summary:** ___ questions rated 3, ___ rated 2, ___ rated 1
 
 ### Gold diligence questions (benchmark)
 
@@ -134,28 +136,18 @@ present. Override automated status where it is wrong.
 
 | ID | Gold risk theme (abbreviated) | Auto score | Your verdict | Notes |
 |----|------------------------------|------------|-------------|-------|
-| R-01 | Macro risks: wars, geopolitical tensions, inflation, supply disruption and highe… | (see results.md §2) | PARTIAL | Covers difficult retailer conditions and structural supply pressure, but not the wider geopolitical, inflation, financing-cost and supply-chain dimensions of macro risk. |
-| R-02 | Automotive economy and market environment: changes in vehicle supply/demand, hig… | (see results.md §2) | COVERED | Retailer weakness, declining stock and structural used-car supply constraints are directly analysed. |
-| R-03 | Legal and regulatory compliance: expansion into finance, leasing, online transac… | (see results.md §2) | PARTIAL | The CMA investigation is covered, but wider FCA, consumer-protection, finance, leasing, privacy and regulatory exposure is not. |
-| R-04 | Competition: large technology companies, social platforms and AI agents could di… | (see results.md §2) | COVERED | Amazon Autos, agentic AI and marketplace disintermediation are explicitly discussed. |
-| R-05 | IT systems and cyber security: a cyberattack, data breach or prolonged platform … | (see results.md §2) | MISSING | Cyberattack, data breach, platform outage and IT-resilience risks are not meaningfully analysed. |
-| R-06 | Employees: the business depends on attracting, retaining and motivating people w… | (see results.md §2) | COVERED | Employee engagement and its possible impact on execution, innovation and service are directly covered. |
-| R-07 | Brand and reputation: negative publicity, fraud, misleading advertisements or po… | (see results.md §2) | PARTIAL | Retailer sentiment and CMA-related reputation exposure appear, but broader fraud, advertising, customer-trust and platform reputation risks are absent. |
-| R-08 | Failure to innovate continuously and responsibly: the company could lose relevan… | (see results.md §2) | COVERED | Addresses the need to innovate through AI and digital retailing and the threat of technological disruption. |
-| R-09 | Climate change: the ICE-to-EV transition, changing policy, extreme weather and e… | (see results.md §2) | MISSING | Climate transition, EV policy, emissions, environmental commitments and related risks are not analysed. |
-| R-10 | Reliance on third parties and partners: failure by a critical cloud, technology,… | (see results.md §2) | MISSING | Third-party and partner dependence is discussed only as an opportunity, not as an operational or resilience risk. |
+| R-01 | Macro risks: wars, geopolitical tensions, inflation, supply disruption and highe… | (see results.md §2) | COVERED / PARTIAL / MISSING | |
+| R-02 | Automotive economy and market environment: changes in vehicle supply/demand, hig… | (see results.md §2) | COVERED / PARTIAL / MISSING | |
+| R-03 | Legal and regulatory compliance: expansion into finance, leasing, online transac… | (see results.md §2) | COVERED / PARTIAL / MISSING | |
+| R-04 | Competition: large technology companies, social platforms and AI agents could di… | (see results.md §2) | COVERED / PARTIAL / MISSING | |
+| R-05 | IT systems and cyber security: a cyberattack, data breach or prolonged platform … | (see results.md §2) | COVERED / PARTIAL / MISSING | |
+| R-06 | Employees: the business depends on attracting, retaining and motivating people w… | (see results.md §2) | COVERED / PARTIAL / MISSING | |
+| R-07 | Brand and reputation: negative publicity, fraud, misleading advertisements or po… | (see results.md §2) | COVERED / PARTIAL / MISSING | |
+| R-08 | Failure to innovate continuously and responsibly: the company could lose relevan… | (see results.md §2) | COVERED / PARTIAL / MISSING | |
+| R-09 | Climate change: the ICE-to-EV transition, changing policy, extreme weather and e… | (see results.md §2) | COVERED / PARTIAL / MISSING | |
+| R-10 | Reliance on third parties and partners: failure by a critical cloud, technology,… | (see results.md §2) | COVERED / PARTIAL / MISSING | |
 
-**Part C summary:** 4 / 10 COVERED (verified), 3 PARTIAL, 3 MISSING — weighted score (PARTIAL = 0.5): 5.5/10 (55%). Note: overrides the automated estimate of 9/10, which had keyword-match false positives.
-
----
-
-## Assessor summary (Zak Whatmough, 17 July 2026)
-
-**Key strengths of the memo:** strong company-specific diligence questions; good analysis of Deal Builder execution risk; strong capital-allocation analysis; strong treatment of AI as both an opportunity and a threat; clear distinction between disclosed and inferred risks; evidence references throughout; transparent limitations.
-
-**Main analytical gaps:** direct-traffic economics; engagement quality and declining monthly minutes; cyber security and platform resilience; third-party dependency risk; climate and EV-transition risk; broader legal and regulatory exposure; explicit separation of operating growth from buyback-driven EPS growth.
-
-**Status: LOCKED V1 EVALUATION RESULT.** The memo must not be altered or regenerated retroactively. Any improvement round produces separately labelled V2 outputs and V2 scores, reported alongside these.
+**Part C summary:** ___ / 10 COVERED (verified), ___ PARTIAL, ___ MISSING
 
 ---
 

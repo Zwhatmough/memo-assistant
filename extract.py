@@ -25,12 +25,14 @@ load_dotenv()
 from chunk import chunk_pdf
 from llm import call_llm, estimate_cost, EXTRACTION_MODEL
 from schemas.facts import ExtractedFacts
+from section_filter import build_memo_sections
 
 
-# Sections of the annual report relevant to an investment memo.
-# Everything else (governance boilerplate, remuneration, audit opinion,
-# notes to accounts) is excluded to cut cost and noise.
-MEMO_SECTIONS = [
+# Hard-coded fallback sections used when config.yaml is absent or when
+# section_filter.py heading detection fails for every section.
+# These are Auto Trader FY2026 page ranges — for a new company, supply a
+# config.yaml with section_taxonomy and fallback_pages instead of editing here.
+_AT_MEMO_SECTIONS_FALLBACK = [
     (3, 9, "CEO/Chairman review, business overview"),
     (10, 15, "Strategy and market position"),
     (19, 21, "Key performance indicators"),
@@ -129,12 +131,34 @@ def _load_existing_facts(path: str) -> tuple[list[dict], set[int]]:
     return facts, done_pages
 
 
-def _pages_in_memo_sections() -> list[int]:
-    """Return sorted list of all page numbers in MEMO_SECTIONS."""
+def _pages_in_memo_sections(memo_sections: list[tuple[int, int, str]]) -> list[int]:
+    """Return sorted list of all page numbers covered by memo_sections."""
     pages = []
-    for start, end, _ in MEMO_SECTIONS:
+    for start, end, _ in memo_sections:
         pages.extend(range(start, end + 1))
     return sorted(set(pages))
+
+
+def _resolve_memo_sections(pdf_path: str, config_path: str = "config.yaml") -> list[tuple[int, int, str]]:
+    """Return section page ranges, auto-detected from PDF headings where possible.
+
+    Tries config.yaml + section_filter.py first. Falls back to the hardcoded
+    Auto Trader ranges if config.yaml is absent or returns no sections.
+    """
+    import os
+    if os.path.exists(config_path):
+        try:
+            sections, _ = build_memo_sections(pdf_path, config_path, detect_offset=True)
+            if sections:
+                return sections
+            print("  [section_filter] Auto-detection returned no sections — "
+                  "using hardcoded fallback")
+        except Exception as e:
+            print(f"  [section_filter] Error during auto-detection ({e}) — "
+                  f"using hardcoded fallback")
+    else:
+        print(f"  [section_filter] {config_path} not found — using hardcoded fallback")
+    return _AT_MEMO_SECTIONS_FALLBACK
 
 
 def _make_batches(chunks: list, batch_size: int) -> list[list]:
@@ -183,11 +207,12 @@ def run_extraction(pdf_path: str, doc_id: str) -> None:
     doc = chunk_pdf(pdf_path, doc_id)
     print(f"  {len(doc.chunks)} non-empty pages from {doc.total_pages} total")
 
-    # 3. Filter to memo-relevant sections
-    target_pages = _pages_in_memo_sections()
+    # 3. Filter to memo-relevant sections (auto-detected from headings or fallback)
+    memo_sections = _resolve_memo_sections(pdf_path)
+    target_pages = _pages_in_memo_sections(memo_sections)
     chunks = [c for c in doc.chunks if c.page in target_pages]
     print(f"  Filtered to memo sections: {len(chunks)} pages")
-    for start, end, label in MEMO_SECTIONS:
+    for start, end, label in memo_sections:
         print(f"    p{start}-{end}: {label}")
 
     # 4. Skip already-extracted pages

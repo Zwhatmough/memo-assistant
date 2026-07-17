@@ -675,29 +675,56 @@ def identify_missing_data(prior_facts: list[dict]) -> list[MissingData]:
 
 
 # ── Orchestration ──────────────────────────────────────────────────────────────
+#
+# Cross-checks are split into two groups:
+#
+#   UNIVERSAL_CROSS_CHECKS — run for any company. These check the structural
+#     integrity of the P&L walk, EPS, cash conversion, leverage, and returns.
+#     Their formulas hold for any public company reporting under UK GAAP / IFRS.
+#     Fact labels are generic (e.g. "group operating profit", "profit before tax").
+#
+#   COMPANY_CROSS_CHECKS  — keyed by company_id. These check structures that
+#     are specific to one company's reporting: segment revenue splits, entity
+#     bridges, proprietary KPI reconciliations. A new company gets a new key.
+#     No changes to the universal checks or orchestration are needed.
+#
+# COMPANY_DERIVED_METRICS follows the same pattern.
 
-CROSS_CHECK_FUNCTIONS = [
-    check_revenue_entity_split,
-    check_autotrader_revenue_by_channel,
-    check_consumer_services_split,
-    check_operating_profit_bridge,
-    check_pbt_bridge,
-    check_profit_after_tax,
-    check_effective_tax_rate,
-    check_basic_eps,
-    check_group_op_margin,
-    check_at_op_margin,
-    check_net_bank_debt,
-    check_shareholder_returns,
+UNIVERSAL_CROSS_CHECKS = [
+    check_pbt_bridge,               # OP − Net Finance Costs = PBT
+    check_profit_after_tax,         # PBT − Tax = PAT
+    check_effective_tax_rate,       # Tax / PBT × 100
+    check_basic_eps,                # PAT / Weighted Avg Shares × 100
+    check_group_op_margin,          # OP / Revenue × 100
+    check_net_bank_debt,            # Drawn RCF − Cash = Net Bank Debt
+    check_shareholder_returns,      # Dividends + Buyback = Total Returned
 ]
 
-DERIVED_METRIC_FUNCTIONS = [
-    calc_cash_conversion,
-    calc_free_cash_flow,
-    calc_autorama_revenue_contribution,
-    calc_autorama_margin_drag,
-    calc_arpr_implied_retailer_revenue,
+# Company-specific cross-checks: entity splits, segment bridges, KPI reconciliations.
+# Key = company_id from config.yaml. Add a new key to support a new company.
+COMPANY_CROSS_CHECKS: dict[str, list] = {
+    "at": [
+        check_revenue_entity_split,             # Core AT + Autorama = Group
+        check_autotrader_revenue_by_channel,    # Trade + Consumer Services ≈ AT Revenue
+        check_consumer_services_split,          # Private + Motoring Services = Consumer Services
+        check_operating_profit_bridge,          # AT OP − Central Costs + Autorama = Group OP
+        check_at_op_margin,                     # AT OP / AT Revenue × 100
+    ],
+}
+
+UNIVERSAL_DERIVED_METRICS = [
+    calc_cash_conversion,   # Cash from Ops / OP × 100
+    calc_free_cash_flow,    # Net Cash from Ops + PPE purchases
 ]
+
+# Company-specific derived metrics.
+COMPANY_DERIVED_METRICS: dict[str, list] = {
+    "at": [
+        calc_autorama_revenue_contribution,     # Autorama / Group Revenue %
+        calc_autorama_margin_drag,              # How much Autorama loss suppresses group margin
+        calc_arpr_implied_retailer_revenue,     # ARPR × Forecourts × 12 / 1M
+    ],
+}
 
 # Growth metrics computed using prior-year facts from prior_year.py.
 # Each tuple: (display_name, label_fragment, unit, explanatory_note)
@@ -719,18 +746,28 @@ GROWTH_METRIC_SPECS = [
 ]
 
 
-def run_all(facts: list[dict], validated_chunks: list[dict]) -> dict:
+def run_all(facts: list[dict], validated_chunks: list[dict], company_id: str = "at") -> dict:
     """Run all cross-checks, derived metrics, and growth rates.
 
     Args:
         facts: flattened list of verified financial_figure dicts
         validated_chunks: raw chunks from validated_facts.json
                           (needed to extract prior-year facts)
+        company_id: key into COMPANY_CROSS_CHECKS / COMPANY_DERIVED_METRICS.
+                    Defaults to "at" (Auto Trader). Add a new key to support
+                    a new company without changing any universal logic.
     """
     prior_facts = extract_prior_year_facts(validated_chunks)
 
-    checks = [fn(facts) for fn in CROSS_CHECK_FUNCTIONS]
-    metrics = [fn(facts) for fn in DERIVED_METRIC_FUNCTIONS]
+    company_checks = COMPANY_CROSS_CHECKS.get(company_id, [])
+    company_metrics = COMPANY_DERIVED_METRICS.get(company_id, [])
+
+    if company_id not in COMPANY_CROSS_CHECKS:
+        print(f"  Warning: no company-specific checks registered for '{company_id}'. "
+              f"Running universal checks only.")
+
+    checks = [fn(facts) for fn in UNIVERSAL_CROSS_CHECKS + company_checks]
+    metrics = [fn(facts) for fn in UNIVERSAL_DERIVED_METRICS + company_metrics]
 
     growth_metrics = [
         calc_growth_metric(name, label, facts, prior_facts, unit, note)
@@ -820,13 +857,15 @@ def main():
     parser = argparse.ArgumentParser(description="Deterministic finance module")
     parser.add_argument("--facts", default="output/validated_facts.json")
     parser.add_argument("--out", default="output/financials.json")
+    parser.add_argument("--company", default="at",
+                        help="Company ID for company-specific checks (default: at)")
     args = parser.parse_args()
 
     print(f"Loading facts from {args.facts}...")
     facts, chunks = load_verified_facts(args.facts)
     print(f"  {len(facts)} verified/corrected financial figures loaded")
 
-    result = run_all(facts, chunks)
+    result = run_all(facts, chunks, company_id=args.company)
     print_report(result)
 
     os.makedirs("output", exist_ok=True)

@@ -121,6 +121,39 @@ First run of the evaluation harness against the frozen gold set. Automated score
 
 **Blocked:** `anthropic.BadRequestError: You have reached your specified API usage limits. You will regain access on 2026-08-01 at 00:00 UTC.` V2 run to resume from 1 August 2026. V1 outputs unchanged.
 
+## 17 Jul 2026 — V2 run complete; section_filter.py + finance.py generalisation refactor
+
+**V2 pipeline run results** (API limit cleared, run completed same session):
+
+- **Classify** (`output/v2/classified_facts.json`): 249 facts → 4 batches of 80, then synthesis over 175 facts (rel ≥3). Risk-floor adjustment: 4 facts bumped to relevance 3 by taxonomy match (2 cyber, 1 third-party, 1 carbon). Actual cost: $0.7396. Relevance distribution unchanged from V1 except for the 4 floored facts.
+- **Memo** (`output/v2/memo.md`): All 11 synthesis risks now appear in Section 6 (V1 had 5 of 11). Direct-traffic moat appears in exec summary, Section 4 (value drivers), and Section 5 (strengths). EPS-vs-operating-profit divergence now explicit in bear case with buyback mechanism identified. Actual cost: part of $0.7396 total.
+- **Eval** (`python3 eval/run_eval.py`): Automated fact recall 18/20 (90%), citation accuracy 16/18 (88%), risk coverage automated 10/10 — but R-05 is a false positive (matched stems "platform" + "marketplace" from an EV policy sentence, not from any cyber/IT discussion). Adjusted automated = 9/10.
+
+**What worked:**
+- **C2 (explicit risk checklist) — fully effective**: All 11 synthesis risks now in Section 6. GHG +55% y/y and EV policy uncertainty (pay-per-mile tax, mixed government messaging) now explicitly addressed. This directly fixes R-09 (climate/EV = MISSING in V1).
+- **C3 (synthesis focus questions) — fully effective**: Direct-traffic moat and EPS-buyback mechanism both appear in V2 memo. These were the two most specific analytical gaps flagged in Zak's V1 assessment. O-07 and O-05 expected to move from MISSING/PARTIAL to COVERED.
+
+**What did not work:**
+- **C1 (taxonomy floor) → R-05 (cyber)**: 2 cyber facts were successfully floored from relevance 2 to 3 and entered the synthesis call. However, the synthesis model did not produce a cyber/IT risk as one of its 11 items — so no cyber risk entry existed for the C2 checklist to mandate in Section 6. The floor targeted the right bottleneck (synthesis exclusion) but the synthesis model still deprioritised cyber. To fix: the synthesis prompt itself would need a cyber mandate, not just the memo-generation prompt.
+- **C1 (taxonomy floor) → R-10 (third-party)**: Same pattern. Facts floored, entered synthesis, but no third-party synthesis item generated.
+- **O-08 (engagement quality)**: No V2 change targeted this. Structural pdfplumber limitation on infographic pages (p4) — still MISSING.
+
+**Automated risk-coverage false positive (known issue):** R-05 auto-shows COVERED in V2 because "platform" and "marketplace" appear in Section 6 in the context of the EV policy sentence ("...EV tax...platform..."). These are not cyber keywords. The adjusted V2 automated score is 9/10 (same as V1 signal). Zak must verify R-05 as MISSING in the manual scoring addendum.
+
+**Section filter and finance.py generalisation refactor (same session):**
+
+1. **`section_filter.py`** (new file): Generic heading-taxonomy matcher replaces the hard-coded `MEMO_SECTIONS` constant in `extract.py`. Uses case-insensitive substring match of the first 400 characters of each PDF page against `heading_variants` lists defined in `config.yaml`. Also detects the printed-page offset (scans first 20 pages for an isolated "1" in the page footer — typical UK AR front-matter convention). Falls back to `fallback_pages` per section if heading detection fails. Design note: exact substring match chosen deliberately (not fuzzy edit-distance) because UK annual report headings are formulaic and verbatim matching is reliable without added complexity.
+
+2. **`config.yaml`** (new file): Company configuration for Auto Trader. Includes `section_taxonomy` block with 6 section types (`strategic_overview`, `strategy`, `kpis`, `financial_review`, `principal_risks`, `financial_statements`), each with `heading_variants`, `description`, `max_pages`, and `fallback_pages`. Adding a new company needs only a new `config.yaml`.
+
+3. **`extract.py`** (modified): `MEMO_SECTIONS` renamed to `_AT_MEMO_SECTIONS_FALLBACK` and made truly a fallback. Added `_resolve_memo_sections()` which tries `config.yaml` + `section_filter.py` first; falls back to the AT-specific constant only if config absent or returns nothing.
+
+4. **`finance.py`** (modified): Cross-check functions split into `UNIVERSAL_CROSS_CHECKS` (P&L walk, EPS, cash conversion, net bank debt, shareholder returns — applicable to any company) and `COMPANY_CROSS_CHECKS["at"]` (segment revenue splits, ARPR × forecourts reconciliation, AT-specific margin bridge — AT-specific). Similarly for derived metrics. `run_all()` now accepts `company_id="at"` and merges universal + company-specific lists. Adding Greggs or a third company needs only a new key in `COMPANY_CROSS_CHECKS` and `COMPANY_DERIVED_METRICS` with the relevant check functions.
+
+**DESIGN.md generalisation principle recorded:** All company adaptations must be generic mechanisms — configurable or auto-detected, never hardcoded to a specific company — such that adding a new company requires only a `config.yaml` entry and a company-specific checks registry entry, with no changes to pipeline logic. Confirmed 17 Jul 2026.
+
+**pytest suite: 63 tests, 0 failures.** All finance.py and prior_year.py tests pass after the refactor (function names unchanged; only the list constants and `run_all` signature changed).
+
 ## 17 Jul 2026 — Milestone 6 (Evaluation): manual scoring complete, V1 locked
 
 **Found:** Human evaluation by Zak (17 July 2026) produced materially different risk-coverage scores from the automated keyword estimate. Automated: 9/10 (90%). Human-verified: 5.5/10 (55%). Three risks are MISSING (cyber/IT, climate/EV, third-party dependency) and three are PARTIAL (macro, legal/regulatory, brand/reputation). Observation coverage: 7.5/10 (75%). Diligence question quality: 7/7 at 3.0/3.0 (100%).
