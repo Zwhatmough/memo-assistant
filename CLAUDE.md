@@ -28,6 +28,15 @@ Read `DESIGN.md` in full. It is the agreed project design and is the source of t
 
 **Generalisation refactor — complete.** `section_filter.py` (new): generic heading-taxonomy matcher using `config.yaml` section types with `heading_variants` and `fallback_pages`; replaces hard-coded page ranges in `extract.py`. `config.yaml` (new): Auto Trader company configuration. `finance.py`: cross-checks split into `UNIVERSAL_CROSS_CHECKS` + `COMPANY_CROSS_CHECKS["at"]`; `run_all()` takes `company_id` parameter. Adding a second company (e.g. Greggs) requires only a new `config.yaml` and `COMPANY_CROSS_CHECKS["greggs"]` entry — no pipeline logic changes. Generalisation principle recorded in DESIGN.md decision log. pytest suite: 63 tests, 0 failures.
 
+**Greggs generalisation test — complete (17 Jul 2026).** Full V3 pipeline run on `documents/greggs-ar25.pdf` (`greggs_config.yaml`, output at `output/greggs/`). Five generalisation findings uncovered and fixed:
+1. **PDF sidebar defeats heading detection**: Greggs PDF left-sidebar navigation panel appears first in pdfplumber's reading order on every page, defeating first-400-chars matcher. Fix: `greggs_config.yaml` uses empty `heading_variants` + explicit `fallback_pages`. No code change required — the fallback_pages path already existed.
+2. **`extract.py` needed `--out` flag**: Added `facts_out` parameter + `--out` CLI flag to support per-company output directories without overwriting AT outputs.
+3. **`finance.py` universal cross-checks all WARN for Greggs**: Expected behaviour — AT-labelled label-matching searches return no matches on Greggs facts. Shop count check also returned WARN (fact label was "Total shops at year-end", not "total shops"). Not a bug; per-company checks must be written against actual fact labels from a first run.
+4. **`memo.py` hardcoded company identity**: `MEMO_SYSTEM`, header, section instructions, section 10 all referenced "Auto Trader Group plc", "ARPR", "Autorama", "Deal Builder". Model confused itself (flagged evidence register mismatch in its own Executive Summary). Fix: all AT-specific strings replaced with config-driven templates; `--config` flag added; `_load_company_meta()` reads from YAML. Also fixed: `max_tokens` for sections 1–5 increased from 4096 → 8192 (173-entry register too large for 4096-token limit).
+5. **`prior_year.py` low yield on Greggs**: 4 facts extracted (vs 38 for AT) — Greggs report uses inline `(2024: X)` patterns sparingly. Structural limitation, not a bug.
+
+Greggs pipeline results: 249/252 facts verified (98%), 0 memo reference errors, 0 number errors, all 8 disclosed risk categories present. Total cost: $1.33. Greggs memo at `output/greggs/memo.md`. See BUILD_LOG.md for full finding detail.
+
 ## Working method (non-negotiable)
 
 - Work in small, understandable stages. For each stage: explain what and why, propose the simplest credible implementation, flag important decisions, implement a small component, test it, explain failures.

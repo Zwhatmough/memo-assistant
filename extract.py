@@ -190,11 +190,16 @@ def _make_batches(chunks: list, batch_size: int) -> list[list]:
     return batches
 
 
-def run_extraction(pdf_path: str, doc_id: str) -> None:
+def run_extraction(
+    pdf_path: str,
+    doc_id: str,
+    config_path: str = "config.yaml",
+    facts_out: str = "output/facts.json",
+) -> None:
     """Run fact extraction on memo-relevant sections of a PDF."""
 
-    facts_path = os.path.join("output", "facts.json")
-    log_path = os.path.join("output", "run_log.json")
+    facts_path = facts_out
+    log_path = os.path.join(os.path.dirname(facts_out) or "output", "run_log.json")
 
     # 1. Load existing results (resumable)
     existing_facts, done_pages = _load_existing_facts(facts_path)
@@ -208,7 +213,7 @@ def run_extraction(pdf_path: str, doc_id: str) -> None:
     print(f"  {len(doc.chunks)} non-empty pages from {doc.total_pages} total")
 
     # 3. Filter to memo-relevant sections (auto-detected from headings or fallback)
-    memo_sections = _resolve_memo_sections(pdf_path)
+    memo_sections = _resolve_memo_sections(pdf_path, config_path=config_path)
     target_pages = _pages_in_memo_sections(memo_sections)
     chunks = [c for c in doc.chunks if c.page in target_pages]
     print(f"  Filtered to memo sections: {len(chunks)} pages")
@@ -296,7 +301,7 @@ def run_extraction(pdf_path: str, doc_id: str) -> None:
             })
 
     # 8. Merge with existing and save
-    os.makedirs("output", exist_ok=True)
+    os.makedirs(os.path.dirname(facts_path) or "output", exist_ok=True)
 
     all_facts = existing_facts + new_facts
     with open(facts_path, "w") as f:
@@ -326,9 +331,13 @@ def main():
     )
     parser.add_argument("pdf_path", help="Path to the PDF file")
     parser.add_argument("doc_id", help="Document identifier")
+    parser.add_argument("--config", default="config.yaml",
+                        help="Path to company config YAML (default: config.yaml)")
+    parser.add_argument("--out", default="output/facts.json",
+                        help="Output path for extracted facts JSON (default: output/facts.json)")
     args = parser.parse_args()
 
-    run_extraction(args.pdf_path, args.doc_id)
+    run_extraction(args.pdf_path, args.doc_id, config_path=args.config, facts_out=args.out)
 
 
 if __name__ == "__main__":

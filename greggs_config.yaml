@@ -1,0 +1,74 @@
+# Pipeline configuration — Greggs plc Annual Report and Accounts 2025
+#
+# GENERALISATION NOTE: The Greggs PDF has a persistent left-sidebar navigation
+# panel that pdfplumber reads before the main content on virtually every page.
+# The sidebar contains the full table of contents (including section headings
+# like "Chair's Statement", "Chief Executive's Report", etc.) so heading-based
+# auto-detection fires incorrectly on page 1 for every section type. Heading
+# variants are intentionally left empty here; fallback_pages provide explicit
+# page ranges instead. See BUILD_LOG.md for the full diagnosis.
+
+company_id: "greggs"
+company_name: "Greggs plc"
+ticker: "GRG"
+fiscal_year_end: "27 December 2025"
+fiscal_year: "FY2025"
+report_year: "2025"
+currency: "GBP"
+currency_symbol: "£"
+
+documents:
+  annual_report:
+    path: "documents/greggs-ar25.pdf"
+    doc_id: "greggs-ar25"
+
+# ── Section taxonomy ──────────────────────────────────────────────────────────
+#
+# Heading auto-detection is disabled for Greggs (heading_variants left empty)
+# because the PDF sidebar defeats the first-400-chars matching approach.
+# fallback_pages are derived from direct inspection of the PDF (see BUILD_LOG).
+#
+# Page mapping (PDF page → document page):
+#   PDF offset = +2 (doc p8 = PDF p10, doc p32 = PDF p34, etc.)
+#
+# Memo-relevant sections identified:
+#   Chair's Statement:         PDF p10–15  (doc p8–13)
+#   Chief Executive's Report:  PDF p16–21  (doc p14–19)
+#   Our Strategy + KPI:        PDF p22–35  (doc p20–33)
+#   Financial Review:          PDF p59–63  (doc p57–61)
+#   Risk Management:           PDF p64–71  (doc p62–69)
+#   Financial Statements:      PDF p130–143 (doc p128–141)
+#
+# Not included: Our People (p36–43), Sustainability Report (p44–58),
+#   Directors' Report (p72+), Remuneration (p74+) — not memo-relevant.
+
+section_taxonomy:
+  strategic_overview:
+    heading_variants: []
+    description: "Chair's Statement and Chief Executive's Report"
+    max_pages: 12
+    fallback_pages: [10, 21]
+
+  strategy:
+    heading_variants: []
+    description: "Strategy and KPIs"
+    max_pages: 14
+    fallback_pages: [22, 35]
+
+  financial_review:
+    heading_variants: []
+    description: "Financial Review (Finance Director commentary)"
+    max_pages: 6
+    fallback_pages: [59, 63]
+
+  principal_risks:
+    heading_variants: []
+    description: "Risk Management and Principal Risks"
+    max_pages: 10
+    fallback_pages: [64, 71]
+
+  financial_statements:
+    heading_variants: []
+    description: "Primary financial statements"
+    max_pages: 14
+    fallback_pages: [130, 143]

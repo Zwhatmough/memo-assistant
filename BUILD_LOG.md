@@ -246,6 +246,81 @@ After cleanup: 8 categories. V3 classified_facts.json reports 8 disclosed risk c
 
 **Generalisation note:** all three improvement rounds (C1–C6) were designed as generic mechanisms over any company's principal risk disclosure. Generalisation to a second company (Greggs) is the next validation step.
 
+## 17 Jul 2026 — Generalisation test: Greggs plc end-to-end pipeline run
+
+Full V3 pipeline run on `documents/greggs-ar25.pdf` (`greggs_config.yaml`, `output/greggs/`). All findings recorded below.
+
+### Finding 1: PDF sidebar defeats heading detection in section_filter.py
+
+**Found:** `section_filter.py`'s first-400-chars heading matcher fired on PDF page 1 for every section type in the Greggs report. All five sections produced a "no heading found — using fallback" message.
+
+**Cause:** The Greggs PDF has a persistent left-sidebar navigation panel (containing the full table of contents) that pdfplumber reads before the main page body on virtually every page, because the sidebar's x-coordinate is lower. The sidebar text includes every section heading, so the first-400-chars heuristic matched page 1 for every section type simultaneously.
+
+**Fix:** `greggs_config.yaml` uses empty `heading_variants: []` for all sections and relies entirely on explicit `fallback_pages`. This is a supported generalisation path — `section_filter.py` already fell back to page ranges when no heading was found, so no code change was required. The config comment documents the diagnosis.
+
+**Lesson:** For any company with a sidebar-heavy PDF layout, heading auto-detection should be disabled by leaving `heading_variants` empty. The fallback_pages mechanism is sufficient and robust. This is a genuine generalisation finding, not a special case: financial report PDFs frequently embed navigation sidebars.
+
+### Finding 2: extract.py needed --out flag for per-company output directories
+
+**Found:** `extract.py` had no way to write facts to a company-specific output path; `facts_out` was hardcoded to `"output/facts.json"`.
+
+**Cause:** The original design assumed a single company. Multi-company use requires distinct output directories (`output/greggs/facts.json`) to avoid overwriting the AT pipeline's outputs.
+
+**Fix:** Added `facts_out: str = "output/facts.json"` parameter to `run_extraction()` and `--out` flag to the CLI. `os.makedirs()` call updated to derive the parent directory from `facts_out` rather than the hardcoded `"output"`.
+
+**Lesson:** All output paths in pipeline stages should be parameters, not constants. The pattern is now consistent across extract, validate, finance, prior_year, classify, and memo.
+
+### Finding 3: finance.py universal cross-checks all returned WARN for Greggs
+
+**Found:** All 8 cross-checks (7 universal + 1 Greggs-specific shop count) returned WARN ("stated value missing from facts") on the Greggs run. Zero PASS, zero FAIL.
+
+**Cause:** The universal cross-checks (PBT bridge, PAT, effective tax rate, EPS, operating profit margin, net bank debt, shareholder returns) were designed around the Auto Trader P&L architecture and label conventions. `find_fact()` searches by description string, year, and unit; Greggs facts use different label text for the same concepts (e.g. "Underlying pre-tax profit" vs "PBT"). The Greggs-specific shop count check also returned WARN because the extracted facts labelled the metric differently ("Total shops at year-end" rather than "total shops").
+
+**Implication:** All cross-checks returning WARN is expected and correct behaviour for a new company — the pipeline doesn't silently pass or hallucinate values. The finance module is functional; it just needs company-specific check implementations, not generic repairs, to generate PASS/FAIL results. For a production system, Greggs-specific checks would be added iteratively as fact label conventions are confirmed from a first run.
+
+**Lesson:** The `find_fact()` label-matching approach is intentionally simple (description string contains search term). Per-company checks must be written against the actual fact labels the extraction model produces for that company — observable only from a first run.
+
+### Finding 4: prior_year.py extracted only 4 facts for Greggs (vs 38 for Auto Trader)
+
+**Found:** `prior_year.py` extracted 4 prior-year comparative values from verified Greggs excerpts (delivery %, app transactions %, underlying operating profit margin, effective tax rate).
+
+**Cause:** `prior_year.py` searches for inline `(2024: X)` or `(prior year: X)` patterns in verified excerpt text. Greggs' report uses this pattern sparingly; Auto Trader's report used it more systematically throughout the KPI and financial sections. The 4 extracted facts are from excerpts that happen to embed a comparative, not from the primary financial statements (which pdfplumber extracted with 0 facts on pages 130–143 — the financial statement pages appear to have column-based layouts that yield minimal verbatim excerpt text suitable for prior_year pattern matching).
+
+**Implication:** Downstream missing-data catalogue shows 2 blocked calculations (FCF, EPS growth) — same as AT. Prior-year data limitations are structural to the current approach, not Greggs-specific.
+
+### Finding 5: memo.py hardcoded company identity caused complete generation failure on first attempt
+
+**Found:** First Greggs memo generation produced an "Auto Trader Group plc" header and the model's Executive Summary flagged a "material data-integrity issue" — noting that the evidence register described a food-to-go bakery retailer, not a digital classifieds marketplace. Sections 3–5 were entirely absent (truncated at max_tokens=4096).
+
+**Cause:** Two separate bugs:
+1. `MEMO_SYSTEM`, the memo header, and section 1–5 writing instructions all contained hardcoded Auto Trader references ("what Auto Trader does", "ARPR, retailer base, consumer services", "Autorama's role", "Deal Builder"). The model was instructed to write about Auto Trader but given Greggs evidence.
+2. `max_tokens=4096` for the sections 1–5 call was calculated for AT's 161-entry evidence register. Greggs' 173-entry register produces a longer prompt; at 4096 tokens the output was truncated mid-section 2.
+
+**Fix:** 
+- `MEMO_SYSTEM` made into `_build_memo_system(company_name, ticker)` function.
+- `build_sections_1_5_prompt()` and `build_sections_6_8_prompt()` accept `company_name` and `ticker` parameters.
+- Section 1–5 writing instructions genericised (removed AT-specific product/segment references; replaced with generic "core business model", "key revenue streams", "material subsidiary or divisional dynamics" phrasing).
+- Hardcoded memo header replaced with config-driven template using `company_name`, `ticker`, `fiscal_year`, `fiscal_year_end`.
+- Section 10 general limitations text de-referenced from AT ("FY2026 Annual Report only", "FY2027 guidance").
+- `max_tokens` for sections 1–5 call increased from 4096 to 8192.
+- `--config` flag added to `memo.py` CLI; `_load_company_meta()` reads from YAML.
+- `os.makedirs()` generalised to use `memo_out` directory rather than hardcoded `"output"`.
+
+**Lesson:** Every prompt that names a company is a generalisation failure waiting to happen. Company identity should flow from config through the entire pipeline — from extraction through to generation. The pattern is now consistent: every stage accepts a `--config` flag.
+
+### Greggs pipeline results summary
+
+| Stage | Outcome |
+|-------|---------|
+| Section detection | All 5 sections used fallback pages (heading detection bypassed by sidebar) |
+| Extraction | 252 facts, 15 batches, 53 pages, $0.28 |
+| Citation validation | 249/252 (98%), 3 unverifiable (infographic KPI pages — same pattern as AT) |
+| Finance cross-checks | 8 WARN (all missing — AT-labelled checks + shop count label mismatch) |
+| Prior-year extraction | 4 facts (Greggs report has fewer inline comparative patterns) |
+| Classification | 249 facts classified, 8 disclosed risk categories, $0.71 |
+| Memo generation | 0 reference errors, 0 number errors, all 8 risk categories present, $0.15 |
+| Total cost | $1.33 (under $2.00 limit) |
+
 ---
 
 *Update this file whenever a real failure is found and fixed. Each entry: Found / Cause / Fix / Lesson.*

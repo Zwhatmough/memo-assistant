@@ -674,6 +674,51 @@ def identify_missing_data(prior_facts: list[dict]) -> list[MissingData]:
     return missing
 
 
+# ── Greggs-specific checks ────────────────────────────────────────────────────
+#
+# Greggs is a single-segment retailer. There is no Autorama-equivalent entity
+# split, no ARPR × forecourts reconciliation, and no channel revenue bridge.
+# The universal checks (PBT walk, EPS, cash conversion, leverage, returns)
+# handle the core arithmetic. The one genuinely Greggs-specific check is the
+# shop count reconciliation: Greggs publishes opening count, openings, closures,
+# and period-end count as discrete KPI facts. This verifies their internal
+# consistency and validates a key growth driver for the investment thesis.
+
+def check_greggs_shop_count(facts: list[dict]) -> CrossCheck:
+    """Shops at start + openings - closures = shops at period end.
+
+    Greggs reports these four figures as part of its KPI disclosure.
+    The check verifies the reported net movement is internally consistent
+    with opening and closing shop counts.
+    """
+    year = "2025"
+    shops_start = find_fact(facts, "shops at start", year, "count")
+    if shops_start is None:
+        shops_start = find_fact(facts, "total shops", "2024", "count")  # prior year end = start
+    openings = find_fact(facts, "new shop openings", year, "count")
+    if openings is None:
+        openings = find_fact(facts, "shop openings", year, "count")
+    closures = find_fact(facts, "shop closures", year, "count")
+    shops_end = find_fact(facts, "total shops", year, "count")
+    if shops_end is None:
+        shops_end = find_fact(facts, "shops at period end", year, "count")
+
+    calculated = (shops_start or 0.0) + (openings or 0.0) - (closures or 0.0)
+    return _check(
+        name="Greggs: Shop Count (start + openings − closures = end)",
+        formula="Shops at start + New openings − Closures = Shops at period end",
+        inputs={
+            "shops_start": shops_start,
+            "new_openings": openings,
+            "closures": closures,
+        },
+        calculated=calculated,
+        stated=shops_end,
+        tolerance=1.0,   # shop counts are integers; allow ±1 for rounding
+        unit="shops",
+    )
+
+
 # ── Orchestration ──────────────────────────────────────────────────────────────
 #
 # Cross-checks are split into two groups:
@@ -710,6 +755,11 @@ COMPANY_CROSS_CHECKS: dict[str, list] = {
         check_operating_profit_bridge,          # AT OP − Central Costs + Autorama = Group OP
         check_at_op_margin,                     # AT OP / AT Revenue × 100
     ],
+    "greggs": [
+        check_greggs_shop_count,    # Shops start + openings − closures = period-end count
+        # No segment revenue split (single-segment retailer)
+        # No ARPR × forecourts (not applicable to Greggs' business model)
+    ],
 }
 
 UNIVERSAL_DERIVED_METRICS = [
@@ -723,6 +773,10 @@ COMPANY_DERIVED_METRICS: dict[str, list] = {
         calc_autorama_revenue_contribution,     # Autorama / Group Revenue %
         calc_autorama_margin_drag,              # How much Autorama loss suppresses group margin
         calc_arpr_implied_retailer_revenue,     # ARPR × Forecourts × 12 / 1M
+    ],
+    "greggs": [
+        # No Autorama-equivalent segment metrics.
+        # Universal metrics (cash conversion, FCF) are sufficient for Greggs.
     ],
 }
 

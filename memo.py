@@ -202,7 +202,8 @@ def _format_metrics_for_prompt(financials: dict) -> str:
     return "\n".join(lines)
 
 
-MEMO_SYSTEM = """You are writing a professional investment memo on Auto Trader Group plc (LSE: AUTO) for an investment analyst's first-pass review. The memo is based solely on the evidence register and analytical synthesis provided below — you must not invent facts, numbers, or citations.
+def _build_memo_system(company_name: str, ticker: str) -> str:
+    return f"""You are writing a professional investment memo on {company_name} ({ticker}) for an investment analyst's first-pass review. The memo is based solely on the evidence register and analytical synthesis provided below — you must not invent facts, numbers, or citations.
 
 ABSOLUTE RULES:
 1. Every material claim must end with an inline evidence citation: [E-NNN]
@@ -225,11 +226,14 @@ def build_sections_1_5_prompt(
     analytics: dict,
     metrics: str,
     fact_to_e: dict[str, str],
+    company_name: str = "Auto Trader Group plc",
+    ticker: str = "LSE: AUTO",
 ) -> str:
     reg_text = _format_register_for_prompt(register)
     analytics_text = _format_analytics_with_e_ids(analytics, fact_to_e)
+    memo_system = _build_memo_system(company_name, ticker)
 
-    return f"""{MEMO_SYSTEM}
+    return f"""{memo_system}
 
 EVIDENCE REGISTER (your only permitted citations — E-001 through E-{len(register):03d}):
 {reg_text}
@@ -245,13 +249,13 @@ ANALYTICAL SYNTHESIS (use this to guide the narrative — E-IDs already shown):
 Write sections 1 through 5 only. Do not write sections 6–10.
 
 ## 1. Executive Summary
-~200 words. Cover: what Auto Trader does, FY2026 headline results, key investment thesis points, one sentence on the main risk. Cite the 4–5 most important E-IDs.
+~200 words. Cover: what the company does, its key headline results for the period, the key investment thesis points, and one sentence on the main risk. Cite the 4–5 most important E-IDs.
 
 ## 2. Business Overview
-~300 words. Cover: the core marketplace model, how the company makes money (ARPR, retailer base, consumer services), Autorama's role, Deal Builder as the key strategic product. Cite E-IDs throughout.
+~300 words. Cover: the core business model, how the company earns revenue (key revenue streams, customer base, key products or services), any material subsidiary or divisional dynamics evident from the evidence register, and the key operational metrics. Cite E-IDs throughout.
 
 ## 3. Financial and Operating Performance
-~400 words. Walk through the P&L and key KPIs: revenue growth, operating profit, margins (core vs group), EPS, cash generation, leverage, and capital returns. Use the FINANCIAL METRICS for growth rates. Cite E-IDs on every figure.
+~400 words. Walk through the P&L and key operating KPIs: revenue, operating profit, margins, EPS, cash generation, leverage, and capital returns. Use the FINANCIAL METRICS for growth rates where available. Cite E-IDs on every figure.
 
 ## 4. Value Drivers
 3–5 bullet points, each ~40 words. Draw from the VALUE DRIVERS in the analytical synthesis. Each bullet must cite [E-NNN].
@@ -311,10 +315,13 @@ def build_sections_6_8_prompt(
     fact_to_e: dict[str, str],
     sections_1_5_text: str,
     risk_skeleton: list[dict] | None = None,
+    company_name: str = "Auto Trader Group plc",
+    ticker: str = "LSE: AUTO",
 ) -> str:
     reg_text = _format_register_for_prompt(register)
     analytics_text = _format_analytics_with_e_ids(analytics, fact_to_e)
     risks_checklist = _format_risks_checklist(analytics, fact_to_e)
+    memo_system = _build_memo_system(company_name, ticker)
 
     # V3: if a risk skeleton is available, use it to impose mandatory Section 6
     # structure. The skeleton overrides the generic 3-bucket structure from V2.
@@ -346,7 +353,7 @@ Patterns visible in the data not explicitly called out by management. 1–2 poin
 ### Items requiring further investigation
 Draw from diligence questions that surface data gaps. 1–2 points."""
 
-    return f"""{MEMO_SYSTEM}
+    return f"""{memo_system}
 
 EVIDENCE REGISTER:
 {reg_text}
@@ -433,12 +440,11 @@ def build_section_10(missing_data: list[dict], unverifiable_facts: list[dict]) -
         "\n### General limitations\n"
         "- This memo is an AI-assisted first draft. All material claims should be "
         "independently verified against the source documents before use in investment decisions.\n"
-        "- The pipeline was run on the FY2026 Annual Report only. "
+        "- The pipeline was run on a single annual report. "
         "The analyst presentation, half-year results, and prior-year annual reports "
-        "were not included in V1.\n"
-        "- Forward-looking statements (FY2027 guidance, long-term capital return targets) "
-        "are reproduced from management commentary and reflect management's views at the "
-        "time of publication, not the pipeline's projections.\n"
+        "were not included.\n"
+        "- Forward-looking statements are reproduced from management commentary and "
+        "reflect management's views at the time of publication, not the pipeline's projections.\n"
         "- No buy, sell, or hold recommendation is made or implied."
     )
     return "\n".join(lines)
@@ -700,6 +706,32 @@ def load_unverifiable_facts(validated_path: str) -> list[dict]:
     return result
 
 
+def _load_company_meta(config_path: str | None) -> dict:
+    """Load company metadata from a config YAML, falling back to AT defaults."""
+    defaults = {
+        "company_name": "Auto Trader Group plc",
+        "ticker": "LSE: AUTO",
+        "fiscal_year": "FY2026",
+        "fiscal_year_end": "31 March 2026",
+        "report_year": "2026",
+    }
+    if not config_path:
+        return defaults
+    import os
+    if not os.path.exists(config_path):
+        return defaults
+    import yaml
+    with open(config_path) as f:
+        cfg = yaml.safe_load(f)
+    return {
+        "company_name": cfg.get("company_name", defaults["company_name"]),
+        "ticker": f"{cfg.get('ticker', '')}",
+        "fiscal_year": cfg.get("fiscal_year", defaults["fiscal_year"]),
+        "fiscal_year_end": cfg.get("fiscal_year_end", defaults["fiscal_year_end"]),
+        "report_year": cfg.get("report_year", defaults["report_year"]),
+    }
+
+
 def run_memo_pipeline(
     classified_path: str = "output/classified_facts.json",
     financials_path: str = "output/financials.json",
@@ -708,8 +740,16 @@ def run_memo_pipeline(
     memo_out: str = "output/memo.md",
     register_out: str = "output/evidence_register.json",
     dry_run: bool = False,
+    config_path: str | None = None,
 ) -> None:
     """Full memo generation pipeline."""
+
+    # 0. Company metadata
+    meta = _load_company_meta(config_path)
+    company_name = meta["company_name"]
+    ticker = meta["ticker"]
+    fiscal_year = meta["fiscal_year"]
+    fiscal_year_end = meta["fiscal_year_end"]
 
     # 1. Load inputs
     print("Loading inputs...")
@@ -762,11 +802,14 @@ def run_memo_pipeline(
 
     # 6. Generate sections 1–5
     print("Generating sections 1–5 (exec summary through strengths)...")
-    prompt_1_5 = build_sections_1_5_prompt(register, analytics, metrics_text, fact_to_e)
+    prompt_1_5 = build_sections_1_5_prompt(
+        register, analytics, metrics_text, fact_to_e,
+        company_name=company_name, ticker=ticker,
+    )
     sections_1_5 = call_llm_text(
         prompt=prompt_1_5,
         model=MEMO_GENERATION_MODEL,
-        max_tokens=4096,
+        max_tokens=8192,
         log=call_log,
     )
     stop_reason = call_log[-1].get("stop_reason", "?")
@@ -780,6 +823,7 @@ def run_memo_pipeline(
     prompt_6_8 = build_sections_6_8_prompt(
         register, analytics, metrics_text, fact_to_e, sections_1_5,
         risk_skeleton=risk_skeleton or None,
+        company_name=company_name, ticker=ticker,
     )
     sections_6_8 = call_llm_text(
         prompt=prompt_6_8,
@@ -799,10 +843,11 @@ def run_memo_pipeline(
 
     # 9. Assemble the full memo
     today = date.today().strftime("%-d %B %Y")
+    ticker_str = f" ({ticker})" if ticker else ""
     header = (
-        f"# Investment Memo: Auto Trader Group plc (LSE: AUTO)\n\n"
+        f"# Investment Memo: {company_name}{ticker_str}\n\n"
         f"**Prepared by:** Evidence-Grounded AI Memo Assistant  \n"
-        f"**Source:** FY2026 Annual Report (year ended 31 March 2026)  \n"
+        f"**Source:** {fiscal_year} Annual Report (year ended {fiscal_year_end})  \n"
         f"**Date:** {today}  \n"
         f"**Status:** AI-assisted first draft — requires human review before use  \n"
         f"**Model:** {MEMO_GENERATION_MODEL}  \n\n---\n\n"
@@ -856,7 +901,7 @@ def run_memo_pipeline(
     print(f"  Unique E-IDs cited in prose: {len(cited_ids)}/{len(register)}")
 
     # 12. Write outputs
-    os.makedirs("output", exist_ok=True)
+    os.makedirs(os.path.dirname(memo_out) or "output", exist_ok=True)
     with open(memo_out, "w") as f:
         f.write(memo_text)
     print(f"\nWrote {memo_out}")
@@ -893,6 +938,8 @@ def main():
     parser.add_argument("--prior-year", default="output/prior_year_facts.json")
     parser.add_argument("--memo-out", default="output/memo.md")
     parser.add_argument("--register-out", default="output/evidence_register.json")
+    parser.add_argument("--config", default=None,
+                        help="Path to company config YAML for company name, ticker, fiscal year")
     parser.add_argument("--dry-run", action="store_true",
                         help="Estimate cost only; do not call the API")
     args = parser.parse_args()
@@ -905,6 +952,7 @@ def main():
         memo_out=args.memo_out,
         register_out=args.register_out,
         dry_run=args.dry_run,
+        config_path=args.config,
     )
 
 
